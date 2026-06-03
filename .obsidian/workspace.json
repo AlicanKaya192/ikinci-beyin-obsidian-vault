@@ -1,0 +1,308 @@
+{
+  "main": {
+    "id": "81db2bcb36fc1b2f",
+    "type": "split",
+    "children": [
+      {
+        "id": "e12c62a76b00db74",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e4c16ff87e6a76f3",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Grafik Görünümü"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "846669c739f4c265",
+    "type": "split",
+    "children": [
+      {
+        "id": "2327fc871ad5151d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ff16074a682bc729",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Dosya Gezgini"
+            }
+          },
+          {
+            "id": "f54db3e1f780982b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Ara"
+            }
+          },
+          {
+            "id": "fecd11f3fe1ba07e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Yer İmleri"
+            }
+          },
+          {
+            "id": "183d3eb374152429",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {},
+              "icon": "smart-connections",
+              "title": "Connections"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 265.5
+  },
+  "right": {
+    "id": "96b609e6305cbae6",
+    "type": "split",
+    "children": [
+      {
+        "id": "d5383fc29db9baed",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "87070d491ffa2a36",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Geri Bağlantılar"
+            }
+          },
+          {
+            "id": "dd588d1c03408a77",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Giden bağlantılar"
+            }
+          },
+          {
+            "id": "9e3398b598d5d00c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiketler"
+            }
+          },
+          {
+            "id": "1c4faa15f92e5bbd",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Tüm özellikler"
+            }
+          },
+          {
+            "id": "eb439b111e46c416",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Anahat"
+            }
+          },
+          {
+            "id": "77861e446cc5a6c0",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          },
+          {
+            "id": "e86dee1361245774",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Copilot"
+            }
+          },
+          {
+            "id": "d38a4a50e8c45889",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {},
+              "icon": "lucide-info",
+              "title": "Dosya özellikleri"
+            }
+          },
+          {
+            "id": "6278271941bee756",
+            "type": "leaf",
+            "state": {
+              "type": "smart-lookup-view-connections",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "smart-lookup-view-connections"
+            }
+          },
+          {
+            "id": "5cecb2de1a465725",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
+          },
+          {
+            "id": "86b6ed1cbb2dc85a",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
+          {
+            "id": "7aba1e0b1666d515",
+            "type": "leaf",
+            "state": {
+              "type": "footnotes",
+              "state": {},
+              "icon": "lucide-file-signature",
+              "title": "Dipnotlar"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 400.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Hızlı geçişi aç": false,
+      "graph:Grafik görünümünü aç": false,
+      "canvas:Yeni tuval oluşturun": false,
+      "daily-notes:Bugünün Notunu Aç": false,
+      "templates:Şablon ekle": false,
+      "command-palette:Komut paletini aç": false,
+      "bases:Yeni taban oluştur": false,
+      "copilot:Open Copilot Chat": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "templater-obsidian:Templater": false,
+      "smart-connections:Smart Connections: Open connections view": false,
+      "smart-connections:Toggle Footer Connections": false,
+      "smart-connections:Smart Connections: Open random connection": false,
+      "obsidian-git:Open Git source control": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "workspaces:Çalışma alanı düzenlerini yönetme": false,
+      "zk-prefixer:Yeni benzersiz not oluştur": false
+    }
+  },
+  "active": "e4c16ff87e6a76f3",
+  "lastOpenFiles": [
+    "Git-Github/GitHub - SSH Anahtarları ve Güvenlik.md",
+    "Git-Github/GitHub - Repository Yönetimi.md",
+    "Git-Github/GitHub - Pull Request ve Code Review.md",
+    "Git-Github/GitHub - Proje Yönetimi ve İşbirliği.md",
+    "Git-Github/GitHub - Actions ve CI-CD.md",
+    "Git-Github/Git - Temel Komutlar ve Workflow.md",
+    "Git-Github/Git - Takım Çalışması ve Git Stratejileri.md",
+    "Git-Github/Git - Konfigürasyon ve Araçlar.md",
+    "Git-Github/Git - Giriş ve Temel Kavramlar.md",
+    "Git-Github/Git - Gerçek Dünya Senaryoları ve Sık Hatalar.md",
+    "Git-Github/Git - Geçmişi Yeniden Yazma ve İleri Düzey.md",
+    "Git-Github/Git - Branching ve Merging.md",
+    "Git-Github",
+    "MLOPS/MLOps - Weights and Biases.md",
+    "MLOPS/MLOps - Otomatik Yeniden Eğitim.md",
+    "MLOPS/MLOps - Model Packaging ve BentoML.md",
+    "MLOPS/MLOps - Model Monitoring ve Drift Tespiti.md",
+    "MLOPS/MLOps - MLOps Proje Yapısı.md",
+    "MLOPS/MLOps - MLflow ile Deney Takibi.md",
+    "MLOPS/MLOps - Kubernetes ile ML Deploy.md",
+    "MLOPS/MLOps - GitHub Actions ile CI-CD.md",
+    "MLOPS/MLOps - Giriş ve Temel Kavramlar.md",
+    "MLOPS/MLOps - Feature Store.md",
+    "MLOPS/MLOps - DVC ile Veri Versiyonlama.md",
+    "MLOPS/MLOps - Airflow ile Pipeline.md",
+    "MLOPS/MLOps - AB Test ve Shadow Mode.md",
+    "MLOPS",
+    "Data Science/DS - Pandas Merge ve Join.md",
+    "NoSQL - MongoDB",
+    "FastAPI",
+    "Docker",
+    "Time Series",
+    "MSSQL",
+    "Excalidraw",
+    "Feature Engineering",
+    "gemini-scribe/Scheduled-Tasks/scheduled-tasks-state.json"
+  ]
+}
