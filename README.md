@@ -22,7 +22,7 @@ Bu depo; Veri Bilimi (Data Science), Yapay Zeka / Makine Öğrenmesi (Machine Le
 Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari şemaları ve gerçek dünya senaryolarını içerecek şekilde detaylı olarak Türkçe hazırlanmıştır.
 
 > [!NOTE]
-> Proje adı **The Tech Cortex** olarak güncellenmiştir. GitHub depo adresi ve yerel klasör isimleri geriye dönük uyumluluk adına `data-science-ml-obsidian-vault` olarak kalmıştır.
+> Proje adı **The Tech Cortex** olarak güncellenmiştir. GitHub üzerindeki depo ismi ise `ikinci-beyin-obsidian-vault` olarak güncellenmiştir.
 
 ---
 
@@ -655,12 +655,12 @@ Bu not defteri Obsidian uygulaması ile tamamen entegre çalışacak şekilde ta
 1. **Obsidian'ı İndirin:** Henüz kurmadıysanız [Obsidian Web Sitesi](https://obsidian.md/)'nden uygulamayı indirin.
 2. **Depoyu Klonlayın:**
    ```bash
-   git clone https://github.com/AlicanKaya192/data-science-ml-obsidian-vault.git
+   git clone https://github.com/AlicanKaya192/ikinci-beyin-obsidian-vault.git
    ```
 3. **Vault Olarak Açın:**
    - Obsidian uygulamasını açın.
    - **"Open folder as vault"** (Klasörü vault olarak aç) seçeneğine tıklayın.
-   - Klonladığınız `data-science-ml-obsidian-vault` klasörünü seçin.
+   - Klonladığınız `ikinci-beyin-obsidian-vault` klasörünü seçin.
 4. **Grafik Görünümünü Keşfedin:** `Ctrl + G` (veya Mac'te `Cmd + G`) tuşlarına basarak notların birbiriyle olan ilişkilerini görselleştiren **Graph View** modunu açın.
 
 ---
