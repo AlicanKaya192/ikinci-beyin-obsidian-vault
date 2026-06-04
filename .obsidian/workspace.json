@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e12c62a76b00db74",
+        "id": "779ee8df23fb4c0d",
         "type": "tabs",
         "children": [
           {
-            "id": "e4c16ff87e6a76f3",
+            "id": "ac4fd8f1ef799238",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Grafik Görünümü"
+              "type": "markdown",
+              "state": {
+                "file": "Kubernetes & Orchestration/K8s - Ingress ve Trafik Yönetimi.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "K8s - Ingress ve Trafik Yönetimi"
             }
           }
         ]
@@ -100,6 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Siber Güvenlik/Siber Güvenlik - Giriş ve Temel Kavramlar (CIA, Threat Model).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +114,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Geri Bağlantılar"
+              "title": "Siber Güvenlik - Giriş ve Temel Kavramlar (CIA, Threat Model) için geri bağlantılar"
             }
           },
           {
@@ -247,6 +252,9 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "markdown-importer:Markdown yükleyicisini aç": false,
+      "random-note:Rastgele not oluştur": false,
+      "publish:Değişiklikleri yayınla": false,
       "switcher:Hızlı geçişi aç": false,
       "graph:Grafik görünümünü aç": false,
       "canvas:Yeni tuval oluşturun": false,
@@ -266,43 +274,43 @@
       "zk-prefixer:Yeni benzersiz not oluştur": false
     }
   },
-  "active": "e4c16ff87e6a76f3",
+  "active": "ac4fd8f1ef799238",
   "lastOpenFiles": [
-    "Git-Github/GitHub - SSH Anahtarları ve Güvenlik.md",
-    "Git-Github/GitHub - Repository Yönetimi.md",
-    "Git-Github/GitHub - Pull Request ve Code Review.md",
-    "Git-Github/GitHub - Proje Yönetimi ve İşbirliği.md",
-    "Git-Github/GitHub - Actions ve CI-CD.md",
-    "Git-Github/Git - Temel Komutlar ve Workflow.md",
-    "Git-Github/Git - Takım Çalışması ve Git Stratejileri.md",
-    "Git-Github/Git - Konfigürasyon ve Araçlar.md",
-    "Git-Github/Git - Giriş ve Temel Kavramlar.md",
-    "Git-Github/Git - Gerçek Dünya Senaryoları ve Sık Hatalar.md",
-    "Git-Github/Git - Geçmişi Yeniden Yazma ve İleri Düzey.md",
-    "Git-Github/Git - Branching ve Merging.md",
-    "Git-Github",
-    "MLOPS/MLOps - Weights and Biases.md",
-    "MLOPS/MLOps - Otomatik Yeniden Eğitim.md",
-    "MLOPS/MLOps - Model Packaging ve BentoML.md",
-    "MLOPS/MLOps - Model Monitoring ve Drift Tespiti.md",
-    "MLOPS/MLOps - MLOps Proje Yapısı.md",
-    "MLOPS/MLOps - MLflow ile Deney Takibi.md",
-    "MLOPS/MLOps - Kubernetes ile ML Deploy.md",
-    "MLOPS/MLOps - GitHub Actions ile CI-CD.md",
-    "MLOPS/MLOps - Giriş ve Temel Kavramlar.md",
-    "MLOPS/MLOps - Feature Store.md",
-    "MLOPS/MLOps - DVC ile Veri Versiyonlama.md",
-    "MLOPS/MLOps - Airflow ile Pipeline.md",
-    "MLOPS/MLOps - AB Test ve Shadow Mode.md",
-    "MLOPS",
-    "Data Science/DS - Pandas Merge ve Join.md",
-    "NoSQL - MongoDB",
-    "FastAPI",
-    "Docker",
-    "Time Series",
-    "MSSQL",
-    "Excalidraw",
-    "Feature Engineering",
-    "gemini-scribe/Scheduled-Tasks/scheduled-tasks-state.json"
+    "Kubernetes & Orchestration/K8s - Deployments ve Scaling.md",
+    "System Design & Mimari/SD - Dağıtık Sistemler ve CAP Teoremi.md",
+    "System Design & Mimari/SD - API Gateway ve Load Balancing.md",
+    "Siber Güvenlik/Siber Güvenlik - CEH Konu Özeti.md",
+    "Siber Güvenlik/Siber Güvenlik - API Güvenliği.md",
+    "Monitoring & Observability/MO - ELK Stack ile Merkezi Log Yönetimi.md",
+    "Monitoring & Observability/MO - CloudWatch ve Azure Monitor (Cloud Native).md",
+    "Monitoring & Observability/MO - Alerting Stratejileri ve On-call Yönetimi.md",
+    "Generative AI & LLM Engineering/LLM - LangChain ve LlamaIndex ile Uygulama Geliştirme.md",
+    "Generative AI & LLM Engineering/LLM - Değerlendirme (Evaluation) ve İzleme.md",
+    "Kubernetes & Orchestration/K8s - ConfigMaps ve Secrets.md",
+    "Kubernetes & Orchestration/K8s - Giriş ve Mimari (Control Plane, Worker Nodes).md",
+    "DevSecOps & Otomasyon/DSO - İmaj Güvenliği ve Konteyner Tarama (Trivy, Clair).md",
+    "DevSecOps & Otomasyon/DSO - GitOps Prensipleri ve ArgoCD.md",
+    "DevSecOps & Otomasyon/DSO - CI-CD Pipeline Güvenliği ve Secret Tarama.md",
+    "İleri Dağıtık Sistemler & Veritabanları/DB - RabbitMQ vs Apache Kafka (Mimari Karşılaştırma).md",
+    "İleri Dağıtık Sistemler & Veritabanları/DB - Dağıtık Kilit (Distributed Lock) Mekanizmaları.md",
+    "İleri Dağıtık Sistemler & Veritabanları/DB - ClickHouse ile Gerçek Zamanlı Analitik (OLAP).md",
+    "Yazılım Mühendisliği & Metodolojiler/SE - CI-CD Süreçleri ve Otomasyon Stratejileri.md",
+    "Yazılım Mühendisliği & Metodolojiler/SE - Agile Metodolojileri (Scrum, Kanban).md",
+    "Derin Öğrenme (Deep Learning)/DL - Transfer Learning ve Fine-tuning Teknikleri.md",
+    "Derin Öğrenme (Deep Learning)/DL - TensorFlow ve Keras Ekosistemi.md",
+    "Derin Öğrenme (Deep Learning)/DL - Model Optimizasyonu (Pruning, Quantization).md",
+    "Derin Öğrenme (Deep Learning)/DL - Konvolsiyonel Sinir Ağları (CNN) ve Görüntü İşleme.md",
+    "Derin Öğrenme (Deep Learning)/DL - Generative Adversarial Networks (GAN).md",
+    "DevSecOps & Otomasyon/DSO - Dinamik Ortamlar ve Altyapı Otomasyonu.md",
+    "DevSecOps & Otomasyon",
+    "İleri Dağıtık Sistemler & Veritabanları",
+    "Yazılım Mühendisliği & Metodolojiler",
+    "Derin Öğrenme (Deep Learning)",
+    "fix_mermaid_final.py",
+    "fix_markdown_final.py",
+    "fix_markdown.py",
+    "fix_obsidian.py",
+    "Monitoring & Observability/MO - Giriş",
+    "Monitoring & Observability"
   ]
 }

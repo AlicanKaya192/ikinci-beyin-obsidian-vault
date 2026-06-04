@@ -1,4 +1,4 @@
-# 🧠 Data Science, Machine Learning & MLOps Obsidian Vault
+# 🧠 The Tech Cortex: Yazılım Geliştirme, Veri Bilimi & DevOps Obsidian Kütüphanesi
 
 <div align="center">
 
@@ -15,9 +15,14 @@
 
 </div>
 
-Bu depo, Veri Bilimi (Data Science), Yapay Zeka / Makine Öğrenmesi (Machine Learning), MLOps, Veritabanları (SQL & NoSQL), API Geliştirme, Konteynerizasyon (Docker), Bulut Sistemleri ve İstatistik konularını kapsayan, **386 kapsamlı not içeren bir Obsidian bilgi bankasıdır (vault)**.
+**The Tech Cortex**, modern bir yazılım geliştirici, veri bilimci, veri mühendisi ve DevOps uzmanının ihtiyaç duyabileceği tüm teknik konuları tek bir çatı altında toplayan kapsamlı bir **İkinci Beyin (Second Brain)** kütüphanesidir.
 
-Her bir not, konseptlerin teorik temellerini, matematiksel formüllerini, pratik kod bloklarını ve gerçek dünya senaryolarını içerecek şekilde Türkçe olarak hazırlanmıştır.
+Bu depo; Veri Bilimi (Data Science), Yapay Zeka / Makine Öğrenmesi (Machine Learning), Derin Öğrenme (Deep Learning), MLOps, Veri Mühendisliği (Data Engineering), Generative AI & LLM, Sistem Tasarımı (System Design), Veritabanları (SQL & NoSQL), API Geliştirme, Konteynerizasyon (Docker & Kubernetes), Bulut Sistemleri, İstatistik, Linux ve Siber Güvenlik konularını kapsayan, **386 kapsamlı not içeren bir Obsidian bilgi bankasıdır (vault)**.
+
+Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari şemaları ve gerçek dünya senaryolarını içerecek şekilde detaylı olarak Türkçe hazırlanmıştır.
+
+> [!NOTE]
+> Proje adı **The Tech Cortex** olarak güncellenmiştir. GitHub depo adresi ve yerel klasör isimleri geriye dönük uyumluluk adına `data-science-ml-obsidian-vault` olarak kalmıştır.
 
 ---
 
