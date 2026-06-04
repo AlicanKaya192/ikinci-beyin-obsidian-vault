@@ -8,11 +8,23 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-Güç analizi, istatistiksel testin gerçek bir etkiyi ne olasılıkla tespit edebileceğini hesaplar. Araştırma tasarımında yeterli örneklem büyüklüğünü belirlemek için kullanılır.
+İstatistiksel güç analizi, bir hipotez testinin gerçekte var olan bir etkiyi veya farkı doğru bir şekilde tespit edebilme kapasitesini (1-β) ölçer. Araştırma tasarımının başlangıcında yapılan bu analiz, hem etik nedenlerle (gereksiz denek kullanımını önlemek) hem de maliyet etkinliği açısından kritik olan optimum örneklem büyüklüğünün belirlenmesini sağlar. Güç düzeyi; seçilen anlamlılık düzeyi (α), beklenen etki büyüklüğü (effect size) ve örneklem sayısı (n) arasındaki hassas dengeye dayanır. Yetersiz güçle yapılan çalışmalar, gerçekte anlamlı olan farkları kaçırma (Tip II hata) riski taşırken, aşırı büyük örneklemler pratik önemi olmayan çok küçük farkları bile istatistiksel olarak anlamlı çıkararak yanıltıcı olabilir.
 
 ---
 
 ## 🧠 Detay
+
+### Güç Analizi Bileşenleri Arasındaki İlişki
+
+```mermaid
+graph LR
+    A["Anlamlılık Düzeyi (α)"] <--> B["Örneklem Büyüklüğü (n)"]
+    B <--> C["Test Gücü (1-β)"]
+    C <--> D["Etki Büyüklüğü (Effect Size)"]
+    D <--> A
+    
+    style B fill:#f9f,stroke:#333,stroke-width:2px
+```
 
 ### Dört Temel Parametre
 

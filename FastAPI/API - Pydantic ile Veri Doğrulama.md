@@ -7,9 +7,21 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-Pydantic, Python tip ipuçlarını kullanarak veri doğrulama ve serileştirme sağlar. FastAPI'ın kalbidir. Request/response şemalarını tanımlar, otomatik validasyon yapar.
+Pydantic, Python tip ipuçlarını (type hints) kullanarak veri doğrulama ve ayarların yönetimini sağlayan, FastAPI'nin temelini oluşturan güçlü bir kütüphanedir. Gelen HTTP isteklerini (Request) tanımlanan şemalara göre otomatik olarak doğrular, hatalı veri girişlerinde anlamlı hata mesajları döner ve veriyi Python nesnelerine dönüştürür. Aynı zamanda API yanıtlarının (Response) yapısını belirleyerek sadece istenen verilerin dış dünyaya açılmasını sağlar. Bu süreç, veri güvenliğini artırırken geliştiricilere tip güvenliği ve otomatik dökümantasyon (Swagger) avantajı sağlar.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["HTTP Request (JSON)"] --> B["Pydantic Model Parsing"]
+    B --> C{Veri Geçerli mi?}
+    C -- "Hayır" --> D["422 Unprocessable Entity (Hata Mesajı)"]
+    C -- "Evet" --> E["Python Nesnesi (BaseModel)"]
+    E --> F["Business Logic / ML Tahmin"]
+    F --> G["Response Data"]
+    G --> H["Pydantic Serialization"]
+    H --> I["HTTP Response (JSON)"]
+```
 
 ### Temel Pydantic Modeli
 ```python

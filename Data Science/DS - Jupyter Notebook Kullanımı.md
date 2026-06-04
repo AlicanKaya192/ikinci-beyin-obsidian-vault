@@ -7,9 +7,19 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-Jupyter Notebook, kod, görselleştirme ve açıklamayı bir arada sunan interaktif bir geliştirme ortamıdır. Veri bilimi projelerinin vazgeçilmez aracıdır.
+Jupyter Notebook, veri bilimcilerin kod yazma, görselleştirme oluşturma ve zengin metin açıklamaları ekleme işlemlerini tek bir "yaşayan doküman" içerisinde birleştirmesine olanak tanıyan interaktif bir geliştirme ortamıdır. Projelerin sadece ham koddan ibaret kalmamasını, aynı zamanda bir hikaye anlatıcılığı ve reproducibility (tekrarlanabilirlik) sunmasını sağlar. Hücre bazlı çalışma yapısı sayesinde kod parçacıklarını bağımsız olarak test etmeye, hataları hızla ayıklamaya ve büyük veri setlerini her seferinde yeniden yüklemeden analiz etmeye imkan tanır. Veri biliminde prototipleme, eğitim materyalleri oluşturma ve karmaşık analizleri adım adım dökümante etme süreçlerinde endüstri standardı haline gelmiş vazgeçilmez bir araçtır.
 
 ## 🧠 Detay
+
+### Jupyter Çalışma Mimarisi
+```mermaid
+graph LR
+    A["Kullanıcı Arayüzü (Browser)"] -- "Kod Gönderir" --> B["Kernel (Python/R/Julia)"]
+    B -- "İşlem Yapar" --> C["Sistem Kaynakları / Bellek"]
+    C -- "Sonuç Döner" --> B
+    B -- "Çıktı & Görsel Gönderir" --> A
+    A -- "Durumu Kaydeder" --> D[".ipynb Dosyası (JSON)"]
+```
 
 ### Kurulum ve Başlatma
 ```bash

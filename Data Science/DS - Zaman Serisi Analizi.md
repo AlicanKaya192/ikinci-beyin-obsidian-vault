@@ -7,9 +7,22 @@ zorluk: ileri
 ---
 
 ## 📌 Özet
-Zaman serisi, zamana bağlı sıralı gözlemlerden oluşan veri tipidir. Trend, mevsimsellik ve gürültü bileşenlerinden oluşur. Satış tahmini, borsa analizi gibi alanlarda kullanılır.
+Zaman serisi analizi, verilerin zaman içindeki değişimini ve bu değişimdeki kalıpları inceleyen istatistiksel bir yöntemdir. Satış tahmini, borsa hareketleri ve hava durumu gibi geleceğe yönelik öngörü gerektiren alanlarda temel taşı niteliğindedir. Zaman serisi verileri; trend, mevsimsellik, döngüsellik ve rassal gürültü gibi bileşenlere ayrılarak analiz edilir. Bu alandaki çalışmalar, geçmiş verilerdeki örüntüleri yakalayarak kurumların stratejik planlama yapmasına ve riskleri minimize etmesine olanak tanır.
 
 ## 🧠 Detay
+
+### 📈 Zaman Serisi Analiz Akışı
+
+```mermaid
+graph TD
+    A["Zaman Serisi Verisi"] --> B["Ön İşleme"]
+    B --> C["Bileşen Ayrıştırma"]
+    B --> D["Durağanlık Kontrolü"]
+    C --> C1["Trend, Mevsimsellik, Gürültü"]
+    D --> D1["ADF Testi, Fark Alma"]
+    B --> E["Özellik Türetme"]
+    E --> E1["Lag (Gecikme), Rolling Mean"]
+```
 
 ### DatetimeIndex Oluşturma
 ```python

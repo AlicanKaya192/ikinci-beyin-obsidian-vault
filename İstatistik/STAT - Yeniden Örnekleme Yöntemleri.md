@@ -8,11 +8,27 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-Yeniden örnekleme yöntemleri, parametrik varsayımlara gerek kalmadan standart hata, güven aralığı ve p-değeri hesaplamak için verinin kendisini kullanır.
+Yeniden örnekleme (resampling) yöntemleri, modern istatistiğin en güçlü araçlarından biri olup, verinin dağılımı hakkında katı varsayımlarda bulunmadan (non-parametrik) çıkarım yapmamızı sağlar. Bu yöntemler, mevcut veri setinden tekrar tekrar alt örneklemler çekerek istatistiksel tahmin edicilerin değişkenliğini, standart hatasını ve güven aralıklarını hesaplar. Özellikle analitik formüllerin bulunmadığı karmaşık istatistiklerde veya örneklem büyüklüğünün küçük olduğu durumlarda Bootstrap ve Jackknife gibi teknikler hayat kurtarıcıdır. Ayrıca, model geçerliliğini test etmek için Cross-Validation ve hipotez testleri için Permütasyon testleri, veriye dayalı kararların doğruluğunu ampirik olarak kanıtlamak için yaygın olarak kullanılır.
 
 ---
 
 ## 🧠 Detay
+
+### Yeniden Örnekleme Stratejileri
+
+```mermaid
+graph TD
+    A["Veri Seti (n Gözlem)"] --> B["Bootstrap"]
+    A --> C["Jackknife"]
+    
+    B -- "Yerine koyarak çekim" --> B1["B adet rastgele örneklem (n)"]
+    B1 --> B2["İstatistik hesapla"]
+    B2 --> B3["Standart Hata & GA"]
+    
+    C -- "Sırayla bir gözlemi çıkar" --> C1["n adet deterministik örneklem (n-1)"]
+    C1 --> C2["İstatistik hesapla"]
+    C2 --> C3["Varyans & Sapma Tahmini"]
+```
 
 ### Bootstrap ⭐
 

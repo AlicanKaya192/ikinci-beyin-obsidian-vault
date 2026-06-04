@@ -7,9 +7,21 @@ zorluk: Başlangıç
 ---
 
 ## 📌 Özet
-Python'da listeler, farklı türdeki öğeleri sıralı depolayan, değiştirilebilir (mutable) veri yapılarıdır. Köşeli parantez `[]` kullanılarak tanımlanırlar.
+Python'da listeler, birden fazla öğeyi tek bir değişken altında saklamamıza olanak tanıyan, sıralı ve değiştirilebilir (mutable) veri yapılarının temelini oluşturur. Farklı veri türlerini (int, str, float, bool ve hatta diğer listeleri) bir arada barındırabilen bu yapılar, `[]` parantezleri ile tanımlanır ve elemanlarına sıfır tabanlı indeksleme sistemiyle erişilir. Listeler üzerinde dinamik olarak eleman ekleme, silme, güncelleme ve dilimleme (slicing) işlemleri kolaylıkla gerçekleştirilebilir. Programlama süreçlerinde veri kümelerini yönetmek, döngülerle üzerinde işlem yapmak ve karmaşık veri organizasyonları kurmak için en sık başvurulan araçlardan biridir.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Python Listeleri"] --> B["Özellikler"]
+    A --> C["Temel İşlemler"]
+    B --> B1["Sıralı (Ordered)"]
+    B --> B2["Değiştirilebilir (Mutable)"]
+    B --> B3["Heterojen (Farklı Tipler)"]
+    C --> C1["Ekleme (append, insert, extend)"]
+    C --> C2["Silme (pop, remove, clear)"]
+    C --> C3["Erişim (Indexing, Slicing)"]
+```
 
 Python'da listeler, farklı veri tiplerini (sayılar, metinler, hatta başka listeler) bir arada tutabilen son derece esnek yapılardır.
 

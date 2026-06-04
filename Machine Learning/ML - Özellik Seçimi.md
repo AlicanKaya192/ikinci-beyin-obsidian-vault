@@ -7,9 +7,31 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Özellik seçimi, modeli en çok etkileyen değişkenleri seçerek gereksiz özellikleri eler. Performansı artırır, overfitting'i azaltır ve modeli hızlandırır.
+Özellik seçimi (Feature Selection), makine öğrenmesi modelinin performansını doğrudan etkileyen en kritik adımlardan biridir. Bu işlem, hedef değişkeni tahmin etmede en yüksek bilgiye sahip özellikleri seçerek gereksiz, gürültülü veya fazla korele olan özellikleri eler. Bu sayede model karmaşıklığı düşer, overfitting (aşırı öğrenme) riski azalır ve hem eğitim hem de tahmin süreci ciddi oranda hızlanır.
 
 ## 🧠 Detay
+
+### 🗺️ Özellik Seçimi Yöntemleri
+
+```mermaid
+graph TD
+    A["Özellik Seçimi İhtiyacı"] --> B{"Veri Boyutu ve Kaynak"}
+    
+    B -- Çok Büyük / Sınırlı Kaynak --> C["Filter Yöntemleri"]
+    C --> C1["İstatistiksel Testler (ANOVA, Chi2)"]
+    C --> C2["Korelasyon Analizi"]
+    C --> C3["Varyans Eşiği (Variance Threshold)"]
+    
+    B -- Ortalam Veri / Bol Kaynak --> D{"Model İçi Performans Önemli mi?"}
+    
+    D -- Evet --> E["Wrapper Yöntemleri"]
+    E --> E1["RFE (Recursive Feature Elimination)"]
+    E --> E2["Forward/Backward Selection"]
+    
+    D -- Hayır (Algoritma Kendi Seçsin) --> F["Embedded Yöntemler"]
+    F --> F1["Lasso Regresyon (L1 Regularization)"]
+    F --> F2["Ağaç Tabanlı Modeller (Random Forest, XGBoost)"]
+```
 
 ### Filter Yöntemleri (Model Bağımsız)
 ```python

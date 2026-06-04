@@ -8,11 +8,24 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-Takımın büyüklüğüne, deployment sıklığına ve ürün olgunluğuna göre farklı Git stratejileri seçilir. Git Flow, GitHub Flow, Trunk-Based Development ve Mono-repo yaklaşımları.
+Ekip çalışmasında Git kullanımı, sadece komutları bilmekten öte, projenin hızı ve kalitesini doğrudan etkileyen stratejik bir karardır. Git Flow, GitHub Flow ve Trunk-Based Development gibi farklı iş akışı modelleri, projenin büyüklüğüne ve yayınlanma (deployment) sıklığına göre optimize edilmiş çözümler sunar. Bu rehberde, hangi stratejinin hangi durumlarda avantaj sağladığı, sürekli entegrasyon (CI) süreçlerinin bu modellere nasıl entegre edileceği ve mono-repo gibi modern yaklaşımların nasıl yönetileceği detaylıca ele alınmıştır. Doğru Git stratejisi seçimi, geliştirme süreçlerini standartlaştırarak karmaşayı önler ve ekiplerin odak noktasını kod kalitesine kaydırmasını sağlar.
 
 ---
 
 ## 🧠 Detay
+
+### Git İş Akış Modelleri Karşılaştırması
+
+```mermaid
+graph TD
+    A["Proje Gereksinimleri"] --> B{"Yayınlanma Sıklığı?"}
+    B -- "Sürümsel (Aylar/Haftalar)" --> C["Git Flow"]
+    B -- "Sık (Günlük)" --> D["GitHub Flow"]
+    B -- "Çok Sık (Anlık)" --> E["Trunk-Based Development"]
+    C --> C1["Daha Güvenli / Daha Karmaşık"]
+    D --> D1["Hızlı / Basit"]
+    E --> E1["Yüksek Hız / Feature Flag Gerekli"]
+```
 
 ### Git Flow
 

@@ -7,9 +7,24 @@ zorluk: ileri
 ---
 
 ## 📌 Özet
-Generator'lar, değerleri tek seferde değil birer birer üreten özel fonksiyonlardır. `yield` anahtar kelimesi kullanılır. Büyük veri setlerinde bellek tasarrufu sağlar.
+Generator'lar (Üreteçler), Python'da bellek verimliliğini maksimize eden özel fonksiyonlardır. Klasik fonksiyonlar tüm sonucu bir kerede (`return`) belleğe yükleyip dönerken, generator'lar `yield` ifadesini kullanarak değerleri talep edildikçe (lazy evaluation) üretirler. Bu yöntem, özellikle milyonlarca satırlık büyük dosyaların okunması veya sonsuz sayı dizilerinin oluşturulması gibi senaryolarda belleği şişirmeden verimli veri işleme imkanı sağlar. Bir generator nesnesi bir kez tüketildikten sonra tekrar kullanılamaz, bu da onu 'tek yönlü' bir veri akışı haline getirir.
 
 ## 🧠 Detay
+
+```mermaid
+graph LR
+    subgraph "Normal Fonksiyon"
+        A["Fonksiyon Başlat"] --> B["Tüm Veriyi Üret"]
+        B --> C["Belleğe Kaydet (Liste)"]
+        C --> D["Return ile Döndür"]
+    end
+    subgraph "Generator Fonksiyon"
+        E["Fonksiyon Başlat"] --> F["yield ile Tek Değer Üret"]
+        F --> G["Durumu Dondur (Suspend)"]
+        G -- "next() Çağrısı" --> F
+        F --> H["Bitti (StopIteration)"]
+    end
+```
 
 ### Generator Fonksiyon
 ```python

@@ -8,11 +8,24 @@ zorluk: ⭐⭐⭐⭐
 
 ## 📌 Özet
 
-Tahmin teorisi, bilinmeyen parametreleri veriden nasıl tahmin etmemiz gerektiğini inceler. İyi bir tahmincinin özellikleri: yansızlık, tutarlılık, etkinlik ve yeterlilik.
+Tahmin teorisi, gözlemlenen veri örneklerinden yararlanarak bir popülasyonun bilinmeyen parametrelerini (ortalama, varyans vb.) en doğru şekilde belirleme sanatıdır. Bir tahmincinin kalitesi; yansızlık (hataların ortalamasının sıfır olması), tutarlılık (örneklem büyüdükçe gerçek değere yaklaşması) ve etkinlik (en düşük varyansa sahip olması) gibi matematiksel kriterlerle ölçülür. Maksimum Olabilirlik Tahmini (MLE) ve Momentler Yöntemi (MOM) gibi teknikler, veri biliminde model parametrelerini optimize etmek için kullanılan temel araçlardır. Bu teori, modern istatistiksel çıkarımın ve makine öğrenmesi algoritmalarının temelindeki 'en iyi tahmin' mantığını kuramsallaştırır.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Tahmin Teorisi Bileşenleri"] --> B["Tahmin Yöntemleri"]
+    A --> C["Tahminci Kalite Kriterleri"]
+    B --> B1["MLE (Maksimum Olabilirlik)"]
+    B --> B2["MOM (Momentler Yöntemi)"]
+    B --> B3["Bayesyen Tahmin (MAP)"]
+    C --> C1["Yansızlık (E[θ̂] = θ)"]
+    C --> C2["Tutarlılık (n → ∞ Yakınsama)"]
+    C --> C3["Etkinlik (Minimum Varyans - Cramer-Rao)"]
+    C --> C4["Yeterlilik (Verideki Tüm Bilgi)"]
+```
 
 ### Tahminci Özellikleri
 

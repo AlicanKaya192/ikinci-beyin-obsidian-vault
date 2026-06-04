@@ -7,9 +7,18 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-`pip`, Python'un paket yöneticisidir. PyPI (Python Package Index) üzerindeki binlerce kütüphaneyi yüklemek, güncellemek ve kaldırmak için kullanılır.
+pip, Python programlama dili için standart paket yönetim sistemidir ve PyPI (Python Package Index) deposundaki geniş kütüphane ekosistemine erişim sağlar. Geliştiricilerin projelerinde ihtiyaç duyduğu harici bağımlılıkları kolayca yüklemesine, sürüm kontrolü yapmasına ve kaldırmasına olanak tanıyarak yazılım geliştirme sürecini hızlandırır. 'requirements.txt' dosyası aracılığıyla proje bağımlılıklarının dökümünü çıkararak, kodun farklı makinelerde veya sunucularda aynı kütüphane sürümleriyle tutarlı bir şekilde çalışmasını garanti eder.
 
 ## 🧠 Detay
+
+```mermaid
+graph LR
+    User["Geliştirici"] -- "pip install" --> CLI["pip CLI"]
+    CLI -- "İndir" --> PyPI["PyPI (Paket Deposu)"]
+    PyPI -- "Paket Dosyaları" --> CLI
+    CLI -- "Yükle" --> Env["Python Ortamı (Site-Packages)"]
+    Env -- "Listele" --> Req["requirements.txt"]
+```
 
 ### Temel pip Komutları
 ```bash

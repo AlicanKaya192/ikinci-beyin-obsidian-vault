@@ -7,9 +7,19 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-DataFrame üzerinde sıralama, gruplama, pivot, apply gibi ileri düzey işlemler veri analizinin çekirdeğini oluşturur.
+Pandas DataFrame işlemleri, ham verinin anlamlı içgörülere dönüştürüldüğü veri manipülasyon aşamasının merkezinde yer alır. `sort_values` ile veriyi düzenlemek, `groupby` ile kategorik bazda özet istatistikler üretmek ve `pivot_table` ile veriyi farklı boyutlarda incelemek, karmaşık analizleri basit komutlarla yapmayı sağlar. `apply` fonksiyonu sayesinde özel iş mantıkları (business logic) sütunlara satır bazında kolayca uygulanırken, `rename` ve `drop` gibi metodlarla veri setinin yapısı optimize edilir. Bu araçlar, veri bilimcilerin veri setlerini keşfetmesini, temizlemesini ve modellemeye hazırlamasını sağlayan en güçlü yeteneklerdir.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["DataFrame İşlemleri"] --> B["Manipülasyon"]
+    A --> C["Gruplama ve Analiz"]
+    A --> D["Dönüştürme"]
+    B --> B1["sort_values(), rename(), drop()"]
+    C --> C1["groupby(), agg(), pivot_table()"]
+    D --> D1["apply(), value_counts(), unique()"]
+```
 
 ### Sıralama
 ```python

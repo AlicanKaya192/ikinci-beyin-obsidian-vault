@@ -7,9 +7,21 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Gerçek dünya verisi her zaman kirlidir. Eksik değerler, tekrar eden satırlar, yanlış tipler ve tutarsız formatlar veri analizinin önündeki en büyük engeldir.
+Veri temizleme, veri biliminin en zaman alıcı fakat en kritik aşamasıdır; çünkü modellerin kalitesi doğrudan beslendikleri verinin temizliğine bağlıdır ("çöp içeri, çöp dışarı" prensibi). Pandas, eksik değerlerin tespiti (`isnull`), doldurulması (`fillna`) veya silinmesi (`dropna`) gibi işlemleri esnek parametrelerle yönetmeyi sağlar. Ayrıca, veri setindeki gürültüyü azaltmak için tekrar eden satırların ayıklanması, veri tiplerinin standardize edilmesi ve metin verilerinin temizlenmesi gibi rutin işlemler Pandas fonksiyonlarıyla otomatikleştirilebilir. IQR gibi yöntemlerle aykırı değerlerin (outliers) tespiti ve yönetilmesi, istatistiksel analizlerin ve makine öğrenmesi modellerinin doğruluğunu garanti altına alır.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Veri Temizleme Akışı"] --> B["Eksik Veri (Missing Data)"]
+    A --> C["Gürültü ve Tekrar (Noise/Duplicated)"]
+    A --> D["Format ve Tip (Format/Type)"]
+    B --> B1["isnull(), fillna(), dropna()"]
+    C --> C1["duplicated(), drop_duplicates()"]
+    D --> D1["astype(), to_datetime(), str.strip()"]
+    A --> E["Aykırı Değer (Outliers)"]
+    E --> E1["IQR, Z-Score, Clipping"]
+```
 
 ### Eksik Değer Tespiti
 ```python

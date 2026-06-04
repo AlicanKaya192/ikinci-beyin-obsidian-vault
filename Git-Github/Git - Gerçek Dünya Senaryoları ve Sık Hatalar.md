@@ -8,11 +8,28 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-"Oh Shit, Git!" — En sık yapılan hatalar ve kurtarma yöntemleri. Yanlış commit, yanlış branch, silinen veri, push edilen şifre ve diğer acil durumlar.
+Git kullanırken yapılan hatalar, geliştirme sürecinin doğal bir parçasıdır ancak bu hatalardan veri kaybı yaşamadan geri dönmek kritik bir beceridir. Bu rehber, yanlış branch'te commit yapmaktan, hassas verilerin (secret) yanlışlıkla uzak depoya gönderilmesine kadar geniş bir yelpazedeki gerçek dünya senaryolarını ve çözüm yollarını kapsamaktadır. `reflog`, `reset`, `amend` ve `filter-repo` gibi araçların kullanımıyla, en karmaşık hata durumlarında bile kontrolün nasıl yeniden sağlanacağı adım adım açıklanmıştır. Ayrıca, sunulan iyi uygulama (best practices) örnekleri, bu hataların henüz oluşmadan engellenmesini sağlayacak bir disiplin kazandırmayı amaçlar.
 
 ---
 
 ## 🧠 Detay
+
+### Git Hata Kurtarma Karar Ağacı
+
+```mermaid
+graph TD
+    A["Hata Yapıldı veya Panik Durumu"] --> B{"Hata Türü Nedir?"}
+    B -- "Yanlış Commit Mesajı" --> C["git commit --amend"]
+    B -- "Yanlış Branch'te Commit" --> D["git reset --soft + git stash"]
+    B -- "Reset ile Veri Kaybı" --> E["git reflog ile Commit Bul"]
+    B -- "Merge/Rebase Çıkmazı" --> F["git merge/rebase --abort"]
+    B -- "Secret/Şifre Push Edildi" --> G["git filter-repo + Şifre Değişimi"]
+    C --> H["Sorun Giderildi"]
+    D --> H
+    E --> H
+    F --> H
+    G --> H
+```
 
 ### Hata 1: Yanlış Branch'te Commit
 

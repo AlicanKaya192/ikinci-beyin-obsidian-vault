@@ -7,9 +7,21 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-Demetler (tuple), listelere benzer ancak **değiştirilemez (immutable)** veri yapılarıdır. Parantez `()` ile tanımlanırlar. Sabit kalmalarını istediğimiz verilerde kullanılır.
+Python'da Demetler (Tuple), sıralı ve değiştirilemez (immutable) veri koleksiyonlarıdır. Listelerden en temel farkı, bir kez oluşturulduktan sonra elemanlarının eklenememesi, silinememesi veya güncellenememesidir. Bu yapısal sabitlik, tuple'ları veritabanı kayıtları veya koordinatlar gibi değişmemesi gereken veri grupları için güvenli kılar. Ayrıca, değiştirilemez yapıları sayesinde listelere göre daha az bellek tüketirler ve daha yüksek erişim hızı sunarlar.
 
 ## 🧠 Detay
+
+```mermaid
+graph LR
+    A["Veri Yapıları"] --> B["Liste (List)"]
+    A --> C["Demet (Tuple)"]
+    B --> B1["Mutable (Değiştirilebilir)"]
+    B --> B2["[] Köşeli Parantez"]
+    B --> B3["Dinamik Veri"]
+    C --> C1["Immutable (Değiştirilemez)"]
+    C --> C2["() Normal Parantez"]
+    C --> C3["Sabit/Güvenli Veri"]
+```
 
 ### Demet Oluşturma
 ```python

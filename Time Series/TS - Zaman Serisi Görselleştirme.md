@@ -7,9 +7,29 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-Zaman serisi analizinde görselleştirme ilk ve en kritik adımdır. Trend, mevsimsellik ve anomaliler görsel incelemeyle tespit edilir.
+Zaman serisi analizinde görselleştirme, verinin hikayesini anlamanın ilk ve en kritik adımıdır. Sadece rakamlara bakarak fark edilemeyen uzun vadeli trendler, periyodik mevsimsel döngüler ve veri setindeki uç değerler (anomaliler) görsel inceleme sayesinde gün yüzüne çıkar. Çizgi grafiklerinden ısı haritalarına, lag plotlardan kutu grafiklerine kadar farklı teknikler kullanılarak verinin otokorelasyon yapısı ve durağanlığı hakkında ön bilgi edinilir. İyi bir görselleştirme stratejisi, model seçimi öncesinde hipotez kurmayı kolaylaştırır ve sonuçların paydaşlara etkili bir şekilde sunulmasını sağlar.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Zaman Serisi Görselleştirme"] --> B["Zaman Alanı (Time Domain)"]
+    A --> C["Frekans Alanı (Frequency Domain)"]
+    A --> D["İstatistiksel Dağılım"]
+    
+    B --> B1["Çizgi Grafik (Trend & Mevsimsellik)"]
+    B --> B2["Hareketli Ortalama (Yumuşatma)"]
+    
+    C --> C1["ACF / PACF Plot (Otokorelasyon)"]
+    C --> C2["Lag Plot (Gecikmeli İlişki)"]
+    
+    D --> D1["Seasonal Box Plot (Aylık/Haftalık Dağılım)"]
+    D --> D2["Isı Haritası (Yıllık Yoğunluk)"]
+    
+    B1 --> E["Trend Takibi"]
+    C1 --> F["Model Parametre Belirleme"]
+    D1 --> G["Mevsimsellik Tespiti"]
+```
 
 ### Temel Çizgi Grafik
 ```python

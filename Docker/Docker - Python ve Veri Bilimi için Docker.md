@@ -8,11 +8,38 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-Python web uygulamaları ve veri bilimi araçları için hazır Docker yapılandırmaları. FastAPI, Django, Jupyter Notebook ve MLflow için production-ready Dockerfile ve Compose şablonları.
+Python tabanlı web uygulamaları ve veri bilimi projelerinde Docker, bağımlılık karmaşasını çözen ve "benim makinemde çalışıyordu" sorununu ortadan kaldıran standart bir dağıtım formatı sunar. FastAPI ve Django gibi modern web çatılarından, Jupyter Notebook ve MLflow gibi veri bilimi ekosisteminin temel taşlarına kadar her araç, Docker container'ları sayesinde izole ve ölçeklenebilir bir yapıya kavuşur. Özellikle büyük veri kütüphaneleri ve karmaşık sistem bağımlılıkları gerektiren ML projelerinde, Docker imajları geliştirme sürecini hızlandırırken canlı ortamda (production) tutarlılık sağlar. Bu rehber, Python projelerini production-ready (üretim düzeyinde) Dockerize etmek için gerekli olan en iyi uygulamaları, güvenlik ayarlarını ve orkestrasyon şablonlarını içermektedir.
 
 ---
 
 ## 🧠 Detay
+
+### Python ve ML Docker Ekosistemi
+
+```mermaid
+graph TD
+    subgraph "Uygulama Türleri"
+        A["Web API (FastAPI/Django)"]
+        B["Veri Bilimi (Jupyter/Lab)"]
+        C["MLOps (MLflow/Airflow)"]
+    end
+
+    subgraph "Konteyner Katmanları"
+        D["Base Image (Python-Slim/Alpine)"]
+        E["Runtime Dependencies (pip/conda)"]
+        F["Application Code & Models"]
+    end
+
+    subgraph "Yardımcı Servisler"
+        G["Veritabanı (PostgreSQL/Redis)"]
+        H["Nesne Depolama (S3/Minio)"]
+    end
+
+    A & B & C --> D
+    D --> E --> F
+    F <--> G
+    F <--> H
+```
 
 ### FastAPI Uygulaması
 

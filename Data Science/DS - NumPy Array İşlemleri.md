@@ -7,9 +7,19 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-NumPy array'leri yeniden şekillendirme, birleştirme, filtreleme ve vektörel işlemler NumPy'ın en güçlü yönleridir.
+NumPy array'leri üzerinde gerçekleştirilen yeniden şekillendirme, birleştirme ve filtreleme işlemleri, veri bilimi iş akışlarının temel taşlarını oluşturur. `reshape` ile verinin boyutlarını değiştirmek, `concatenate` veya `vstack/hstack` ile farklı veri setlerini bir araya getirmek, büyük veri gruplarını yönetmeyi kolaylaştırır. Boolean maskeleme ve fancy indexing yöntemleri, karmaşık veri setleri içerisinden istenen alt kümeleri yüksek performansla çekebilmeyi sağlar. Ayrıca, broadcasting mekanizması sayesinde farklı şekillerdeki array'ler arasında matematiksel işlemler otomatik ve verimli bir şekilde yürütülür.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["NumPy Array İşlemleri"] --> B["Şekillendirme (Reshaping)"]
+    A --> C["Birleştirme (Merging)"]
+    A --> D["Filtreleme (Filtering)"]
+    B --> B1["reshape(), flatten(), T"]
+    C --> C1["concatenate(), vstack(), hstack()"]
+    D --> D1["Boolean Masking, Fancy Indexing"]
+```
 
 ### Şekillendirme
 ```python

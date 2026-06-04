@@ -7,9 +7,27 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Overfitting eğitim verisini ezberleme, underfitting ise yeterince öğrenememe sorunudur. Bias-Variance dengesi bu iki uç arasında optimal noktayı bulmayı gerektirir.
+Overfitting (Aşırı Öğrenme), bir modelin eğitim verisindeki gürültüyü ve tesadüfi detayları asıl kalıplardan ayıramayarak 'ezberlemesi' durumudur; bu durum modelin yeni verilere karşı genelleme yeteneğini yok eder. Underfitting (Eksik Öğrenme) ise modelin veri setindeki temel yapıları kavrayamayacak kadar basit kalması ve hem eğitim hem de test verisinde düşük performans göstermesi anlamına gelir. Makine öğrenmesi projelerindeki temel hedef, 'Bias-Variance' dengesini kurarak modelin ne çok basit (yüksek bias) ne de çok karmaşık (yüksek variance) olmasını sağlamak, böylece hatayı minimize eden optimal karmaşıklık noktasını bulmaktır.
 
 ## 🧠 Detay
+
+### Model Performans ve Karmaşıklık İlişkisi
+```mermaid
+graph TD
+    Start["Model Karmaşıklığı (Complexity)"] --> Low["Düşük Karmaşıklık"]
+    Start --> High["Yüksek Karmaşıklık"]
+    
+    Low --> Under["Underfitting (Eksik Öğrenme)"]
+    Under --> HB["Yüksek Bias / Düşük Varyans"]
+    HB --> Poor1["Eğitim ve Test Hatası Yüksek"]
+    
+    High --> Over["Overfitting (Aşırı Öğrenme)"]
+    Over --> HV["Yüksek Varyans / Düşük Bias"]
+    HV --> Poor2["Eğitim Hatası Düşük / Test Hatası Yüksek"]
+    
+    Start --> Optimal["Optimal Nokta (Sweet Spot)"]
+    Optimal --> Good["İyi Genelleme Performansı"]
+```
 
 ### Bias-Variance Trade-off
 ```

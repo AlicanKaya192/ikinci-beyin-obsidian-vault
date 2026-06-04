@@ -7,9 +7,19 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Weights & Biases (W&B), deney takibi, model görselleştirme ve hiperparametre optimizasyonu için gelişmiş bir platform. MLflow'a güçlü bir alternatif, özellikle derin öğrenme projelerinde yaygın.
+Weights & Biases (W&B), makine öğrenmesi ve özellikle derin öğrenme projelerinde deneylerin (experiment tracking) takibi, görselleştirilmesi ve yönetimi için tasarlanmış kapsamlı bir platformdur. Araştırmacıların eğitim süreçlerindeki her bir adımı gerçek zamanlı olarak izlemesine, hiperparametre optimizasyonunu (Sweeps) akıllı yöntemlerle otomatize etmesine ve model çıktılarını (Artifacts) detaylı raporlar halinde sunmasına olanak tanır. MLflow'a kıyasla daha zengin bir görsel arayüz ve takım içi işbirliği özellikleri sunan W&B, modellerin versiyonlanmasından performans karşılaştırmasına kadar tüm yaşam döngüsünü bulut tabanlı veya yerel sunucularda yönetmeyi sağlar. Ayrıca, tek bir satır kodla entegre olabilen kütüphane desteği sayesinde geliştirme hızını önemli ölçüde artırır.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Veri Bilimci (Python Script/Notebook)"] -->|wandb.init / wandb.log| B["W&B Bulut / Yerel Sunucu"]
+    B -->|Görselleştirir| C["W&B Dashboard (Gerçek Zamanlı)"]
+    B -->|Yönetir| D["Artifacts (Dataset & Model)"]
+    E["Hiperparametre Kontrolü"] -->|wandb.sweep| A
+    B -->|Paylaşır| F["Raporlar & Takım İşbirliği"]
+    G["Model Registry"] --- D
+```
 
 ### Kurulum
 ```bash

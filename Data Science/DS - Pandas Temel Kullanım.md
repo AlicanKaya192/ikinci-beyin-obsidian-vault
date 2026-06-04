@@ -7,9 +7,21 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-Pandas, veri analizi için Python'un en temel kütüphanesidir. Tablo şeklindeki verileri (DataFrame) kolayca okumak, temizlemek ve analiz etmek için kullanılır.
+Pandas, Python programlama dilinde yüksek performanslı, esnek ve kolay kullanımlı veri yapıları sağlayan bir veri analizi kütüphanesidir. Temel veri yapıları olan `Series` (tek boyutlu) ve `DataFrame` (iki boyutlu tablo) nesneleri, heterojen verilerin bir arada saklanmasını ve üzerinde karmaşık sorguların (filtreleme, seçme, dönüşüm vb.) saniyeler içinde yürütülmesini sağlar. Pandas, eksik veri yönetimi, veri hizalama ve farklı veri kaynaklarından okuma/yazma gibi gelişmiş özellikleriyle modern veri bilimi projelerinin vazgeçilmez bir parçasıdır. Veri keşfi aşamasında `head`, `describe` ve `info` gibi metodlar, veri setinin genel yapısını hızlıca kavramamıza yardımcı olur.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Pandas Temelleri"] --> B["Veri Yapıları"]
+    A --> C["Veri Keşfi"]
+    A --> D["Seçme ve Filtreleme"]
+    B --> B1["Series (1B)"]
+    B --> B2["DataFrame (2B)"]
+    C --> C1["head(), info(), describe()"]
+    D --> D1["loc[], iloc[]"]
+    D --> D2["Boolean Indexing, isin()"]
+```
 
 ### Kurulum ve Import
 ```python

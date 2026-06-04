@@ -8,11 +8,21 @@ zorluk: ⭐⭐⭐⭐
 
 ## 📌 Özet
 
-Survival analizi (hayatta kalma analizi), bir olayın gerçekleşmesine kadar geçen süreyi inceler. Tıbbi araştırmalarda ölüm süresi, mühendislikte arıza süresi, iş dünyasında müşteri kaybı (churn) analizinde kullanılır.
+Survival analizi (hayatta kalma analizi), belirli bir başlangıç noktasından ilgilenilen bir olayın (ölüm, makine arızası, abonelik iptali vb.) gerçekleşmesine kadar geçen 'bekleme süresini' inceleyen istatistiksel yöntemler bütünüdür. Bu analizin en ayırt edici özelliği, çalışma süresince olayın henüz gerçekleşmediği veya takibin koptuğu 'sansürlenmiş' verileri (censored data) etkin bir şekilde işleyebilmesidir. Tıpta tedavi etkinliği ölçümünden, bankacılıkta kredi temerrüt analizine ve mühendislikte güvenilirlik hesaplamalarına kadar geniş bir uygulama alanına sahiptir. Kaplan-Meier eğrileri ile olasılık tahmini yapılırken, Cox regresyonu ile risk faktörlerinin süre üzerindeki etkileri nicelleştirilir.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Survival Analizi Akışı"] --> B["Veri Hazırlama (Zaman ve Olay Değişkeni)"]
+    B --> C["Tanımlayıcı Analiz (Kaplan-Meier Eğrisi Tahmini)"]
+    C --> D["Grup Karşılaştırmaları (Log-Rank Testleri)"]
+    D --> E["Regresyon Modelleme (Cox Proportional Hazards)"]
+    E --> F["Varsayım Kontrolü (PH Varsayımı ve Artık Analizi)"]
+    F --> G["Sonuç Yorumlama (Hazard Ratio Analizi)"]
+```
 
 ### Temel Kavramlar
 

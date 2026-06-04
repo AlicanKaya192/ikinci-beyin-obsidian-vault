@@ -7,9 +7,23 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Azure Databricks, Apache Spark tabanlı büyük veri işleme ve ML platformudur. Delta Lake ile ACID işlemleri, MLflow ile deney takibi entegre gelir. Petabyte ölçeğinde veri için idealdir.
+Azure Databricks, Apache Spark üzerine kurulu, büyük veri analitiği ve makine öğrenmesi süreçlerini hızlandırmak için optimize edilmiş tam yönetilen bir bulut platformudur. Delta Lake teknolojisi aracılığıyla "Lakehouse" mimarisini destekleyerek; veri göllerinin esnekliği ve düşük maliyetini, veri ambarlarının sunduğu ACID işlem garantisi ve güvenilirlik ile birleştirir. MLflow entegrasyonu sayesinde deney takibi ve model yönetimini kolaylaştırırken, Azure ekosistemindeki Data Lake Storage ve Power BI gibi servislerle kusursuz bir uyum içinde çalışır. Petabayt ölçeğindeki verileri işleyebilen otomatik ölçeklenebilir hesaplama kümeleri (clusters) ve işbirlikçi çalışma ortamı (notebooks), Databricks'i modern veri mühendisliği ve büyük ölçekli yapay zeka projeleri için endüstri lideri bir çözüm haline getirir.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Azure Data Lake Storage (Gen2)"] --> B["Azure Databricks (Lakehouse)"]
+    subgraph "Databricks Temel Bileşenleri"
+    B1["Apache Spark (Dağıtık Hesaplama)"] --- B
+    B2["Delta Lake (ACID & Zaman Yolculuğu)"] --- B
+    B3["MLflow (Deney & Model Takibi)"] --- B
+    B4["Unity Catalog (Veri Yönetişimi)"] --- B
+    end
+    B -- "İşlenmiş Veri" --> C["Power BI / Dashboard"]
+    B -- "Model Kaydı" --> D["Azure Machine Learning"]
+    E["Veri Bilimciler / Analistler"] -- "Notebooks & SQL" --> B
+```
 
 ### Temel Kavramlar
 ```

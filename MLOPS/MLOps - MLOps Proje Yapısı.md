@@ -7,9 +7,21 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-İyi organize edilmiş bir MLOps proje yapısı; tekrarlanabilirlik, işbirliği ve bakım kolaylığı sağlar. Cookiecutter-datascience şablonu yaygın tercihlerden biridir.
+Başarılı bir MLOps stratejisinin temeli, standartlaştırılmış ve ölçeklenebilir bir proje klasör yapısından geçer. Bu yapı, veri bilimcilerin modellerini geliştirirken kullandıkları deneysel ortamlar (notebooks) ile mühendislerin bu modelleri canlıya aldığı üretim ortamı (src/app) arasındaki boşluğu doldurur. İyi tasarlanmış bir hiyerarşi, veri versiyonlama (DVC), model takibi (MLflow) ve sürekli entegrasyon (CI/CD) süreçlerinin sorunsuz çalışmasını sağlayarak projeyi kişiye bağımlı olmaktan çıkarır. Ayrıca, konfigürasyon dosyaları (params.yaml) ve otomasyon araçları (Makefile) aracılığıyla tüm yaşam döngüsünün merkezi ve tekrarlanabilir bir şekilde yönetilmesine imkan tanır.
 
 ## 🧠 Detay
+
+```mermaid
+graph LR
+    A["Veri (data/)"] --> B["Deney (notebooks/)"]
+    B --> C["Üretim Kodu (src/)"]
+    C --> D["API / Servis (app/)"]
+    E["Konfigürasyon (configs/)"] -.-> C
+    E -.-> D
+    F["Testler (tests/)"] --> G["CI/CD Pipeline"]
+    C --> H["Model (model/)"]
+    H --> D
+```
 
 ### Önerilen Proje Yapısı
 ```

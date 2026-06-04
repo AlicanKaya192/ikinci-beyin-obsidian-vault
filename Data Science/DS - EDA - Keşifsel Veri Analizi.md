@@ -7,19 +7,30 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Keşifsel Veri Analizi (EDA), modellemeye geçmeden önce verinin yapısını, dağılımını ve ilişkilerini anlamak için yapılan sistematik incelemedir.
+Keşifsel Veri Analizi (EDA), veri bilimcinin modelleme aşamasına geçmeden önce veriyi derinlemesine "tanıma" ve "konuşturma" sürecidir. Bir dedektiflik çalışmasına benzeyen bu süreçte; verinin genel yapısı incelenir, eksik veya aykırı değerler tespit edilir ve değişkenler arasındaki gizli ilişkiler hem istatistiksel özetler hem de görselleştirme teknikleriyle ortaya çıkarılır. EDA, kurulan hipotezlerin doğrulanmasını sağladığı gibi, veri setindeki yapısal hataların erkenden fark edilmesine ve daha güçlü öznitelik mühendisliği (feature engineering) kararları alınmasına bilimsel bir temel oluşturur. İyi yapılandırılmış bir EDA süreci, projenin geri kalanındaki model başarısının ve stratejik çıkarımların en büyük belirleyicisidir.
 
 ## 🧠 Detay
 
+### EDA İş Akışı
+```mermaid
+graph TD
+    A["Ham Veri Seti"] --> B["Veri Yapısını İncele (Shape, Dtypes)"]
+    B --> C["Eksik & Aykırı Değer Tespiti"]
+    C --> D["Tek Değişkenli Analiz (Dağılımlar)"]
+    D --> E["Çok Değişkenli Analiz (Korelasyon, Scatter)"]
+    E --> F["Hedef Değişken İlişkisi"]
+    F --> G["Özellik Mühendisliği & Modelleme Kararları"]
+```
+
 ### EDA Adımları
 ```
-1. Veriye genel bakış
-2. Eksik değer analizi
-3. Betimsel istatistik
-4. Dağılım analizi
-5. Kategorik değişken analizi
-6. Korelasyon analizi
-7. Aykırı değer tespiti
+1. Veriye genel bakış (Pandas metodları)
+2. Eksik değer analizi (Missing values)
+3. Betimsel istatistik (Describe)
+4. Dağılım analizi (Histogram, Boxplot)
+5. Kategorik değişken analizi (Barplot, Counts)
+6. Korelasyon analizi (Heatmap)
+7. Aykırı değer tespiti (Outliers)
 ```
 
 ### 1. Genel Bakış

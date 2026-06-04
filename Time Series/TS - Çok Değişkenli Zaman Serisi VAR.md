@@ -7,9 +7,31 @@ zorluk: ileri
 ---
 
 ## 📌 Özet
-VAR (Vector AutoRegression), birden fazla birbiriyle ilişkili zaman serisini aynı anda modeller. Her değişken, tüm değişkenlerin gecikmeli değerlerine bağlıdır.
+VAR (Vector AutoRegression), birden fazla zaman serisinin birbirleriyle olan etkileşimlerini analiz etmek için kullanılan ileri düzey bir ekonometrik modeldir. Geleneksel tek değişkenli modellerin aksine VAR, her bir değişkenin hem kendi geçmiş değerlerine hem de modeldeki diğer tüm değişkenlerin geçmiş değerlerine bağlı olduğunu varsayar. Bu yapı, değişkenler arasındaki çift yönlü ilişkilerin (feedback loops) yakalanmasını sağlar. Modelin başarısı için tüm serilerin durağan olması kritik bir ön koşuldur ve değişkenler arası nedensellik ilişkileri Granger testi ile sorgulanabilir.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["VAR Modeli Yapısı"] --> B["Değişken 1 (Y1,t)"]
+    A --> C["Değişken 2 (Y2,t)"]
+    A --> D["Değişken n (Yn,t)"]
+    
+    B --> B1["Y1,t-1 ... Y1,t-p"]
+    B --> B2["Y2,t-1 ... Y2,t-p"]
+    B --> B3["Yn,t-1 ... Yn,t-p"]
+    
+    C --> C1["Y1,t-1 ... Y1,t-p"]
+    C --> C2["Y2,t-1 ... Y2,t-p"]
+    C --> C3["Yn,t-1 ... Yn,t-p"]
+    
+    E["Analiz Araçları"] --> F["Granger Nedensellik"]
+    E --> G["Etki-Tepki Fonksiyonu (IRF)"]
+    E --> H["Varyans Ayrışımı (FEVD)"]
+    
+    F --> I["Değişkenler arası yönlü ilişki"]
+    G --> J["Şokların sisteme yayılması"]
+```
 
 ### VAR Modeli
 ```python

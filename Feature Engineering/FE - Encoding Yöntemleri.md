@@ -14,6 +14,23 @@ Makine öğrenmesi modelleri sayısal veri bekler. Kategorik değişkenleri say�
 
 ## 🧠 Detay
 
+### 🗺️ Encoding Karar Ağacı (Yol Haritası)
+
+```mermaid
+graph TD
+    A["Kategorik Değişken"] --> B{"Sıralı mı? <br/> Ordinal?"}
+    B -- Evet --> C["Ordinal Encoding"]
+    B -- Hayır --> D{"Kardinalite <br/> (Kategori Sayısı)"}
+    D -- Düşük < 15 --> E["One-Hot Encoding"]
+    D -- Yüksek >= 15 --> F{"Model Türü?"}
+    F -- Doğrusal / NN --> G["Target Encoding / Binary Encoding"]
+    F -- Ağaç Tabanlı --> H["Label Encoding / Target Encoding / Frequency"]
+    G --> I["Smoothing Uygula!"]
+    H --> J["Overfitting Kontrolü"]
+```
+
+---
+
 ### Encoding Seçim Rehberi
 
 ```

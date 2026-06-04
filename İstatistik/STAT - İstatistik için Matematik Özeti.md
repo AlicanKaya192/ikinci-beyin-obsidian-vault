@@ -8,11 +8,30 @@ zorluk: ⭐⭐
 
 ## 📌 Özet
 
-İstatistik ve olasılık teorisi için gerekli temel matematik: türev, integral, logaritma, limit ve optimizasyon. Hızlı başvuru notu.
+İstatistiksel yöntemlerin ve olasılık kuramının temelinde yatan matematiksel yapılar, veriden anlam çıkarma sürecinin formel dilini oluşturur. Bu özet, olasılık yoğunluk fonksiyonlarının integrallerinden, en çok olabilirlik tahminlemesindeki (MLE) optimizasyon süreçlerine kadar kullanılan kalkülüs, logaritma ve kombinatorik kavramlarını kapsar. Özellikle türev ve gradyan kavramları model eğitiminde, integral ise beklenen değer ve olasılık hesaplamalarında hayati rol oynar. Taylor serileri ve Gamma/Beta fonksiyonları gibi ileri düzey araçlar, karmaşık dağılımların yaklaşıklanması ve istatistiksel çıkarımların analitik olarak çözülmesinde sıklıkla karşımıza çıkar.
 
 ---
 
 ## 🧠 Detay
+
+### İstatistiğin Matematiksel Temelleri
+
+```mermaid
+graph TD
+    A["İstatistik için Matematik"] --> B["Kalkülüs"]
+    A --> C["Lineer Cebir"]
+    A --> D["Analiz & Fonksiyonlar"]
+    
+    B --> B1["Türev (Optimizasyon & MLE)"]
+    B --> B2["İntegral (Beklenen Değer & Olasılık)"]
+    
+    C --> C1["Matrisler (Regresyon & Çok Değişkenli)"]
+    C --> C2["Özvektörler (PCA & LDA)"]
+    
+    D --> D1["Logaritma (Olabilirlik & Entropi)"]
+    D --> D2["Gamma/Beta (Dağılımlar)"]
+    D --> D3["Kombinatorik (Sayma & Kesikli Olasılık)"]
+```
 
 ### Logaritma ve Üstel Fonksiyon
 

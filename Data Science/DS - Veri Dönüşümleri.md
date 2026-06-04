@@ -7,9 +7,22 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Veri dönüşümleri, ham veriyi makine öğrenmesi algoritmalarına uygun hale getirmek için yapılan ölçekleme, kodlama ve dönüştürme işlemleridir.
+Veri dönüşümleri, ham verinin makine öğrenmesi modellerinin anlayabileceği ve matematiksel olarak işleyebileceği bir forma sokulması sürecidir. Bu aşamada yapılan normalizasyon, ölçeklendirme ve kategorik değişken kodlama işlemleri, modellerin doğruluğunu ve eğitim hızını doğrudan etkiler. Aykırı değerlerin yönetilmesi ve değişkenlerin aynı ölçeğe getirilmesi, özellikle mesafe tabanlı algoritmalarda hayati önem taşır. Doğru dönüşüm stratejisi, modelin veri içindeki gerçek desenleri öğrenmesini sağlayan temel hazırlıktır.
 
 ## 🧠 Detay
+
+### 🛠️ Veri Dönüşüm Türleri
+
+```mermaid
+graph TD
+    A["Ham Veri"] --> B["Veri Dönüşümü"]
+    B --> C["Sayısal Ölçekleme"]
+    B --> D["Kategorik Kodlama"]
+    B --> E["Dağılım Dönüştürme"]
+    C --> C1["StandardScaler, MinMaxScaler"]
+    D --> D1["One-Hot, Label, Ordinal"]
+    E --> E1["Log, Karekök Dönüşümü"]
+```
 
 ### Sayısal Ölçekleme
 

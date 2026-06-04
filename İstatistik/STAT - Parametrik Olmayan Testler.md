@@ -8,11 +8,24 @@ zorluk: ⭐⭐
 
 ## 📌 Özet
 
-Parametrik olmayan testler, normal dağılım ve eşit varyans gibi parametrik varsayımlar karşılanmadığında kullanılır. Verinin sıralamasını (rank) kullanır, ham değerleri değil.
+Parametrik olmayan (non-parametric) testler, verilerin belirli bir dağılıma (örneğin normal dağılım) uyma zorunluluğu bulunmadığı durumlarda kullanılan esnek istatistiksel yöntemlerdir. Bu testler, verilerin ham değerlerinden ziyade sıralama (rank) değerlerini analiz ederek aykırı değerlere ve çarpık dağılımlara karşı direnç gösterir. Özellikle küçük örneklemlerde, sıralı (ordinal) verilerde veya varyans homojenliği sağlanamadığında t-testi ve ANOVA gibi parametrik yöntemlere en güçlü alternatifleri sunar. Mann-Whitney U, Wilcoxon ve Kruskal-Wallis gibi testler, modern veri analizinde varsayımların ihlal edildiği senaryolarda güvenilir sonuçlar elde etmek için kritik öneme sahiptir.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Parametrik Olmayan Test Seçimi"] --> B{"Veri Dağılımı Normal mi?"}
+    B -- "Hayır / Bilinmiyor" --> C{"Karşılaştırılacak Grup Sayısı?"}
+    C -- "2 Grup" --> D{"Gruplar Bağımsız mı?"}
+    D -- "Evet" --> D1["Mann-Whitney U Testi"]
+    D -- "Hayır" --> D2["Wilcoxon İşaretli Sıra Testi"]
+    C -- "3+ Grup" --> E{"Gruplar Bağımsız mı?"}
+    E -- "Evet" --> E1["Kruskal-Wallis H Testi"]
+    E -- "Hayır" --> E2["Friedman Testi"]
+    B -- "Evet" --> F["Parametrik Testleri Kullan (t-test, ANOVA)"]
+```
 
 ### Ne Zaman Parametrik Olmayan Test Kullanılır?
 

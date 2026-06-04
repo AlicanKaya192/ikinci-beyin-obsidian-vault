@@ -7,9 +7,23 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-Azure SQL Database, tam yönetilen ilişkisel veritabanı servisi. Cosmos DB ise küresel dağıtımlı, çok modelli NoSQL veritabanı. Python ile her ikisine de kolayca bağlanılır.
+Azure SQL Database, ilişkisel veri iş yükleri için yüksek erişilebilirlik, otomatik yamalama ve yapay zeka destekli performans optimizasyonu sunan tam yönetilen bir platform servisidir (PaaS). Azure Cosmos DB ise modern NoSQL iş yükleri için tasarlanmış; SQL, MongoDB ve Cassandra gibi farklı API'leri destekleyen, küresel ölçekte dağıtılmış ve milisaniye altı gecikme sunan çok modelli bir veritabanı servisidir. Bu iki servis, bulut tabanlı uygulamalar için kapsamlı bir veri stratejisi sunar: Azure SQL, güçlü tutarlılık ve karmaşık tablolar arası ilişkiler gerektiren yapılandırılmış veriler için idealdir; Cosmos DB ise gerçek zamanlı yüksek hacimli veri akışları ve dünya çapında yaygınlık gerektiren senaryolarda öne çıkar. `pyodbc` ve `azure-cosmos` gibi Python kütüphaneleriyle olan derin entegrasyonları, geliştiricilerin veri yoğunluklu uygulamaları ve makine öğrenmesi boru hatlarını güvenli ve performanslı bir şekilde inşa etmelerine olanak tanır.
 
 ## 🧠 Detay
+
+```mermaid
+graph LR
+    A["Uygulama / ML Modeli"] --> B["Azure Veri Katmanı"]
+    subgraph "Veritabanı Seçenekleri"
+    B --> C["Azure SQL (Relational)"]
+    B --> D["Cosmos DB (NoSQL)"]
+    C --- C1["Yapılandırılmış Tablolar"]
+    D --- D1["JSON / Doküman / Graph"]
+    end
+    C -- "Güçlü Tutarlılık (ACID)" --> A
+    D -- "Küresel Ölçek & Hız" --> A
+    E["Azure AD / Entra ID"] -- "RBAC Erişimi" --> B
+```
 
 ### Azure SQL Database
 

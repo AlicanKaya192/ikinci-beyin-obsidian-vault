@@ -8,11 +8,27 @@ zorluk: ⭐⭐⭐⭐
 
 ## 📌 Özet
 
-Zaman serisi analizi, belirli aralıklarla zaman içinde ölçülen verilerin incelenmesidir. Trend, mevsimsellik, döngü ve düzensizlik bileşenlerine ayrışır.
+Zaman serisi analizi, verilerin belirli zaman aralıklarıyla sıralı bir şekilde gözlemlendiği durumlarda, geçmişteki desenleri kullanarak geleceğe yönelik tahminler yapmayı amaçlayan istatistiksel bir disiplindir. Bu analizde veriler; uzun vadeli eğilimi gösteren trend, periyodik tekrarları ifade eden mevsimsellik, ekonomik dalgalanmaları yansıtan döngü ve öngörülemeyen rastgele bileşenlere ayrıştırılır. Analiz sürecinin en kritik adımlarından biri durağanlık testidir; çünkü ARIMA gibi modeller, serinin ortalama ve varyansının zaman boyunca sabit kalmasını gerektirir. Doğru modelleme stratejisi, otokorelasyon fonksiyonları (ACF/PACF) ve bilgi kriterleri (AIC/BIC) kullanılarak belirlenir ve modelin başarısı RMSE veya MAPE gibi hata metrikleriyle ölçülür.
 
 ---
 
 ## 🧠 Detay
+
+### Zaman Serisi Analiz İş Akışı
+
+```mermaid
+graph TD
+    A["Zaman Serisi Verisi"] --> B["Görselleştirme & Ayrıştırma"]
+    B --> C{"Durağan mı?"}
+    C -- "Hayır" --> D["Fark Alma / Dönüşüm"]
+    D --> C
+    C -- "Evet" --> E["ACF/PACF Analizi"]
+    E --> F["Model Seçimi (ARIMA/SARIMA)"]
+    F --> G["Parametre Tahmini"]
+    G --> H["Tanısal Kontrol (Artık Analizi)"]
+    H -- "Yetersiz" --> F
+    H -- "Yeterli" --> I["Gelecek Tahmini (Forecasting)"]
+```
 
 ### Zaman Serisi Bileşenleri
 

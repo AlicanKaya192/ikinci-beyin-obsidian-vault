@@ -7,9 +7,31 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-IAM (Identity and Access Management), bulut kaynaklarına kimlerin, neye erişebileceğini kontrol eder. En az ayrıcalık prensibi ile güvenli ML altyapısı kurulur.
+Kimlik ve Erişim Yönetimi (IAM), bulut bilişim ortamındaki kaynakların güvenliğini sağlamak için kullanılan en kritik katmandır ve "kimin, hangi kaynağa, hangi koşullar altında erişebileceğini" merkezi olarak tanımlar. "En Az Ayrıcalık Prensibi" (Least Privilege) çerçevesinde, kullanıcılara ve otonom servislere yalnızca işlerini yapmaları için gereken minimum yetkiler verilerek sistemin saldırı yüzeyi önemli ölçüde daraltılır. Özellikle veri bilimi projelerinde, hassas veri göllerine, veritabanlarına ve ML modellerine erişim; roller (Roles), politikalar (Policies) ve Managed Identity gibi modern mekanizmalarla yönetilerek veri güvenliği ve uyumluluk standartları korunur. Bulut güvenliği, altyapı sağlayıcısı ile kullanıcı arasında paylaşılan bir sorumluluk modeli üzerine kuruludur ve bu modelin doğru anlaşılması güvenli bir mimari için vazgeçilmezdir.
 
 ## 🧠 Detay
+
+### 🛡️ Paylaşımlı Sorumluluk Modeli
+
+```mermaid
+graph TD
+    subgraph "Müşteri Sorumluluğu (Buluttaki Güvenlik)"
+        A["Veri Güvenliği"]
+        B["Uygulama Güvenliği"]
+        C["Kimlik ve Erişim Yönetimi (IAM)"]
+        D["İşletim Sistemi (IaaS)"]
+    end
+    
+    subgraph "Sağlayıcı Sorumluluğu (Bulutun Güvenliği)"
+        E["Fiziksel Sunucular"]
+        F["Ağ Altyapısı"]
+        G["Veri Merkezi Güvenliği"]
+        H["Sanallaştırma Katmanı"]
+    end
+    
+    A & B & C & D --- Sağ Çizgisi["Güvenlik Sınırı"]
+    Sağ Çizgisi --- E & F & G & H
+```
 
 ### AWS IAM
 

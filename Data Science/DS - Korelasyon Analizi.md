@@ -7,9 +7,27 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Korelasyon, iki değişken arasındaki doğrusal ilişkinin yönünü ve gücünü ölçer. -1 ile +1 arasında değer alır. Nedensellik değil, ilişki gösterir.
+Korelasyon analizi, iki veya daha fazla değişken arasındaki istatistiksel ilişkinin yönünü, gücünü ve anlamlılığını belirlemek için kullanılan temel bir yöntemdir. Değişkenler arasındaki doğrusal bağımlılığı ölçen korelasyon katsayısı -1 (tam ters yönlü ilişki) ile +1 (tam aynı yönlü ilişki) arasında değer alırken, 0 değeri değişkenler arasında doğrusal bir bağ olmadığını simgeler. Veri biliminde bu analiz; hedef değişkeni etkileyen en güçlü öznitelikleri belirlemek, modellerde sapmaya yol açabilecek çoklu doğrusallık (multicollinearity) sorunlarını tespit etmek ve veri setindeki yapısal bağımlılıkları anlamak için kritiktir. Ancak analiz sürecinde "korelasyonun nedensellik olmadığı" (correlation is not causation) prensibi daima akılda tutulmalı ve p-değeri ile istatistiksel anlamlılık kontrol edilmelidir.
 
 ## 🧠 Detay
+
+### Korelasyon Yöntemi Seçimi
+```mermaid
+graph TD
+    A["Korelasyon Analizi"] --> B["Veri Tipi & Dağılım?"]
+    B --> C["Pearson"]
+    B --> D["Spearman"]
+    B --> E["Kendall"]
+    
+    C --> C1["Sürekli Değişkenler & Normal Dağılım"]
+    C --> C2["Sadece Doğrusal İlişkileri Ölçer"]
+    
+    D --> D1["Sıralı (Ordinal) veya Normal Dağılmayan"]
+    D --> D2["Monotonik (Doğrusal Olmayan) İlişkiler"]
+    
+    E --> E1["Küçük Veri Setleri & Çok Sayıda Aynı Değer"]
+    E --> E2["Aykırı Değerlere Karşı En Dirençli"]
+```
 
 ### Pearson Korelasyonu
 ```python

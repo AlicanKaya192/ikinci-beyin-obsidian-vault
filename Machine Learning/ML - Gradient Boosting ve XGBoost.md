@@ -7,11 +7,24 @@ zorluk: ileri
 ---
 
 ## 📌 Özet
-Gradient Boosting, zayıf modelleri sıralı şekilde birleştirerek güçlü bir model oluşturan ensemble yöntemidir. XGBoost ve LightGBM en popüler implementasyonlarıdır.
+Gradient Boosting, zayıf modelleri (genellikle sığ karar ağaçları) birbirine eklemleyerek (additive) çok güçlü bir topluluk (ensemble) modeli oluşturan, modern veri biliminin en başarılı algoritmalarından biridir. Bu yöntemin temel prensibi, her yeni ağacın bir önceki adımda yapılan hataları (artıklar/residuals) minimize etmeye odaklanmasıdır. XGBoost ise bu süreci paralel hesaplama kapasitesi, gelişmiş düzenlileştirme (regularization) teknikleri ve donanım optimizasyonları ile çok daha hızlı ve verimli hale getirmiş halidir. Özellikle tablo tipi verilerde model başarısı ve hızı nedeniyle endüstri standardı olarak kabul edilir.
 
 ## 🧠 Detay
 
+### Gradient Boosting Çalışma Mantığı
+```mermaid
+graph LR
+    A["Veri Seti"] --> T1["Karar Ağacı 1"]
+    T1 --> E1["Hata 1 (Artıklar)"]
+    E1 --> T2["Karar Ağacı 2 (Hatayı Öğren)"]
+    T2 --> E2["Hata 2 (Yeni Artıklar)"]
+    E2 --> T3["Karar Ağacı 3"]
+    T3 --> FN["..."]
+    FN --> RES["Final Tahmin = T1 + LR*T2 + LR*T3 + ..."]
+```
+
 ### Scikit-learn GradientBoosting
+Gradyan artırma algoritmasının standart implementasyonudur. Parametre ayarı hassastır.
 ```python
 from sklearn.ensemble import GradientBoostingClassifier
 

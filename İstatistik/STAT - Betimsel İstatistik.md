@@ -8,11 +8,26 @@ zorluk: ⭐⭐
 
 ## 📌 Özet
 
-Betimsel istatistik, veri setini özetleyen ve açıklayan ölçütlerin hesaplanmasıdır. Merkezi eğilim ölçüleri (ortalama, medyan, mod) ve yayılım ölçüleri (varyans, standart sapma, IQR) ana araçlardır.
+Betimsel istatistik, bir veri setindeki temel özellikleri sayısal ölçütler ve grafiksel yöntemlerle özetlemek, düzenlemek ve açıklamak için kullanılan temel bir istatistik dalıdır. Verinin merkezini belirleyen eğilim ölçüleri (ortalama, medyan, mod) ile verinin ne kadar yayıldığını gösteren yayılım ölçüleri (varyans, standart sapma, çeyrekler arası aralık) bu alanın ana yapı taşlarını oluşturur. Çıkarımsal istatistiğin aksine, betimsel istatistik sadece eldeki veriyi tanımlamaya odaklanır ve örneklemden anakütleye yönelik bir tahmin yürütmez. Bu analizler, veri setindeki aykırı değerleri, dağılımın şeklini ve değişkenler arasındaki temel örüntüleri anlamak için ilk ve en kritik adımdır.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Betimsel İstatistik"] --> B["Merkezi Eğilim Ölçüleri"]
+    A --> C["Yayılım (Dağılım) Ölçüleri"]
+    A --> D["Şekil Ölçüleri"]
+    B --> B1["Ortalama"]
+    B --> B2["Medyan"]
+    B --> B3["Mod"]
+    C --> C1["Varyans / Standart Sapma"]
+    C --> C2["Ranj (Aralık)"]
+    C --> C3["IQR (Çeyrekler Arası Fark)"]
+    D --> D1["Çarpıklık (Skewness)"]
+    D --> D2["Basıklık (Kurtosis)"]
+```
 
 ### Merkezi Eğilim Ölçüleri
 

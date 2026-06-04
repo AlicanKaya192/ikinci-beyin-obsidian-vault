@@ -7,9 +7,21 @@ zorluk: ileri
 ---
 
 ## 📌 Özet
-PCA (Principal Component Analysis), yüksek boyutlu veriyi daha az boyuta indirgerken maksimum varyansı korur. Görselleştirme, gürültü azaltma ve özellik sıkıştırma için kullanılır.
+Temel Bileşen Analizi (PCA), yüksek boyutlu veri setlerindeki karmaşıklığı azaltmak için kullanılan, gözetimsiz bir boyut indirgeme tekniğidir. Verideki temel yapıyı bozmadan, değişkenler arasındaki korelasyonu kullanarak veriyi birbiriyle ilişkisiz 'Temel Bileşenlere' (Principal Components) dönüştürür ve maksimum varyansı (bilgiyi) en az sayıda bileşenle temsil etmeyi hedefler. Bu süreç, 'Boyut Laneti' (Curse of Dimensionality) ile başa çıkılmasını sağlar, model eğitim sürelerini kısaltır ve verinin iki veya üç boyutta görselleştirilmesine imkan tanır. Ancak PCA uygulanmadan önce verilerin mutlaka standartlaştırılması (Scaling) gerekir, çünkü değişkenlerin ölçekleri bileşenlerin yönünü doğrudan etkiler.
 
 ## 🧠 Detay
+
+### PCA Uygulama Adımları
+```mermaid
+graph TD
+    Start["Yüksek Boyutlu Veri (X)"] --> Scale["Standartlaştırma (StandardScaler)"]
+    Scale --> Cov["Kovaryans Matrisi Hesaplama"]
+    Cov --> Eigen["Özvektör ve Özdeğerlerin Bulunması"]
+    Eigen --> Sort["Bileşenlerin Varyansa Göre Sıralanması"]
+    Sort --> Select["Bileşen Sayısının Seçilmesi (n_components)"]
+    Select --> Project["Verinin Yeni Boyuta İzdüşümü"]
+    Project --> End["Düşük Boyutlu Veri (X_pca)"]
+```
 
 ### Temel Kullanım
 ```python

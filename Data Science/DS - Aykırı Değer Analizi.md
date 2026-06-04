@@ -7,9 +7,25 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Aykırı değerler (outlier), diğer gözlemlerden belirgin biçimde uzak olan veri noktalarıdır. Modeli olumsuz etkileyebilir; tespit edilip uygun şekilde ele alınmalıdır.
+Aykırı değer (outlier) analizi, veri ön işleme sürecinin en kritik aşamalarından biridir ve istatistiksel modellerin güvenilirliğini doğrudan etkiler. Aykırı değerler, veri setindeki genel örüntünün belirgin şekilde dışına sapan; ölçüm hatalarından, veri giriş yanlışlıklarından veya sistemdeki doğal aşırı değişkenlikten kaynaklanabilen gözlemlerdir. Bu değerlerin tespiti için IQR (Interquartile Range) ve Z-skoru gibi klasik istatistiksel yöntemlerin yanı sıra Isolation Forest veya Local Outlier Factor gibi modern makine öğrenmesi yaklaşımları da etkin bir şekilde kullanılmaktadır. Tespit edilen aykırı değerlerin silinmesi, belirli eşik değerlere baskılanması (capping/winsorizing) veya logaritmik dönüşümlerle etkisinin azaltılması, veri bilimcinin verinin doğasına ve çözüm aranan iş problemine göre vereceği kritik kararlardır.
 
 ## 🧠 Detay
+
+### Aykırı Değer İş Akışı
+```mermaid
+graph TD
+    A["Veri Seti"] --> B["Tespit Yöntemi Seçimi"]
+    B --> C["İstatistiksel (IQR, Z-Score)"]
+    B --> D["Görsel (Boxplot, Scatter)"]
+    B --> E["Algoritmik (Isolation Forest)"]
+    C & D & E --> F{"Aykırı Değer Var mı?"}
+    F -- "Evet" --> G["Ele Alma Stratejisi"]
+    F -- "Hayır" --> H["Analize Devam Et"]
+    G --> I["Silme (Dropping)"]
+    G --> J["Baskılama (Capping/Winsorizing)"]
+    G --> K["Dönüştürme (Log/Sqrt)"]
+    I & J & K --> H
+```
 
 ### IQR Yöntemi
 ```python

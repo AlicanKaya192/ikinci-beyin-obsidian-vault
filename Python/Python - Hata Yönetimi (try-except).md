@@ -7,9 +7,20 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Hata yönetimi, programın çalışma sırasında oluşan hataları yakalayıp uygun şekilde işlememizi sağlar. `try-except` bloğu ile hatalar kontrol altına alınır.
+Python'da Hata Yönetimi, programın yürütülmesi sırasında karşılaşılan beklenmedik durumların (istisnalar/exceptions) programı tamamen durdurmasını önlemek ve bu durumları kontrollü bir şekilde yönetmek için kullanılır. `try` bloğu riskli kodu içerirken, `except` blokları spesifik hata türlerini yakalayarak çözüm üretir. Hata oluşmadığında çalışan `else` ve her koşulda kaynakları serbest bırakmak (dosya kapatmak vb.) için kullanılan `finally` blokları sayesinde, dayanıklı (robust) ve kullanıcı dostu uygulamalar geliştirilir.
 
 ## 🧠 Detay
+
+```mermaid
+flowchart TD
+    A["Başlat"] --> B["try Bloğu (Riskli Kod)"]
+    B --> C{"Hata Oluştu mu?"}
+    C -->|Evet| D["except Bloğu (Hata Yakalama)"]
+    C -->|Hayır| E["else Bloğu (Başarı Durumu)"]
+    D --> F["finally Bloğu (Temizlik/Kapanış)"]
+    E --> F
+    F --> G["Program Devam Eder"]
+```
 
 ### Temel try-except
 ```python

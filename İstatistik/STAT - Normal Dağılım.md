@@ -8,11 +8,27 @@ zorluk: ⭐⭐
 
 ## 📌 Özet
 
-Normal dağılım, istatistiğin en temel dağılımıdır. Simetrik, çan şeklinde yapısıyla merkezi limit teoremine dayanan çoğu istatistiksel yöntemin temelidir.
+Normal dağılım, istatistik biliminin temel taşını oluşturan ve doğada en sık rastlanan sürekli olasılık dağılımıdır. Simetrik, çan eğrisi şeklindeki yapısı ile verilerin merkezi bir eğilim etrafında nasıl kümelendiğini gösterir ve merkezi limit teoremi aracılığıyla karmaşık sistemlerin analizinde kritik bir rol oynar. İstatistikteki t-testi, ANOVA ve doğrusal regresyon gibi birçok parametrik yöntemin temel varsayımı verilerin normal dağılmasıdır. Standartlaştırma süreci (Z-skoru) sayesinde farklı ölçeklerdeki verilerin birbiriyle karşılaştırılmasına olanak tanır.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Normal Dağılım Varsayımı"] --> B{"Veri Normal mi?"}
+    B -- "Evet" --> C["Parametrik Testler"]
+    C --> C1["t-testi"]
+    C --> C2["ANOVA"]
+    C --> C3["Pearson Korelasyonu"]
+    B -- "Hayır" --> D["Veri Dönüşümü (Log, Kök, vb.)"]
+    D --> E{"Normalleşti mi?"}
+    E -- "Evet" --> C
+    E -- "Hayır" --> F["Parametrik Olmayan Testler"]
+    F --> F1["Mann-Whitney U"]
+    F --> F2["Kruskal-Wallis"]
+    F --> F3["Spearman Korelasyonu"]
+```
 
 ### Normal Dağılımın Özellikleri
 

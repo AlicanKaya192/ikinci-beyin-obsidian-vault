@@ -7,9 +7,21 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-Döngüler, bir kod bloğunu tekrar tekrar çalıştırmak için kullanılır. Python'da `for` ve `while` olmak üzere iki tür döngü vardır.
+Python'da döngüler, belirli bir kod bloğunun belirli bir koşul altında veya bir veri koleksiyonu üzerinde tekrarlanmasını sağlayan kontrol yapılarıdır. `for` döngüsü genellikle liste, demet veya metin gibi 'yinelenebilir' (iterable) nesneler üzerinde dolaşmak için kullanılırken; `while` döngüsü belirli bir mantıksal koşul doğru olduğu sürece çalışmaya devam eder. Döngü akışını özelleştirmek için `break` (döngüyü kırma), `continue` (mevcut adımı atlama) ve `else` (döngü başarıyla biterse çalışma) gibi yardımcı anahtar kelimeler ile güçlü kontrol mekanizmaları oluşturulabilir.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Döngü Yapıları"] --> B["for Döngüsü"]
+    A --> C["while Döngüsü"]
+    B --> B1["Eleman sayısı bellidir (Iterable)"]
+    B --> B2["range, liste, string vb."]
+    C --> C1["Koşula bağlıdır"]
+    C --> C2["Koşul False olana kadar sürer"]
+    B1 --> D["break/continue Kontrolü"]
+    C1 --> D
+```
 
 ### for Döngüsü
 ```python

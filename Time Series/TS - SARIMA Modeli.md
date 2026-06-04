@@ -7,9 +7,27 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-SARIMA, ARIMA'ya mevsimsel bileşen eklenmiş halidir. SARIMA(p,d,q)(P,D,Q,s) ile hem trend hem mevsimsellik modellenir.
+SARIMA (Seasonal Autoregressive Integrated Moving Average), klasik ARIMA modelinin mevsimsellik içeren veriler için genişletilmiş bir versiyonudur. Standart (p, d, q) parametrelerine ek olarak, mevsimsel periyotlardaki AR, Fark ve MA etkilerini temsil eden (P, D, Q, s) parametre kümesini kullanır. Bu yapı sayesinde model, hem uzun vadeli trendleri hem de periyodik olarak tekrarlanan (aylık, çeyreklik veya haftalık) kalıpları aynı anda yakalayabilir. Karmaşıklığına rağmen, özellikle istatistiksel anlamlılığın ve model açıklanabilirliğinin kritik olduğu durumlarda en güçlü tahmin araçlarından biridir.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["SARIMA(p,d,q)(P,D,Q,s)"] --> B["Trend Bileşeni (p,d,q)"]
+    A --> C["Mevsimsel Bileşen (P,D,Q,s)"]
+    
+    B --> B1["p: Otoregresyon (AR)"]
+    B --> B2["d: Fark Derecesi (I)"]
+    B --> B3["q: Hareketli Ortalama (MA)"]
+    
+    C --> C1["P: Mevsimsel AR"]
+    C --> C2["D: Mevsimsel Fark"]
+    C --> C3["Q: Mevsimsel MA"]
+    C --> C4["s: Mevsim Uzunluğu"]
+    
+    B1 --> D["Trend kalıpları"]
+    C1 --> E["Periyodik kalıplar"]
+```
 
 ### SARIMA Parametreleri
 ```

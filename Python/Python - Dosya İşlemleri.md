@@ -7,9 +7,25 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Python'da dosya okuma ve yazma işlemleri `open()` fonksiyonu ile yapılır. `with` bloğu kullanımı dosyaların güvenli şekilde kapatılmasını sağlar.
+Python'da dosya işlemleri, verilerin kalıcı olarak depolanması ve okunması için `open()` fonksiyonu temel alınarak gerçekleştirilir. Dosya erişiminde en güvenli yöntem, işlem bittiğinde dosyanın otomatik olarak kapatılmasını garanti eden `with` bağlam yöneticisidir (context manager). Farklı erişim modları (`r`, `w`, `a`, `b`) sayesinde metin tabanlı veya ikili (binary) dosyalar üzerinde okuma, yazma ve ekleme işlemleri esnek bir şekilde yürütülebilirken, `os` ve `pathlib` modülleri ile dosya sistemi düzeyinde yönetim sağlanır.
 
 ## 🧠 Detay
+
+```mermaid
+flowchart TD
+    A["Dosya İşlemi Başlat"] --> B{"open() Çağrısı"}
+    B -->|'r'| C["Okuma Modu"]
+    B -->|'w'| D["Yazma Modu"]
+    B -->|'a'| E["Ekleme Modu"]
+    C --> F["Veri İşleme (Read/Iterate)"]
+    D --> G["Veri Girişi (Write)"]
+    E --> H["Sona Veri Ekleme"]
+    F --> I{"'with' bloğu kullanıldı mı?"}
+    G --> I
+    H --> I
+    I -->|Evet| J["Otomatik Kapatma (close)"]
+    I -->|Hayır| K["f.close() Gerekli!"]
+```
 
 ### Dosya Açma Modları
 | Mod | Açıklama |

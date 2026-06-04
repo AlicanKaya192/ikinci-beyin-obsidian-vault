@@ -7,9 +7,19 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Veri bilimciler için SQL, büyük veri setlerini veritabanından çekmek ve analiz etmek için temel araçtır. Pandas ile entegre çalışır.
+Veri bilimciler için SQL, veri kaynaklarına erişmek, büyük veri setlerini filtrelemek ve analiz için gerekli alt kümeleri oluşturmak için kritik bir beceridir. Veritabanı yönetim sistemleri ile kurulan bu etkileşim, verinin ham halden temizlenmiş ve yapılandırılmış hale getirilmesi sürecinin ilk adımıdır. SQLite ve SQLAlchemy gibi araçlar sayesinde Python ve Pandas ekosistemi ile tam uyumlu çalışarak veritabanı işlemlerini kolaylaştırır. Verimli sorgu yazımı, veri biliminde zaman ve kaynak tasarrufu sağlayan en temel yetkinliklerden biridir.
 
 ## 🧠 Detay
+
+### 🔄 Veri Akış Şeması
+
+```mermaid
+graph LR
+    A["SQL Veritabanı"] -- "Sorgu (SELECT)" --> B["Pandas DataFrame"]
+    B -- "Analiz / Modelleme" --> C["Sonuçlar"]
+    C -- "Depolama (to_sql)" --> A
+    B -- "Manipülasyon" --> B
+```
 
 ### SQLite ile Temel Kullanım
 ```python

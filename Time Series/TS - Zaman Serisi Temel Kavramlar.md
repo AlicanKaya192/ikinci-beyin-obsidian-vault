@@ -7,9 +7,28 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-Zaman serisi, belirli zaman aralıklarında sıralı olarak toplanan gözlemler dizisidir. Trend, mevsimsellik, döngü ve gürültü bileşenlerinden oluşur.
+Zaman serisi analizi, belirli bir zaman aralığında sıralı olarak toplanmış gözlemlerin altında yatan dinamikleri anlama ve gelecekteki değerleri öngörme sürecidir. Bir zaman serisi tipik olarak; uzun vadeli eğilimi gösteren trend, belirli periyotlarla tekrarlanan mevsimsellik, ekonomik veya iş çevrimlerini yansıtan döngü ve rastsal hatalardan oluşan gürültü bileşenlerinin birleşimidir. Bu bileşenlerin nasıl bir araya geldiğine bağlı olarak modeller toplamsal (additive) veya çarpımsal (multiplicative) olarak sınıflandırılır. Temel kavramları (gecikme, fark alma, otokorelasyon vb.) anlamak, veriyi tahmin modellerine hazırlamak için elzemdir.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Zaman Serisi Verisi (Y)"] --> B["Sistematik Bileşenler"]
+    A --> C["Sistematik Olmayan Bileşen"]
+    
+    B --> B1["Trend (Uzun Vadeli Eğilim)"]
+    B --> B2["Mevsimsellik (Periyodik Desen)"]
+    B --> B3["Döngü (Düzensiz Dalgalanma)"]
+    
+    C --> C1["Gürültü / Hata (Rastsal)"]
+    
+    A --> D["Model Tipleri"]
+    D --> D1["Toplamsal: Y = T + S + C + E"]
+    D --> D2["Çarpımsal: Y = T * S * C * E"]
+    
+    B1 --> E["Artış/Azalış"]
+    B2 --> F["Haftalık/Aylık/Yıllık"]
+```
 
 ### Zaman Serisi Bileşenleri
 ```

@@ -8,11 +8,24 @@ zorluk: ⭐⭐⭐⭐
 
 ## 📌 Özet
 
-İleri istatistiğin matematiksel temeli: moment üreten fonksiyonlar, beklenti operatörü özellikleri, ortak dağılımlar ve koşullu beklenti.
+Olasılık kuramı matematiği, istatistiksel çıkarımların ve modellemelerin üzerine inşa edildiği aksiyomatik ve analitik yapıyı sağlar. Bu ders notu, rastlantı değişkenlerinin momentlerini türeten Moment Üreten Fonksiyonlar (MGF), beklenti ve varyans operatörlerinin doğrusal özellikleri ve çok değişkenli sistemlerin analizinde kullanılan ortak dağılımları kapsamaktadır. Ayrıca, Adam's ve Eve's yasaları gibi koşullu beklenti teorileri ve rastlantı değişkenlerinin dönüşümleri için kullanılan Jacobian matrisleri gibi ileri düzey araçlar ele alınmaktadır. Bu matematiksel altyapı, merkezi limit teoremi gibi temel yasaların ispatlanması ve modern makine öğrenmesi algoritmalarının olasılıksal temellerinin anlaşılması için vazgeçilmezdir.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Olasılık Matematiği Temelleri"] --> B["Operatörler"]
+    A --> C["Fonksiyonlar"]
+    A --> D["Yasalar ve Eşitsizlikler"]
+    B --> B1["Beklenti E[X] (LOTUS Yasası)"]
+    B --> B2["Varyans Var(X) ve Kovaryans"]
+    C --> C1["Moment Üreten Fonksiyonlar (MGF)"]
+    C --> C2["Karakteristik Fonksiyonlar (MLT İspatı)"]
+    D --> D1["Adam's ve Eve's Yasaları (Koşullu)"]
+    D --> D2["Eşitsizlikler (Markov, Chebyshev, Jensen)"]
+```
 
 ### Beklenti Operatörünün Özellikleri
 

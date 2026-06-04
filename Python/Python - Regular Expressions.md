@@ -7,9 +7,21 @@ zorluk: ileri
 ---
 
 ## 📌 Özet
-Regular Expression (regex), metin içinde desen aramak, eşleştirmek ve değiştirmek için kullanılan güçlü bir araçtır. Python'da `re` modülü ile kullanılır.
+Regular Expressions (Düzenli İfadeler), karmaşık metin yığınları içerisinde belirli desenleri tanımlamak, aramak, doğrulamak ve manipüle etmek için kullanılan evrensel ve çok güçlü bir araçtır. Python'ın yerleşik 're' modülü, bu desenleri kullanarak metinlerde gelişmiş arama-bulma işlemleri yapmamıza, verileri belirli formatlara (e-posta, telefon vb.) göre doğrulamamıza ve metin parçalarını dinamik olarak değiştirmemize olanak tanır. Özellikle büyük veri setlerinin temizlenmesi, log dosyalarının analizi ve web scraping gibi süreçlerde vazgeçilmez bir yetenek sunar.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    M["Metin (Input Text)"] -- "re.search()" --> S["İlk Eşleşmeyi Bul"]
+    M -- "re.findall()" --> FA["Tüm Eşleşmeleri Liste Olarak Al"]
+    M -- "re.sub()" --> Sub["Desenle Değiştir (Replace)"]
+    M -- "re.split()" --> Spl["Desene Göre Parçala"]
+    P["Regex Deseni (Pattern)"] --> S
+    P --> FA
+    P --> Sub
+    P --> Spl
+```
 
 ### Temel Karakterler
 | Desen | Anlam |

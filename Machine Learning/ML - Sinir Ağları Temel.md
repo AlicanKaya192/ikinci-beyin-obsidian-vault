@@ -7,9 +7,32 @@ zorluk: ileri
 ---
 
 ## 📌 Özet
-Yapay sinir ağları, insan beyninden ilham alan katmanlı hesaplama yapılarıdır. Derin öğrenmenin temelidir. Görüntü, metin ve ses gibi karmaşık veriler için güçlüdür.
+Yapay Sinir Ağları (YSA), insan beyninin biyolojik yapısından ilham alan, birbirine bağlı işlem birimlerinden (nöronlar) oluşan katmanlı bir hesaplama mimarisidir. Veriden öğrenme süreci, girdilerin ağırlıklandırılarak katmanlar boyunca ilerlediği 'İleri Yayılım' (Forward Propagation) ve elde edilen hatanın geriye doğru dağıtılarak ağırlıkların güncellendiği 'Geriye Yayılım' (Backpropagation) mekanizmalarına dayanır. Derin Öğrenmenin (Deep Learning) temel yapı taşını oluşturan bu ağlar, özellikle geleneksel algoritmaların zorlandığı görüntü tanıma, doğal dil işleme ve ses analizi gibi doğrusal olmayan, karmaşık örüntülerin tespitinde benzersiz bir yeteneğe sahiptir. Modelin başarısı; katman sayısı, nöron yoğunluğu, aktivasyon fonksiyonları ve öğrenme oranı gibi hiperparametrelerin hassas bir şekilde optimize edilmesine bağlıdır.
 
 ## 🧠 Detay
+
+### Sinir Ağı Mimarisi (Feedforward)
+```mermaid
+graph LR
+    subgraph InputLayer["Girdi Katmanı"]
+        I1["X1"]
+        I2["X2"]
+        I3["Xn"]
+    end
+    
+    subgraph HiddenLayer["Gizli Katmanlar (Öğrenme)"]
+        H1["H1"]
+        H2["H2"]
+        H3["H3"]
+    end
+    
+    subgraph OutputLayer["Çıktı Katmanı"]
+        O1["Tahmin (y_hat)"]
+    end
+    
+    I1 & I2 & I3 --> H1 & H2 & H3
+    H1 & H2 & H3 --> O1
+```
 
 ### Temel Kavramlar
 ```

@@ -8,11 +8,33 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-Docker performans optimizasyonu iki ana başlıkta incelenir: Build süresi (cache kullanımı, BuildKit, layer sırası) ve runtime performansı (kaynak sınırları, image boyutu).
+Docker'da performans ve optimizasyon, hem geliştirme aşamasındaki "build" sürelerini kısaltmak hem de canlı sistemlerdeki "runtime" (çalışma zamanı) verimliliğini artırmak için kritik öneme sahiptir. Etkili bir optimizasyon stratejisi; katmanlı dosya sistemini (Layered FS) doğru kullanarak cache mekanizmasını maksimize etmek, BuildKit gibi araçlarla paralel işleme gücünden yararlanmak ve imaj boyutlarını "slim" veya "alpine" gibi minimal tabanlarla küçültmekten geçer. Ayrıca, çalışma zamanında CPU ve RAM sınırlarının doğru belirlenmesi, hem uygulama performansını korur hem de ana makinenin kaynaklarının diğer servislerle adil paylaşılmasını sağlar.
 
 ---
 
 ## 🧠 Detay
+
+### Optimizasyon Katmanları
+
+```mermaid
+graph LR
+    subgraph "Geliştirme (Build)"
+        A["Cache Verimi"] --- B["BuildKit"]
+        B --- C[".dockerignore"]
+    end
+    
+    subgraph "Depolama (Image)"
+        D["Multi-stage Build"] --- E["Minimal Base Image"]
+        E --- F["Layer Sayısı"]
+    end
+    
+    subgraph "Çalışma (Runtime)"
+        G["CPU/RAM Limitleri"] --- H["Log Yönetimi"]
+        H --- I["Health Checks"]
+    end
+    
+    Build --> Image --> Runtime
+```
 
 ### Build Cache Nasıl Çalışır?
 

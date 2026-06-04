@@ -7,9 +7,28 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Random Forest, birden fazla karar ağacının tahminlerini birleştiren (ensemble) güçlü bir algoritmadır. Overfitting'e dayanıklıdır ve özellik önemi verir.
+Random Forest (Rastgele Orman), çok sayıda karar ağacının tahminlerini birleştirerek (ensemble) tek bir güçlü tahmin modeli oluşturan, gözetimli bir makine öğrenmesi algoritmasıdır. Algoritma, hem veri setinden (Bootstrap) hem de özniteliklerden (Feature Randomness) rastgele örnekler seçerek farklı ağaçlar eğitir; sınıflandırma için çoğunluk oyunu, regresyon için ise ortalamayı alarak nihai sonucu belirler. Bu 'topluluk öğrenmesi' yaklaşımı, tekil karar ağaçlarının en büyük sorunu olan 'ezberleme' (overfitting) riskini önemli ölçüde azaltırken modelin genelleme başarısını artırır. Ayrıca, eksik verilerle başa çıkabilmesi ve hangi değişkenlerin tahmin üzerinde daha etkili olduğunu (feature importance) göstermesi bakımından veri biliminde çok yaygın kullanılan, esnek bir araçtır.
 
 ## 🧠 Detay
+
+### Random Forest Çalışma Mekanizması
+```mermaid
+graph TD
+    Data["Orijinal Veri Seti"] --> B1["Bootstrap Örnekleme 1"]
+    Data --> B2["Bootstrap Örnekleme 2"]
+    Data --> BN["Bootstrap Örnekleme N"]
+    
+    B1 --> T1["Karar Ağacı 1 (Rastgele Özellikler)"]
+    B2 --> T2["Karar Ağacı 2 (Rastgele Özellikler)"]
+    BN --> TN["Karar Ağacı N (Rastgele Özellikler)"]
+    
+    T1 & T2 & TN --> Agg["Aggregating (Birleştirme)"]
+    
+    Agg -- "Sınıflandırma" --> Vote["Çoğunluk Oyu (Voting)"]
+    Agg -- "Regresyon" --> Mean["Ortalama Alma (Averaging)"]
+    
+    Vote & Mean --> Final["Nihai Tahmin"]
+```
 
 ### Nasıl Çalışır?
 ```

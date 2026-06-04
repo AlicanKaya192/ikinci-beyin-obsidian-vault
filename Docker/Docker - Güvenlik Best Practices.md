@@ -8,11 +8,33 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-Docker güvenliği: root olmayan kullanıcı, minimal base image, secret yönetimi, ağ izolasyonu ve düzenli güvenlik taraması. Varsayılan ayarlar güvenli değildir.
+Docker güvenliği, container'ların çalıştığı ortamdan kullanılan imajların içeriğine kadar uzanan çok katmanlı bir "savunma derinliği" (defense in depth) yaklaşımı gerektirir. Varsayılan Docker yapılandırmaları genellikle kullanım kolaylığına odaklandığı için, güvenlik best practice'lerini uygulamak geliştiricinin sorumluluğundadır. Bu süreç; uygulamaları root yetkileri olmayan kullanıcılarla çalıştırmak, "slim" veya "distroless" gibi minimal saldırı yüzeyine sahip taban imajlar seçmek ve hassas verileri (secrets) asla imaj katmanlarına gömmeden güvenli yöntemlerle yönetmek gibi temel adımları içerir. Ayrıca, çalışma zamanında kaynak sınırlandırması yapmak ve dosya sistemini salt-okunur (read-only) olarak ayarlamak, olası bir sızıntının sisteme verebileceği zararı minimize eder.
 
 ---
 
 ## 🧠 Detay
+
+### Güvenlik Katmanları Mimarisi
+
+```mermaid
+graph TD
+    subgraph "1. İmaj Güvenliği"
+        A["Minimal Base Image"] --> B["Sabit Versiyon Etiketleri"]
+        B --> C["İmaj Tarama (Trivy)"]
+    end
+    
+    subgraph "2. Build ve Dağıtım"
+        D["Non-root User Tanımı"] --> E["BuildKit Secrets"]
+        E --> F[".dockerignore Kullanımı"]
+    end
+    
+    subgraph "3. Çalışma Zamanı (Runtime)"
+        G["Read-only FS"] --> H["Capability Drop"]
+        H --> I["Kaynak Sınırları (CPU/RAM)"]
+    end
+    
+    İmaj --> Build --> Çalışma
+```
 
 ### 1. Non-Root User (En Kritik!)
 

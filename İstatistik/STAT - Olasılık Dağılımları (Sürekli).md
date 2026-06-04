@@ -8,11 +8,24 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-Sürekli rastlantı değişkenleri aralıkta sonsuz değer alabilir. Olasılık yoğunluk fonksiyonu (PDF) ile tanımlanır. Normal dağılım en temel ve yaygın sürekli dağılımdır.
+Sürekli olasılık dağılımları, bir rastlantı değişkeninin belirli bir aralıkta (örneğin [0, 1] veya tüm gerçel sayılar) sonsuz sayıda değer alabildiği durumları açıklar. Bu değişkenlerin olasılıkları, tekil noktalar yerine alan hesaplamaları (integral) yoluyla, Olasılık Yoğunluk Fonksiyonu (PDF) kullanılarak belirlenir. İstatistikte en kritik dağılım olan Normal dağılımın yanı sıra, bekleme sürelerini modelleyen Üstel dağılım ve hipotez testlerinde kilit rol oynayan t, Ki-kare ve F dağılımları bu kategoride yer alır. Mühendislikten finansal risk analizine kadar geniş bir yelpazede, fiziksel ölçümlerin ve hata paylarının modellenmesinde temel teşkil eder.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Sürekli Olasılık Dağılımları"] --> B["Normal Dağılım (Gauss)"]
+    A --> C["Üstel Dağılım (Exponential)"]
+    A --> D["Hipotez Testi Dağılımları"]
+    B -- "Z = (X-μ)/σ" --> B1["Standart Normal (Z)"]
+    C -- "Olaylar arası süre" --> C1["Poisson Süreci İlişkisi"]
+    D --> D1["Student's t (Küçük Örneklem)"]
+    D --> D2["Ki-Kare (Varyans ve Uyum)"]
+    D --> D3["F-Dağılımı (ANOVA ve Regresyon)"]
+    B1 -- "Karelerin Toplamı" --> D2
+```
 
 ### Temel Kavramlar
 

@@ -7,9 +7,24 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-ARIMA gibi istatistiksel modeller yerine XGBoost, LightGBM gibi ML modelleri lag ve pencere özellikleri türetilerek kullanılabilir. Çok değişkenli problemlerde genellikle daha iyi sonuç verir.
+Zaman serisi tahmininde makine öğrenmesi (ML) yaklaşımı, klasik istatistiksel modellerin aksine, problemi bir denetimli öğrenme (supervised learning) regresyon görevine dönüştürerek çözer. Bu yöntemde en kritik adım; geçmiş değerlerden gecikme (lag), hareketli ortalama (moving average) ve takvim tabanlı (ay, gün, tatil vb.) özelliklerin türetildiği 'Feature Engineering' sürecidir. XGBoost, LightGBM ve Random Forest gibi güçlü algoritmalar; çok değişkenli verilerle çalışabilme, doğrusal olmayan karmaşık ilişkileri yakalayabilme ve dışsal faktörleri (fiyat, hava durumu, kampanya) modele kolayca dahil edebilme yetenekleri sayesinde genellikle ARIMA modellerinden daha yüksek performans sergiler. Ancak bu modellerin zaman serisi doğasına uygun şekilde 'Walk-Forward Validation' gibi özel yöntemlerle doğrulanması, aşırı öğrenmeyi (overfitting) önlemek için hayatidir.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Zaman Serisi Verisi"] --> B["Feature Engineering"]
+    B --> B1["Gecikme Özellikleri (Lags)"]
+    B --> B2["İstatistiksel Özellikler (Pencereler)"]
+    B --> B3["Takvim Özellikleri (Tarih/Saat)"]
+    B1 --> C["Veri Seti Hazırlığı (X, y)"]
+    B2 --> C
+    B3 --> C
+    C --> D["Zaman Tabanlı Bölme (TimeSplit)"]
+    D --> E["ML Model Eğitimi (XGBoost, LGBM)"]
+    E --> F["Tahmin ve Hata Analizi"]
+    F --> G["Gelecek Değer Tahmini (Recursive/Direct)"]
+```
 
 ### Zaman Serisi Feature Engineering
 ```python

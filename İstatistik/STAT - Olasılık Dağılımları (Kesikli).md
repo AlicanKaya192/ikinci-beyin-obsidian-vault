@@ -8,11 +8,23 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-Kesikli rastlantı değişkenleri sayılabilir değerler alır. Binom, Poisson ve Geometrik dağılımlar en yaygın kesikli olasılık dağılımlarıdır.
+Kesikli olasılık dağılımları, bir rastlantı değişkeninin tam sayılar gibi belirli ve sayılabilir değerler aldığı durumları modeller. Bu dağılımlar, 'Kaç kez?', 'Kaç tane?' gibi soruların yanıtlarını bulmak için kullanılır. Binom dağılımı sabit sayıda bağımsız denemedeki başarıları, Poisson dağılımı belirli bir zaman veya mekandaki nadir olayları, Geometrik dağılım ise ilk başarıya kadar geçen denemeleri temsil eder. İstatistikte kalite kontrol, lojistik ve risk yönetimi gibi alanlarda bu modellerden sıkça yararlanılır.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Kesikli Olasılık Dağılımları"] --> B["Bernoulli/Binom"]
+    A --> C["Poisson"]
+    A --> D["Geometrik/Negatif Binom"]
+    A --> E["Hipergeometrik"]
+    B -- "Uygulama" --> B1["Başarı/Başarısızlık Sayısı (n deneme)"]
+    C -- "Uygulama" --> C1["Zaman/Bölgedeki Olay Sayısı (λ oranı)"]
+    D -- "Uygulama" --> D1["Başarıya kadar gereken denemeler"]
+    E -- "Uygulama" --> E1["Yerine koymadan yapılan seçimler"]
+```
 
 ### Rastlantı Değişkeni (Random Variable)
 

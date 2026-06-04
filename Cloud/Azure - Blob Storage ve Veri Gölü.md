@@ -7,9 +7,24 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-Azure Blob Storage, yapılandırılmamış büyük veriyi (CSV, Parquet, JSON, görsel) depolamak için kullanılır. ADLS Gen2 ise büyük veri analitiği için optimize edilmiş veri gölü çözümüdür.
+Azure Blob Storage; dokümanlar, medya dosyaları ve ikili büyük nesneler (blobs) gibi yapılandırılmamış verileri devasa ölçeklerde güvenle depolamak için tasarlanmış bir nesne depolama çözümüdür. Azure Data Lake Storage (ADLS) Gen2 ise, bu sağlam altyapının üzerine hiyerarşik dizin yapısı ve büyük veri analitiği iş yükleri için özel performans optimizasyonları ekleyerek modern veri gölü (data lake) ihtiyaçlarını karşılar. Makine öğrenmesi ve veri mühendisliği süreçlerinde bu servisler; verinin ham halden (Bronze), temizlenmiş (Silver) ve analize hazır (Gold) seviyelere taşındığı "Medalyon Mimarisi"nin merkezi deposu olarak kritik bir rol oynar. Paylaşımlı Erişim İmzaları (SAS) ile güvenli veri paylaşımı ve Azure Databricks veya Pandas gibi popüler veri araçlarıyla olan doğrudan entegrasyonu, Azure bulutunda veri odaklı projelerin ölçeklenebilir omurgasını oluşturur.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Veri Kaynakları (IoT, Web, DB)"] --> B["Azure Storage Account"]
+    subgraph "Medalyon Mimarisi (Veri Gölü Yapısı)"
+    B --> C["'bronze/' (Ham Veri Katmanı)"]
+    C -- "Temizleme & Normalizasyon" --> D["'silver/' (Zenginleştirilmiş Veri)"]
+    D -- "Agregasyon & İş Mantığı" --> E["'gold/' (Analize Hazır Veri)"]
+    end
+    C --- C1["JSON / CSV / Avro"]
+    D --- D1["Parquet / Delta"]
+    E --- E1["Power BI / ML Veri Setleri"]
+    B -- "Veri Besleme" --> F["Azure Machine Learning"]
+    B -- "Dağıtık İşleme" --> G["Azure Databricks"]
+```
 
 ### Temel Kavramlar
 ```

@@ -8,11 +8,23 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-Basit doğrusal regresyon, bir bağımsız değişken (X) ile bir bağımlı değişken (Y) arasındaki doğrusal ilişkiyi modelleyen yöntemdir. En küçük kareler (OLS) yöntemiyle katsayılar tahmin edilir.
+Basit doğrusal regresyon, bir bağımlı değişken ile tek bir bağımsız değişken arasındaki sayısal ilişkiyi en iyi temsil eden doğruyu bulmayı amaçlayan istatistiksel bir tekniktir. En Küçük Kareler (OLS) yöntemi kullanılarak, gözlemlenen değerler ile tahmin edilen değerler arasındaki hata kareleri toplamı minimize edilerek eğim ve kesişim katsayıları hesaplanır. Bu model, sadece değişkenler arasındaki ilişkinin yönünü ve gücünü anlamamıza değil, aynı zamanda gelecekteki değerleri tahmin etmemize de olanak tanır. İstatistikte ekonomiden sosyal bilimlere kadar geniş bir uygulama alanına sahip olan bu yöntem, daha karmaşık çoklu regresyon modellerinin de temelini oluşturur.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Veri Toplama ve EDA (Saçılım Grafiği)"] --> B["Doğrusallık Kontrolü"]
+    B --> C["Model Kurma (OLS Tahmini)"]
+    C --> D["Varsayım Kontrolleri (LINE)"]
+    D --> E{"Varsayımlar Sağlandı mı?"}
+    E -- "Evet" --> F["Anlamlılık Testleri (t ve F testleri)"]
+    F --> G["Model Başarı Analizi (R² ve Artık Analizi)"]
+    E -- "Hayır" --> H["Veri Dönüşümü veya Alternatif Modeller"]
+    H --> C
+```
 
 ### Model
 

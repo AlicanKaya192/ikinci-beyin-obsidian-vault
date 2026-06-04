@@ -8,11 +8,27 @@ zorluk: ⭐⭐
 
 ## 📌 Özet
 
-Container'lar ephemeral (geçici) dir — silinince veri gider. Volumes ile veri kalıcı hale getirilir. Üç tür mount vardır: Volume, Bind Mount, tmpfs.
+Docker konteynerleri doğası gereği geçici (ephemeral) yapılardır; konteyner durdurulduğunda veya silindiğinde, içinde üretilen tüm veriler de kaybolur. Veri yönetim araçları, bu sorunu çözmek için veriyi konteynerin yaşam döngüsünden bağımsız hale getirerek kalıcılık sağlar. Docker, veri saklama için Named Volumes, Bind Mounts ve tmpfs Mounts olmak üzere üç ana mekanizma sunar. Named Volumes genellikle üretim ortamlarında veritabanı verilerini saklamak için tercih edilirken, Bind Mounts geliştirme aşamasında kaynak kodun konteyner içine canlı olarak yansıtılması için idealdir. Doğru veri yönetimi stratejisi, uygulamaların durum bilgisi (state) yönetimini güvenli ve verimli bir şekilde yapmasını sağlar.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Veri Kalıcılığı İhtiyacı"] --> B{"Veri Nerede Saklanmalı?"}
+    B -- "Docker Tarafından Yönetilsin" --> C["Named Volumes (Birimler)"]
+    B -- "Host Dizinine Bağlansın" --> D["Bind Mounts (Bağlamalar)"]
+    B -- "Sadece RAM'de Kalsın" --> E["tmpfs Mounts"]
+    C --> F["Üretim Ortamı (DB Verileri vb.)"]
+    D --> G["Geliştirme Ortamı (Kod Paylaşımı)"]
+    E --> H["Hassas/Geçici Veriler (Şifreler)"]
+    subgraph "Docker Veri Yönetimi"
+    C
+    D
+    E
+    end
+```
 
 ### Mount Türleri
 

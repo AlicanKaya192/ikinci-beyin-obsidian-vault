@@ -7,9 +7,27 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Prophet, Meta (Facebook) tarafından geliştirilmiş, tatil ve çoklu mevsimselliği destekleyen güçlü bir tahmin kütüphanesidir. Parametreler sezgisel, kullanımı kolaydır.
+Meta (Facebook) tarafından açık kaynak olarak sunulan Prophet kütüphanesi, zaman serisi tahmini süreçlerini hem kolaylaştırmak hem de profesyonelleştirmek için tasarlanmıştır. Özellikle doğrusal olmayan trendleri, yıllık, haftalık ve günlük mevsimselliklerle birlikte ele alabilen toplamsal (additive) bir modelleme yapısına sahiptir. Prophet'in en güçlü yanlarından biri, eksik verilerle (missing data) ve trend değişiklikleriyle (changepoints) başa çıkabilmesi, ayrıca tatil takvimlerini modele kolayca entegre edebilmesidir. Uzman bilgisine ihtiyaç duymadan, sezgisel hiperparametreler aracılığıyla iş bilgisi modele yansıtılabilir.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Prophet Model Yapısı"] --> B["Trend"]
+    A --> C["Mevsimsellik"]
+    A --> D["Tatil Etkileri"]
+    A --> E["Hata (Noise)"]
+    
+    B --> B1["Lineer veya Lojistik Büyüme"]
+    B --> B2["Otomatik Değişim Noktaları (Changepoints)"]
+    
+    C --> C1["Yıllık (Fourier Serisi)"]
+    C --> C2["Haftalık (Dummy Değişkenler)"]
+    C --> C3["Günlük"]
+    
+    D --> D1["Özel Gün Tanımlamaları"]
+    D1 --> D2["Pencere Etkisi (Önceki/Sonraki Günler)"]
+```
 
 ### Kurulum ve Veri Formatı
 ```python

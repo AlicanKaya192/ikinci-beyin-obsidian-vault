@@ -7,9 +7,22 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Matplotlib grafiklerini profesyonel görünüm için özelleştirmek; renkler, stiller, legend, annotasyon ve çoklu eksenler kullanmayı kapsar.
+Matplotlib grafik özelleştirme, ham veriyi etkileyici bir görsel hikayeye dönüştürmenin ve profesyonel kalitede raporlar sunmanın temel yoludur. Grafiklerin sadece sayısal olarak doğru olması yetmez; renk paleti seçimi, yazı tipi hiyerarşisi, lejant yerleşimi ve stratejik açıklama notları (annotations) ile izleyicinin dikkati verideki en kritik bulgulara çekilmelidir. Matplotlib'in esnek yapısı, hazır stillerin (ggplot, seaborn vb.) ötesine geçerek her bir görsel bileşenin milimetrik düzeyde kontrol edilmesine olanak tanır. Doğru bir özelleştirme süreci, teknik karmaşıklığı sadeleştirerek bulguların hem estetik bir bütünlük içinde sunulmasını hem de teknik açıdan daha kolay yorumlanmasını sağlar.
 
 ## 🧠 Detay
+
+### Matplotlib Nesne Hiyerarşisi
+```mermaid
+graph TD
+    A["Figure (Ana Katman / Çerçeve)"] --> B["Axes (Grafik Alanı / Alt Grafikler)"]
+    B --> C["Axis (X ve Y Eksenleri)"]
+    B --> D["Spines (Kenarlık Çizgileri)"]
+    B --> E["Artists (Görsel Nesneler)"]
+    E --> E1["Lines / Scatters (Veri)"]
+    E --> E2["Title / Labels (Metin)"]
+    E --> E3["Legend (Açıklama)"]
+    E --> E4["Annotations (Oklar ve Notlar)"]
+```
 
 ### Stil ve Renk
 ```python

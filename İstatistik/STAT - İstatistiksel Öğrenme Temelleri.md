@@ -8,11 +8,35 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-İstatistiksel öğrenme, X'ten Y'yi tahmin etmek için f fonksiyonunu veriden öğrenme yöntemidir. Makine öğrenmesi ile istatistiğin kesişim noktasıdır.
+İstatistiksel öğrenme, bağımsız değişkenler (X) ile bağımlı değişken (Y) arasındaki ilişkiyi temsil eden bir fonksiyonu (f) veriden hareketle tahmin etme sürecidir. Bu disiplin, hem geleceğe yönelik doğru tahminler yapmayı (prediction) hem de değişkenler arasındaki karmaşık ilişkileri anlamayı (inference) hedefler. Temel prensip, toplam hata payını oluşturan indirgelenebilir model hatalarını (bias ve varyans) minimize ederken, verideki doğal gürültüyü (indirgelemez hata) tanımaktır. Başarılı bir istatistiksel öğrenme süreci, modelin esnekliği ile yorumlanabilirliği arasındaki hassas dengenin kurulmasına ve aşırı öğrenme (overfitting) tuzağına düşmeden genelleme yeteneğinin korunmasına dayanır.
 
 ---
 
 ## 🧠 Detay
+
+### İstatistiksel Öğrenme Görevleri
+
+```mermaid
+graph TD
+    A["İstatistiksel Öğrenme"] --> B["Denetimli (Supervised)"]
+    A --> C["Denetimsiz (Unsupervised)"]
+    
+    B --> B1["Regresyon (Sürekli Y)"]
+    B --> B2["Sınıflandırma (Kategorik Y)"]
+    
+    C --> C1["Kümeleme (Gözlem Gruplama)"]
+    C --> C2["Boyut İndirgeme (Değişken Sıkıştırma)"]
+    
+    subgraph "Amaçlar"
+    D["Tahmin (Prediction)"]
+    E["Çıkarım (Inference)"]
+    end
+    
+    B1 --> D
+    B1 --> E
+    B2 --> D
+    B2 --> E
+```
 
 ### Genel Çerçeve
 

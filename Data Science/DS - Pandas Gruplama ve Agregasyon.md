@@ -7,9 +7,21 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Gruplama ve agregasyon, veriyi anlamlı kategorilere bölerek özet istatistikler üretir. SQL'deki GROUP BY'a karşılık gelir.
+Pandas'ta gruplama ve agregasyon işlemleri, büyük veri setlerini belirli kategoriler altında toplayarak verinin genel eğilimlerini özetlemek için kullanılır. `groupby` yapısı, veriyi "böl-uygula-birleştir" (split-apply-combine) stratejisiyle işleyerek toplam, ortalama ve sayım gibi temel istatistiklerin yanı sıra karmaşık fonksiyonların da gruplar üzerinde çalıştırılmasına imkan tanır. `agg` fonksiyonu ile farklı sütunlara farklı istatistikler uygulanabilirken, `transform` ve `filter` metodları grup bazlı veri dönüşümü ve elemenin kapılarını açar. Ayrıca `resample`, `cut` ve `qcut` gibi araçlar, zaman serilerini ve sürekli sayısal değişkenleri mantıklı segmentlere ayırarak derinlemesine analiz yapmayı kolaylaştırır.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Gruplama ve Agregasyon"] --> B["Böl (Split)"]
+    A --> C["Uygula (Apply)"]
+    A --> D["Birleştir (Combine)"]
+    B --> B1["groupby('kategori')"]
+    C --> C1["sum(), mean(), agg()"]
+    C --> C2["transform(), filter()"]
+    D --> D1["Segmentlere Ayırma (cut, qcut)"]
+    D --> D2["Zaman Serisi (resample)"]
+```
 
 ### Temel groupby
 ```python

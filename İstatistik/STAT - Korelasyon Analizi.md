@@ -8,11 +8,24 @@ zorluk: ⭐⭐
 
 ## 📌 Özet
 
-Korelasyon, iki değişken arasındaki doğrusal ilişkinin yönünü ve gücünü ölçer. -1 ile 1 arasında değer alır. **Korelasyon nedensellik değildir.**
+Korelasyon analizi, iki değişken arasındaki istatistiksel ilişkinin yönünü (pozitif/negatif) ve gücünü ölçmek için kullanılan temel bir tekniktir. Korelasyon katsayısı -1 ile +1 arasında değer alarak, bir değişkenin değerindeki değişimin diğeriyle ne kadar uyumlu olduğunu sayısal olarak ifade eder. En yaygın kullanılan Pearson katsayısı doğrusal ilişkileri hedeflerken, Spearman ve Kendall gibi parametrik olmayan yöntemler sıralı veriler ve doğrusal olmayan monoton ilişkiler için uygundur. En kritik kural, korelasyonun varlığının mutlaka bir neden-sonuç ilişkisi (nedensellik) anlamına gelmediği; ilişkili görünen değişkenlerin aslında üçüncü bir gizli faktörden etkileniyor olabileceğidir.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Korelasyon Türleri"] --> B["Pearson (r)"]
+    A --> C["Spearman (rho)"]
+    A --> D["Kendall (tau)"]
+    B --> B1["Sürekli Veri & Normal Dağılım"]
+    B --> B2["Doğrusal İlişki"]
+    C --> C1["Sıralı (Ordinal) Veri"]
+    C --> C2["Doğrusal Olmayan Monoton İlişki"]
+    D --> D1["Küçük Örneklemler"]
+    D --> D2["Aykırı Değerlere Karşı Dayanıklı"]
+```
 
 ### Pearson Korelasyon Katsayısı (r)
 

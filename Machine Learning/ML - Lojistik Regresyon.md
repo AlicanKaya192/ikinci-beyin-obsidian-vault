@@ -7,19 +7,31 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-Lojistik regresyon, ikili sınıflandırma için kullanılan temel algoritmadır. Sigmoid fonksiyonu ile olasılık üretir. Açıklanabilirliği yüksektir.
+Lojistik Regresyon, isminde "regresyon" geçmesine rağmen temel bir sınıflandırma algoritmasıdır ve özellikle ikili (binary) sınıflandırma problemlerinde dünyada en yaygın kullanılan yöntemlerden biridir. Temel çalışma prensibi, girdilerin doğrusal bir kombinasyonunu hesaplayıp bu sonucu Sigmoid (Lojistik) fonksiyonundan geçirerek 0 ile 1 arasında bir olasılık değerine dönüştürmektir. Bu olasılık değeri, belirlenen bir eşik değeriyle (genellikle 0.5) karşılaştırılarak nihai sınıf kararı verilir. Yüksek yorumlanabilirliği, katsayılar üzerinden özellik etkilerinin net analizi (Odds Ratio) ve hesaplama hızı nedeniyle, özellikle tıp, finans ve pazarlama gibi alanlarda temel model olarak tercih edilir.
 
 ## 🧠 Detay
 
+### Lojistik Regresyon Akış Şeması
+```mermaid
+graph LR
+    A["Girdiler (X)"] --> B["Doğrusal Kombinasyon (z = WX + b)"]
+    B --> C["Sigmoid Fonksiyonu 1 / 1 + e^-z"]
+    C --> D["Olasılık Değeri (0 ile 1 arası)"]
+    D --> E{"Eşik Kontrolü (P > 0.5?)"}
+    E -- "Evet" --> F["Sınıf 1 (Pozitif)"]
+    E -- "Hayır" --> G["Sınıf 0 (Negatif)"]
+```
+
 ### Matematiksel Temel
+Lojistik regresyonun kalbi olan Sigmoid fonksiyonu, herhangi bir gerçek sayıyı (z) dar bir olasılık aralığına sıkıştırır:
 ```
 P(y=1) = 1 / (1 + e^(-z))
 z = β₀ + β₁x₁ + ... + βₙxₙ
 
 Sigmoid → [0,1] arasında olasılık döndürür
-Eşik (threshold) → genellikle 0.5
+Eşik (threshold) → Genellikle 0.5 seçilir (ihtiyaca göre değiştirilebilir)
 ```
-
+...
 ### Scikit-learn ile Uygulama
 ```python
 from sklearn.linear_model import LogisticRegression

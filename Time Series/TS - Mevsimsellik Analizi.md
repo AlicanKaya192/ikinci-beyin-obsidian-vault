@@ -7,9 +7,23 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Mevsimsellik, belirli periyotlarla tekrar eden sistematik desenlerdir. Doğru tespit ve modelleme tahmin kalitesini önemli ölçüde artırır.
+Mevsimsellik (Seasonality), zaman serisi verilerinde belirli takvim aralıklarıyla (günlük, haftalık, aylık veya yıllık) düzenli olarak tekrarlanan dalgalanmaları ifade eder. Bu örüntülerin doğru bir şekilde tespit edilmesi; perakende satışları, turizm talepleri veya enerji tüketimi gibi alanlarda isabetli tahminler yapabilmek için kritik bir öneme sahiptir. Analiz sürecinde veriyi; trend, mevsimsellik ve kalıntı (artık) bileşenlerine ayıran STL (Seasonal-Trend decomposition using LOESS) gibi yöntemler kullanılarak serinin iç yapısı çözümlenir. Mevsimsel etkilerin tespit edilmesi, modelin bu döngüsel hareketleri öğrenmesini sağlayarak tahmin hatalarını minimize eder ve 'mevsimsellikten arındırma' yoluyla temel trendin daha net görülmesine imkan tanır.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Zaman Serisi Verisi"] --> B{"Mevsimsellik Var mı?"}
+    B -- "Görsel Kontrol" --> C["Yıllık Bindirme Grafiği"]
+    B -- "İstatistiksel" --> D["Otokorelasyon (ACF)"]
+    B -- "Frekans Tabanlı" --> E["Fourier Dönüşümü (Periodogram)"]
+    C --> F["Periyot Belirleme (S)"]
+    D --> F
+    E --> F
+    F --> G["STL veya Klasik Ayrıştırma"]
+    G --> H["Bileşenler: Trend, Mevsimsel, Artık"]
+    H --> I["Mevsimsellikten Arındırma"]
+```
 
 ### Mevsimsellik Tespiti
 ```python

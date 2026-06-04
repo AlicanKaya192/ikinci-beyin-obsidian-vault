@@ -8,11 +8,28 @@ zorluk: ⭐⭐⭐⭐
 
 ## 📌 Özet
 
-Çok değişkenli istatistik, birden fazla bağımlı değişkeni aynı anda analiz eder. Çok değişkenli normal dağılım, MANOVA ve diskriminant analizi temel araçlardır.
+Çok değişkenli istatistik, tek bir bağımlı değişken yerine birden fazla bağımlı değişkenin eş zamanlı olarak incelendiği ve bu değişkenler arasındaki korelasyon yapısının dikkate alındığı ileri düzey bir analiz alanıdır. Bu yaklaşım, değişkenleri birbirinden bağımsızmış gibi ele almak yerine, onları bir vektör olarak tanımlayarak sistemin bütünsel davranışını kavramamıza olanak tanır. MANOVA ile gruplar arası farklılıklar birden fazla boyutta test edilirken, Diskriminant Analizi ile bu farkların hangi değişkenlerden kaynaklandığı ve yeni gözlemlerin hangi gruba ait olduğu belirlenir. Kanonik korelasyon ve kümeleme gibi teknikler ise veri setindeki gizli yapıları ve değişken kümeleri arasındaki ilişkileri ortaya çıkarmak için kullanılır.
 
 ---
 
 ## 🧠 Detay
+
+### Çok Değişkenli Tekniklerin Sınıflandırılması
+
+```mermaid
+graph TD
+    A["Çok Değişkenli Analiz"] --> B["Bağımlılık Analizi"]
+    A --> C["Karşılıklı İlişki Analizi"]
+
+    B --> B1["MANOVA (Gruplar arası fark)"]
+    B --> B2["Diskriminant Analizi (Sınıflandırma)"]
+    B --> B3["Çok Değişkenli Regresyon"]
+
+    C --> C1["PCA (Boyut İndirgeme)"]
+    C --> C2["Faktör Analizi (Gizli Yapılar)"]
+    C --> C3["Kümeleme (Gözlem Gruplama)"]
+    C --> C4["Kanonik Korelasyon (Kümeler arası ilişki)"]
+```
 
 ### Çok Değişkenli Normal Dağılım $MVN(\boldsymbol{\mu}, \boldsymbol{\Sigma})$
 

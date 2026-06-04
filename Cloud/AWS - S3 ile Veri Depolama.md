@@ -7,9 +7,24 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-Amazon S3 (Simple Storage Service), AWS'nin nesne depolama servisidir. Azure Blob Storage'a karşılık gelir. ML projelerinde veri gölü, model artefaktı ve pipeline geçiş deposu olarak kullanılır.
+Amazon S3 (Simple Storage Service), internetin her yerinden istenilen miktarda veriyi depolamak ve geri çağırmak için tasarlanmış; yüksek dayanıklılığa sahip, ölçeklenebilir ve güvenli bir nesne depolama servisidir. Makine öğrenmesi yaşam döngüsünde S3, ham veri setleri, işlenmiş öznitelikler (features) ve versiyonlanmış model çıktıları (artifacts) için merkezi bir "Veri Gölü" (Data Lake) görevi görür. SageMaker ve Lambda gibi diğer AWS servisleriyle olan derin entegrasyonu sayesinde, dosya yüklemelerinin otomatik olarak veri işleme boru hatlarını veya model yayına alma süreçlerini tetiklemesine olanak tanır. Yaşam döngüsü politikaları (lifecycle policies) ile otomatik maliyet optimizasyonu ve hassas erişim kontrolü (IAM/Bucket Policy) gibi özellikleri, S3'ü sağlam ve maliyet etkin veri odaklı bulut mimarileri oluşturmak için vazgeçilmez bir araç haline getirir.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Veri Kaynakları (Sensör, Web, DB)"] --> B["Amazon S3 (Merkezi Veri Gölü)"]
+    subgraph "S3 Organizasyonu (Prefix Yapısı)"
+    B1["'bronze/' (Ham Veri)"] --- B
+    B2["'silver/' (Temizlenmiş)"] --- B
+    B3["'gold/' (Özellikler/Features)"] --- B
+    B4["'models/' (Eğitilmiş Modeller)"] --- B
+    end
+    B -- "S3 Event" --> C["AWS Lambda (ETL Süreci)"]
+    B -- "Veri Besleme" --> D["SageMaker (Eğitim)"]
+    D -- "Artefakt Kaydı" --> B4
+    E["Athena (SQL Sorgu)"] -- "Analiz" --> B3
+```
 
 ### Temel Kavramlar
 ```

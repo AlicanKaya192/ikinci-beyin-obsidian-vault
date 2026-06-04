@@ -7,9 +7,24 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Zaman serilerinde anomali tespiti; ani artışlar, düşüşler veya beklenen örüntüden sapmaları otomatik olarak bulur. Dolandırıcılık tespiti, arıza izleme gibi alanlarda kritiktir.
+Zaman serilerinde anomali tespiti, verinin genel akışından belirgin şekilde sapan, beklenen örüntülere uymayan ve genellikle 'aykırı değer' olarak adlandırılan veri noktalarının veya segmentlerinin otomatik olarak belirlenmesi sürecidir. Bu süreç, ağ trafiği güvenliği, finansal dolandırıcılık tespiti, endüstriyel sensör verilerindeki arıza izleme ve pazarlama analizlerindeki ani trend değişikliklerini yakalamak için hayati önem taşır. Anomali tespiti yöntemleri; basit istatistiksel sınır kontrollerinden (Z-Score, IQR), zaman serisi modellerinin (SARIMA, Prophet) tahmin hatalarının analizine ve gelişmiş makine öğrenmesi algoritmalarına (Isolation Forest, Autoencoders) kadar geniş bir yelpazeyi kapsar. Başarılı bir analiz için verinin mevsimsellik ve trend bileşenlerinden arındırılması, gerçek anomalilerin sistemik gürültüden doğru şekilde ayırt edilmesini sağlar.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Zaman Serisi Verisi"] --> B{"Yöntem Seçimi"}
+    B --> C["İstatistiksel"]
+    B --> D["Tahmin Tabanlı"]
+    B --> E["Makine Öğrenmesi"]
+    C --> C1["Z-Score / IQR"]
+    D --> D1["Hata Payı (Residuals)"]
+    E --> E1["Isolation Forest / LOF"]
+    C1 --> F["Eşik Değeri Kontrolü"]
+    D1 --> F
+    E1 --> F
+    F --> G["Anomali Etiketleme"]
+```
 
 ### İstatistiksel Yöntemler
 ```python

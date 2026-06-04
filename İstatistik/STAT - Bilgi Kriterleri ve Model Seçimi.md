@@ -8,11 +8,21 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-Model seçimi, veriyi en iyi açıklayan ama aşırı karmaşık olmayan modeli seçmektir. Bilgi kriterleri (AIC, BIC) ve çapraz doğrulama başlıca araçlardır.
+Model seçimi, bir veri setini en iyi açıklayan matematiksel modelin, aşırı karmaşıklıktan (overfitting) kaçınılarak belirlenmesi sürecidir. İstatistiksel analizlerde, modelin veriye uyumu (fit) ile kullanılan parametre sayısı (parsimony) arasında hassas bir denge kurulması gerekir; çünkü gereğinden fazla parametre içeren modeller eğitim verisine çok iyi uysa da yeni verilerde başarısız olur. Akaike Bilgi Kriteri (AIC) ve Bayes Bilgi Kriteri (BIC) gibi yöntemler, modelleri karşılaştırırken fazla parametre kullanımı için bir "ceza terimi" uygulayarak en optimal modeli seçmeye yardımcı olur. Bu süreç, modelin genelleme yeteneğini artırarak hem tahmin performansını iyileştirir hem de yorumlanabilirliği sağlar.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph LR
+    A["Model Karmaşıklığı"] --> B["Düşük Karmaşıklık (Underfitting)"]
+    A --> C["Optimal Karmaşıklık"]
+    A --> D["Yüksek Karmaşıklık (Overfitting)"]
+    B --> B1["Yüksek Yanlılık (Bias)"]
+    D --> D1["Yüksek Varyans"]
+    C --> C1["Düşük Toplam Hata (AIC/BIC ile tespit)"]
+```
 
 ### Bias-Variance Tradeoff
 

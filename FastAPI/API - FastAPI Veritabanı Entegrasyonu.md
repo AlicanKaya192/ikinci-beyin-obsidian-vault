@@ -7,9 +7,21 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-FastAPI'da SQLAlchemy ORM veya async için SQLModel kullanarak veritabanı entegrasyonu yapılır. Tahmin logları, kullanıcı yönetimi ve model metadata saklamak için gereklidir.
+FastAPI uygulamalarında veritabanı entegrasyonu, genellikle SQLAlchemy veya SQLModel gibi ORM (Object-Relational Mapping) araçları kullanılarak gerçekleştirilir. Bu yapı sayesinde veritabanı işlemleri Python nesneleri üzerinden yönetilir ve SQL sorgularıyla doğrudan uğraşma ihtiyacı azalır. Dependency Injection mekanizması, her istek (request) için bir veritabanı oturumu (session) oluşturulmasını ve işlemin sonunda bu oturumun güvenli bir şekilde kapatılmasını sağlar. Özellikle makine öğrenmesi servislerinde, gelen tahmin isteklerinin loglanması, model performansının izlenmesi ve metadata yönetimi için sağlam bir veritabanı altyapısı kurmak kritik bir öneme sahiptir.
 
 ## 🧠 Detay
+
+```mermaid
+graph LR
+    A["Kullanıcı İsteği"] --> B["FastAPI Endpoint"]
+    B --> C["Depends(get_db)"]
+    C --> D["SQLAlchemy Session"]
+    D --> E[("Veritabanı (PostgreSQL/SQLite)")]
+    B --> F["ML Model Tahmini"]
+    F --> G["Veritabanı Loglama"]
+    G --> D
+    D --> H["Commit / Close"]
+```
 
 ### Kurulum
 ```bash

@@ -8,11 +8,22 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-ANOVA (Analysis of Variance), ikiden fazla grup ortalamasını karşılaştırmak için kullanılır. Çoklu t-testi yerine ANOVA kullanmak Tip I hata birikimini önler.
+ANOVA (Analysis of Variance - Varyans Analizi), ikiden fazla bağımsız grup ortalaması arasında istatistiksel olarak anlamlı bir fark olup olmadığını test etmek için kullanılan güçlü bir yöntemdir. Birden fazla t-testi yapmak yerine ANOVA kullanmak, "Tip I Hata" (yalancı pozitif) birikimini engelleyerek testin güvenilirliğini korur. Bu yöntem, verideki toplam varyansı "gruplar arası" ve "grup içi" olarak ikiye ayırarak, gruplar arasındaki farkın rastlantısal olup olmadığını F-istatistiği üzerinden hesaplar. Eğer ANOVA sonucu anlamlı çıkarsa, hangi grupların birbirinden farklı olduğunu belirlemek için Tukey veya Bonferroni gibi post-hoc (artçı) testlerin uygulanması gerekir.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Veri Seti (İkiden fazla grup)"] --> B{"Varsayımlar Karşılanıyor mu?"}
+    B -- "Evet" --> C["ANOVA Uygula"]
+    B -- "Hayır" --> D["Kruskal-Wallis (Parametrik Olmayan)"]
+    C --> E{"p-değeri < alpha?"}
+    E -- "Evet (Anlamlı)" --> F["Post-Hoc Testler (Tukey, vb.)"]
+    E -- "Hayır (Anlamsız)" --> G["Gruplar arası fark yok"]
+    F --> H["Farklı olan grupları belirle"]
+```
 
 ### Neden ANOVA?
 

@@ -7,9 +7,24 @@ zorluk: ileri
 ---
 
 ## 📌 Özet
-SHAP (SHapley Additive exPlanations), her özelliğin model tahminine katkısını oyun teorisiyle hesaplar. Kara kutu modelleri anlaşılır kılar.
+SHAP (SHapley Additive exPlanations), karmaşık makine öğrenmesi modellerinin çıktılarını 'oyun teorisi' prensiplerine dayanarak açıklayan güçlü bir yöntemdir. Her bir özelliğin (feature) model tahminine olan katkısını, o özelliğin tüm olası alt kümelerle birlikte modelde yer alması veya almaması durumlarını kıyaslayarak (Shapley değerleri) hesaplar. Bu yaklaşım hem bireysel tahminlerin nedenlerini açıklayan 'yerel' (local) yorumlanabilirlik, hem de tüm modelin hangi değişkenlere ne kadar önem verdiğini gösteren 'küresel' (global) yorumlanabilirlik sağlar; böylece karmaşık 'kara kutu' modellerin güvenilirliği ve şeffaflığı artırılır.
 
 ## 🧠 Detay
+
+### SHAP Çalışma Mantığı
+```mermaid
+graph LR
+    Model["Kara Kutu Model (XGBoost, RF, vs.)"] --> Input["Girdi Verisi (X)"]
+    Input --> Pred["Model Tahmini (y_pred)"]
+    Pred --> SHAP["SHAP Explainer"]
+    SHAP --> SV["Shapley Değerleri Hesaplama"]
+    
+    SV --> Local["Yerel Açıklama (Waterfall, Force Plot)"]
+    SV --> Global["Küresel Açıklama (Summary, Dependence Plot)"]
+    
+    Local --> Insight1["'Bu tahmin neden yapıldı?'"]
+    Global --> Insight2["'Model genel olarak nasıl çalışıyor?'"]
+```
 
 ### Kurulum ve Temel Kullanım
 ```python

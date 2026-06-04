@@ -7,9 +7,21 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Merge ve join işlemleri, birden fazla tabloyu birleştirmek için kullanılır. SQL JOIN'e karşılık gelir. Veri analizinde farklı kaynaklardan gelen tabloları birleştirmek için sıklıkla kullanılır.
+Pandas'ta tablo birleştirme işlemleri, farklı kaynaklardan gelen veri setlerini ortak anahtarlar (keys) üzerinden ilişkilendirerek tek bir yapı altında toplama sürecidir. `merge` fonksiyonu, SQL dünyasındaki JOIN mantığını (inner, left, right, outer) birebir karşılayarak esnek bir birleştirme imkanı sunarken; `concat` fonksiyonu tabloları satır veya sütun bazında birbiri ardına eklemek (stacking) için kullanılır. Index tabanlı birleştirmeler için `join` metodu tercih edilirken, zaman serisi gibi tam eşleşme sağlanamayan durumlarda en yakın değeri bulan `merge_asof` kritik bir rol oynar. Bu teknikler, dağınık verilerin entegrasyonu ve kapsamlı analiz raporlarının oluşturulması için vazgeçilmez araçlardır.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Veri Birleştirme Teknikleri"] --> B["merge()"]
+    A --> C["concat()"]
+    A --> D["join()"]
+    B --> B1["Inner, Left, Right, Outer Join"]
+    B --> B2["merge_asof() (Zaman Serisi)"]
+    C --> C1["Satır Bazlı (axis=0)"]
+    C --> C2["Sütun Bazlı (axis=1)"]
+    D --> D1["Index Tabanlı Birleştirme"]
+```
 
 ### merge() — SQL JOIN Karşılığı
 ```python

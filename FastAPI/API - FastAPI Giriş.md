@@ -7,9 +7,19 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-FastAPI, Python'un modern, hızlı ve tip güvenli web framework'üdür. Otomatik dokümantasyon, async desteği ve Pydantic entegrasyonu ile ML modellerini API'a dökmek için en popüler tercihlerden biridir.
+FastAPI, Python tabanlı modern bir web framework'ü olup, özellikle yüksek performanslı ve ölçeklenebilir API'lar geliştirmek için tasarlanmıştır. Starlette ve Pydantic kütüphaneleri üzerine inşa edilen yapısı, veri doğrulama ve serileştirme işlemlerini Python'un standart tip ipuçlarını kullanarak otomatikleştirir. Geliştiricilere Swagger ve ReDoc üzerinden anında interaktif dokümantasyon sunarak test süreçlerini hızlandırır. Modern makine öğrenmesi modellerini hızlıca web servisi haline getirmek için sektör standardı haline gelmiştir.
 
 ## 🧠 Detay
+
+### Temel Mimari
+```mermaid
+graph LR
+    A["İstemci (Tarayıcı/Mobil)"] -- "HTTP İsteği" --> B["FastAPI (Starlette)"]
+    B -- "Validasyon" --> C["Pydantic Modeli"]
+    C -- "İşlem" --> D["Business Logic / ML Model"]
+    D -- "Dönüş Değeri" --> E["JSON Yanıtı"]
+    B -. "Görsel Arayüz" .-> F["Swagger UI / ReDoc"]
+```
 
 ### Flask vs FastAPI Karşılaştırması
 | Özellik | Flask | FastAPI |

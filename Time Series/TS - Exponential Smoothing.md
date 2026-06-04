@@ -7,9 +7,23 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Üstel düzleştirme, son gözlemlere daha fazla ağırlık veren bir tahmin ailesidir. Basit, Holt'un ve Holt-Winters yöntemleri mevcuttur.
+Üstel Düzleştirme (Exponential Smoothing), geçmiş gözlemlerin ağırlıklarını zaman geçtikçe geometrik olarak azaltan ve en son verilere daha yüksek önem atfeden bir tahmin yöntemleri ailesidir. Basit Üstel Düzleştirme (SES) yalnızca seviyeyi modellerken, Holt'un Lineer Trend yöntemi eğilimi (trend), Holt-Winters yöntemi ise hem trendi hem de mevsimselliği modele dahil eder. Bu yöntemler, özellikle verinin yapısal değişimler gösterdiği durumlarda ARIMA gibi karmaşık modellere güçlü bir alternatif sunar. ETS (Error-Trend-Seasonality) çerçevesi altında aditif veya çarpımsal bileşenlerle yapılandırılabilen bu modeller, esneklikleri ve hesaplama hızları nedeniyle iş dünyasında stok ve talep tahminleri için sıkça tercih edilir.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Zaman Serisi Verisi"] --> B{"Trend ve Mevsimsellik?"}
+    B -- "Hiçbiri Yok" --> C["Basit Üstel Düzleştirme (SES)"]
+    B -- "Sadece Trend" --> D["Holt Lineer Yöntemi"]
+    B -- "Her İkisi de Var" --> E["Holt-Winters Yöntemi"]
+    E --> E1["Aditif (Sabit Mevsimsellik)"]
+    E --> E2["Çarpımsal (Değişken Mevsimsellik)"]
+    C --> F["Tahmin (Level)"]
+    D --> G["Tahmin (Level + Trend)"]
+    E1 --> H["Tahmin (Level + Trend + Seasonality)"]
+    E2 --> H
+```
 
 ### Basit Üstel Düzleştirme (SES)
 ```python

@@ -7,9 +7,22 @@ zorluk: ileri
 ---
 
 ## 📌 Özet
-Decorator'lar, bir fonksiyonun davranışını değiştirmeden ona ek özellik kazandıran fonksiyonlardır. `@` sembolü ile kullanılır. Loglama, zamanlama, yetki kontrolü gibi durumlarda idealdir.
+Decorator'lar (Süsleyiciler), Python'da mevcut bir fonksiyonun veya sınıfın kodunu doğrudan değiştirmeden ona dinamik olarak yeni sorumluluklar veya davranışlar eklememizi sağlayan güçlü araçlardır. '@' sözdizimi ile kolayca uygulanan bu yapı, kod tekrarını önler ve 'Ayrılmış İlgi Alanları' (Separation of Concerns) prensibine uygun olarak loglama, kimlik doğrulama, önbellekleme ve performans ölçümü gibi yan etkileri ana mantıktan ayırır. Yüksek dereceli fonksiyonlar (higher-order functions) mantığına dayanan decorator'lar, hem fonksiyon hem de sınıf düzeyinde uygulanabilir.
 
 ## 🧠 Detay
+
+```mermaid
+sequenceDiagram
+    participant U["Kullanıcı Çağrısı"]
+    participant D["Decorator (Wrapper)"]
+    participant F["Orijinal Fonksiyon"]
+    U->>D: Fonksiyonu Çağır (Argümanlarla)
+    D->>D: Ön İşlemler (Loglama vb.)
+    D->>F: Orijinal Fonksiyonu Yürüt
+    F-->>D: Sonucu Döndür
+    D->>D: Son İşlemler (Temizlik vb.)
+    D-->>U: Sonucu Döndür
+```
 
 ### Temel Decorator
 ```python

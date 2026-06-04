@@ -7,9 +7,23 @@ zorluk: ileri
 ---
 
 ## 📌 Özet
-SVM, sınıflar arasındaki marjını en büyükleştiren hiper düzlemi bulan algoritmadır. Kernel trick ile doğrusal olmayan problemleri de çözebilir.
+Destek Vektör Makineleri (SVM), iki sınıf arasındaki boşluğu (margin) en üst düzeye çıkaran 'optimal hiper düzlemi' bularak sınıflandırma ve regresyon yapan güçlü bir gözetimli öğrenme algoritmasıdır. Algoritmanın temel gücü, düşük boyutlu uzayda doğrusal olarak ayrılması imkansız olan verileri 'Kernel Trick' yöntemiyle daha yüksek boyutlu bir uzaya taşıyarak orada ayrıştırabilmesidir. SVM, özellikle yüksek boyutlu verilerde ve sınıfların net bir şekilde ayrıldığı durumlarda çok başarılı sonuçlar verirken, eğitim verisindeki gürültüye ve özelliklerin ölçeklendirilmesine karşı oldukça hassastır. Bu nedenle, SVM uygulanmadan önce verilerin standartlaştırılması model performansı için hayati önem taşır.
 
 ## 🧠 Detay
+
+### SVM Çalışma Mantığı ve Karar Mekanizması
+```mermaid
+graph TD
+    Data["Girdi Verisi"] --> Space{"Veri Ayrılabilir mi?"}
+    Space -- "Doğrusal" --> Hyperplane["Optimal Hiper Düzlem Bulunur"]
+    Space -- "Doğrusal Değil" --> Kernel["Kernel Trick (RBF, Poly, vs.)"]
+    Kernel --> SpaceHigh["Yüksek Boyutlu Uzaya Projeksiyon"]
+    SpaceHigh --> Hyperplane
+    
+    Hyperplane --> SV["Destek Vektörlerinin Belirlenmesi"]
+    SV --> Margin["Maksimum Marjin (Boşluk) Hesabı"]
+    Margin --> Result["Sınıflandırma Sınırı"]
+```
 
 ### Temel Kavramlar
 ```

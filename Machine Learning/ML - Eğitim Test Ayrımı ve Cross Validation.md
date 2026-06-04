@@ -7,11 +7,29 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-Modelin gerçek performansını ölçmek için eğitim ve test verisi ayrılmalıdır. Cross validation ise bu değerlendirmeyi daha güvenilir hale getirir.
+Eğitim ve test verisi ayrımı, bir modelin gerçek dünya verilerindeki performansını (genelleme yeteneğini) ölçmek için kullanılan en temel tekniktir. Model eğitim verisini "ezberleyebilir" (overfitting), bu yüzden modelin başarısını ölçmek için daha önce hiç görmediği bir test setine ihtiyaç duyulur. Çapraz Doğrulama (Cross Validation) ise bu süreci daha güvenilir hale getirmek için veriyi birden fazla kez farklı kombinasyonlarda böler; böylece verinin tesadüfi dağılımından kaynaklanan performans sapmaları (varyans) minimize edilir ve modelin kararlılığı doğrulanmış olur.
 
 ## 🧠 Detay
 
-### Train-Test Ayrımı
+### K-Fold Çapraz Doğrulama Süreci
+```mermaid
+graph TD
+    A["Tüm Veri Seti"] --> B{"K-Parçaya Böl (K-Fold)"}
+    B --> C["İterasyon 1: Kat 1 Test, Diğerleri Train"]
+    B --> D["İterasyon 2: Kat 2 Test, Diğerleri Train"]
+    B --> E["İterasyon ..."]
+    B --> F["İterasyon K: Kat K Test, Diğerleri Train"]
+    
+    C --> G["Skor 1"]
+    D --> H["Skor 2"]
+    E --> I["Skor ..."]
+    F --> J["Skor K"]
+    
+    G & H & I & J --> K["Ortalama Skor & Standart Sapma"]
+```
+
+### Train-Test Ayrımı (Hold-out Method)
+Bu yöntem veriyi tek bir seferde ikiye veya üçe böler. Hızlıdır ancak verinin nasıl bölündüğüne çok duyarlıdır.
 ```python
 from sklearn.model_selection import train_test_split
 
@@ -21,9 +39,6 @@ X_train, X_test, y_train, y_test = train_test_split(
     random_state=42,     # tekrarlanabilirlik
     stratify=y           # sınıf dağılımını koru
 )
-
-print(X_train.shape)   # (800, 10)
-print(X_test.shape)    # (200, 10)
 ```
 
 ### Train / Validation / Test Ayrımı

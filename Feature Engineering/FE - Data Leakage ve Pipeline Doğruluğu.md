@@ -211,6 +211,7 @@ test_score = full_pipeline.score(X_test, y_test)
 - [[FE - Giriş ve Genel Bakış]]
 - [[FE - Encoding Yöntemleri]]
 - [[FE - Dengesiz Veri Seti İşleme]]
+- [[FE - Feature Store ve MLOps]]
 - [[ML - Veri Ön İşleme Pipeline]]
 - [[ML - Overfitting ve Underfitting]]
 

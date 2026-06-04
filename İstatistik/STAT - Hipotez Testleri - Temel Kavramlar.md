@@ -14,6 +14,35 @@ Hipotez testi, örneklem verisiyle anakütle hakkında bir iddiayı (hipotezi) s
 
 ## 🧠 Detay
 
+### 🗺️ İstatistiksel Test Seçim Rehberi
+
+```mermaid
+graph TD
+    Start[Hangi Testi Seçmeliyim?] --> Type{Veri Türü?}
+    
+    Type -- Sayısal --> Dist{Normal Dağılım?}
+    Type -- Kategorik --> Cat{Amacınız?}
+    
+    Dist -- Evet --> Parametric{Kaç Grup?}
+    Dist -- Hayır --> NonParametric[Parametrik Olmayan Testler]
+    
+    Parametric -- 1 Grup --> T1[Tek Örneklem t-testi]
+    Parametric -- 2 Grup --> T2{Bağımlı mı?}
+    T2 -- Hayır --> T2Ind[Bağımsız t-testi]
+    T2 -- Evet --> T2Paired[Eşleştirilmiş t-testi]
+    
+    Parametric -- 3+ Grup --> ANOVA[ANOVA / F-testi]
+    
+    Cat -- İlişki Testi --> Chi2[Ki-Kare Bağımsızlık Testi]
+    Cat -- Uyum İyiliği --> ChiGoF[Ki-Kare Uyum İyiliği]
+    
+    NonParametric --> NP{Kaç Grup?}
+    NP -- 2 Grup --> MWU[Mann-Whitney U / Wilcoxon]
+    NP -- 3+ Grup --> KW[Kruskal-Wallis]
+```
+
+---
+
 ### Hipotez Türleri
 
 | Hipotez | Simge | Anlam |

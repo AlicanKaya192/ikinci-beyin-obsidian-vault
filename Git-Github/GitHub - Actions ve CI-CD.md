@@ -8,7 +8,7 @@ zorluk: ⭐⭐⭐⭐
 
 ## 📌 Özet
 
-GitHub Actions, kod değişikliğinden production'a kadar tüm süreci otomatikleştiren CI/CD platformudur. Workflow, Job, Step ve Action kavramları üzerine kuruludur.
+GitHub Actions, yazılım geliştirme süreçlerini uçtan uca otomatize eden güçlü bir CI/CD (Sürekli Entegrasyon ve Sürekli Dağıtım) platformudur. Geliştiriciler, YAML dosyaları aracılığıyla kodun test edilmesi, paketlenmesi ve dağıtılması gibi karmaşık boru hatlarını (pipelines) doğrudan depo üzerinde tanımlayabilirler. Sistem; belirli olaylar (push, pull request vb.) tarafından tetiklenen iş akışları (workflows), bu akışlar içindeki bağımsız görevler (jobs) ve her görevin alt adımları (steps) hiyerarşisiyle çalışır. Bu otomasyon sayesinde hata payı azalır, kod kalitesi artar ve uygulama teslimat hızı önemli ölçüde ivme kazanır.
 
 ---
 
@@ -16,20 +16,15 @@ GitHub Actions, kod değişikliğinden production'a kadar tüm süreci otomatikl
 
 ### Temel Kavramlar
 
-```
-Event (tetikleyici)
-   │
-   ▼
-Workflow (.github/workflows/*.yml)
-   │
-   ├─ Job 1 (ubuntu-latest)
-   │    ├─ Step 1: Checkout
-   │    ├─ Step 2: Setup Python
-   │    └─ Step 3: Run tests
-   │
-   └─ Job 2 (ubuntu-latest) ← Job 1'e bağımlı
-        ├─ Step 1: Build Docker
-        └─ Step 2: Push to registry
+```mermaid
+graph LR
+    E["Olay (Event)"] -- "Tetikler" --> W["İş Akışı (Workflow)"]
+    W --> J1["Görev 1 (Job 1)"]
+    W --> J2["Görev 2 (Job 2)"]
+    J1 --> S1["Adım 1 (Step 1)"]
+    J1 --> S2["Adım 2 (Step 2)"]
+    S1 -- "Kullanır" --> A["Aksiyon (Action)"]
+    J2 -- "Bağımlıdır" --> J1
 ```
 
 ### Tetikleyiciler (Triggers)

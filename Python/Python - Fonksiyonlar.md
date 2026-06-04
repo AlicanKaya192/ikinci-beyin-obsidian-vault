@@ -7,9 +7,20 @@ zorluk: Başlangıç / Orta
 ---
 
 ## 📌 Özet
-Python'da fonksiyonlar, belirli bir görevi yerine getirmek için yazılan ve tekrar kullanılabilen kod bloklarıdır. Kodun daha modüler, okunabilir ve yönetilebilir olmasını sağlarlar.
+Python'da fonksiyonlar, 'DRY' (Don't Repeat Yourself - Kendini Tekrar Etme) prensibinin temel taşıdır ve belirli bir görevi yerine getirmek üzere tasarlanmış, isimlendirilmiş kod bloklarıdır. `def` anahtar kelimesiyle tanımlanan bu yapılar, modüler programlama anlayışıyla karmaşık problemleri daha küçük ve yönetilebilir parçalara ayırmamızı sağlar. Fonksiyonlar; parametreler aracılığıyla girdi alabilir, `return` ile çıktı üretebilir ve `*args`/`**kwargs` gibi esnek yapılarla değişken sayıda veri üzerinde işlem yaparak kodun yeniden kullanılabilirliğini maksimuma çıkarır.
 
 ## 🧠 Detay
+
+```mermaid
+graph LR
+    A["Fonksiyon Tanımı (def)"] --> B["İsim"]
+    A --> C["Parametreler (Girdiler)"]
+    A --> D["Kod Bloğu (Gövde)"]
+    D --> E["İşlem/Mantık"]
+    D --> F["Dönüş Değeri (return)"]
+    G["Çağrı (Call)"] -- "Argümanlar" --> C
+    F -- "Sonuç" --> H["Kullanıcı/Değişken"]
+```
 
 ### 1. Fonksiyon Tanımlama ve Çağırma
 Python'da bir fonksiyon `def` anahtar kelimesi ile tanımlanır:

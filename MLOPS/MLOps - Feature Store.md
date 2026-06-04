@@ -7,9 +7,31 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Feature Store, ML özelliklerini merkezi olarak depolayan, yöneten ve servis eden sistemdir. Eğitim ve tahmin sırasında aynı özelliklerin kullanılmasını garantiler (training-serving skew önler).
+Feature Store, makine öğrenmesi modelleri için geliştirilen özellikleri (features) merkezi bir sistemde depolayan, yöneten ve servis eden modern bir MLOps bileşenidir. Farklı takımların aynı özellikleri tekrar tekrar hesaplamasını önleyerek iş birliğini ve verimliliği artırırken; eğitim ve canlı tahmin (serving) aşamalarında aynı veri formüllerinin kullanılmasını garanti ederek "training-serving skew" hatasını ortadan kaldırır. Geçmiş veriler için Offline Store (toplu eğitim) ve düşük gecikmeli erişim için Online Store (gerçek zamanlı tahmin) katmanlarını yönetir. Ayrıca zaman serisi verilerinde "point-in-time correctness" özelliği sayesinde modelin eğitim sırasında gelecekteki verileri görmesini (data leakage) engelleyerek model güvenilirliğini sağlar.
 
 ## 🧠 Detay
+
+### Feature Store Mimarisi
+```mermaid
+graph TD
+    RawData["Ham Veri Kaynakları (SQL, NoSQL, Logs)"] --> Processing["Özellik İşleme (Batch/Streaming)"]
+    Processing --> FS_Admin["Feature Store (Metadata & Registry)"]
+    
+    subgraph Storage_Layer ["Depolama Katmanları"]
+    FS_Admin --> Offline_Store["Offline Store (DWH, S3, Parquet)"]
+    FS_Admin --> Online_Store["Online Store (Redis, DynamoDB)"]
+    end
+    
+    Offline_Store -- "Tarihsel Veri (Batch)" --> Training["Model Eğitimi (Training)"]
+    Online_Store -- "Düşük Gecikme (Real-time)" --> Serving["Canlı Tahmin (Inference)"]
+    
+    Training --> Model_Registry["Model Kayıt Defteri"]
+    Model_Registry --> Serving
+    
+    style FS_Admin fill:#f96,stroke:#333,stroke-width:2px
+    style Online_Store fill:#85e,stroke:#333,stroke-width:1px,color:#fff
+    style Offline_Store fill:#85e,stroke:#333,stroke-width:1px,color:#fff
+```
 
 ### Feature Store Neden Gerekli?
 ```

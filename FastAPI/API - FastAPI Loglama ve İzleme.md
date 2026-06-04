@@ -7,9 +7,19 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Production'daki ML API'larını izlemek için loglama ve metrik toplama kritiktir. Hata ayıklama, performans takibi ve model drift tespiti için kullanılır.
+Bir FastAPI uygulamasının üretim ortamında sağlıklı bir şekilde çalışabilmesi için kapsamlı bir loglama ve izleme (monitoring) stratejisi şarttır. Loglama, uygulama içindeki olayları, hataları ve kullanıcı etkileşimlerini JSON gibi yapılandırılmış formatlarda kaydederek merkezi sistemlerde (ELK Stack, Loki gibi) kolayca analiz edilmesini sağlar. İzleme ise, Prometheus gibi araçlar aracılığıyla sistemin CPU/RAM kullanımı, yanıt süreleri ve hata oranları gibi anlık metriklerini toplayarak Grafana üzerinde görselleştirir. Özellikle ML servislerinde, modelin tahmin olasılıkları ve işlem süreleri gibi özel metriklerin takibi, model performansının zaman içindeki değişimini (drift) anlamak için hayati öneme sahiptir.
 
 ## 🧠 Detay
+
+### İzleme ve Loglama Mimarisi
+```mermaid
+graph TD
+    A["FastAPI Servisi"] -- "Yapılandırılmış Log" --> B["Merkezi Log Yönetimi (ELK/Loki)"]
+    A -- "Prometheus Metrikleri" --> C["Prometheus Server"]
+    C -- "Görselleştirme" --> D["Grafana Dashboard"]
+    A -- "Sağlık Durumu" --> E["Kubernetes / Load Balancer"]
+    F["Admin / Geliştirici"] -- "Uyarılar & Dashboard" --> D
+```
 
 ### Yapılandırılmış Loglama
 ```python

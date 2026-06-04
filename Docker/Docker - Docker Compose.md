@@ -8,11 +8,31 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-Docker Compose, birden fazla container'ı tek bir YAML dosyasında tanımlamak ve tek komutla yönetmek için araçtır. Mikroservis geliştirme ortamları için vazgeçilmezdir.
+Docker Compose, karmaşık ve çoklu konteyner içeren uygulamaları tek bir yapılandırma dosyası (YAML) üzerinden tanımlamaya ve yönetmeye olanak tanıyan kritik bir araçtır. Mikroservis mimarileri için vazgeçilmez olan bu araç, veritabanı, önbellek katmanı ve web servisi gibi birbirine bağlı bileşenlerin aynı ağ üzerinde uyum içinde çalışmasını sağlar. "docker-compose.yml" dosyası sayesinde, tüm uygulama altyapısı tek bir komutla ayağa kaldırılabilir, ölçeklendirilebilir ve yönetilebilir. Bu yaklaşım, geliştirme ortamlarının üretim ortamlarıyla birebir aynı olmasını garantileyerek, ortamlar arası uyumsuzlukları ve manuel kurulum hatalarını ortadan kaldırır.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["docker-compose.yml"] --> B["Docker Compose Engine"]
+    B --> C["Web Service (Container)"]
+    B --> D["Database Service (Container)"]
+    B --> E["Cache Service (Container)"]
+    C <--> F["Shared Network (Ağ)"]
+    D <--> F
+    E <--> F
+    G["Host Volumes (Birimler)"] --- C
+    G --- D
+    G --- E
+    subgraph "Çoklu Konteyner Yönetimi"
+    C
+    D
+    E
+    F
+    end
+```
 
 ### Tam Özellikli docker-compose.yml
 

@@ -7,9 +7,23 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Durağanlık, zaman serisi modellerinin temel varsayımıdır. Ortalama, varyans ve otokorelasyon zamanla sabit olmalıdır. ARIMA gibi modeller durağan veri gerektirir.
+Durağanlık (Stationarity), bir zaman serisinin istatistiksel özelliklerinin (ortalama, varyans ve kovaryans) zaman boyunca sabit kalması durumudur ve klasik zaman serisi analiz yöntemlerinin (özellikle ARIMA) doğru çalışması için en temel varsayımdır. Eğer bir seri durağan değilse, modelleme aşamasından önce fark alma (differencing) veya logaritmik dönüşüm gibi tekniklerle durağan hale getirilmelidir. Durağanlığı test etmek için gözle yapılan grafik incelemelerinin yanı sıra, ADF (Augmented Dickey-Fuller) ve KPSS gibi istatistiksel birim kök testleri kullanılarak serinin karakteristiği bilimsel olarak doğrulanır. Durağan verilerle çalışmak, modelin geçmişteki örüntüleri geleceğe güvenli bir şekilde taşıyabilmesini sağlar.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Zaman Serisi Verisi"] --> B{"Görsel İnceleme"}
+    B --> C["Ortalama Değişiyor mu? (Trend)"]
+    B --> D["Varyans Değişiyor mu?"]
+    C -- "Evet" --> E["Fark Alma (Differencing)"]
+    D -- "Evet" --> F["Log / Box-Cox Dönüşümü"]
+    E --> G["Birim Kök Testleri (ADF, KPSS)"]
+    F --> G
+    G --> H{"P-Değeri < 0.05 (ADF için)"}
+    H -- "Hayır" --> E
+    H -- "Evet" --> I["Seri Durağan: Modellemeye Hazır"]
+```
 
 ### Durağanlık Nedir?
 ```

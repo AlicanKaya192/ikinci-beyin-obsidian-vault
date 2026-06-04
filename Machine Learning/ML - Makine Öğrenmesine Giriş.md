@@ -11,6 +11,35 @@ Makine öğrenmesi, bilgisayarların açıkça programlanmadan veriden öğrenme
 
 ## 🧠 Detay
 
+### 🗺️ Algoritma Seçim Rehberi (Yol Haritası)
+
+```mermaid
+graph TD
+    Start[Problem Nedir?] --> Data{Veri Var mı?}
+    Data -- Hayır --> RL[Pekiştirmeli Öğrenme]
+    Data -- Evet --> Label{Etiket Var mı?}
+    
+    Label -- Hayır --> Unsupervised[Gözetimsiz Öğrenme]
+    Unsupervised --> Cluster{Kümeleme?}
+    Cluster -- Evet --> KMeans[K-Means / DBSCAN]
+    Cluster -- Hayır --> PCA[PCA / t-SNE / UMAP]
+    
+    Label -- Evet --> Supervised[Gözetimli Öğrenme]
+    Supervised --> Type{Tahmin Edilecek?}
+    
+    Type -- Sayısal Değer --> Reg[Regresyon]
+    Reg --> Linear[Lineer Regresyon]
+    Reg --> TreeReg[Decision Tree / RF / XGBoost]
+    
+    Type -- Kategori --> Class[Sınıflandırma]
+    Class --> Size{Veri Boyutu?}
+    Size -- Küçük --> KNN[KNN / Naive Bayes / SVM]
+    Size -- Büyük --> TreeClass[RF / XGBoost / LightGBM]
+    Size -- Karmaşık --> DL[Deep Learning / MLP]
+```
+
+---
+
 ### ML Kategorileri
 
 #### Gözetimli Öğrenme (Supervised Learning)

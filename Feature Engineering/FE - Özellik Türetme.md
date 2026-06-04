@@ -192,6 +192,7 @@ df['pozisyon_basi_maas'] = df['maas'] / df['pozisyon_katsayi']
 
 ## 💡 Bağlantılar
 - [[FE - Tarih ve Zaman Özellikleri]]
+- [[FE - Coğrafi Özellik Mühendisliği]]
 - [[FE - Metin Özellikleri]]
 - [[FE - Özellik Seçimi Yöntemleri]]
 - [[FE - Encoding Yöntemleri]]

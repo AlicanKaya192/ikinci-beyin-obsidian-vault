@@ -7,9 +7,22 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Production'daki modeller zamanla bozulur. Veri dağılımı değişir (data drift), model performansı düşer (concept drift). Evidently ve WhyLogs bu sorunları tespit etmek için kullanılır.
+Canlı ortamdaki makine öğrenmesi modelleri, veri dünyasındaki değişimlere karşı hassastır ve zamanla performans kaybına (model decay) uğrarlar. Model izleme süreci, girdi verilerinin dağılımındaki sapmaları (Data Drift) ve girdi ile çıktı arasındaki mantıksal ilişkinin değişmesini (Concept Drift) sürekli olarak analiz ederek bu bozulmaları erken aşamada yakalamayı hedefler. Evidently gibi araçlar kullanılarak oluşturulan raporlar, sadece istatistiksel testlerle drift tespiti yapmakla kalmaz, aynı zamanda modelin iş değerini koruyup korumadığını da denetler. Etkili bir izleme stratejisi, performans eşikleri aşıldığında veya kritik driftler saptandığında otomatik uyarılar göndererek veya yeniden eğitim (retraining) süreçlerini tetikleyerek sistemin güvenilirliğini sağlar.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Üretim Verisi (Live Data)"] --> B["Veri İzleme (Data Monitoring)"]
+    B -->|İstatistiksel Testler| C{"Drift Var mı?"}
+    C -- Evet --> D["Alarm & Bildirim"]
+    C -- Hayır --> E["Normal Çalışma"]
+    F["Gerçek Etiketler (Ground Truth)"] --> G["Performans İzleme"]
+    G -->|Metrik Analizi| H{"Performans Düştü mü?"}
+    H -- Evet --> I["Yeniden Eğitim (Retraining)"]
+    H -- Hayır --> E
+    D --> I
+```
 
 ### Drift Türleri
 ```

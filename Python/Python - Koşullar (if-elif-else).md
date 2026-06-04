@@ -7,9 +7,21 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-Koşullu ifadeler, belirli bir koşula göre farklı kod bloklarının çalıştırılmasını sağlar. Python'da `if`, `elif` ve `else` anahtar kelimeleri kullanılır.
+Python'da koşullu ifadeler, program akışını belirli mantıksal şartlara göre yönlendirmek için kullanılan temel yapı taşlarıdır. `if` bloğu bir koşulun doğruluğunu kontrol ederken, `elif` (else if) birden fazla alternatif senaryoyu test etmemize olanak tanır ve `else` bloğu ise hiçbir koşul sağlanmadığında devreye giren varsayılan yoldur. Python'ın girinti (indentation) temelli yapısı sayesinde bu bloklar hem okunabilirliği artırır hem de karmaşık karar ağaçlarının oluşturulmasını sağlar. Ayrıca, tek satırlık ternary operatörler ve Python 3.10 ile gelen `match-case` yapısı gibi alternatifler de akış kontrolünü daha esnek hale getirir.
 
 ## 🧠 Detay
+
+```mermaid
+flowchart TD
+    A["Başla"] --> B{"Koşul 1 Sağlanıyor mu?"}
+    B -- "Evet" --> C["if Bloğunu Çalıştır"]
+    B -- "Hayır" --> D{"Koşul 2 Sağlanıyor mu?"}
+    D -- "Evet" --> E["elif Bloğunu Çalıştır"]
+    D -- "Hayır" --> F["else Bloğunu Çalıştır"]
+    C --> G["Bitir"]
+    E --> G
+    F --> G
+```
 
 ### Temel if-elif-else
 ```python

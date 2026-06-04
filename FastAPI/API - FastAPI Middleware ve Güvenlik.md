@@ -7,9 +7,22 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Middleware her isteğe/yanıta kesişen katmanlar ekler. CORS, loglama, rate limiting için kullanılır. API güvenliği ise API Key ve JWT ile sağlanır.
+FastAPI uygulamalarında güvenlik ve çapraz kesen ilgiler (cross-cutting concerns), middleware katmanları ve gelişmiş yetkilendirme mekanizmaları ile yönetilir. Middleware, her HTTP isteğinin uç noktaya ulaşmadan önce ve her yanıtın istemciye dönmeden önce geçtiği bir filtre görevi görerek CORS yapılandırması, loglama ve işlem süresi takibi gibi görevleri üstlenir. Güvenlik tarafında ise, basit senaryolar için API Key, daha karmaşık kullanıcı tabanlı erişimler için ise OAuth2 ve JWT (JSON Web Token) standartları kullanılır. Bu katmanlı yapı, hem uygulamanın dış dünyadan gelen kötü niyetli isteklere karşı korunmasını sağlar hem de geliştiricilere yetkilendirme mantığını merkezi bir noktadan yönetme kolaylığı sunar.
 
 ## 🧠 Detay
+
+### İstek ve Güvenlik Yaşam Döngüsü
+```mermaid
+graph TD
+    A["İstemci"] -- "İstek" --> B["Middleware (CORS/Log)"]
+    B -- "Doğrulama" --> C{"Güvenlik Katmanı"}
+    C -- "Geçersiz" --> D["401 Unauthorized"]
+    C -- "Geçerli" --> E["Dependency Injection"]
+    E --> F["Endpoint İşlemi"]
+    F -- "Yanıt" --> G["Middleware (Headers)"]
+    G -- "Sonuç" --> A
+    D --> A
+```
 
 ### CORS Middleware
 ```python

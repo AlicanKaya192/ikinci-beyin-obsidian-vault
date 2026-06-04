@@ -8,11 +8,23 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-Güven aralığı, bilinmeyen bir parametrenin (μ, p gibi) belirli bir güven düzeyiyle (genellikle %95) içinde yer alacağı aralığı verir. "Parametre bu aralığın içindedir" değil, "bu yöntemle oluşturulan aralıkların %95'i parametreyi kapsar" anlamına gelir.
+Güven aralığı (Confidence Interval), bir anakütle parametresinin (ortalama, oran vb.) belirli bir olasılıkla (güven düzeyiyle) içerisinde yer alması beklenen değerler aralığını ifade eder. Nokta tahminine bir hata payı (margin of error) ekleyerek oluşturulan bu aralık, tahminin hassasiyetini ve güvenilirliğini sayısal olarak ortaya koyar. Frekansçı yaklaşımda %95 güven düzeyi, "bu süreç 100 kez tekrarlanırsa, üretilen 95 aralığın gerçek parametreyi kapsaması beklenir" anlamına gelir; yani güven parametreye değil, kullanılan yönteme atfedilir. Güven aralığının genişliği, örneklem büyüklüğü, verideki değişkenlik ve seçilen güven düzeyiyle doğrudan ilişkilidir; n arttıkça aralık daralır ve tahmin netleşir.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Güven Aralığı Hesaplama"] --> B{"Parametre Türü?"}
+    B -- "Ortalama (Mean)" --> C{"Varyans Biliniyor mu?"}
+    B -- "Oran (Proportion)" --> D["Z-Skoru Kullan (Normal Yakınsama)"]
+    C -- "Evet" --> E["Z-Tablosu / Normal Dağılım"]
+    C -- "Hayır" --> F["t-Tablosu / t-Dağılımı"]
+    E --> G["Hata Payı Hesapla ve Ekle/Çıkar"]
+    F --> G
+    D --> G
+```
 
 ### Güven Aralığı Yorumu ⚠️
 

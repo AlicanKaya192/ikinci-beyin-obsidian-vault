@@ -8,11 +8,28 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-Dockerfile, Docker image oluşturmak için adım adım talimatlar içeren metin dosyasıdır. Her komut yeni bir katman oluşturur. İyi yazılmış Dockerfile küçük, hızlı ve güvenli image üretir.
+Dockerfile, bir Docker imajının nasıl inşa edileceğini belirleyen, adım adım talimatlar içeren bir yapılandırma dosyasıdır. Bu dosya içindeki her bir komut (FROM, RUN, COPY vb.), imajın üzerine eklenen yeni bir katmanı (layer) temsil eder ve bu katmanlı yapı sayesinde Docker, imaj build süreçlerini önbelleğe alarak (cache) hızlandırır. İyi tasarlanmış bir Dockerfile, sadece uygulamanın çalışmasını sağlamakla kalmaz; aynı zamanda "Multi-stage Build" gibi tekniklerle imaj boyutunu küçültür ve gereksiz dosyaları dışarıda bırakarak güvenliği artırır. Geliştiriciler için Dockerfile yazmak, uygulamanın altyapısını kod olarak tanımlamak (Infrastructure as Code) ve dağıtım süreçlerini tüm ortamlarda standartlaştırmak anlamına gelir.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Dockerfile (Talimatlar)"] --> B["Docker Build (İşlem)"]
+    B --> C["Docker Image (Statik Kalıp)"]
+    C --> D["Docker Run (Çalıştırma)"]
+    D --> E["Docker Container (Canlı Süreç)"]
+    subgraph "Build Aşaması"
+    A
+    B
+    C
+    end
+    subgraph "Runtime Aşaması"
+    D
+    E
+    end
+```
 
 ### Tüm Dockerfile Komutları
 

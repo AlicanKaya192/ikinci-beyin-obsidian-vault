@@ -7,16 +7,32 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Hiperparametreler modelin öğrenmeden önce belirlenen yapısal parametreleridir. GridSearch, RandomSearch ve Bayesian optimizasyon ile en iyi değerleri bulunur.
+Hiperparametre optimizasyonu, bir makine öğrenmesi modelinin öğrenme sürecini kontrol eden yapısal ayarların (örneğin bir ağacın maksimum derinliği veya öğrenme katsayısı) en iyi performans verecek şekilde sistematik olarak aranması sürecidir. Parametrelerin aksine hiperparametreler veri üzerinden otomatik öğrenilmez; eğitimden önce kullanıcı tarafından belirlenir. Bu süreçte temel amaç, modelin eğitim verisine aşırı uyum sağlamasını (overfitting) engelleyerek görmediği verilerdeki başarısını maksimize etmektir. GridSearchCV, RandomizedSearchCV ve Bayesian Optimization (Optuna) gibi yöntemler, bu "en iyi" ayarları bulmak için farklı stratejiler sunar.
 
 ## 🧠 Detay
 
+### Optimizasyon Stratejileri Karşılaştırması
+```mermaid
+graph TD
+    A["Hiperparametre Arama"] --> B{"Arama Uzayı Boyutu?"}
+    B -- "Küçük / Sınırlı" --> C["Grid Search"]
+    B -- "Geniş / Sürekli" --> D["Random Search"]
+    B -- "Karmaşık / Pahalı" --> E["Bayesian Optimization (Optuna)"]
+
+    C --> C1["Tüm kombinasyonları dene"]
+    D --> D1["Rastgele örnekler seç"]
+    E --> E1["Geçmiş sonuçlardan öğrenerek ilerle"]
+
+    C1 & D1 & E1 --> F["En İyi Model Parametreleri"]
+```
+
 ### GridSearchCV
+Arama uzayındaki her bir kombinasyonu tek tek dener. Garantili sonuç verir ama zaman maliyeti çok yüksektir.
 ```python
 from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.pipeline import Pipeline
-
+...
 pipe = Pipeline([
     ("model", RandomForestClassifier(random_state=42))
 ])

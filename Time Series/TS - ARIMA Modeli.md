@@ -7,11 +7,26 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-ARIMA (AutoRegressive Integrated Moving Average), durağan zaman serileri için en temel tahmin modelidir. p, d, q parametreleriyle tanımlanır.
+ARIMA (AutoRegressive Integrated Moving Average), zaman serisi tahminleme dünyasının en temel ve yaygın kullanılan parametrik modellerinden biridir. Model; geçmiş değerlere dayanan 'Öz-bağlanımlı' (AR), veriyi durağanlaştırmak için uygulanan 'Bütünleşik' (I) fark alma ve geçmiş hata terimlerini kullanan 'Hareketli Ortalama' (MA) bileşenlerinden oluşur. ARIMA(p, d, q) notasyonu ile ifade edilen bu modelde; p gecikme sayısını, d durağanlık için gereken fark derecesini, q ise hata terimi penceresini temsil eder. Box-Jenkins metodolojisi çerçevesinde kurulan ARIMA modelleri, kısa vadeli tahminlerde yüksek doğruluk sunarken, serinin durağan olması ön şartına dayanır.
 
 ## 🧠 Detay
 
+```mermaid
+graph TD
+    A["Zaman Serisi Verisi"] --> B{"Durağan mı?"}
+    B -- "Hayır" --> C["Fark Alma (d)"]
+    C --> B
+    B -- "Evet" --> D["ACF/PACF Analizi"]
+    D --> E["p ve q Parametrelerini Seç"]
+    E --> F["ARIMA(p,d,q) Modeli Kur"]
+    F --> G["Kalıntı Analizi (Residuals)"]
+    G --> H{"Beyaz Gürültü mü?"}
+    H -- "Hayır" --> E
+    H -- "Evet" --> I["Tahmin ve Validasyon"]
+```
+
 ### ARIMA Parametreleri
+
 ```
 p → AR terimi: kaç lag kullanılacak
 d → Differencing: durağanlaştırma için fark sayısı

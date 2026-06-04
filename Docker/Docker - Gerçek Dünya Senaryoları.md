@@ -8,11 +8,36 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-Gerçek dünya projelerinde kullanılan hazır Docker yapılandırmaları: Django + PostgreSQL + Celery, FastAPI, React production build ve sık karşılaşılan sorunların çözümleri.
+Gerçek dünya projelerinde Docker kullanımı, tekil container'ların ötesine geçerek; veritabanları, asenkron görev kuyrukları, önbellekleme mekanizmaları ve ters vekil sunucuların (reverse proxy) bir arada çalıştığı bütünsel bir orkestrasyon sürecidir. Bu dosya, Django, FastAPI ve React gibi popüler teknolojilerin production ortamında nasıl yapılandırıldığını, statik dosyaların yönetimini ve container'lar arası ağ iletişimini somut senaryolarla ele alır. Ayrıca, geliştiricilerin günlük hayatta sıkça karşılaştığı izin sorunları, bağlantı hataları ve kaynak yönetimi gibi kritik problemlere pratik çözümler sunarak, Docker'ın profesyonel projelerdeki uygulama standartlarını belirler.
 
 ---
 
 ## 🧠 Detay
+
+### Tam Yığın (Full-Stack) Production Mimarisi
+
+```mermaid
+graph TD
+    subgraph "Dış Dünya"
+        U["Kullanıcı"] --> NX["Nginx (Reverse Proxy)"]
+    end
+
+    subgraph "Uygulama Katmanı"
+        NX -- "/api" --> API["Backend (FastAPI/Django)"]
+        NX -- "/" --> FE["Frontend (React/Vue Static)"]
+    end
+
+    subgraph "İş Kuyruğu ve Önbellek"
+        API -- "Görev Gönder" --> R["Redis (Broker)"]
+        R -- "Görev Al" --> W["Celery Worker"]
+    end
+
+    subgraph "Veri ve Depolama"
+        API & W --> DB["PostgreSQL"]
+        DB -- "Kalıcı Veri" --> V1[("DB Volume")]
+        NX -- "Medya/Statik" --> V2[("Static Volume")]
+    end
+```
 
 ### Senaryo 1: Django + PostgreSQL + Redis + Celery
 

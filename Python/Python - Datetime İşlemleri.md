@@ -7,9 +7,20 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Python'da tarih ve saat işlemleri `datetime` modülü ile yapılır. Tarih oluşturma, hesaplama, formatlama ve zaman dilimi işlemlerini kapsar.
+Python'da tarih ve saat verileriyle çalışmak için yerleşik `datetime` modülü kullanılır. Bu modül; `date` (yalnızca tarih), `time` (yalnızca saat), `datetime` (hem tarih hem saat) ve `timedelta` (zaman farkı) gibi temel sınıflar sunarak zaman tabanlı verilerin yönetimini kolaylaştırır. Tarihlerin kullanıcı dostu metinlere dönüştürülmesi (strftime) veya metin tabanlı tarih verilerinin nesneye dönüştürülmesi (strptime) gibi kritik fonksiyonlarla veri işleme süreçlerinde büyük esneklik sağlar.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["datetime Modülü"] --> B["date (Yıl, Ay, Gün)"]
+    A --> C["time (Saat, Dakika, Saniye, Mikrosaniye)"]
+    A --> D["datetime (date + time)"]
+    A --> E["timedelta (Zaman Farkları/Süreler)"]
+    A --> F["tzinfo (Zaman Dilimi Bilgisi)"]
+    D --> G["strftime (Nesne -> Metin)"]
+    D --> H["strptime (Metin -> Nesne)"]
+```
 
 ### Temel Kullanım
 ```python

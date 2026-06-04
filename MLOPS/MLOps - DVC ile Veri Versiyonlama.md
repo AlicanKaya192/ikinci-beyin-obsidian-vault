@@ -7,9 +7,35 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-DVC (Data Version Control), büyük veri dosyalarını ve ML pipeline'larını Git benzeri bir sistemle versiyonlar. Veri ve model tekrarlanabilirliğini sağlar.
+Data Version Control (DVC), büyük boyutlu veri setlerini, makine öğrenmesi modellerini ve ara çıktıları Git ile uyumlu bir şekilde versiyonlamak için geliştirilmiş açık kaynaklı bir araçtır. Git kod dosyalarındaki değişiklikleri takip ederken, DVC bu koda karşılık gelen devasa veri dosyalarının meta verilerini (.dvc dosyaları) Git üzerinde saklayarak, asıl veriyi S3, Google Drive veya Azure Blob Storage gibi harici depolama alanlarında güvenle muhafaza eder. Bu yaklaşım, ML projelerinde deneylerin tam tekrarlanabilirliğini (reproducibility) garanti altına alır ve hangi veri setiyle hangi modelin üretildiğinin takibini kusursuzlaştırır. Ayrıca sunduğu pipeline yapısı sayesinde, veri işleme ve eğitim adımlarını birbirine bağlayarak sadece değişen kısımların yeniden çalıştırılmasını otomatik olarak koordine eder.
 
 ## 🧠 Detay
+
+### Git ve DVC Çalışma Prensibi
+```mermaid
+graph TD
+    subgraph Git_Control ["Git (Versiyon Kontrolü)"]
+    Code["Kaynak Kod (.py)"]
+    DVC_Pointer["Veri İşaretçisi (.dvc)"]
+    Params["Parametreler (params.yaml)"]
+    end
+    
+    subgraph DVC_Storage ["DVC Remote (Veri Deposu)"]
+    S3["Bulut Depolama (S3/GCS/Azure)"]
+    end
+    
+    subgraph Local_Workspace ["Yerel Çalışma Alanı"]
+    Large_Data["Büyük Veri Setleri (GBs)"]
+    Model_Files["Model Dosyaları (.h5/.pkl)"]
+    end
+    
+    DVC_Pointer -- "Hash Eşleşmesi" --> Large_Data
+    Large_Data -- "dvc push / pull" --> S3
+    Git_Control -- "git push / pull" --> GitHub["GitHub / GitLab"]
+    
+    style Large_Data fill:#f9f,stroke:#333,stroke-width:2px
+    style S3 fill:#bbf,stroke:#333,stroke-width:2px
+```
 
 ### Kurulum ve Başlangıç
 ```bash

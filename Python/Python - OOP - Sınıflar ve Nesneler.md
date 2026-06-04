@@ -7,9 +7,21 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Nesne Yönelimli Programlama (OOP), gerçek dünyadaki nesneleri modelleyen bir programlama yaklaşımıdır. Sınıf (class) nesnenin şablonudur; nesne (object) sınıftan üretilen somut örnektir.
+Nesne Yönelimli Programlama (OOP), yazılım geliştirme sürecinde gerçek dünya varlıklarını kod içerisinde modellemek için kullanılan temel bir paradigmadır. Sınıf (class), bir nesnenin sahip olacağı özellikleri ve davranışları tanımlayan soyut bir taslak veya şablon işlevi görür. Nesne (object) ise bu sınıftan türetilen, hafızada yer kaplayan somut bir örnektir; sınıflar veri yapılarını (nitelikler) ve bu veriler üzerinde işlem yapan fonksiyonları (metodlar) bir araya getirerek kodun daha modüler, yeniden kullanılabilir ve yönetilebilir olmasını sağlar.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    S["Sınıf (Class)"] --> N1["Nesne 1 (Instance)"]
+    S --> N2["Nesne 2 (Instance)"]
+    subgraph "Sınıf Yapısı"
+    S --- A["Nitelikler (Attributes/Data)"]
+    S --- M["Metodlar (Methods/Behavior)"]
+    end
+    N1 --- V1["Özel Veriler"]
+    N2 --- V2["Özel Veriler"]
+```
 
 ### Sınıf Tanımlama
 ```python

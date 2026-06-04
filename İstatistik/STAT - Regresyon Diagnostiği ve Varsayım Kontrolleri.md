@@ -8,11 +8,28 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-Regresyon modelini kurduktan sonra varsayımların sağlandığı kontrol edilmelidir. Aykırı değerler, etkili gözlemler ve varsayım ihlalleri modeli bozabilir.
+Regresyon diagnostiği, oluşturulan istatistiksel modelin güvenilirliğini ve geçerliliğini doğrulamak için yapılan kritik bir değerlendirme sürecidir. Modelin temel varsayımları olan doğrusallık, bağımsızlık, normallik ve eş varyanslılık (LINE) ihlal edildiğinde, elde edilen katsayılar ve p-değerleri yanıltıcı olabilir. Bu süreçte sadece varsayımlar değil, aynı zamanda modelin katsayılarını orantısız şekilde değiştirebilen aykırı değerler (outliers), yüksek kaldıraçlı noktalar (leverage) ve etkili gözlemler (Cook's Distance) titizlikle incelenir. Etkin bir diagnostik analizi, modelin zayıf yönlerini ortaya çıkararak veri dönüşümleri, robust yöntemler veya modelin yeniden yapılandırılması gibi düzeltici önlemlerin alınmasını sağlar.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Regresyon Modeli Oluşturuldu"] --> B["Varsayım Kontrolleri (LINE)"]
+    B --> C["Gözlem Analizi (Etki ve Hata)"]
+    B --> B1["Normallik (Q-Q Plot / Shapiro-Wilk)"]
+    B --> B2["Eş Varyans (Scale-Location / BP Testi)"]
+    B --> B3["Bağımsızlık (Durbin-Watson)"]
+    C --> C1["Kaldıraç (Leverage / Hat Matrix)"]
+    C --> C2["Etki (Cook's Distance / DFFITS)"]
+    C --> C3["Aykırı Değerler (Öğrenci Artıkları)"]
+    C1 --> D{"Model Güvenilir mi?"}
+    B1 --> D
+    D -- "Hayır" --> E["Model Düzeltme (Dönüşüm / Robust Regresyon)"]
+    D -- "Evet" --> F["Final Model Yorumlama ve Tahmin"]
+    E --> A
+```
 
 ### Temel Varsayım Kontrolleri (LINE)
 

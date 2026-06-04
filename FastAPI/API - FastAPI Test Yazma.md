@@ -7,9 +7,20 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-FastAPI'da TestClient ile endpoint'leri pytest kullanarak kolayca test edebilirsiniz. Mock ile model bağımlılıklarını izole etmek production kalitesi için kritiktir.
+FastAPI uygulamalarında test yazımı, uygulamanın güvenilirliğini ve sürdürülebilirliğini sağlamak için kritik bir adımdır. `TestClient` ve `pytest` kütüphaneleri kullanılarak hem senkron hem de asenkron endpoint'lerin davranışı kapsamlı bir şekilde doğrulanabilir. Özellikle makine öğrenmesi modelleri içeren projelerde, model bağımlılıklarını `unittest.mock` ile izole ederek sadece API mantığını test etmek, testlerin hızını ve tutarlılığını artırır. Ayrıca, `pytest fixtures` kullanımı test kodunun tekrarını önleyerek daha temiz ve yönetilebilir bir test yapısı kurulmasına olanak tanır.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Test Runner (Pytest)"] --> B["TestClient (Starlette)"]
+    B --> C["FastAPI App (ASGI)"]
+    C --> D["Dependency Injection (Overrides)"]
+    C --> E["Mocked ML Models / DB"]
+    D -.-> E
+    B --> F["JSON Response Validation"]
+    B --> G["HTTP Status Code Validation"]
+```
 
 ### Kurulum
 ```bash

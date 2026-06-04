@@ -7,9 +7,21 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Modeller zamanla bozulur; otomatik yeniden eğitim sistemi drift veya performans düşüşü tespit edildiğinde modeli yeniden eğitip deploy eder. Airflow veya Prefect ile orkestre edilir.
+Otomatik yeniden eğitim (Continuous Retraining), canlı ortamdaki bir modelin performansının zamanla düşmesini engellemek için tasarlanmış bir MLOps sürecidir. Bu sistem, önceden belirlenmiş tetikleyiciler (zaman, performans düşüşü veya veri drifti) aracılığıyla en güncel veriyi kullanarak yeni bir model eğitir, bu modeli test eder ve belirli kalite kriterlerini karşıladığında otomatik olarak yayına alır. Airflow, Prefect veya GitHub Actions gibi orkestrasyon araçları kullanılarak kurgulanan bu döngü, modellerin her zaman güncel dünya verilerini yansıtmasını sağlayarak manuel müdahale ihtiyacını minimize eder. Bu sayede, "Continuous Integration" ve "Continuous Deployment" kavramlarına ek olarak "Continuous Training" (CT) yetkinliği de sisteme kazandırılmış olur.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Monitoring Sistemi"] -->|Drift/Performans Kaybı| B["Tetikleyici (Trigger)"]
+    C["Zamanlanmış Görev (Cron)"] --> B
+    B --> D["Veri Toplama & Temizleme"]
+    D --> E["Model Eğitimi (Retraining)"]
+    E --> F["Performans Değerlendirme"]
+    F -->|Başarılı| G["Model Registry (Update)"]
+    F -->|Başarısız| H["Alarm & Log"]
+    G --> I["Otomatik Deployment"]
+```
 
 ### Yeniden Eğitim Tetikleyicileri
 ```

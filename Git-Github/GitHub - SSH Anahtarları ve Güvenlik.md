@@ -8,11 +8,37 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-GitHub güvenliği: SSH anahtarları ile şifresiz bağlantı, GPG ile commit imzalama, iki faktörlü kimlik doğrulama ve Personal Access Token yönetimi.
+GitHub üzerinde güvenli bir geliştirme ortamı oluşturmak, hem kodun bütünlüğünü korumak hem de yetkisiz erişimleri engellemek için hayati önem taşır. SSH anahtarları aracılığıyla şifresiz ve güvenli bağlantılar kurulurken, GPG imzalama yöntemiyle commit'lerin doğruluğu ve kaynağı garanti altına alınır. İki faktörlü kimlik doğrulama (2FA) hesap güvenliğini bir üst seviyeye taşırken, Personal Access Token (PAT) ve Deploy Keys gibi araçlar, otomasyon sistemleri ve sunucular için kontrollü erişim sağlar. Bu güvenlik katmanlarının doğru yapılandırılması, siber tehditlere karşı güçlü bir savunma hattı oluşturur ve profesyonel yazılım geliştirme standartlarını karşılar.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    User["Kullanıcı"]
+    subgraph "Kimlik Doğrulama (Auth)"
+    SSH["SSH Anahtarları (Bağlantı)"]
+    PAT["PAT / Token (API Access)"]
+    2FA["2FA (Hesap Güvenliği)"]
+    end
+    
+    subgraph "Doğrulama (Verification)"
+    GPG["GPG İmzalama (Commit Verified)"]
+    end
+    
+    subgraph "Otomasyon (Automation)"
+    DK["Deploy Keys (Read-only)"]
+    APP["GitHub Apps"]
+    end
+    
+    User --> SSH
+    User --> PAT
+    User --> 2FA
+    User -- "Commit" --> GPG
+    SSH -- "Push/Pull" --> REPO["GitHub Repository"]
+    DK -- "Sadece Okuma" --> REPO
+```
 
 ### SSH Anahtarı Oluşturma ve Ekleme
 

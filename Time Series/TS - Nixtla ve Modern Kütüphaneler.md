@@ -7,9 +7,27 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Nixtla ekosistemi (StatsForecast, MLForecast, NeuralForecast), modern ve hızlı zaman serisi tahmin kütüphaneleridir. Çok sayıda seriyi aynı anda verimli şekilde modelleyebilir.
+Nixtla ekosistemi, zaman serisi tahmini alanında hızı, ölçeklenebilirliği ve doğruluğu bir araya getiren modern bir kütüphane setidir. StatsForecast ile klasik istatistiksel modelleri, MLForecast ile makine öğrenmesi yaklaşımlarını ve NeuralForecast ile derin öğrenme modellerini (N-BEATS, PatchTST vb.) tek bir çatı altında sunar. Geleneksel kütüphanelere göre en büyük avantajı, binlerce farklı zaman serisini aynı anda ve son derece verimli bir şekilde modelleyebilmesidir. Ayrıca TimeGPT gibi "foundation model" yaklaşımlarıyla, eğitim gerektirmeyen (zero-shot) yüksek performanslı tahminler yapılmasına imkan tanır.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Nixtla Ekosistemi"] --> B["StatsForecast"]
+    A --> C["MLForecast"]
+    A --> D["NeuralForecast"]
+    A --> E["TimeGPT"]
+    
+    B --> B1["AutoARIMA, ETS, MSTL"]
+    C --> C1["LGBM, XGBoost, CatBoost"]
+    D --> D1["N-BEATS, NHITS, PatchTST"]
+    E --> E1["Zero-shot LLM tabanlı tahmin"]
+    
+    B1 --> F["Hızlı İstatistiksel Modeller"]
+    C1 --> G["Özellik Mühendisliği & Regresyon"]
+    D1 --> H["Karmaşık Kalıpları Öğrenme"]
+    E1 --> I["Eğitim Gerekmez (API)"]
+```
 
 ### StatsForecast
 ```python

@@ -7,9 +7,21 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-Flask, basit ve esnek bir Python web framework'üdür. Küçük ML servisleri, prototipleme ve mevcut Flask projelerine model ekleme için hâlâ yaygın kullanılır.
+Flask, Python dünyasında uzun yıllardır popülerliğini koruyan, "mikro" yapıda, esnek ve hafif bir web framework'üdür. Özellikle hızlı prototipleme, küçük çaplı makine öğrenmesi servisleri ve basit API geliştirmeleri için ideal bir tercihtir. FastAPI'nin sunduğu otomatik tip doğrulama ve asenkron yapı gibi modern özelliklerden yoksun olsa da, geniş ekosistemi ve öğrenme kolaylığı sayesinde hala birçok projede aktif olarak kullanılmaktadır. Bu dokümanda, eğitilmiş bir ML modelinin Flask üzerinden nasıl servis edileceği, hata yönetimi ve production ortamı için Gunicorn yapılandırması detaylandırılmıştır.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["İstemci (POST isteği)"] --> B["Flask WSGI Sunucusu (Gunicorn)"]
+    B --> C["Flask Uygulaması (app.py)"]
+    C --> D["JSON Veri Doğrulama (Manuel)"]
+    D --> E["Özellik Ölçeklendirme (Scaler)"]
+    E --> F["Model Tahmini (Inference)"]
+    F --> G["JSON Yanıt Hazırlama"]
+    G --> B
+    B --> H["İstemci (Yanıt)"]
+```
 
 ### Kurulum
 ```bash

@@ -7,9 +7,27 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Kalıtım (inheritance), bir sınıfın başka bir sınıfın özelliklerini ve metodlarını devralmasıdır. Kod tekrarını önler ve hiyerarşik yapılar oluşturur.
+Nesne Yönelimli Programlamanın (OOP) en temel direklerinden biri olan kalıtım (inheritance), bir sınıfın (alt sınıf / subclass) başka bir sınıfın (üst sınıf / parent class) tüm nitelik ve davranışlarını miras almasını sağlayan mekanizmadır. Bu yapı, kodun yeniden kullanılabilirliğini (reusability) maksimize ederken, sınıflar arasında mantıksal bir hiyerarşi ve uzmanlaşma (specialization) oluşturur. Alt sınıflar, miras aldıkları metodları olduğu gibi kullanabilir, "overriding" tekniği ile kendi ihtiyaçlarına göre yeniden tanımlayabilir veya tamamen yeni özellikler ekleyebilirler. Python'ın çoklu kalıtım (multiple inheritance) desteği ve Method Resolution Order (MRO) algoritması, karmaşık sınıf ilişkilerinin tutarlı bir şekilde yönetilmesini sağlar.
 
 ## 🧠 Detay
+
+```mermaid
+classDiagram
+    class Hayvan {
+        +String isim
+        +ses_cikar()
+        +tanitim()
+    }
+    class Kopek {
+        +ses_cikar()
+        +getir()
+    }
+    class Kedi {
+        +ses_cikar()
+    }
+    Hayvan <|-- Kopek : Miras Alır
+    Hayvan <|-- Kedi : Miras Alır
+```
 
 ### Temel Kalıtım
 ```python

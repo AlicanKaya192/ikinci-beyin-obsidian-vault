@@ -7,9 +7,30 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Yeni modeli production'a alırken A/B test veya shadow mode ile güvenli geçiş yapılır. Canary deployment ise trafiği kademeli olarak yeni modele yönlendirir.
+Makine öğrenmesi modellerini yayına alırken riskleri minimize etmek ve en doğru modeli seçmek için çeşitli stratejik yaklaşımlar kullanılır. A/B testi, kullanıcı kitlesini farklı segmentlere ayırarak hangi modelin daha yüksek performans (dönüşüm oranı, tıklama vb.) sergilediğini istatistiksel anlamlılık düzeyinde belirlemeyi sağlar. Shadow Mode (Gölge Modu) ise yeni modeli üretim ortamında, sonuçlarını kullanıcıya yansıtmadan arka planda çalıştırarak gerçek dünya verileri üzerindeki doğruluğunu ve sistem yükünü sıfır riskle test etmeye yarar. Canary Deployment yöntemiyle de trafik küçük adımlarla yeni modele kaydırılarak olası hataların tüm kullanıcı tabanını etkilemesi engellenmiş olur.
 
 ## 🧠 Detay
+
+### Model Dağıtım Stratejileri Görseli
+```mermaid
+graph TD
+    User["Kullanıcı"] --> LB["Yük Dengeleyici / Trafik Yönetimi"]
+    LB -- "%X Trafik (Canary/AB)" --> ModelA["Model A (Mevcut Prod)"]
+    LB -- "%Y Trafik (Canary/AB)" --> ModelB["Model B (Yeni Model)"]
+    ModelA --> Response["Kullanıcı Yanıtı"]
+    ModelB --> Response
+    
+    subgraph ShadowMode ["Shadow Mode Akışı"]
+    LB -- "Kopya İstek" --> ModelShadow["Shadow Model (Paralel)"]
+    ModelShadow -. "Log/Metrik" .-> Compare["Kıyaslama Analizi"]
+    ModelA -. "Log/Metrik" .-> Compare
+    end
+    
+    Response --> Metrics["Performans İzleme & Karar"]
+    Metrics --> Decision{"Model Başarılı mı?"}
+    Decision -- "Evet" --> FullDeploy["Tam Dağıtım (%100)"]
+    Decision -- "Hayır" --> Rollback["Geri Al (Rollback)"]
+```
 
 ### Deployment Stratejileri
 ```

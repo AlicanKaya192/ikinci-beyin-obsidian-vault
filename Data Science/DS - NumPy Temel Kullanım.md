@@ -7,9 +7,20 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-NumPy, Python'da sayısal hesaplama için temel kütüphanedir. Çok boyutlu diziler (ndarray) ve matematiksel işlemler sunar. Pandas, Scikit-learn gibi kütüphanelerin temeli NumPy'dır.
+NumPy (Numerical Python), Python programlama dilinde bilimsel hesaplamalar ve veri manipülasyonu için kullanılan en temel kütüphanedir. Çok boyutlu dizi yapısı olan `ndarray` nesnesi, standart Python listelerine kıyasla çok daha hızlı ve bellek verimli bir çalışma ortamı sunar. Pandas, Scikit-learn ve TensorFlow gibi popüler veri bilimi araçları, veri yapılarının temelinde NumPy'ı kullanarak karmaşık matematiksel işlemleri optimize ederler. Array oluşturma, veri tiplerini yönetme ve dilimleme (slicing) tekniklerini anlamak, modern veri analizi süreçlerine adım atmak için kritik bir öneme sahiptir.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["NumPy Temelleri"] --> B["Array Oluşturma"]
+    A --> C["Array Özellikleri"]
+    A --> D["Erişim ve Dilimleme"]
+    B --> B1["np.array(), np.zeros(), np.ones()"]
+    B --> B2["np.arange(), np.linspace(), np.eye()"]
+    C --> C1["shape, ndim, size, dtype"]
+    D --> D1["Indexleme, Slicing, 2D Erişim"]
+```
 
 ### Kurulum ve Import
 ```python

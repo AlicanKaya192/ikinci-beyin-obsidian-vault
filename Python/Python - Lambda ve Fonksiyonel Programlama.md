@@ -7,9 +7,20 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Lambda, tek satırlık anonim fonksiyonlardır. `map()`, `filter()`, `reduce()` gibi fonksiyonel araçlarla birlikte sıklıkla kullanılır.
+Python'da Lambda ifadeleri, isim verilmeden tanımlanan ve genellikle kısa süreli işlemler için kullanılan "anonim" fonksiyonlardır. Fonksiyonel programlama paradigmasının temel araçları olan `map()`, `filter()` ve `reduce()` gibi yüksek seviyeli fonksiyonlarla (higher-order functions) birlikte kullanıldıklarında, kodun daha kompakt ve deklaratif bir yapıda olmasını sağlarlar. Özellikle veri işleme boru hatlarında (data pipelines) ve karmaşık listeleri belirli kriterlere göre sıralarken (custom sorting) lambda fonksiyonları büyük kolaylık sunar. Ancak, çok karmaşık mantıklar için lambda yerine standart `def` bloklarını kullanmak, kodun okunabilirliğini ve sürdürülebilirliğini korumak açısından daha doğru bir yaklaşımdır.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Girdi Verisi (Iterable)"] --> B{"İşlem Tipi?"}
+    B -- "Dönüştürme (Transformation)" --> C["map(lambda, iterable)"]
+    B -- "Süzme (Filtering)" --> D["filter(lambda, iterable)"]
+    B -- "Biriktirme (Reduction)" --> E["reduce(lambda, iterable)"]
+    C --> F["Yeni Veri / Sonuç"]
+    D --> F
+    E --> F
+```
 
 ### Lambda
 ```python

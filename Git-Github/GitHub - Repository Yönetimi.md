@@ -8,11 +8,30 @@ zorluk: ⭐⭐
 
 ## 📌 Özet
 
-GitHub, Git repository'lerini barındıran ve ekip işbirliğini sağlayan platformdur. Fork, Issues, Releases ve GitHub CLI ile verimli proje yönetimi.
+GitHub Repository yönetimi, yazılım projelerinin bulut üzerinde barındırılmasının ötesinde, projenin tüm yaşam döngüsünü kapsayan merkezi bir yönetim merkezidir. Uzak depoların (remotes) etkin kullanımı, çatallama (fork) iş akışları ve sürümleme (releases) stratejileri sayesinde ekipler, karmaşık projeleri düzenli ve güvenli bir şekilde yürütebilirler. Ayrıca GitHub CLI gibi araçlar, terminal üzerinden depo işlemlerini hızlandırırken, Issue ve Milestone takibi ile proje hedeflerine ulaşmak kolaylaşır. Bu bütünsel yaklaşım, hem açık kaynak topluluklarında hem de özel kurumsal projelerde şeffaf ve sürdürülebilir bir geliştirme ortamı sağlar.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    RE["Repository (Depo)"]
+    RE --> IS["Issue (Sorun) Takibi"]
+    RE --> PR["Pull Request (İşbirliği)"]
+    RE --> RL["Releases (Sürümler)"]
+    RE --> AC["Actions (Otomasyon)"]
+    
+    subgraph "Dış Etkileşim"
+    FK["Fork (Çatallama)"]
+    CL["Clone (Yerel Kopya)"]
+    end
+    
+    FK -- "Değişiklik Gönder" --> PR
+    CL -- "Kod Yaz" --> RE
+    IS -- "Referans Ver" --> PR
+    PR -- "Kod Birleştir" --> RL
+```
 
 ### Remote Yönetimi
 

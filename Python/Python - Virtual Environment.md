@@ -7,9 +7,22 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-Virtual environment (sanal ortam), her proje için bağımsız Python ortamı oluşturur. Paket çakışmalarını önler ve projeleri birbirinden izole eder.
+Sanal Ortam (Virtual Environment), Python projeleri için izole edilmiş çalışma alanları yaratarak kütüphane ve bağımlılık çakışmalarını ortadan kaldıran kritik bir araçtır. Her proje, kendi sistem kütüphanelerinden bağımsız olarak belirli kütüphane sürümlerine sahip olabilir, bu da 'benim makinemde çalışıyor ama sunucuda çalışmıyor' gibi sorunların önüne geçer. Yazılım geliştirme sürecinde her yeni projeye bir sanal ortam oluşturarak başlamak, temiz ve yönetilebilir bir kod ekosistemi kurmanın en temel adımıdır.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    Global["Sistem Python (Global)"] --> V1["Proje A (Sanal Ortam)"]
+    Global --> V2["Proje B (Sanal Ortam)"]
+    subgraph "Proje A"
+    V1 --- P1["numpy 1.20"]
+    end
+    subgraph "Proje B"
+    V2 --- P2["numpy 1.24"]
+    end
+    V1 -- "İzole" --- V2
+```
 
 ### Neden Gerekli?
 - Proje A: numpy 1.20 kullanıyor

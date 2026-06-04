@@ -21,6 +21,24 @@ Feature Engineering (Özellik Mühendisliği), ham veriden makine öğrenmesi mo
 - Kötü özellikler karmaşık modelleri bile çökertir
 - Domain bilgisi + veri = güçlü özellikler
 
+### 🗺️ Feature Engineering Ana Yol Haritası
+
+```mermaid
+graph TD
+    Start["Ham Veri"] --> EDA["Veri Anlama / EDA"]
+    EDA --> Cleaning["Temizlik: Eksik & Aykırı Değer"]
+    Cleaning --> Basic["Temel İşlemler: Encoding & Scaling"]
+    Basic --> Advanced{"Veri Türü?"}
+    Advanced -- Sayısal --> Trans["Dönüşümler & Binning"]
+    Advanced -- Kategorik --> Card["High Cardinality İşlemleri"]
+    Advanced -- Metin/Ses/Görüntü --> Unstruct["Unstructured FE"]
+    Advanced -- Zaman/Konum --> TempGeo["Temporal & Geospatial FE"]
+    Trans & Card & Unstruct & TempGeo --> Creation["Yeni Özellik Türetme"]
+    Creation --> Selection["Özellik Seçimi"]
+    Selection --> Pipeline["ML Pipeline / Feature Store"]
+    Pipeline --> Model["Model Eğitimi"]
+```
+
 ### Feature Engineering Adımları
 
 ```
@@ -116,9 +134,13 @@ full_pipeline = Pipeline([
 
 ## 💡 Bağlantılar
 - [[FE - Eksik Veri İşleme]]
+- [[FE - Aykırı Değer İşleme]]
 - [[FE - Encoding Yöntemleri]]
 - [[FE - Ölçeklendirme ve Normalizasyon]]
 - [[FE - Özellik Türetme]]
+- [[FE - Coğrafi Özellik Mühendisliği]]
+- [[FE - Ses Özellikleri]]
+- [[FE - Feature Store ve MLOps]]
 - [[ML - Veri Ön İşleme Pipeline]]
 
 ## ❓ Sorular / Anlamadıklarım

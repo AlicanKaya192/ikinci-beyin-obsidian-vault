@@ -8,11 +8,25 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-Branch (dal), ana geliştirme hattından bağımsız çalışmanızı sağlar. Merge ve rebase, dalları birleştirmenin iki farklı yoludur. Conflict çözümü en kritik beceridir.
+Git'te dallanma (branching), projeyi farklı geliştirme hatlarına bölerek ana kod tabanını riske atmadan yeni özellikler eklemenize veya hataları düzeltmenize olanak tanır. Bu yapı, ekiplerin aynı anda farklı özellikler üzerinde birbirini engellemeden çalışmasını sağlayan modern yazılım geliştirme süreçlerinin temel taşıdır. Merge ve Rebase yöntemleri, bu bağımsız çalışmaları ana dala geri getirmenin farklı yaklaşımlarını sunar; Merge geçmişin bütünlüğünü korurken, Rebase daha temiz ve doğrusal bir tarihçe oluşturur. Çatışma (Conflict) yönetimi ise, aynı dosya üzerindeki farklı değişikliklerin uyumlu hale getirilmesi sürecinde kritik bir rol oynar ve doğru araçlarla yönetilmesi geliştirici verimliliğini artırır.
 
 ---
 
 ## 🧠 Detay
+
+### Branching ve Merging Akışı
+
+```mermaid
+graph TD
+    A["Main Dalı"] --> B["Yeni Branch Oluştur (git branch)"]
+    B --> C["Geliştirme Yap (commit)"]
+    C --> D{"Birleştirme Stratejisi Seç"}
+    D -- "Merge (git merge)" --> E["Merge Commit Oluşturulur"]
+    D -- "Rebase (git rebase)" --> F["Commitler Hedef Dalın Ucuna Taşınır"]
+    E --> G["Değişiklikler Ana Dala Aktarıldı"]
+    F --> G
+    G --> H["Branch Silme (git branch -d)"]
+```
 
 ### Branch Yönetimi
 

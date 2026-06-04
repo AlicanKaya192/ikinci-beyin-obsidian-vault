@@ -7,9 +7,21 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Veri bilimciler sıklıkla dış kaynaklardan veri toplar. API'lar yapılandırılmış veri sunarken, web scraping ham HTML'den veri çeker.
+Modern veri biliminde dış kaynaklardan veri toplamak için API kullanımı ve Web Scraping iki temel sütunu oluşturur. API'lar (Application Programming Interface), sunucular tarafından belirli bir protokol çerçevesinde sunulan, genellikle JSON veya XML formatındaki yapılandırılmış verilere güvenli ve standart bir erişim imkanı tanır. Web Scraping ise, bir API'nın bulunmadığı durumlarda web sayfalarının HTML içeriğini analiz ederek istenen bilgileri ayıklama sürecidir. Bu süreçte veri bilimciler, statik sayfalar için `BeautifulSoup` ve dinamik, JavaScript tabanlı içerikler için `Selenium` gibi araçları kullanarak veriyi analiz edilebilir formatlara dönüştürürler. Veri toplama işlemlerinde etik kurallara uyulması, sunucu limitlerine (rate limiting) saygı gösterilmesi ve `robots.txt` dosyalarının kontrol edilmesi sürdürülebilir bir veri akışı için hayati önem taşır.
 
 ## 🧠 Detay
+
+### Veri Toplama Stratejisi
+```mermaid
+graph TD
+    A["Veri İhtiyacı"] --> B{"API Mevcut mu?"}
+    B -- "Evet" --> C["API Üzerinden Veri Çekme (Requests)"]
+    B -- "Hayır" --> D["Web Scraping (BeautifulSoup/Selenium)"]
+    C --> E["Yapılandırılmış Veri (JSON/XML)"]
+    D --> F["Ham HTML Verisi"]
+    E --> G["Pandas DataFrame"]
+    F --> G
+```
 
 ### requests ile API Kullanımı
 ```python

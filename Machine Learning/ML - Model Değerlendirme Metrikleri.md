@@ -7,9 +7,29 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Model performansını doğru ölçmek için doğru metriği seçmek kritiktir. Sınıflandırma ve regresyon için farklı metrikler kullanılır.
+Model değerlendirme metrikleri, bir makine öğrenmesi modelinin performansını ve güvenilirliğini ölçmek için kullanılan temel araçlardır. Doğru metriğin seçilmesi, iş probleminin doğasına ve veri setinin dengesine (class imbalance) doğrudan bağlıdır; örneğin, dengeli veri setlerinde 'Accuracy' yeterli olabilirken, nadir olayların tespiti gibi durumlarda 'Recall' veya 'F1-Score' çok daha kritik hale gelir. Performans ölçümü sadece sayısal bir çıktı değil, aynı zamanda modelin zayıf yanlarını (yanlış pozitifler vs. yanlış negatifler) anlamamızı sağlayarak iyileştirme stratejilerini belirlememize rehberlik eder.
 
 ## 🧠 Detay
+
+### Metrik Seçim Akış Diyagramı
+```mermaid
+graph TD
+    Start["Metrik Seçimi"] --> Task{"Görev Tipi?"}
+    Task -- "Sınıflandırma" --> Imbalance{"Veri Dengeli mi?"}
+    Task -- "Regresyon" --> Outliers{"Aykırı Değer Var mı?"}
+    
+    Imbalance -- "Evet" --> Acc["Accuracy"]
+    Imbalance -- "Hayır" --> Cost{"Hata Maliyeti?"}
+    
+    Cost -- "Yanlış Pozitif (FP) Kritik" --> Prec["Precision"]
+    Cost -- "Yanlış Negatif (FN) Kritik" --> Rec["Recall"]
+    Cost -- "Her İkisi de Önemli" --> F1["F1-Score"]
+    
+    Outliers -- "Evet" --> MAE["MAE (Mean Absolute Error)"]
+    Outliers -- "Hayır" --> RMSE["RMSE (Root Mean Squared Error)"]
+    
+    Acc & Prec & Rec & F1 & MAE & RMSE --> End["Model Performans Analizi"]
+```
 
 ### Sınıflandırma Metrikleri
 

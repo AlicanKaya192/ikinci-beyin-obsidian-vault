@@ -7,9 +7,24 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-Pandas, CSV, Excel, JSON, SQL gibi farklı formatlardaki verileri kolayca okuyup yazabilir. Gerçek dünya veri analizi bu adımla başlar.
+Pandas, veri bilimcilerin farklı veri ekosistemleriyle etkileşim kurmasını sağlayan kapsamlı Giriş/Çıkış (I/O) araçlarına sahiptir. CSV ve Excel gibi yaygın ofis formatlarından, JSON gibi web tabanlı veri yapılarına ve ilişkisel veritabanlarından (SQL) doğrudan veri çekmeye kadar geniş bir yelpazeyi destekler. Veri okuma sırasında sunulan `sep`, `encoding`, `index_col` ve `nrows` gibi parametreler, ham veriyi belleğe alırken optimize etmeyi ve hataları önlemeyi sağlar. Bu yetenekler, verinin analiz için hazır hale getirilmesindeki ilk ve en kritik adım olan veri entegrasyonu sürecini standartlaştırır.
 
 ## 🧠 Detay
+
+```mermaid
+graph LR
+    A["Veri Kaynakları"] --> B["Pandas I/O (read_*)"]
+    B --> C["DataFrame (Bellek)"]
+    B --> D["Veri Çıktısı (to_*)"]
+    A1["CSV / TXT"] --> B
+    A2["Excel (.xlsx)"] --> B
+    A3["JSON"] --> B
+    A4["SQL / DB"] --> B
+    D --> D1["CSV"]
+    D --> D2["Excel"]
+    D --> D3["JSON"]
+    D --> D4["SQL"]
+```
 
 ### CSV Okuma ve Yazma
 ```python

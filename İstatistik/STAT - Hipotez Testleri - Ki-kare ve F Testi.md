@@ -8,11 +8,22 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-Ki-kare testleri kategorik veriler için, F-testi ise varyansları karşılaştırmak ve regresyon anlamlılığı için kullanılır.
+Ki-kare ve F-testleri, verideki değişkenlik ve kategorik ilişkileri incelemek için kullanılan kritik hipotez testleridir. Ki-kare testi, özellikle kategorik verilerin beklenen bir dağılıma uyup uymadığını (iyilik-uyum) veya iki kategorik değişken arasında bağımsızlık olup olmadığını test etmek için temel araçtır. F-testi ise, iki farklı grubun varyanslarını karşılaştırmak veya regresyon modellerinin genel anlamlılığını değerlendirmek amacıyla kullanılır. Her iki yöntem de sürekli verilerden ziyade frekanslar veya varyans oranları üzerinden çıkarım yaparak, araştırmacılara değişkenler arasındaki yapısal ilişkiler ve grup farklılıkları hakkında istatistiksel kanıt sunar.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Kategorik veya Varyans Odaklı Test"] --> B{"Veri Türü?"}
+    B -- "Kategorik (Frekanslar)" --> C["Ki-Kare Testi"]
+    B -- "Sürekli (Varyans Oranı)" --> D["F-Testi"]
+    C --> C1["Uyum İyiliği (Tek Değişken)"]
+    C --> C2["Bağımsızlık Testi (İki Değişken)"]
+    D --> D1["İki Grup Varyans Karşılaştırması"]
+    D --> D2["ANOVA / Regresyon Anlamlılığı"]
+```
 
 ### Ki-kare Dağılımı Hatırlatması
 

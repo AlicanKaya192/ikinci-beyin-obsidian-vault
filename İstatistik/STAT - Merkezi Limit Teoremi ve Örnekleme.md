@@ -14,6 +14,24 @@ Merkezi Limit Teoremi (MLT), istatistiksel çıkarımın en temel teoremidir. Ha
 
 ## 🧠 Detay
 
+### 🗺️ Örnekleme Dağılımı ve CLT Görselleşimi
+
+```mermaid
+graph TD
+    A["Anakütle / Population <br/> Herhangi bir dağılım"] --> B["Rastgele Örneklem 1"]
+    A --> C["Rastgele Örneklem 2"]
+    A --> D["Rastgele Örneklem n..."]
+    
+    B --> B1["Ortalama x̄1"]
+    C --> C1["Ortalama x̄2"]
+    D --> D1["Ortalama x̄n"]
+    
+    B1 & C1 & D1 --> E["Örnekleme Dağılımı <br/> Sampling Distribution"]
+    E --> F{"Örneklem Sayısı n > 30?"}
+    F -- Evet --> G["Dağılım NORMAL olur"]
+    F -- Hayır --> H["Dağılım orijinal dağılıma benzer"]
+```
+
 ### Büyük Sayılar Yasası (Law of Large Numbers)
 
 **Zayıf Versiyon**: $n \to \infty$ iken $\bar{X}_n \xrightarrow{p} \mu$

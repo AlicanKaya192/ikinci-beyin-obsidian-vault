@@ -7,9 +7,31 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Pipeline, veri ön işleme ve modelleme adımlarını tek bir nesne altında birleştirir. Veri sızıntısını önler, kodu temiz tutar ve deploy sürecini kolaylaştırır.
+Makine öğrenmesi süreçlerinde 'Pipeline', veri ön işleme adımları ile model tahminleme aşamasını tek bir yapısal nesne altında birleştiren güçlü bir araçtır. Pipeline kullanmanın en kritik avantajı, 'Veri Sızıntısını' (Data Leakage) önleyerek, ön işleme adımlarının (ölçeklendirme, eksik veri tamamlama vb.) sadece eğitim verisine göre öğrenilmesini ve test verisine hatasız uygulanmasını garanti altına almasıdır. Bu yaklaşım hem kodun daha temiz, modüler ve okunabilir olmasını sağlar hem de üretim (production) aşamasında modelin deploy edilmesini son derece kolaylaştırır. Ayrıca, GridSearchCV gibi hiperparametre optimizasyon süreçlerinde tüm iş akışının çapraz doğrulama (cross-validation) katmanları içinde tutarlı bir şekilde koşturulmasına olanak tanır.
 
 ## 🧠 Detay
+
+### Pipeline Veri Akış Şeması
+```mermaid
+graph LR
+    Input["Ham Veri (Raw Data)"] --> Pipe["Pipeline Başlangıcı"]
+    
+    subgraph Preprocessing["Ön İşleme Adımları"]
+        Step1["Imputer (Eksik Veri)"] --> Step2["Scaler (Ölçekleme)"]
+        Step2 --> Step3["Encoder (Kategorik)"]
+    end
+    
+    Pipe --> Preprocessing
+    Preprocessing --> Model["Model / Tahminleyici (Estimator)"]
+    
+    subgraph FitPredict["Çalışma Mantığı"]
+        Fit["fit(): Adımları öğren ve uygula"]
+        Predict["predict(): Sadece transform uygula ve tahmin et"]
+    end
+    
+    Model --> FitPredict
+    FitPredict --> Output["Sonuç / Tahmin"]
+```
 
 ### Neden Pipeline?
 ```python

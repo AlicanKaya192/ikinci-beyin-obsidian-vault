@@ -8,11 +8,23 @@ zorluk: ⭐⭐
 
 ## 📌 Özet
 
-Günlük Git kullanımında en çok ihtiyaç duyulan komutlar: durum takibi, geçmiş görüntüleme, farklılık gösterme ve değişiklikleri geri alma.
+Git temel komutları ve iş akışı, bir projenin yaşam döngüsü boyunca yapılan değişikliklerin yönetimini sağlar. Bu süreç; dosyaların takibi (status), değişikliklerin sahnelenmesi (add), kalıcı hale getirilmesi (commit) ve geçmişin incelenmesi (log/diff) gibi kritik adımları kapsar. Ayrıca, çalışma alanındaki karmaşıklığı yönetmek için stash kullanımı ve hatalı işlemlerin geri alınması (reset/restore) gibi ileri düzey araçlar geliştirici verimliliğini artırır. Bu komutların etkili kullanımı, hem bireysel çalışmalarda hem de ekip içi entegrasyonlarda veri bütünlüğünü korumanın temelidir.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    WD["Çalışma Dizini (Working Directory)"] -- "git add" --> SA["Hazırlık Alanı (Staging Area)"]
+    SA -- "git commit" --> LR["Yerel Depo (Local Repository)"]
+    LR -- "git push" --> RR["Uzak Depo (Remote Repository)"]
+    RR -- "git pull / fetch" --> LR
+    SA -- "git restore --staged" --> WD
+    LR -- "git reset" --> SA
+    WD -- "git stash" --> ST["Geçici Saklama (Stash)"]
+    ST -- "git stash pop" --> WD
+```
 
 ### git status
 

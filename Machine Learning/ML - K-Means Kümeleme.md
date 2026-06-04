@@ -7,11 +7,22 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-K-Means, veriyi K kümeye bölen en popüler gözetimsiz öğrenme algoritmasıdır. Her küme, üyelerinin ortalama noktası (centroid) ile temsil edilir.
+K-Means, etiketlenmemiş verileri birbirine olan benzerliklerine (genellikle Öklid mesafesi) göre K adet ayrık gruba ayıran, en temel ve popüler gözetimsiz (unsupervised) öğrenme algoritmasıdır. Algoritma, her kümenin bir "merkez noktası" (centroid) olduğu varsayımıyla çalışır ve veri noktalarını en yakın merkeze atayarak kümeler oluşturur. K-Means, iteratif bir yaklaşımla merkezleri sürekli güncelleyerek toplam küme içi varyansı minimize etmeye çalışır. Müşteri segmentasyonu, anomali tespiti ve veri ön işleme gibi pek çok alanda yaygın olarak kullanılır; ancak algoritmanın başarısı, verinin ölçeklendirilmiş olmasına ve doğru K sayısının seçilmesine sıkı sıkıya bağlıdır.
 
 ## 🧠 Detay
 
+### K-Means Algoritma Akışı
+```mermaid
+graph TD
+    A["Başlangıç: K adet rastgele merkez seç"] --> B["Atama: Her noktayı en yakın merkeze ata"]
+    B --> C["Güncelleme: Kümelerin yeni merkezlerini (ortalama) hesapla"]
+    C --> D{"Merkezler değişti mi?"}
+    D -- "Evet" --> B
+    D -- "Hayır" --> E["Sonuç: Kümeler belirlendi"]
+```
+
 ### Temel Kullanım
+K-Means mesafeye dayalı bir algoritma olduğu için verilerin ölçeklendirilmesi (StandardScaler) zorunludur.
 ```python
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
@@ -20,7 +31,7 @@ import matplotlib.pyplot as plt
 # Ölçekleme önemli
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
-
+...
 kmeans = KMeans(
     n_clusters=3,
     init="k-means++",    # akıllı başlangıç

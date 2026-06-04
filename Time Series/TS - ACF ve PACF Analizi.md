@@ -7,9 +7,21 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-ACF ve PACF grafikleri ARIMA modelinin p, d, q parametrelerini belirlemek için kullanılır. Her zaman serisi analizinin temel adımıdır.
+ACF (Otokorelasyon Fonksiyonu) ve PACF (Kısmi Otokorelasyon Fonksiyonu), zaman serisi verilerindeki içsel bağımlılıkları anlamak ve ARIMA gibi modellerin parametrelerini (p ve q) belirlemek için kullanılan en kritik araçlardır. ACF, bir gözlem ile önceki gecikmeli değerleri arasındaki toplam korelasyonu ölçerken; PACF, aradaki diğer gecikmelerin etkisini arındırarak doğrudan ilişkiyi ortaya koyar. Bu grafikler sayesinde serinin durağan olup olmadığı, mevsimsel etkiler barındırıp barındırmadığı ve hangi model yapısının (AR, MA veya ARMA) veriye daha uygun olduğu bilimsel bir temelde analiz edilir. Özellikle Box-Jenkins metodolojisinin temelini oluşturan bu analizler, tahmin modellerinin başarısını doğrudan etkiler.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Zaman Serisi Verisi"] --> B["ACF Analizi"]
+    A --> C["PACF Analizi"]
+    B --> D{"ACF Yorumu"}
+    C --> E{"PACF Yorumu"}
+    D -- "Yavaş Azalma" --> F["Seri Durağan Değil"]
+    D -- "q'dan Sonra Kesilme" --> G["MA(q) Modeli"]
+    E -- "p'den Sonra Kesilme" --> H["AR(p) Modeli"]
+    F --> I["Fark Alma İşlemi (d)"]
+```
 
 ### ACF (Otokorelasyon Fonksiyonu)
 ```python

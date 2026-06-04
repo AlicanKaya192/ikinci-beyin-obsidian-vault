@@ -7,9 +7,22 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-Sözlükler (dictionary), anahtar-değer (key-value) çiftleri saklayan veri yapılarıdır. Süslü parantez `{}` ile tanımlanır. Python 3.7+ sürümlerinde ekleme sırası korunur.
+Sözlükler (Dictionary), Python'da anahtar-değer (key-value) mantığına dayanan, oldukça hızlı ve verimli bir veri yapısıdır. Listelerin aksine elemanlara indis numaralarıyla değil, benzersiz (hashable) anahtarlar üzerinden erişim sağlanır, bu da veri aramayı çok daha performanslı hale getirir. Python 3.7 ve üzeri sürümlerde sıralı (ordered) bir yapı sergileyen sözlükler, karmaşık verileri yapılandırmak ve JSON gibi veri formatlarını modellemek için yazılım dünyasında standart olarak kabul edilir.
 
 ## 🧠 Detay
+
+```mermaid
+graph LR
+    D["Sözlük (Dictionary)"] --- K1["Anahtar 1 (Key)"]
+    D --- K2["Anahtar 2 (Key)"]
+    K1 --> V1["Değer 1 (Value)"]
+    K2 --> V2["Değer 2 (Value)"]
+    subgraph "Özellikler"
+    P1["Benzersiz Anahtarlar"]
+    P2["Hızlı Erişim (O(1))"]
+    P3["Sıralı (3.7+)"]
+    end
+```
 
 ### Sözlük Oluşturma
 ```python

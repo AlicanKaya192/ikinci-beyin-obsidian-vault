@@ -8,11 +8,25 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-Çoklu doğrusal regresyon, birden fazla bağımsız değişkenin bağımlı değişken üzerindeki etkisini modelleyen yöntemdir. Basit regresyonun çok değişkenli genellemesidir.
+Çoklu doğrusal regresyon, bağımlı bir değişken ile birden fazla bağımsız değişken arasındaki ilişkiyi matematiksel bir denklemle açıklayan, istatistiğin en temel ve yaygın kullanılan araçlarından biridir. Bu yöntem, her bir bağımsız değişkenin, diğer tüm değişkenler sabit tutulduğunda (ceteris paribus) bağımlı değişken üzerindeki net etkisini ölçmemize olanak tanır. Modelin başarısı, sadece açıklayıcılık gücü (R²) ile değil, aynı zamanda hataların homoscedasticity ve bağımsızlık gibi Gauss-Markov varsayımlarını ne ölçüde karşıladığıyla değerlendirilir. Gerçek dünya uygulamalarında, çoklu doğrusallık (multicollinearity) gibi sorunları tespit etmek için VIF değerlerini kontrol etmek ve model karmaşıklığını yönetmek için AIC/BIC gibi kriterlere dayalı model seçim yöntemlerini kullanmak kritiktir.
 
 ---
 
 ## 🧠 Detay
+
+### Çoklu Regresyon Analiz Süreci
+
+```mermaid
+graph TD
+    A["Veri Hazırlama"] --> B["Model Kurulumu (OLS)"]
+    B --> C["Varsayım Kontrolleri"]
+    C --> D{"Varsayımlar Sağlandı mı?"}
+    D -- "Hayır" --> E["Dönüşüm / Değişken Seçimi / Düzenlileştirme"]
+    E --> B
+    D -- "Evet" --> F["Katsayı & Model Anlamlılık Testi (t & F)"]
+    F --> G["Performans Ölçümü (Adj. R2, AIC/BIC)"]
+    G --> H["Model Yorumlama & Tahmin"]
+```
 
 ### Model
 

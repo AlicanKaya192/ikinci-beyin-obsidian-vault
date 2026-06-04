@@ -7,9 +7,29 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Zaman serisi tahmin modellerini doğru metrikleri kullanarak değerlendirmek kritiktir. MAE, RMSE, MAPE ve MASE en yaygın kullanılan metriklerdir.
+Zaman serisi tahmin modellerinin performansını ölçmek, modelin güvenilirliğini ve gelecekteki veriler üzerindeki genelleme yeteneğini anlamak için hayati önem taşır. Standart regresyon metriklerinin yanı sıra, zaman serilerine özgü olan ve ölçekten bağımsız değerlendirme imkanı sunan MAPE, sMAPE ve MASE gibi metrikler sıklıkla tercih edilir. Özellikle RMSE, büyük hataları daha sert cezalandırırken; MAE, ortalama hata miktarını daha doğrusal bir şekilde yansıtır. Doğru metrik seçimi, iş probleminin doğasına ve verideki aykırı değerlerin (outliers) varlığına göre değişkenlik göstermelidir.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Zaman Serisi Metrikleri"] --> B["Hata Tabanlı Metrikler"]
+    A --> C["Yüzdesel Metrikler"]
+    A --> D["Ölçeklendirilmiş Metrikler"]
+    
+    B --> B1["MAE (Mutlak Hata)"]
+    B --> B2["RMSE (Karesel Hata Kökü)"]
+    
+    C --> C1["MAPE (Ortalama Yüzde Hata)"]
+    C --> C2["sMAPE (Simetrik MAPE)"]
+    
+    D --> D1["MASE (Naif Model Karşılaştırması)"]
+    
+    B1 --> B1_Desc["Ortalama hata büyüklüğü"]
+    B2 --> B2_Desc["Büyük hatalara hassasiyet"]
+    C1 --> C1_Desc["Birimden bağımsız yorumlama"]
+    D1 --> D1_Desc["Zaman serisine özgü benchmark"]
+```
 
 ### Temel Metrikler
 ```python

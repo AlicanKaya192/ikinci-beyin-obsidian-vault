@@ -14,6 +14,24 @@ Eksik veriler (NaN, None, NULL) gerçek dünya verilerinin kaçınılmaz parças
 
 ## 🧠 Detay
 
+### 🗺️ Eksik Veri Strateji Haritası
+
+```mermaid
+graph TD
+    A["Eksik Veri Tespit Edildi"] --> B{"Eksiklik Oranı?"}
+    B -- > %50 --> C["Sütunu Sil"]
+    B -- < %50 --> D{"Eksiklik Mekanizması?"}
+    D -- MCAR / MAR --> E{"Veri Türü?"}
+    D -- MNAR --> F["Gösterge Özelliği Ekle + <br/> Domain Bilgisi ile Doldur"]
+    E -- Sayısal --> G{"Dağılım?"}
+    E -- Kategorik --> H["Mod / 'Bilinmiyor' Sabiti"]
+    G -- Normal --> I["Ortalama / Mean"]
+    G -- Çarpık --> J["Medyan / Median"]
+    G -- Karmaşık İlişki --> K["KNN / Iterative Imputer"]
+```
+
+---
+
 ### Eksiklik Mekanizmaları
 
 | Tür | Açıklama | Örnek | Strateji |

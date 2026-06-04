@@ -8,11 +8,21 @@ zorluk: ⭐
 
 ## 📌 Özet
 
-Git, dağıtık versiyon kontrol sistemidir. Kod değişikliklerini takip eder, ekip çalışmasını kolaylaştırır ve her zaman önceki sürüme dönmeyi mümkün kılar. Her yazılım projesinin temelidir.
+Git, modern yazılım geliştirme dünyasının standart dağıtık versiyon kontrol sistemidir ve kodunuzun zaman içindeki değişimini her saniyesine kadar takip etmenizi sağlar. Sadece bir dosya yedekleme aracı değil, aynı zamanda ekiplerin birbirinin çalışmasını bozmadan eşzamanlı kod geliştirmesine olanak tanıyan güçlü bir işbirliği platformudur. Bu rehber, Git'in temel çalışma mantığını (Working Directory, Staging Area, Repository), kurulum adımlarını ve ilk commit'inizi yapana kadar geçeceğiniz temel aşamaları kapsamlı bir şekilde sunar. Git'i doğru anlamak, profesyonel projeleri yönetmek ve hata durumlarında güvenli bir geçmişe dönmek için atılan en kritik adımdır.
 
 ---
 
 ## 🧠 Detay
+
+### Git Temel Çalışma Akışı
+
+```mermaid
+graph LR
+    A["Working Directory<br/>(Çalışma Dizini)"] -- "git add" --> B["Staging Area<br/>(Hazırlık Alanı)"]
+    B -- "git commit" --> C["Local Repository<br/>(Yerel Depo)"]
+    C -- "git push" --> D["Remote Repository<br/>(Uzak Depo)"]
+    D -- "git pull / clone" --> A
+```
 
 ### Neden Git?
 

@@ -8,11 +8,21 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-Deneysel tasarım, geçerli nedensellik çıkarımı yapabilmek için deneyin nasıl planlanacağını belirler. Randomizasyon, kör uygulama ve kontrol grubu temel prensiplerdir.
+Deneysel tasarım (Experimental Design), değişkenler arasındaki neden-sonuç ilişkilerini bilimsel ve geçerli bir şekilde ortaya koymak için kullanılan sistematik bir planlama sürecidir. Bu süreçte araştırmacı, bağımsız değişkenleri (faktörleri) kontrollü bir şekilde manipüle ederek bağımlı değişken (yanıt) üzerindeki etkilerini gözlemler. İyi bir deneysel tasarım; dışsal değişkenlerin etkisini minimize eden kontrol grupları, karıştırıcı etkileri dengeleyen randomizasyon (rastgele atama) ve sonuçların güvenilirliğini artıran replikasyon (tekrarlama) prensiplerine dayanır. Doğru tasarlanmış bir deney, karmaşık veri yapılarında bile faktörlerin tekil ve etkileşimli etkilerini birbirinden ayrıştırmaya olanak tanır.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Araştırma Sorusu ve Hipotez"] --> B["Faktörlerin ve Seviyelerin Belirlenmesi"]
+    B --> C["Deney Tasarımı Seçimi (CRD, RCBD, Faktöriyel vb.)"]
+    C --> D["Randomizasyon ve Uygulama"]
+    D --> E["Veri Toplama"]
+    E --> F["İstatistiksel Analiz (ANOVA vb.)"]
+    F --> G["Sonuçların Yorumlanması ve Karar"]
+```
 
 ### Temel Kavramlar
 

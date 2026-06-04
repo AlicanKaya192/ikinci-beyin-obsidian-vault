@@ -7,26 +7,29 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-KNN, yeni bir noktayı en yakın K komşusunun çoğunluk sınıfına göre sınıflandıran basit ama etkili bir algoritmadır. Eğitim gerektirmez, tahmin sırasında mesafe hesaplar.
+K-Nearest Neighbors (KNN), yeni bir veri noktasını mevcut veri setindeki en yakın K adet komşusunun özelliklerine göre sınıflandıran veya değer atayan, basit ama oldukça güçlü bir gözetimli (supervised) öğrenme algoritmasıdır. KNN bir "tembel öğrenici" (lazy learner) olarak bilinir; çünkü eğitim sırasında karmaşık bir matematiksel model kurmak yerine tüm veriyi hafızasında tutar ve asıl hesaplamayı tahmin anında yapar. Algoritmanın başarısı, mesafe hesaplamalarına dayandığı için verinin ölçeklendirilmiş olması (scaling), uygun mesafe metriğinin (Öklid, Manhattan vb.) seçilmesi ve en uygun komşu sayısı (K) değerinin belirlenmesi kritik öneme sahiptir.
 
 ## 🧠 Detay
 
+### KNN Tahmin Süreci
+```mermaid
+graph TD
+    A["Yeni Veri Noktası Gelir"] --> B["Tüm eğitim noktalarına olan mesafeyi hesapla"]
+    B --> C["Mesafeleri küçükten büyüğe sırala"]
+    C --> D["En yakın K adet komşuyu seç"]
+    D --> E{"Görev Tipi?"}
+    E -- "Sınıflandırma" --> F["Çoğunluk oyuna (voting) bak"]
+    E -- "Regresyon" --> G["Komşuların ortalamasını al"]
+    F & G --> H["Sonuç Tahmin"]
+```
+
 ### KNN Sınıflandırma
+KNN mesafeye dayalı olduğu için özelliklerin aynı ölçekte olması hayatidir. Pipeline kullanımı bu süreci otomatize eder.
 ```python
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
-
-# KNN mesafeye duyarlı → ölçekleme zorunlu
-pipe = Pipeline([
-    ("scaler", StandardScaler()),
-    ("knn", KNeighborsClassifier(
-        n_neighbors=5,
-        metric="euclidean",
-        weights="uniform"    # veya "distance"
-    ))
-])
-
+...
 pipe.fit(X_train, y_train)
 y_pred = pipe.predict(X_test)
 ```

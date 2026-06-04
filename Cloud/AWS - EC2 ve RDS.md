@@ -7,9 +7,22 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-EC2 (Elastic Compute Cloud) AWS'nin sanal makine servisidir, Azure VM'e karşılık gelir. RDS (Relational Database Service) ise tam yönetilen ilişkisel veritabanı servisidir.
+Amazon EC2 (Elastic Compute Cloud), AWS'nin sunduğu temel Altyapı Servisi (IaaS) olup, kullanıcılara tam işletim sistemi kontrolü ve özel yazılım yığınları kurma imkanı tanıyan ölçeklenebilir sanal sunucular sağlar. RDS (Relational Database Service) ise yedekleme, güvenlik yamaları ve donanım ölçeklendirme gibi karmaşık yönetimsel görevleri otomatikleştirerek geliştiricilerin altyapı yerine uygulama mantığına odaklanmasına olanak tanıyan tam yönetilen bir ilişkisel veritabanı servisidir. Bu iki servis, EC2'nin işlem ve uygulama mantığını, RDS'nin ise kalıcı ve güvenilir veri depolamayı üstlendiği modern bulut mimarilerinin omurgasını oluşturur. Özellikle yüksek performans, yüksek erişilebilirlik ve ölçeklenebilirlik gerektiren web uygulamaları, makine öğrenmesi API'leri ve veri yoğunluklu servisler için bu servislerin birlikte kullanımı endüstri standardı olarak kabul edilir.
 
 ## 🧠 Detay
+
+```mermaid
+graph LR
+    A["Kullanıcı / İstemci"] --> B["EC2 Instance (Uygulama Sunucusu)"]
+    subgraph "AWS VPC (Sanal Özel Bulut)"
+    B --> C["Security Group (Güvenlik Duvarı)"]
+    C --> D["RDS Instance (Veritabanı)"]
+    B -- "Boto3 / SDK" --> E["Secrets Manager (Şifre Yönetimi)"]
+    end
+    D -- "Sorgu Sonuçları" --> B
+    style B fill:#f9f,stroke:#333,stroke-width:2px
+    style D fill:#bbf,stroke:#333,stroke-width:2px
+```
 
 ### EC2 Instance Türleri
 ```

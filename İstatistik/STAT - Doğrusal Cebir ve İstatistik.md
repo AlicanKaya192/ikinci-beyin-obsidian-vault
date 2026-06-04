@@ -8,11 +8,24 @@ zorluk: ⭐⭐⭐⭐
 
 ## 📌 Özet
 
-Doğrusal cebir, çok değişkenli istatistiğin matematiksel dilidir. Çoklu regresyon, PCA, kovaryans matrisi ve doğrusal dönüşümler matris operasyonlarına dayanır.
+Doğrusal cebir, modern istatistik ve veri biliminin temel yapı taşlarını ve matematiksel dilini oluşturur. Çok değişkenli verilerin matris formunda temsil edilmesi, binlerce gözlemin ve değişkenin eşzamanlı olarak işlenmesine ve analiz edilmesine olanak tanır. Regresyon analizindeki en küçük kareler (OLS) çözümü, temel bileşenler analizindeki (PCA) varyans maksimizasyonu ve kovaryans yapılarının incelenmesi doğrudan matris cebiri, özdeğerler ve özvektörler üzerinden gerçekleştirilir. Bu matematiksel altyapı, verideki karmaşık geometrik dönüşümleri, izdüşümleri ve boyut indirgeme işlemlerini anlaşılır kılarak istatistiksel modellerin optimize edilmesini sağlar.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Doğrusal Cebir"] --> B["Matris Operasyonları"]
+    A --> C["Özdeğer/Özvektör Analizi"]
+    A --> D["Vektör Uzayları ve İzdüşüm"]
+    B --> B1["Kovaryans Matrisi"]
+    B --> B2["Çoklu Regresyon (OLS)"]
+    C --> C1["PCA (Boyut İndirgeme)"]
+    C --> C2["SVD (Tekil Değer Ayrışımı)"]
+    D --> D1["Hata Terimleri ve Artık Analizi"]
+    D --> D2["Mahalanobis Uzaklığı"]
+```
 
 ### Vektörler ve Matrisler
 

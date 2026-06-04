@@ -8,11 +8,27 @@ zorluk: ⭐⭐
 
 ## 📌 Özet
 
-GitHub'un proje yönetimi araçları: Projects (Kanban/tablo), Discussions (forum), Wiki (dokümantasyon), Packages (paket deposu) ve Teams (ekip yönetimi).
+GitHub, sadece bir kod deposu olmanın ötesinde, ekiplerin uçtan uca işbirliği yapabileceği kapsamlı bir proje yönetimi ekosistemi sunar. Projects aracıyla işler kanban veya yol haritası (roadmap) şeklinde görselleştirilirken, Discussions özelliği topluluk katılımını ve fikir alışverişini kolaylaştırır. Wiki ve GitHub Pages dokümantasyon ihtiyacını karşılarken, Packages özelliği projeye özgü paketlerin ve konteyner imajlarının güvenli bir şekilde saklanmasını sağlar. Bu araçların entegre kullanımı, yazılım geliştirme sürecinin her aşamasında şeffaflığı ve ekip içi koordinasyonu en üst düzeye çıkarır.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    GH["GitHub İşbirliği Ekosistemi"]
+    GH --> P["Projeler (Projects)"]
+    GH --> D["Tartışmalar (Discussions)"]
+    GH --> W["Wiki / Pages"]
+    GH --> PK["Paketler (Packages)"]
+    GH --> T["Ekipler (Teams)"]
+    
+    P -- "İş Takibi" --> ISS["Issue / PR Yönetimi"]
+    D -- "Fikir Alışverişi" --> COM["Topluluk / Forum"]
+    W -- "Bilgi Yönetimi" --> DOC["Dokümantasyon"]
+    PK -- "Dağıtım" --> CI["CI/CD Entegrasyonu"]
+    T -- "Erişim Kontrolü" --> RBAC["Yetkilendirme"]
+```
 
 ### GitHub Projects (v2)
 

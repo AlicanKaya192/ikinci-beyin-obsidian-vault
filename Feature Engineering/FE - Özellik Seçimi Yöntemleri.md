@@ -14,6 +14,23 @@ Tüm özellikler faydalı değildir. Gereksiz özellikler modeli yavaşlatır, o
 
 ## 🧠 Detay
 
+### 🗺️ Özellik Seçimi Karar Rehberi
+
+```mermaid
+graph TD
+    A["Özellik Seçimi Başlat"] --> B{"Veri Boyutu ve Hız?"}
+    B -- Çok Büyük / Çok Hızlı Olmalı --> C["Filter Yöntemleri <br/> (Korelasyon, Chi2, ANOVA)"]
+    B -- Orta-Küçük / Performans Odaklı --> D{"Model Bağımlı mı?"}
+    D -- Evet --> E{"Model Eğitim Sırasında mı?"}
+    D -- Hayır --> F["Wrapper Yöntemleri <br/> (RFE, Forward/Backward)"]
+    E -- Evet --> G["Embedded Yöntemler <br/> (Lasso, Tree Importance, SHAP)"]
+    E -- Hayır --> F
+    C --> H["Genel Ön Eleme"]
+    G --> I["En Güvenilir / Model Odaklı"]
+```
+
+---
+
 ### Özellik Seçim Kategorileri
 
 ```

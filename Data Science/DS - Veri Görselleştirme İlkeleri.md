@@ -7,9 +7,22 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-Etkili veri görselleştirme, doğru grafik türünü seçmek ve sade bir tasarımla mesajı net iletmektir. Yanlış grafik seçimi veriyi yanlış yorumlatabilir.
+Veri görselleştirme, karmaşık sayısal bulguların insan beyninin kolayca kavrayabileceği görsel bir dile tercüme edilmesidir. Doğru grafik seçimi, verinin hikayesini dürüst ve etkili bir şekilde anlatmanın anahtarıyken; yanlış seçimler yanıltıcı sonuçlara yol açabilir. Renk kullanımı, eksen ölçeklendirmesi ve sadelik gibi temel prensipler, izleyicinin dikkatini dağıtmadan ana mesaja odaklanmasını sağlar. Etkili bir görselleştirme, sadece veri sunmakla kalmaz, aynı zamanda karar vericiler için somut aksiyon alınabilir içgörüler üretir.
 
 ## 🧠 Detay
+
+### 🎯 Görselleştirme Stratejisi
+
+```mermaid
+graph TD
+    A["Görselleştirme Hedefi"] --> B["Mesaj Netliği"]
+    A --> C["Doğru Grafik Seçimi"]
+    A --> D["Estetik ve Tasarım"]
+    C --> C1["Dağılım için Histogram"]
+    C --> C2["Trend için Çizgi Grafik"]
+    C --> C3["Karşılaştırma için Bar"]
+    D --> D1["Renk Paletleri, Fontlar, Etiketler"]
+```
 
 ### Grafik Türü Seçim Rehberi
 

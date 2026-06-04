@@ -8,11 +8,28 @@ zorluk: ⭐⭐
 
 ## 📌 Özet
 
-Docker CLI'ın en çok kullanılan komutları: image yönetimi, container yaşam döngüsü, log ve exec komutları.
+Docker Komut Satırı Arayüzü (CLI), imajların yönetiminden konteynerlerin yaşam döngüsüne kadar tüm Docker operasyonlarının kalbidir. Bu doküman, uygulamaları paketlemek için kullanılan imaj komutlarını, çalışan süreçleri yöneten konteyner komutlarını ve sistem genelinde temizlik yapan bakım komutlarını kapsamlı bir şekilde sunar. Özellikle "docker run", "docker exec" ve "docker logs" gibi temel komutların parametreleri, günlük geliştirme ve sistem yönetimi süreçlerinde verimliliği artıran kritik araçlardır. Bu komutları ustalıkla kullanmak, konteynerize edilmiş uygulamaların hata ayıklama, izleme ve dağıtım aşamalarında geliştiricilere ve sistem yöneticilerine büyük kolaylık sağlar.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["docker build / pull"] --> B["Image (Kalıp)"]
+    B --> C["docker run"]
+    C --> D["Container (Running)"]
+    D --> E["docker stop"]
+    E --> F["Container (Exited)"]
+    F --> G["docker start"]
+    G --> D
+    D --> H["docker pause"]
+    H --> I["Container (Paused)"]
+    I --> J["docker unpause"]
+    J --> D
+    F --> K["docker rm"]
+    K --> L["Deleted"]
+```
 
 ### Image Komutları
 

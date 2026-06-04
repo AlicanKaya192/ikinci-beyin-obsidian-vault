@@ -8,11 +8,35 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-Container'ları izlemek: log yönetimi, kaynak kullanım metrikleri ve sağlık durumu. Docker'ın yerleşik araçlarından Prometheus+Grafana stack'ine kapsamlı monitoring.
+Docker ekosisteminde izleme (monitoring) ve kayıt tutma (logging), container tabanlı uygulamaların sağlığını, performansını ve güvenliğini sağlamak için vazgeçilmezdir. Log yönetimi, container'ların ürettiği standart çıktıları (stdout/stderr) yakalayarak yerel dosyalara veya ELK (Elasticsearch, Logstash, Kibana) gibi merkezi sistemlere ileten esnek "log driver" mekanizmalarına dayanır. İzleme tarafında ise `docker stats` gibi yerleşik komutların ötesinde, cAdvisor ile kaynak kullanım metrikleri toplanır, Prometheus ile depolanır ve Grafana üzerinden görselleştirilir. Bu süreçler, Healthcheck mekanizmalarıyla birleşerek uygulamaların sadece çalışır durumda olmasını değil, aynı zamanda sağlıklı hizmet vermesini garanti altına alır.
 
 ---
 
 ## 🧠 Detay
+
+### İzleme ve Log Akış Mimarisi
+
+```mermaid
+graph TD
+    subgraph "Uygulama Katmanı"
+        App["Container Uygulaması"]
+    end
+
+    subgraph "İzleme (Monitoring) Hattı"
+        App -- "Kaynak Metrikleri" --> C["cAdvisor"]
+        C --> P["Prometheus (TSDB)"]
+        P --> G["Grafana (Dashboard)"]
+    end
+
+    subgraph "Kayıt (Logging) Hattı"
+        App -- "stdout / stderr" --> D["Docker Log Driver"]
+        D --> L["Logstash / Fluentd"]
+        L --> E["Elasticsearch"]
+        E --> K["Kibana (Analiz)"]
+    end
+
+    H["Healthcheck"] -. "Sağlık Durumu" .-> App
+```
 
 ### Temel İzleme Komutları
 

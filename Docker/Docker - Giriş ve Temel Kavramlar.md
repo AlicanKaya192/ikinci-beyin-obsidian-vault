@@ -8,11 +8,36 @@ zorluk: ⭐
 
 ## 📌 Özet
 
-Docker, uygulamaları bağımlılıklarıyla birlikte izole edilmiş "konteyner" içinde paketleyen platformdur. "Bende çalışıyor" sorununu ortadan kaldırır.
+Docker, uygulamaların her ortamda tutarlı bir şekilde çalışmasını sağlamak amacıyla uygulama ve tüm bağımlılıklarını izole edilmiş "konteyner" yapıları içinde paketleyen güçlü bir platformdur. Yazılım geliştirme süreçlerinde sıkça karşılaşılan "benim makinemde çalışıyordu" sorununu, işletim sistemi düzeyinde sanallaştırma yaparak ve standart bir paketleme formatı sunarak kökten çözer. Sanal makinelerin aksine, konteynerler doğrudan ana makinenin işletim sistemi çekirdeğini paylaşarak çok daha hafif, hızlı ve verimli bir kaynak kullanımı sunar. Bu teknoloji sayesinde, geliştiriciler uygulamalarını bir kez paketleyip bulut, yerel sunucu veya test ortamları gibi herhangi bir yerde güvenle çalıştırabilirler.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Host OS (Ana İşletim Sistemi)"] --> B["Docker Engine (Motor)"]
+    B --> C["Container 1 (Uygulama A)"]
+    B --> D["Container 2 (Uygulama B)"]
+    B --> E["Container 3 (Uygulama C)"]
+    subgraph "Docker Ekosistemi"
+    C
+    D
+    E
+    end
+```
+
+### 🗺️ Docker İş Akışı (Workflow)
+
+```mermaid
+graph LR
+    A["Dockerfile (Kod)"] --> B["Build"]
+    B --> C["Image (Kalıp)"]
+    C --> D["Push"]
+    D --> E["Registry (Docker Hub)"]
+    E --> F["Pull"]
+    F --> G["Container (Canlı)"]
+```
 
 ### VM vs Container
 

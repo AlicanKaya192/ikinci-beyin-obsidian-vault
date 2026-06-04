@@ -8,11 +8,27 @@ zorluk: ⭐⭐
 
 ## 📌 Özet
 
-Git'i daha verimli kullanmak için araçlar: delta (renkli diff), lazygit (terminal UI), git-extras (ek komutlar), VS Code/IDE entegrasyonu ve faydalı script'ler.
+Git'in ham gücünü ekosistemindeki yardımcı araçlarla birleştirmek, geliştirici verimliliğini ve deneyimini bir üst seviyeye taşır. `delta` ile daha okunabilir diff çıktıları alabilir, `lazygit` gibi terminal kullanıcı arayüzleriyle (TUI) karmaşık işlemleri görselleştirebilir ve `git-extras` sayesinde Git'e düzinelerce yeni ve pratik komut ekleyebilirsiniz. Ayrıca, VS Code gibi IDE entegrasyonları, `fzf` tabanlı bulanık arama betikleri ve Git LFS gibi eklentiler, günlük iş akışınızı hızlandırırken büyük ölçekli projeleri yönetmeyi kolaylaştırır. Bu rehber, Git yapılandırmanızı özelleştirerek kendinize en uygun ve profesyonel çalışma ortamını kurmanız için kapsamlı bir yol haritası sunmaktadır.
 
 ---
 
 ## 🧠 Detay
+
+### Git Araçlar Ekosistemi
+
+```mermaid
+graph TD
+    A["Git Çekirdek (Core)"] --> B["Görselleştirme Araçları"]
+    A --> C["Terminal İyileştirmeleri"]
+    A --> D["IDE Entegrasyonları"]
+    B --> B1["Git Graph (VS Code)"]
+    B --> B2["Lazygit (TUI)"]
+    C --> C1["Delta (Zengin Diff)"]
+    C --> C2["Git Extras (Ek Komutlar)"]
+    C --> C3["FZF (Bulanık Arama)"]
+    D --> D1["VS Code GitLens"]
+    D --> D2["GitHub PR & Issues"]
+```
 
 ### delta — Güzel Diff Görünümü
 

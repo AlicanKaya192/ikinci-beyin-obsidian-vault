@@ -7,9 +7,22 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Seaborn, Matplotlib üzerine kurulu istatistiksel veri görselleştirme kütüphanesidir. Daha az kodla daha güzel ve anlamlı grafikler üretir.
+Seaborn, Matplotlib altyapısını kullanarak verileri daha estetik ve istatistiksel açıdan anlamlı bir şekilde görselleştiren güçlü bir kütüphanedir. Veri biliminde EDA (Keşifsel Veri Analizi) sürecini hızlandıran bu araç, karmaşık veri setlerini tek bir satır kodla görselleştirmeyi sağlar. Pandas DataFrame yapılarıyla doğrudan entegrasyonu sayesinde sütun bazlı analizlerde büyük kolaylık sunar. Hem dağılım, hem ilişki hem de kategorik veriler için özelleşmiş fonksiyonlar barındırır.
 
 ## 🧠 Detay
+
+### 📊 Seaborn Çalışma Akışı
+
+```mermaid
+graph TD
+    A["Veri Seti (DataFrame)"] --> B["Görselleştirme Amacı"]
+    B --> C["Dağılım Analizi"]
+    B --> D["Kategorik Karşılaştırma"]
+    B --> E["İlişki ve Korelasyon"]
+    C --> C1["histplot, kdeplot"]
+    D --> D1["barplot, boxplot, violinplot"]
+    E --> E1["scatterplot, heatmap, pairplot"]
+```
 
 ### Kurulum ve Import
 ```python

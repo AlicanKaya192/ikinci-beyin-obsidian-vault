@@ -7,9 +7,22 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-Kümeler (set), benzersiz elemanlar içeren, sırasız veri yapılarıdır. Tekrar eden elemanları otomatik olarak siler. Matematiksel küme işlemleri için idealdir.
+Python'da kümeler (set), her bir elemanın yalnızca bir kez yer alabildiği, sırasız ve indekslenemeyen koleksiyonlardır. Kümeler, özellikle veri setlerindeki mükerrer kayıtları temizlemek, hızlı üyelik sorgulamaları (membership testing) yapmak ve matematiksel küme operasyonlarını (birleşim, kesişim, fark) gerçekleştirmek için optimize edilmiştir. Listelerin aksine, kümeler hash tabanlı bir yapı kullandığı için milyonlarca eleman içinde bir değerin varlığını kontrol etmek neredeyse anlık (O(1) zaman karmaşıklığı) gerçekleşir. Değiştirilebilir bir yapıda olmalarına rağmen, küme elemanlarının kendileri "hashable" (değişmez) olmalıdır; yani bir küme içinde liste veya başka bir küme barındıramaz (ancak `frozenset` kullanılabilir).
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Küme A {1, 2, 3, 4}"] --- C["Kesişim {3, 4}"]
+    B["Küme B {3, 4, 5, 6}"] --- C
+    A --- D["Sadece A {1, 2}"]
+    B --- E["Sadece B {5, 6}"]
+    subgraph "Küme Operasyonları"
+    C
+    D
+    E
+    end
+```
 
 ### Küme Oluşturma
 ```python

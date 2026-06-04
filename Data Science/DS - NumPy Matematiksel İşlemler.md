@@ -7,9 +7,21 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-NumPy, vektörel matematiksel işlemler, lineer cebir ve istatistiksel hesaplamalar için zengin fonksiyon seti sunar.
+NumPy, veri analizi ve makine öğrenmesi modellerinin temelini oluşturan yüksek performanslı matematiksel ve istatistiksel hesaplama araçları sunar. Vektörel işlemler sayesinde döngülere gerek kalmadan büyük veri setleri üzerinde logaritmik, üstel ve trigonometrik dönüşümler hızla gerçekleştirilebilir. Kapsamlı istatistik fonksiyonları ile verinin merkezi eğilim ve yayılım ölçüleri (ortalama, medyan, standart sapma vb.) hem tüm array hem de belirli eksenler bazında kolayca hesaplanır. Ayrıca, `linalg` modülü ile karmaşık lineer cebir işlemleri ve `random` modülü ile gelişmiş olasılık dağılımlarına dayalı veri üretimi standart hale getirilmiştir.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["NumPy Matematiksel İşlemler"] --> B["Temel Matematik"]
+    A --> C["İstatistiksel Hesaplamalar"]
+    A --> D["Lineer Cebir"]
+    A --> E["Rastgele Sayı Üretimi"]
+    B --> B1["sqrt(), exp(), log(), power()"]
+    C --> C1["sum(), mean(), std(), axis parametresi"]
+    D --> D1["dot(), @, det(), inv(), eig()"]
+    E --> E1["rand(), randn(), randint(), seed()"]
+```
 
 ### Temel Matematiksel İşlemler
 ```python

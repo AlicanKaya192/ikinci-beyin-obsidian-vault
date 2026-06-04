@@ -7,9 +7,20 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Kapsülleme (encapsulation), nesnenin iç verilerini dışarıdan gizleyerek yalnızca belirli metodlar üzerinden erişime izin verir. Python'da `_` ve `__` ile sağlanır.
+Kapsülleme (encapsulation), bir nesnenin iç durumunu (verilerini) doğrudan dış erişime kapatarak, verilerin sadece nesne tarafından sunulan kontrollü metodlar aracılığıyla değiştirilmesini sağlayan OOP prensibidir. Bu yöntem, verilerin tutarlılığını korumayı, hatalı veri girişini engellemeyi ve yazılımın iç işleyişini dış dünyadan gizleyerek kodun daha güvenli ve bakımı kolay hale gelmesini sağlar. Python'da diğer dillerdeki gibi katı "private" anahtar kelimeleri olmasa da, tek alt çizgi (`_`) ile korumalı (protected) ve çift alt çizgi (`__`) ile gizli (private) veri üyeleri tanımlanarak bu prensip uygulanır. Ayrıca `@property` dekoratörü ile veriye erişim ve veri atama işlemleri (getter/setter) daha "Pythonik" bir şekilde, sanki bir özniteliğe erişiliyormuş gibi yönetilebilir.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Dış Dünya (Kullanıcı)"] -- "X Doğrudan Erişim Reddedildi" --> B["__private_degisken"]
+    A -- "Kontrollü Erişim (Getter/Setter)" --> C["@property Metodları"]
+    C --> B
+    subgraph "Sınıf İç Yapısı (Kapsül)"
+    B
+    C
+    end
+```
 
 ### Erişim Seviyeleri
 ```python

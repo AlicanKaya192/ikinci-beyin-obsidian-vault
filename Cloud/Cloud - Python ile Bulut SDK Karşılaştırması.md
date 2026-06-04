@@ -7,9 +7,31 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-AWS ve Azure, Python SDK'ları üzerinden programatik olarak kontrol edilir. Boto3 (AWS) ve azure-sdk (Azure) en temel araçlardır. Ortak iş akışları için hızlı başvuru kaynağı.
+Bulut bilişim kaynaklarının programatik olarak yönetilmesi, veri bilimi iş akışlarının otomasyonu ve MLOps süreçlerinin ölçeklendirilmesi için kritik bir yetkinliktir. Bu doküman, pazar lideri olan AWS ve Azure platformlarının Python Yazılım Geliştirme Kitleri (SDK) arasındaki yapısal ve sözdizimsel farkları temel operasyonlar bazında karşılaştırır. AWS ekosisteminde `boto3` kütüphanesi düşük seviyeli API erişimi ile endüstri standardı haline gelmişken, Azure tarafında modüler bir yapı sunan `azure-sdk` paketleri geliştiricilere modern ve nesne yönelimli bir deneyim sağlar. Kimlik doğrulamadan veri yönetimine, gizli anahtar (secret) kontrolünden makine öğrenmesi modellerinin canlıya alınmasına kadar tüm kritik süreçler, her iki bulut sağlayıcısı için pratik kod örnekleriyle sunulmaktadır.
 
 ## 🧠 Detay
+
+### 🐍 Python Bulut Etkileşim Mimarisi
+
+```mermaid
+graph LR
+    A["Python Uygulaması"] --> B["Python SDK Katmanı"]
+    subgraph "AWS Ekosistemi"
+        B -- "boto3" --> C["AWS API Gateway"]
+        C --> C1["S3"]
+        C --> C2["EC2/Lambda"]
+        C --> C3["SageMaker"]
+    end
+    subgraph "Azure Ekosistemi"
+        B -- "azure-sdk" --> D["Azure Resource Manager"]
+        D --> D1["Blob Storage"]
+        D --> D2["App Service/Functions"]
+        D --> D3["Azure ML"]
+    end
+    
+    E["Kimlik Doğrulama"] -.-> B
+    E1["Env Vars / IAM Roles"] --> E
+```
 
 ### Kurulum
 ```bash

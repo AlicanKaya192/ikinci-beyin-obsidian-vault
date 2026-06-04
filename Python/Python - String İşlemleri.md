@@ -7,9 +7,32 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-String (metin), Python'da en çok kullanılan veri tipidir. Tırnak işaretleri içinde tanımlanır ve üzerinde onlarca hazır metod bulunur.
+String (karakter dizisi), Python'da metinsel verileri temsil etmek için kullanılan ve değiştirilemez (immutable) yapıda olan temel bir veri türüdür. Python, stringler üzerinde arama, parçalama, birleştirme, biçimlendirme ve temizleme gibi işlemler yapmak için oldukça zengin bir yerleşik metod kütüphanesi sunar. Modern Python versiyonlarında f-string yapısı sayesinde metin içerisine dinamik verileri yerleştirmek son derece hızlı ve okunaklı hale gelmiştir; bu da string işlemlerini veri temizliği ve metin işleme projelerinde merkezi bir noktaya taşır.
 
 ## 🧠 Detay
+
+```mermaid
+mindmap
+  root["String İşlemleri"]
+    "Dönüşüm"
+      "upper()"
+      "lower()"
+      "capitalize()"
+    "Temizlik"
+      "strip()"
+      "replace()"
+    "Parçalama & Birleşim"
+      "split()"
+      "join()"
+    "Arama & Kontrol"
+      "find()"
+      "count()"
+      "startswith()"
+      "in (operatör)"
+    "Biçimlendirme"
+      "f-string"
+      "format()"
+```
 
 ### Tanımlama ve f-string
 ```python

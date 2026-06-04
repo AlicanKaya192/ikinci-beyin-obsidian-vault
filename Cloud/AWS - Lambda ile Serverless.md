@@ -7,9 +7,24 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-AWS Lambda, sunucu yönetimi gerektirmeden olay tabanlı kod çalıştıran serverless servistir. Azure Functions'a karşılık gelir. S3, API Gateway, SQS gibi servislerle tetiklenebilir.
+AWS Lambda, kullanıcıların sunucu sağlama veya yönetme zorunluluğu olmadan, belirli olaylara (events) yanıt olarak kod çalıştırmasına olanak tanıyan olay tabanlı bir sunucusuz (serverless) hesaplama platformudur. Birçok programlama dilini destekleyen bu servis, gelen istek hacmine bağlı olarak sıfırdan binlerce eşzamanlı yürütmeye kadar otomatik olarak ölçeklenir. Kullanıcıların yalnızca kodun çalıştığı gerçek işlem süresi (milisaniye bazında) için ödeme yapması, Lambda'yı mikroservisler, veri işleme ve gerçek zamanlı otomasyon görevleri için son derece maliyet etkin bir çözüm haline getirir. Makine öğrenmesi ekosisteminde Lambda, özellikle hafif modelleri API olarak sunmak, veri boru hatlarını (data pipelines) tetiklemek ve model izleme (monitoring) süreçlerini otomatize etmek için kritik bir rol oynar.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Tetikleyici (Trigger)"] --> B["AWS Lambda Fonksiyonu"]
+    subgraph "Olay Kaynakları (Event Sources)"
+    A1["S3 (Dosya Yükleme)"] --> A
+    A2["API Gateway (HTTP İsteği)"] --> A
+    A3["EventBridge (Zamanlanmış Görev)"] --> A
+    A4["SQS (Mesaj Kuyruğu)"] --> A
+    end
+    B --> C["İşlem Mantığı (Compute)"]
+    C --> D1["S3 / DynamoDB (Veri Kaydı)"]
+    C --> D2["CloudWatch (Loglama)"]
+    C --> D3["SNS / SES (Bildirim)"]
+```
 
 ### Lambda Tetikleyicileri
 ```

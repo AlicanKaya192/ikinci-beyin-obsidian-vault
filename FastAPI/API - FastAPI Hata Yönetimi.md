@@ -7,9 +7,23 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-FastAPI'da hata yönetimi HTTP status kodları ve HTTPException ile yapılır. Özel exception handler'lar ile tutarlı hata yanıtları sağlanır.
+FastAPI'da hata yönetimi, hem istemci tarafındaki hataları (4xx) hem de sunucu tarafındaki beklenmedik durumları (5xx) disiplinli bir şekilde ele almayı sağlar. `HTTPException` sınıfı kullanılarak belirli status kodları ve açıklayıcı mesajlar doğrudan fırlatılabilirken, daha karmaşık senaryolar için özel hata sınıfları (`Exception`) tanımlanabilir. Bu özel hatalar, global `exception_handler` fonksiyonları aracılığıyla yakalanarak tüm uygulama genelinde tutarlı ve standart bir JSON hata şeması sunulmasına olanak tanır. Etkili bir hata yönetimi stratejisi, özellikle ML API'larında model yükleme hataları veya geçersiz veri girişleri gibi kritik durumların kullanıcıya anlamlı bir şekilde raporlanmasını sağlar.
 
 ## 🧠 Detay
+
+### Hata Yakalama Akışı
+```mermaid
+graph TD
+    A["İstek Gelir"] --> B["Middleware / Router"]
+    B --> C["Endpoint Mantığı"]
+    C -- "Hata Tespit Edildi" --> D{Hata Tipi?}
+    D -- "HTTPException" --> E["FastAPI İç İşleyici"]
+    D -- "Özel Exception" --> F["Custom Exception Handler"]
+    D -- "Beklenmedik Hata" --> G["Global Exception Handler"]
+    E --> H["JSON Hata Yanıtı (Status + Detail)"]
+    F --> H
+    G --> H
+```
 
 ### HTTPException
 ```python

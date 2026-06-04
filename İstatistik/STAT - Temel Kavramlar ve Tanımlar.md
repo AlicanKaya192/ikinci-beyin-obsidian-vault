@@ -8,11 +8,21 @@ zorluk: ⭐
 
 ## 📌 Özet
 
-İstatistik, veri toplama, düzenleme, analiz etme ve yorumlama bilimidir. İki ana dalı vardır: **Betimsel İstatistik** ve **Çıkarımsal İstatistik**.
+İstatistik bilimi, verilerin sistematik bir şekilde toplanması, özetlenmesi ve bu verilerden hareketle evren hakkında anlamlı çıkarımlar yapılması sürecini kapsar. Temel amacı, belirsizlik içeren durumlarda veriye dayalı karar verme mekanizmalarını güçlendirmek ve karmaşık veri setlerini anlaşılır hale getirmektir. Bu süreçte anakütleden seçilen temsil kabiliyeti yüksek örneklemler üzerinden elde edilen istatistikler, anakütle parametrelerini tahmin etmek için kullanılır. İstatistiksel yöntemler, sadece geçmişi betimlemekle kalmaz, aynı zamanda geleceğe yönelik öngörülerde bulunmamıza ve değişkenler arasındaki nedensellik ilişkilerini test etmemize olanak tanır.
 
 ---
 
 ## 🧠 Detay
+
+### İstatistiksel Süreç Akışı
+
+```mermaid
+graph TD
+    A["Anakütle (Population)"] -- "Örnekleme" --> B["Örneklem (Sample)"]
+    B -- "Analiz" --> C["İstatistik (Statistic)"]
+    C -- "Tahmin/Çıkarım" --> D["Parametre (Parameter)"]
+    D -- "Tanımlar" --> A
+```
 
 ### Temel Kavramlar
 

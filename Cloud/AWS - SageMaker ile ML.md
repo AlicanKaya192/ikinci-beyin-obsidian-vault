@@ -7,9 +7,30 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Amazon SageMaker, AWS'nin tam yönetilen ML platformudur. Azure ML'e karşılık gelir. Eğitim, optimizasyon, deploy ve izleme adımlarını otomatikleştirir.
+Amazon SageMaker, veri bilimcilerin ve geliştiricilerin makine öğrenmesi (ML) modellerini hızlı bir şekilde oluşturmasını, eğitmesini ve yayına almasını sağlayan kapsamlı ve tam yönetilen bir bulut platformudur. Veri etiketlemeden öznitelik mühendisliğine, büyük ölçekli model eğitiminden tek tıkla ölçeklenebilir ve güvenli API endpoint'leri oluşturmaya kadar tüm ML yaşam döngüsünü uçtan uca kapsar. SageMaker'ın modüler mimarisi; etkileşimli geliştirme için Studio, iş akışı orkestrasyonu için Pipelines ve model versiyon kontrolü için Model Registry gibi özelleşmiş araçları bir araya getirerek ekiplerin karmaşık altyapı yönetimi yerine model doğruluğuna ve inovasyona odaklanmasına olanak tanır. Özellikle büyük veri kümeleri üzerinde dağıtık eğitim ve otomatik model optimizasyonu (HPO) gibi yetenekleriyle kurumsal ölçekte ML projeleri için endüstri standardı bir çözüm sunar.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Amazon S3 (Veri & Kod)"] --> B["SageMaker Processing (Veri Hazırlama)"]
+    B --> C["SageMaker Training (Model Eğitimi)"]
+    C --> D["Model Registry (Model Deposu & Onay)"]
+    D --> E["SageMaker Inference (Yayına Alma)"]
+    subgraph "SageMaker Yönetilen Servisler"
+    B
+    C
+    D
+    E
+    end
+    E --> F1["Real-time Endpoint (Canlı Tahmin)"]
+    E --> F2["Batch Transform (Toplu İşleme)"]
+    G["SageMaker Studio (IDE)"] --- B
+    G --- C
+    H["SageMaker Pipelines (MLOps Akışı)"] -- "Kontrol Eder" --> B
+    H -- "Kontrol Eder" --> C
+    H -- "Kontrol Eder" --> E
+```
 
 ### Temel Kavramlar
 ```

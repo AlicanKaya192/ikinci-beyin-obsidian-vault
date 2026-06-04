@@ -7,9 +7,25 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Azure Functions, sunucu yönetimi olmadan olay tabanlı kod çalıştıran serverless servistir. ML modellerini tetikleyici ile çağırmak, veri pipeline'ı otomatikleştirmek için idealdir.
+Azure Functions, altyapı yönetimi ve sunucu bakımı gerektirmeden "fonksiyon" adı verilen küçük kod parçacıklarını çalıştırmanıza olanak tanıyan olay tabanlı bir sunucusuz (serverless) hesaplama servisidir. Event Grid ile olan güçlü entegrasyonu sayesinde; farklı Azure servisleri arasında gevşek bağlı (decoupled) ve tepkisel (reactive) mimariler kurarak, sistem genelindeki olaylara anında yanıt verilmesini sağlar. Makine öğrenmesi projelerinde bu yapı; veri gölüne yeni veri eklendiğinde ön işleme adımlarını başlatmak, hafif modelleri ölçeklenebilir HTTP API'leri olarak sunmak veya model performans düşüşü gibi uyarılara göre MLOps iş akışlarını otomatik olarak tetiklemek için idealdir. Yalnızca kodun çalıştığı işlem süresi kadar maliyet yansıtması, Functions'ı hem ekonomik hem de yüksek oranda ölçeklenebilir bir otomasyon ve mikroservis aracı haline getirir.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Olay Kaynakları (Event Sources)"] --> B["Azure Event Grid (Olay Yönlendirici)"]
+    B --> C["Azure Functions (Sunucusuz Hesaplama)"]
+    subgraph "Tetikleme Yöntemleri"
+    A1["HTTP Trigger (API İsteği)"] --> C
+    A2["Timer Trigger (Zamanlanmış)"] --> C
+    A3["Blob Trigger (Dosya Yükleme)"] --> C
+    A4["Service Bus (Mesaj Kuyruğu)"] --> C
+    end
+    C --> D1["Veritabanı (SQL / NoSQL)"]
+    C --> D2["Blob Storage (İşlenmiş Veri)"]
+    C --> D3["Bildirimler (Email / SMS)"]
+    B -- "Filtreleme ve Dağıtım" --> C
+```
 
 ### Azure Functions Tetikleyicileri
 ```

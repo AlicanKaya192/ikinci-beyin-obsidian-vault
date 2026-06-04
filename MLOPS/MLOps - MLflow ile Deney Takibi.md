@@ -7,9 +7,20 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-MLflow, ML deneyleri takip etmek, modelleri kaydetmek ve deploy etmek için açık kaynak platformdur. Parametreler, metrikler, artifactlar ve modelleri merkezi olarak yönetir.
+MLflow, makine öğrenmesi yaşam döngüsünü uçtan uca yönetmek için tasarlanmış, dil bağımsız ve açık kaynaklı bir platformdur. Bu araç, binlerce deneyi (experiments) sistematik bir şekilde takip etmenize, her bir çalıştırmanın (run) parametrelerini, metriklerini ve çıktılarını (artifacts) merkezi bir veritabanında saklamanıza olanak tanır. Model Registry bileşeni sayesinde, farklı versiyonlardaki modelleri "Staging" veya "Production" gibi aşamalara taşıyarak takım içi işbirliğini ve model yönetişimini güçlendirir. Ayrıca, MLflow Tracking UI üzerinden modelleri görsel olarak karşılaştırarak en iyi performansı gösteren modeli hızlıca tespit etmenizi sağlar.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Veri Bilimci (Notebook/Script)"] -->|Log Param/Metric/Artifact| B["MLflow Tracking Server"]
+    B -->|Saklar| C[("Backend Store (SQL DB)")]
+    B -->|Saklar| D["Artifact Store (S3/Local)"]
+    B -->|Görüntüler| E["MLflow UI"]
+    F["Model Registry"] --- B
+    F -->|Yönetir| G["Version Control"]
+    F -->|Aşamalar| H["Staging / Production"]
+```
 
 ### Kurulum ve Başlatma
 ```bash

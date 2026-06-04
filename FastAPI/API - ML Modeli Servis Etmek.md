@@ -7,9 +7,23 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Eğitilmiş ML modellerini FastAPI ile servis etmek, modeli production'a almanın en yaygın yoludur. Model yükleme, tahmin ve batch işlem adımlarını kapsar.
+Makine öğrenmesi modellerini bir API üzerinden servis etmek, veri bilimi projelerinin değer yaratan son ve en kritik aşamasıdır. FastAPI, bu aşamada sunduğu yüksek performans ve otomatik veri doğrulama yetenekleri ile modern bir standart sunar. Modelin `lifespan` event'leri kullanılarak uygulama başlangıcında belleğe yüklenmesi, her istekte modelin tekrar okunmasını engelleyerek servis hızını maksimize eder. Bu süreç, tekil tahminlerin yanı sıra verimlilik artışı sağlayan toplu (batch) tahmin işlemlerini ve modelin metadata bilgilerinin paylaşılmasını da kapsar.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Başlatma (Lifespan Start)"] --> B["Model & Scaler Yükle (Joblib)"]
+    B --> C["API Sunucusu Hazır"]
+    C --> D["İstemci Tahmin İsteği (JSON)"]
+    D --> E["Pydantic Doğrulama"]
+    E --> F["Ön İşleme (Scaling)"]
+    F --> G["Model Tahmini (Inference)"]
+    G --> H["Pydantic Yanıt Hazırlama"]
+    H --> I["İstemci (JSON Yanıt)"]
+    C --> J["Kapanış (Lifespan End)"]
+    J --> K["Modelleri Bellekten Temizle"]
+```
 
 ### Model Kaydetme ve Yükleme
 ```python

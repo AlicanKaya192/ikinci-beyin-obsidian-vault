@@ -7,9 +7,38 @@ zorluk: ileri
 ---
 
 ## 📌 Özet
-Kubernetes, ML servislerini otomatik ölçeklendirme, yük dengeleme ve kendi kendine iyileştirme ile yönetir. Docker Compose'un production ölçeğindeki karşılığıdır.
+Kubernetes (K8s), konteynerize edilmiş makine öğrenmesi modellerini üretim ortamında ölçeklenebilir ve dayanıklı bir şekilde çalıştırmak için kullanılan endüstri standardı bir orkestrasyon platformudur. ML servislerinin trafik yoğunluğuna göre otomatik olarak ölçeklenmesini (HPA), yük dengeleme (Load Balancing) mekanizmalarıyla isteklerin verimli dağıtılmasını ve arızalanan servislerin kendi kendine iyileşmesini (Self-healing) sağlar. Docker Compose'un kurumsal düzeydeki karşılığı olarak kabul edilen Kubernetes; rolling update stratejileri sayesinde modelleri sıfır kesintiyle güncellemeyi ve gerektiğinde hızlıca eski sürüme dönmeyi (rollback) mümkün kılar. Bu özellikler, ML modellerinin yüksek erişilebilirlik ve güvenilirlik standartlarında servis edilmesi için kritiktir.
 
 ## 🧠 Detay
+
+### Kubernetes ML Servis Mimarisi
+```mermaid
+graph TD
+    Internet["Dış Dünya (Kullanıcılar)"] --> Ing["Ingress Controller (Giriş Kapısı)"]
+    Ing -- "Yönlendirme" --> Svc["Service (İç Yük Dengeleyici)"]
+    
+    subgraph Cluster ["Kubernetes Kümesi"]
+    Svc --> Pod1["Pod 1 (ML API Container)"]
+    Svc --> Pod2["Pod 2 (ML API Container)"]
+    Svc --> PodN["Pod N (ML API Container)"]
+    
+    subgraph Storage ["Veri Katmanı"]
+    PVC["Persistent Volume Claim"] --- Models["Model Dosyaları (.pkl/.h5)"]
+    end
+    
+    Pod1 --- PVC
+    Pod2 --- PVC
+    
+    Config["ConfigMap / Secrets"] --> Pod1
+    HPA["HPA (Auto-scaler)"] -. "CPU/MEM İzleme" .-> Pod1
+    end
+    
+    Monitor["İzleme (Prometheus)"] --- Cluster
+    
+    style Pod1 fill:#f9f,stroke:#333
+    style Svc fill:#bbf,stroke:#333
+    style Ing fill:#dfd,stroke:#333
+```
 
 ### Temel Kavramlar
 ```

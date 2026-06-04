@@ -7,9 +7,34 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-CI/CD pipeline'ı kod değişikliğinde otomatik test, model eğitimi ve deployment yapar. GitHub Actions ile ML projelerine sürekli entegrasyon ve teslimat eklenir.
+GitHub Actions, makine öğrenmesi projelerinde yazılım geliştirme döngüsünü (SDLC) otomatize etmek için kullanılan güçlü bir sürekli entegrasyon ve sürekli teslimat (CI/CD) aracıdır. Kod deposuna yapılan her müdahalede statik kod analizi, birim testler, veri bütünlüğü kontrolleri ve model eğitim süreçlerini otomatik olarak tetikleyerek geliştirme sürecindeki hataları erkenden tespit etmeyi sağlar. MLOps ekosisteminde özellikle model performansını ölçen "kalite kapıları" (quality gates) aracılığıyla, sadece hedeflenen metrikleri karşılayan modellerin otomatik olarak paketlenip (Docker) canlı ortama aktarılmasını koordine eder. Bu sayede modellerin manuel müdahale gerektirmeden, hızlı ve güvenilir bir şekilde güncellenmesi mümkün olur.
 
 ## 🧠 Detay
+
+### MLOps CI/CD Akış Diyagramı
+```mermaid
+graph LR
+    Push["Kod/Veri Güncelleme (Git Push)"] --> CI["Sürekli Entegrasyon (Lint & Unit Test)"]
+    CI --> DataDVC["Veri Çekme (DVC Pull)"]
+    DataDVC --> Train["Model Eğitimi (Training)"]
+    Train --> Metrics["Metrik Değerlendirme (MLflow)"]
+    
+    Metrics --> Gate{"Kalite Kapısı?"}
+    Gate -- "Geçmedi" --> Notify["Geliştiriciye Bildirim"]
+    Gate -- "Geçti" --> CD["Sürekli Dağıtım (Docker Build)"]
+    
+    CD --> Registry["Container Registry"]
+    Registry --> Deploy["Canlı Ortam (Kubernetes/Cloud)"]
+    
+    subgraph GitHub_Actions_Scope ["GitHub Actions Otomasyonu"]
+    CI
+    DataDVC
+    Train
+    Metrics
+    Gate
+    CD
+    end
+```
 
 ### Temel CI Pipeline
 ```yaml

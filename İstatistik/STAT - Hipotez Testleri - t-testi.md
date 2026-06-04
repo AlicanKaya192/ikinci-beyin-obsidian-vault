@@ -8,11 +8,22 @@ zorluk: ⭐⭐
 
 ## 📌 Özet
 
-t-testi, ortalama(lar) hakkında hipotez sınar. σ bilinmediğinde z-testi yerine t-dağılımı kullanılır. Üç ana türü: tek örneklem, bağımsız iki örneklem, eşleştirilmiş.
+t-testi, örneklem ortalamaları üzerinden anakütle parametreleri hakkında çıkarım yapmak için kullanılan, istatistiğin en yaygın hipotez testlerinden biridir. Genellikle anakütle varyansının bilinmediği ve örneklem büyüklüğünün küçük olduğu durumlarda, normal dağılım varsayımı altında grup ortalamaları arasındaki farkın rastlantısal olup olmadığını denetler. Tek örneklem, bağımsız iki örneklem ve eşleştirilmiş t-testi olmak üzere üç ana türü bulunan bu yöntem, araştırmacılara farklı deneysel koşullar veya gruplar arasındaki anlamlı farklılıkları tespit etme imkanı sağlar. Analiz sonucunda elde edilen t-istatistiği ve p-değeri, kurulan sıfır hipotezinin reddedilip reddedilmeyeceğine karar verilmesinde temel kriterdir.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["t-Testi Seçimi"] --> B{"Kaç Grup Karşılaştırılıyor?"}
+    B -- "Tek Grup" --> C["Tek Örneklem t-Testi"]
+    B -- "İki Grup" --> D{"Gruplar Bağımsız mı?"}
+    D -- "Evet" --> E{"Varyanslar Eşit mi?"}
+    D -- "Hayır (Önce/Sonra)" --> F["Eşleştirilmiş (Paired) t-Testi"]
+    E -- "Evet" --> G["Student's t-Testi"]
+    E -- "Hayır" --> H["Welch's t-Testi"]
+```
 
 ### Varsayımlar
 

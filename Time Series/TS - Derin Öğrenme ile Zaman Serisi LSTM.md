@@ -7,9 +7,23 @@ zorluk: ileri
 ---
 
 ## 📌 Özet
-LSTM (Long Short-Term Memory), uzun vadeli bağımlılıkları öğrenebilen özel bir RNN türüdür. Karmaşık örüntüleri ve çok değişkenli zaman serilerini modellemede güçlüdür.
+LSTM (Uzun Kısa Süreli Bellek), standart yinelemeli sinir ağlarının (RNN) 'kaybolan gradyan' problemini aşmak için tasarlanmış, özellikle uzun vadeli bağımlılıkları öğrenmede uzmanlaşmış bir derin öğrenme mimarisidir. Bellek hücreleri ve kapı mekanizmaları (unutmama, giriş ve çıkış kapıları) sayesinde, zaman serisindeki uzak geçmişteki önemli bilgileri saklayabilir ve gereksiz gürültüyü filtreleyebilir. Finansal tahminlerden enerji tüketimi analizine kadar karmaşık, doğrusal olmayan ve çok değişkenli veri setlerinde geleneksel yöntemlere göre üstün performans sergiler. Modelin başarısı için verinin normalize edilmesi (MinMaxScaler gibi) ve uygun bir 'pencereleme' stratejisi ile üç boyutlu (örneklem, zaman adımı, özellik) tensör yapısına dönüştürülmesi şarttır.
 
 ## 🧠 Detay
+
+```mermaid
+graph LR
+    A["Girdi Verisi (X_t)"] --> B["LSTM Hücresi"]
+    B --> C{"Kapı Mekanizmaları"}
+    C --> C1["Unutma Kapısı (Forget Gate)"]
+    C --> C2["Giriş Kapısı (Input Gate)"]
+    C --> C3["Çıkış Kapısı (Output Gate)"]
+    C1 --> D["Hücre Durumu (Cell State)"]
+    C2 --> D
+    D --> E["Gizli Durum (Hidden State)"]
+    C3 --> E
+    E --> F["Tahmin (y_hat)"]
+```
 
 ### Veri Hazırlama
 ```python

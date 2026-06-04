@@ -7,19 +7,26 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Karar ağaçları, veriyi özyinelemeli olarak bölen, insan tarafından kolayca yorumlanabilen modellerdir. Hem sınıflandırma hem regresyon için kullanılır.
+Karar Ağaçları, veriyi belirli özelliklere göre mantıksal sorular sorarak (örneğin: "Yaş > 30 mu?") hiyerarşik bir yapıda bölen, hem sınıflandırma hem de regresyon için kullanılan şeffaf bir makine öğrenmesi algoritmasıdır. Algoritma, her adımda veriyi en iyi ayrıştıran özelliği seçmek için Gini safsızlığı veya Bilgi Kazancı (Information Gain) gibi metrikleri kullanır. Karar ağaçlarının en büyük gücü yorumlanabilir olmalarıdır; ancak kontrol edilmediklerinde verinin en ince detaylarını bile öğrenerek aşırı uyum (overfitting) sağlama eğilimindedirler. Bu durumu engellemek için budama (pruning) veya derinlik kısıtlama gibi teknikler uygulanır.
 
 ## 🧠 Detay
 
-### Temel Kavramlar
-```
-Kök Düğüm (Root) → İlk bölünme noktası
-İç Düğüm → Ara bölünmeler
-Yaprak → Son tahmin
-Derinlik → Ağacın seviye sayısı
-Gini / Entropy → Safsızlık ölçüsü
+### Karar Ağacı Yapısı ve Bölünme
+```mermaid
+graph TD
+    A["Kök Düğüm: Yaş > 35?"] -- "Evet" --> B["İç Düğüm: Gelir > 50k?"]
+    A -- "Hayır" --> C["Yaprak: Kredi Red"]
+    B -- "Evet" --> D["Yaprak: Kredi Onay"]
+    B -- "Hayır" --> E["Yaprak: Kredi Red"]
 ```
 
+### Temel Kavramlar
+Aşağıdaki terimler bir karar ağacının anatomisini anlamak için kritiktir:
+* **Kök Düğüm (Root):** Tüm verinin başladığı ve ilk bölünmenin gerçekleştiği noktadır.
+* **İç Düğüm (Internal Node):** Karar verme sürecinin devam ettiği ara duraklar.
+* **Yaprak (Leaf):** Nihai tahminin yapıldığı, artık daha fazla bölünmenin olmadığı uç noktalar.
+* **Safsızlık (Impurity):** Bir düğümdeki verilerin ne kadar karışık olduğunu gösterir (Gini veya Entropy ile ölçülür).
+...
 ### Scikit-learn ile Uygulama
 ```python
 from sklearn.tree import DecisionTreeClassifier, plot_tree

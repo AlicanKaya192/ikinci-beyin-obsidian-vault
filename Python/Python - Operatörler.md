@@ -7,9 +7,30 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-Python'da operatörler, değerler üzerinde matematiksel, karşılaştırma ve mantıksal işlemler yapmak için kullanılır.
+Python'da operatörler, değişkenler ve değerler üzerinde çeşitli manipülasyonlar gerçekleştirmek için kullanılan özel sembollerdir. Bu operatörler; temel matematiksel işlemler için aritmetik, durumları test etmek için karşılaştırma ve birden fazla koşulu birleştirmek için mantıksal operatörler gibi farklı kategorilere ayrılır. Ayrıca, bellek adreslerini kontrol eden kimlik (identity) ve bir koleksiyonun elemanını sorgulayan üyelik (membership) operatörleri, Python'ın veri yönetiminde sunduğu güçlü araçlar arasında yer alarak kodun akışını ve mantığını belirlemede kritik rol oynar.
 
 ## 🧠 Detay
+
+```mermaid
+mindmap
+  root["Python Operatörleri"]
+    "Aritmetik"
+      "+, -, *, /"
+      "//, %, **"
+    "Karşılaştırma"
+      "==, !="
+      "<, >, <=, >="
+    "Mantıksal"
+      "and"
+      "or"
+      "not"
+    "Atama"
+      "=, +=, -="
+      "x=, /=, //="
+    "Kimlik ve Üyelik"
+      "is, is not"
+      "in, not in"
+```
 
 ### Aritmetik Operatörler
 ```python

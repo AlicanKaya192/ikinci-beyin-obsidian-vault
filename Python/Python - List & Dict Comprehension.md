@@ -7,9 +7,18 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Comprehension, döngü ve koşulları tek satırda yazarak yeni veri yapıları oluşturmayı sağlar. Daha okunabilir ve genellikle daha hızlıdır.
+Python'da Comprehension yapıları, mevcut koleksiyonlardan yeni liste, sözlük veya küme oluşturmak için kullanılan son derece güçlü, özlü ve Pythonik bir yöntemdir. Standart `for` döngülerine kıyasla hem daha az satır kod yazılmasını sağlar hem de Python yorumlayıcısı tarafından C seviyesinde optimize edildiği için genellikle daha performanslı çalışır. Temel olarak bir ifade, bir döngü ve isteğe bağlı bir koşul (if) bloğundan oluşan bu yapılar, veri dönüşümü ve filtreleme işlemlerini tek bir satıra indirger. Ancak, kodun okunabilirliğini korumak adına, iç içe geçmiş (nested) çok sayıda döngü barındıran karmaşık işlemler için standart döngü yapılarının tercih edilmesi daha sağlıklı bir yaklaşımdır.
 
 ## 🧠 Detay
+
+```mermaid
+graph LR
+    A["Girdi (Iterable)"] --> B["for Döngüsü"]
+    B --> C{"if Koşulu (Opsiyonel)"}
+    C -- "Evet" --> D["İfade (Expression)"]
+    C -- "Hayır" --> E["Atla"]
+    D --> F["Yeni Koleksiyon"]
+```
 
 ### List Comprehension
 ```python

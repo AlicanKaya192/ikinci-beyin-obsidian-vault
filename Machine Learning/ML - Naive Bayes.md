@@ -7,9 +7,24 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-Naive Bayes, Bayes teoremi üzerine kurulu olasılıksal bir sınıflandırma algoritmasıdır. Metin sınıflandırma ve spam tespitinde çok etkilidir. Hızlı ve basittir.
+Naive Bayes, Bayes Teoremi'ne dayanan ve özniteliklerin birbirinden bağımsız olduğu varsayımıyla (bu yüzden 'naive' yani saf/safdil denir) çalışan olasılıksal bir sınıflandırma algoritmasıdır. Özellikle yüksek boyutlu veri setlerinde son derece hızlı ve verimli çalışmasıyla bilinir; bu özelliği onu gerçek zamanlı tahmin sistemleri ve metin sınıflandırma (spam tespiti, duygu analizi) için ideal kılar. Verinin dağılımına göre Gaussian, Multinomial ve Bernoulli gibi farklı türevleri bulunur ve her biri farklı veri tipleri (sürekli, sayım tabanlı veya ikili) için özelleşmiştir. Karmaşık modellere kıyasla daha az veriyle etkili sonuçlar verebilmesi, başlangıç seviyesi projeler ve temel modeller (baseline) için büyük bir avantajdır.
 
 ## 🧠 Detay
+
+### Naive Bayes Çalışma Akışı
+```mermaid
+graph TD
+    Start["Girdi Verisi"] --> Type{"Veri Tipi Nedir?"}
+    
+    Type -- "Sürekli / Sayısal (Normal Dağılım)" --> GNB["Gaussian Naive Bayes"]
+    Type -- "Metin / Kelime Sayımı (Ayrık)" --> MNB["Multinomial Naive Bayes"]
+    Type -- "İkili (0/1 / Var/Yok)" --> BNB["Bernoulli Naive Bayes"]
+    
+    GNB & MNB & BNB --> Calc["Bayes Teoremi ve Olasılık Hesaplama"]
+    Calc --> Independence["'Naive' Bağımsızlık Varsayımı Uygulanır"]
+    Independence --> Pred["En Yüksek Sonsal (Posterior) Olasılık Sınıfı Seçilir"]
+    Pred --> End["Sınıflandırma Tahmini"]
+```
 
 ### Bayes Teoremi
 ```

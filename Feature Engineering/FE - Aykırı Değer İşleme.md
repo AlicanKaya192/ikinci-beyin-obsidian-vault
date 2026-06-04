@@ -14,6 +14,23 @@ Aykırı değerler modeli çarpıtabilir veya gerçek sinyaller taşıyabilir. T
 
 ## 🧠 Detay
 
+### 🗺️ Aykırı Değer İşleme Akış Diyagramı
+
+```mermaid
+graph TD
+    A["Aykırı Değer Tespit Edildi"] --> B{"Hatalı Veri mi? <br/> (Ölçüm Hatası vb.)"}
+    B -- Evet --> C["Satırı Sil / Düzelt"]
+    B -- Hayır --> D{"Gerçek Bir Uç Değer mi? <br/> (Örn: Dolandırıcılık)"}
+    D -- Evet --> E["Koru / Ayrı Model Kur"]
+    D -- Hayır --> F{"Model Türü Hassas mı? <br/> (Regresyon, KNN, SVM)"}
+    F -- Hayır --> G["Olduğu Gibi Bırak <br/> (Karar Ağaçları / RF)"]
+    F -- Evet --> H{"Veri Kaybı Tolere Edilebilir mi?"}
+    H -- Evet --> I["Kırpma / Capping / Winsorize"]
+    H -- Hayır --> J["Sayısal Dönüşüm <br/> (Log, Box-Cox)"]
+```
+
+---
+
 ### Aykırı Değer Türleri
 
 | Tür | Açıklama | Örnek |

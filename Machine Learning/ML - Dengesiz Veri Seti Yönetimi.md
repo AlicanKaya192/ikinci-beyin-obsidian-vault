@@ -7,11 +7,36 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Dengesiz veri setlerinde bir sınıf diğerinden çok daha fazlaysa model çoğunluk sınıfını öğrenir. SMOTE, class_weight ve eşik ayarı bu sorunu çözer.
+Dengesiz veri seti yönetimi, sınıf dağılımının bir tarafa aşırı meyilli olduğu (örneğin %99'a %1) durumlarda modelin çoğunluk sınıfına "ezberlemesini" önlemek için kullanılan teknikler bütünüdür. Geleneksel doğruluk (accuracy) metrikleri bu senaryolarda yanıltıcıdır; çünkü model her şeye "çoğunluk sınıfı" diyerek yüksek skor alabilir ancak asıl önemli olan azınlık sınıfını tamamen kaçırabilir. Bu sorunu aşmak için veri seviyesinde örnekleme (sampling), algoritma seviyesinde ağırlıklandırma (class weighting) veya karar eşiği optimizasyonu (threshold tuning) gibi stratejiler uygulanarak modelin azınlık sınıfını ayırt etme yeteneği artırılır.
 
 ## 🧠 Detay
 
+### İş Akışı ve Stratejiler
+```mermaid
+graph TD
+    A["Dengesiz Veri Tespiti"] --> B{"Strateji Seçimi"}
+    B --> C["Veri Seviyesi (Sampling)"]
+    B --> D["Algoritma Seviyesi"]
+    B --> E["Çıktı Seviyesi"]
+    
+    C --> C1["Oversampling (SMOTE, ADASYN)"]
+    C --> C2["Undersampling (Random, Tomek Links)"]
+    
+    D --> D1["class_weight='balanced'"]
+    D --> D2["Maliyet Duyarlı Öğrenme"]
+    
+    E --> E1["Eşik (Threshold) Optimizasyonu"]
+    E --> E2["Precision-Recall Eğrisi Analizi"]
+    
+    C1 --> F["Doğru Metrikle Değerlendir (F1, AUC-ROC)"]
+    C2 --> F
+    D1 --> F
+    D2 --> F
+    E1 --> F
+```
+
 ### Problemi Tespit Et
+Veri setindeki dengesizliği anlamak için ilk adım hedef değişkenin dağılımını kontrol etmektir.
 ```python
 import pandas as pd
 

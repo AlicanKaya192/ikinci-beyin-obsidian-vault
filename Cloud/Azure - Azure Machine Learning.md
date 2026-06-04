@@ -7,9 +7,26 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Azure Machine Learning (AzureML), ML modellerini bulutta geliştirmek, eğitmek, deploy etmek ve izlemek için tam özellikli bir platform. MLflow ile entegrasyonu güçlüdür.
+Azure Machine Learning (AzureML), makine öğrenmesi modellerinin geliştirilmesi, eğitilmesi, yayına alınması ve yönetilmesi süreçlerini uçtan uca kapsayan kurumsal düzeyde bir bulut servisidir. Veri bilimciler ve geliştiriciler için; ölçeklenebilir hesaplama kümeleri, otomatik makine öğrenmesi (AutoML) ve MLflow entegrasyonu gibi güçlü araçlar sunarak deney takibini ve model yönetimini standartlaştırır. "Workspace" yapısı altında toplanan veri setleri, yazılım ortamları (environments) ve modeller, projelerin tam olarak yeniden üretilebilirliğini ve takımlar arası işbirliğini sağlar. Modern MLOps pratiklerini destekleyen yapısıyla; model performansını izleme, versiyonlama ve CI/CD süreçlerine entegrasyon gibi kritik operasyonel gereksinimleri profesyonel bir düzeyde karşılayan kapsamlı bir ekosistem sunar.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Veri Kaynakları (Datastores)"] --> B["AzureML Workspace (Merkezi Yönetim)"]
+    subgraph "Workspace Varlıkları"
+    B1["Datasets (Versiyonlu Veri)"] --- B
+    B2["Compute (GPU/CPU Kümesi)"] --- B
+    B3["Environments (Docker/Conda)"] --- B
+    B4["Experiments (Deney Takibi)"] --- B
+    end
+    B -- "Eğitim Süreci" --> C["Model Registry (Model Kaydı)"]
+    C -- "Yayına Alma" --> D["Endpoints (Tahmin Servisi)"]
+    D --> E1["Managed Online Endpoint (Anlık)"]
+    D --> E2["Batch Endpoint (Toplu)"]
+    F["AutoML / Designer"] -- "Hızlı Prototipleme" --> C
+    G["MLflow Entegrasyonu"] -- "Loglama" --> B4
+```
 
 ### Temel Kavramlar
 ```

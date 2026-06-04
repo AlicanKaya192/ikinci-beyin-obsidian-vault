@@ -8,11 +8,31 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-Docker network'ler container'ların birbirleriyle ve dış dünyayla iletişimini sağlar. Varsayılan bridge, izole bridge, host ve overlay (Swarm) network türleri mevcuttur.
+Docker ağ yönetimi, konteynerlerin birbirleriyle, ana makineyle (host) ve dış dünyayla nasıl iletişim kuracağını belirleyen kritik bir katmandır. Docker, farklı kullanım senaryolarına uygun olarak Bridge, Host, Overlay ve None gibi çeşitli ağ sürücüleri sunar. Özel köprü ağları (Custom Bridge Networks), konteynerler arasında otomatik DNS çözümlemesi sağlayarak mikroservislerin birbirlerini IP adresleri yerine isimleri üzerinden bulmasına olanak tanır. Güvenli bir mimari kurmak için, servisleri mantıksal ağlara ayırmak ve dış dünyaya sadece gerekli portları açmak, konteynerize edilmiş uygulamaların ağ güvenliğini sağlamanın temel yoludur.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Docker Ağ Modları"] --> B["Bridge (Köprü)"]
+    A --> C["Host (Ana Makine)"]
+    A --> D["None (İzole)"]
+    A --> E["Overlay (Katman)"]
+    B --> B1["Varsayılan Bridge (docker0)"]
+    B --> B2["Özel Bridge (Kullanıcı Tanımlı)"]
+    B2 --> B2a["Otomatik DNS Çözümleme"]
+    C --> C1["Host IP ve Portlarını Kullanır"]
+    D --> D1["Ağ Bağlantısı Yok"]
+    E --> E1["Fiziksel Makineler Arası İletişim"]
+    subgraph "Ağ İzolasyon Seviyeleri"
+    B
+    C
+    D
+    E
+    end
+```
 
 ### Network Türleri
 

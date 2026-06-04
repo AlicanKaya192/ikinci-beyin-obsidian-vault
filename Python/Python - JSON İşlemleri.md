@@ -7,9 +7,15 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-JSON (JavaScript Object Notation), veri alışverişinde en yaygın kullanılan format. Python'da `json` modülü ile kolayca okunup yazılabilir. API'larla çalışırken sıklıkla kullanılır.
+JSON (JavaScript Object Notation), modern yazılım dünyasında veri depolama ve web servisleri arasında veri alışverişi için kullanılan en popüler metin tabanlı formattır. Python'da yerleşik olarak gelen `json` modülü, karmaşık Python veri yapılarını JSON formatına dönüştürmeyi (serialization) ve JSON verilerini Python nesnelerine geri döndürmeyi (deserialization) son derece kolaylaştırır. Bu işlemler özellikle web API'ları, konfigürasyon dosyaları ve veri tabanı entegrasyonları gibi alanlarda kritik bir öneme sahiptir. `json.dumps()` ve `json.loads()` fonksiyonları bellekteki verilerle çalışırken, `json.dump()` ve `json.load()` fonksiyonları doğrudan dosya sistemindeki JSON verilerini işlemek için kullanılır.
 
 ## 🧠 Detay
+
+```mermaid
+graph LR
+    A["Python Nesnesi (dict, list, vb.)"] -- "json.dumps() / json.dump()" --> B["JSON Formatı (String / Dosya)"]
+    B -- "json.loads() / json.load()" --> A
+```
 
 ### json Modülü
 ```python

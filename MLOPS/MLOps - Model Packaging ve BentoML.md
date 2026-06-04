@@ -7,9 +7,20 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-BentoML, ML modellerini standart bir şekilde paketleyip servis eden framework'tür. Modeli, bağımlılıkları ve servis kodunu tek bir "Bento" olarak paketler. Docker ve Kubernetes ile kolayca deploy edilir.
+BentoML, makine öğrenmesi modellerini "Bento" adı verilen standartlaştırılmış paketler haline getirerek, araştırma ortamından üretim ortamına geçişi hızlandıran modern bir framework'tür. Bu araç; model ağırlıklarını, gerekli Python bağımlılıklarını, API tanımlarını ve özel ön işleme kodlarını tek bir birim içerisinde izole ederek "benim makinemde çalışıyordu" sorununu ortadan kaldırır. Gelişmiş "Runner" mimarisi sayesinde, model çıkarım (inference) işlemlerini ana API döngüsünden ayırarak yüksek ölçeklenebilirlik ve performans sunar. Tek bir komutla Docker konteynerlarına veya Kubernetes (Yatai) kümelerine dönüşebilen Bento'lar, modellerin servis edilmesini hem güvenli hem de tekrarlanabilir kılar.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Eğitilmiş Model (Sklearn/PyTorch/etc)"] --> B["BentoML Model Store"]
+    B --> C["service.py (API Tanımı)"]
+    C --> D["bentofile.yaml (Build Yapılandırması)"]
+    D --> E["Bento (Standardized Bundle)"]
+    E --> F["bentoml containerize (Docker)"]
+    F --> G["K8s / Cloud / Serverless"]
+    E --> H["bentoml serve (Local API)"]
+```
 
 ### Kurulum
 ```bash

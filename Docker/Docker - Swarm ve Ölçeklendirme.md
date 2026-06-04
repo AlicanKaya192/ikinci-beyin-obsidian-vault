@@ -8,13 +8,33 @@ zorluk: ⭐⭐⭐⭐
 
 ## 📌 Özet
 
-Docker Swarm, birden fazla Docker host'u tek bir cluster olarak yönetir. Container orchestration için Kubernetes'e alternatif, daha basit bir çözümdür.
+Docker Swarm, birden fazla Docker host'unu bir araya getirerek tek bir sanal kaynak havuzu gibi yönetmenizi sağlayan, Docker ekosistemine yerleşik bir orkestrasyon aracıdır. Kubernetes'e göre çok daha hızlı kurulum ve düşük öğrenme eğrisi sunan bu yapı, mikroservislerin ölçeklendirilmesi, hata toleransı ve yük dengeleme gibi kritik görevleri otomatikleştirir. "Manager" düğümleri cluster yönetiminden ve görev dağıtımından sorumluyken, "Worker" düğümleri ise tanımlanan servislerin container'larını çalıştırır. Swarm'un en güçlü yanlarından biri, servis güncellemelerini kesintisiz bir şekilde (rolling updates) gerçekleştirebilmesi ve bir hata durumunda otomatik olarak önceki sürüme dönebilmesidir (rollback).
 
 ---
 
 ## 🧠 Detay
 
 ### Swarm Mimarisi
+
+```mermaid
+graph TD
+    subgraph "Swarm Cluster"
+        M1["Manager Node (Leader - Raft)"]
+        W1["Worker Node 1"]
+        W2["Worker Node 2"]
+        W3["Worker Node 3"]
+    end
+    
+    Admin["Yönetici / CI-CD"] -- "docker stack deploy" --> M1
+    M1 -- "Görevleri Dağıtır" --> W1
+    M1 -- "Görevleri Dağıtır" --> W2
+    M1 -- "Görevleri Dağıtır" --> W3
+    
+    Ingress["Routing Mesh (Yük Dengeleyici)"] --> M1
+    Ingress --> W1
+    Ingress --> W2
+    Ingress --> W3
+```
 
 ```
 ┌────────────────────────────────────────┐

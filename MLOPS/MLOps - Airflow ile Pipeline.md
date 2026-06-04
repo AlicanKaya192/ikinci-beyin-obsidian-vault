@@ -7,9 +7,29 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Apache Airflow, karmaşık ML pipeline'larını DAG (Directed Acyclic Graph) olarak tanımlayan ve zamanlamanı yöneten açık kaynak orkestrasyon aracıdır.
+Apache Airflow, makine öğrenmesi iş akışlarını ve veri boru hatlarını (pipeline) yönetmek, zamanlamak ve izlemek için kullanılan endüstri standardı bir açık kaynak orkestrasyon aracıdır. İş süreçlerini DAG (Directed Acyclic Graph) yapısı altında birbirine bağlı görevler olarak tanımlayarak, veri toplama, temizleme, özellik mühendisliği ve model eğitimi gibi adımların hatasız bir sıra ile yürütülmesini sağlar. Hata durumlarında otomatik yeniden deneme mekanizmaları, zengin görsel izleme arayüzü ve görevler arası veri iletimi (XCom) gibi özellikleri sayesinde operasyonel karmaşıklığı büyük ölçüde azaltır. Python tabanlı yapısı, iş akışlarının kod olarak (Pipeline as Code) yönetilmesine ve versiyonlanmasına olanak tanır.
 
 ## 🧠 Detay
+
+### Örnek ML Pipeline DAG Akışı
+```mermaid
+graph LR
+    DataIn["Veri Kaynağı (SQL/S3)"] --> T1["Veri Çekme (Extract)"]
+    T1 --> T2["Veri Ön İşleme (Preprocess)"]
+    T2 --> T3["Özellik Mühendisliği (Feature Eng)"]
+    
+    subgraph Training_Scope ["Eğitim ve Değerlendirme"]
+    T3 --> T4["Model Eğitimi (Train)"]
+    T4 --> T5["Performans Ölçümü (Evaluate)"]
+    end
+    
+    T5 --> Decision{"Eşik Değeri Geçildi mi?"}
+    Decision -- "Evet" --> T6["Modeli Kaydet & Deploy"]
+    Decision -- "Hayır" --> T7["Uyarı Gönder (Slack/Mail)"]
+    
+    T6 --> Cleanup["Geçici Dosyaları Temizle"]
+    T7 --> Cleanup
+```
 
 ### Kurulum
 ```bash

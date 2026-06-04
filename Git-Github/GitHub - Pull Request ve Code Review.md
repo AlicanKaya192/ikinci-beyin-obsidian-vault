@@ -8,11 +8,29 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-Pull Request (PR), değişiklikleri ana branch'e dahil etmeden önce inceleme, tartışma ve onay sürecidir. Kaliteli code review kültürü ekibin en önemli pratiklerinden biridir.
+Pull Request (PR) süreci, yazılım geliştirmede kalite kontrolünün ve ekip içi bilgi paylaşımının merkezinde yer alan kritik bir iş akışıdır. Bir geliştirici, tamamladığı özellikleri veya hata düzeltmelerini ana kod tabanına dahil etmeden önce, diğer ekip üyelerinin incelemesine ve geri bildirimine sunar. Bu aşama sadece hataların ayıklanmasını sağlamakla kalmaz, aynı zamanda kod standartlarının korunmasına, dokümantasyonun güncel tutulmasına ve projenin genel mimarisine uyumun denetlenmesine olanak tanır. Etkili bir Code Review (Kod İnceleme) kültürü, teknik borcun azalmasını ve daha sürdürülebilir bir yazılım ekosisteminin oluşmasını sağlar.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    FB["Özellik Dalı (Feature Branch)"] -- "PR Oluştur" --> PR["İnceleme Bekliyor (Open PR)"]
+    PR -- "Kod İnceleme (Code Review)" --> REV["Geri Bildirim / Yorum"]
+    REV -- "Düzeltme Yap" --> PR
+    PR -- "Onay (Approval)" --> APP["Onaylandı"]
+    APP -- "Merge (Birleştir)" --> MB["Ana Dal (Main Branch)"]
+    
+    subgraph "Kontroller"
+    CI["CI Pipeline (Testler)"]
+    BP["Branch Koruma Kuralları"]
+    end
+    
+    PR -.-> CI
+    CI -- "Başarılı" --> PR
+    BP -- "Zorunlu" --> PR
+```
 
 ### PR Oluşturma Adımları
 

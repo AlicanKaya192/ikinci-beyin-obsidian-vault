@@ -8,11 +8,29 @@ zorluk: ⭐⭐⭐⭐
 
 ## 📌 Özet
 
-Nedensellik, korelasyondan güçlü bir iddia gerektirir. Randomizasyon mümkün değilse gözlemsel veriden nedensel çıkarım için özel yöntemler kullanılır.
+Nedensel çıkarım, değişkenler arasındaki basit korelasyonun ötesine geçerek, bir müdahalenin (tedavi) sonuç üzerindeki gerçek etkisini belirlemeyi amaçlayan bir metodolojidir. Gözlemsel verilerde karşılaşılan karıştırıcı değişken (confounder) sorunu, korelasyonu nedensellik gibi göstererek yanıltıcı sonuçlara yol açabilir. Bu karmaşıklığı çözmek için DAG gibi görsel modellerle değişkenler arası yapılar tanımlanır ve IV (Araçsal Değişken), DiD (Fark-İçinde-Fark) veya RDD (Regresyon Süreksizliği) gibi "yarı-deneysel" yöntemler kullanılarak rastgele kontrollü deneylerin (RCT) koşulları ampirik olarak taklit edilir. Temel amaç, "bu tedavi uygulanmasaydı ne olurdu?" sorusuna yanıt arayan karşı-olgusal (counterfactual) düşünce yapısı üzerinden net nedensel etkileri tahmin etmektir.
 
 ---
 
 ## 🧠 Detay
+
+### Nedensel Çıkarım Yöntemleri Hiyerarşisi
+
+```mermaid
+graph TD
+    A["Veri Tipi & Tasarım"] --> B["Deneysel (RCT)"]
+    A --> C["Yarı-Deneysel (Quasi-Experimental)"]
+    A --> D["Gözlemsel (Observational)"]
+    
+    B --> B1["Randomize Kontrollü Deney"]
+    
+    C --> C1["DiD (Fark-İçinde-Fark)"]
+    C --> C2["RDD (Regresyon Süreksizliği)"]
+    C --> C3["IV (Araçsal Değişken)"]
+    
+    D --> D1["Eşleştirme (Matching/PSM)"]
+    D --> D2["Çoklu Regresyon Kontrolü"]
+```
 
 ### Korelasyon ≠ Nedensellik
 

@@ -8,11 +8,25 @@ zorluk: ⭐
 
 ## 📌 Özet
 
-Frekans dağılımları, veri setindeki değerlerin kaç kez tekrar ettiğini gösteren tablolardır. Histogramlar, kutu grafikleri ve diğer görsel araçlarla veri yapısı keşfedilir.
+Frekans dağılımları ve grafiksel yöntemler, ham veriyi anlamlı bir yapıya dönüştürerek verinin genel dağılımını, merkezini ve yayılımını keşfetmemizi sağlayan betimsel araçlardır. Frekans tabloları, verideki değerlerin veya aralıkların ne sıklıkla tekrar ettiğini sayısal olarak özetlerken; histogramlar, kutu grafikleri ve saçılım grafikleri bu sayısal özetleri görsel bir dile aktarır. Veri görselleştirme, sadece bir sunum aracı değil, aynı zamanda verideki aykırı değerleri, çarpıklıkları ve gizli örüntüleri tespit etmek için kullanılan kritik bir keşifsel veri analizi (EDA) sürecidir. Doğru grafik seçimi, verinin türüne (kategorik veya sürekli) ve yanıtlanmak istenen soruya göre verinin en doğru ve etkileyici şekilde temsil edilmesini sağlar.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Veri Görselleştirme"] --> B["Kategorik Veri"]
+    A --> C["Sürekli Veri"]
+    B --> B1["Çubuk Grafik (Bar Chart)"]
+    B --> B2["Pasta Grafik (Pie Chart)"]
+    C --> C1["Tek Değişkenli"]
+    C --> C2["Çok Değişkenli"]
+    C1 --> D1["Histogram / Yoğunluk"]
+    C1 --> D2["Kutu Grafiği (Box Plot)"]
+    C2 --> E1["Saçılım Grafiği (Scatter Plot)"]
+    C2 --> E2["Isı Haritası (Heatmap)"]
+```
 
 ### Frekans Türleri
 

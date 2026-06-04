@@ -7,9 +7,21 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-FastAPI + ML modelini Docker ile paketleyerek taşınabilir, tekrar üretilebilir production servisi oluşturulur. Docker Compose ile çok servisli mimari kurulabilir.
+FastAPI uygulamalarını Docker ile paketlemek, uygulamanın farklı ortamlarda (geliştirme, test, üretim) tutarlı bir şekilde çalışmasını sağlar. Bu süreçte, çok aşamalı (multi-stage) build stratejisi kullanılarak hem güvenlik artırılır hem de Docker imaj boyutları optimize edilir. Docker Compose ile FastAPI, veritabanı, Redis ve Nginx gibi yan servisler tek bir yapılandırma altında orkestre edilebilir. Production ortamında sağlık kontrolleri (healthcheck), root olmayan kullanıcı kullanımı ve reverse proxy (Nginx) yapılandırması gibi en iyi uygulamalar hayati önem taşır.
 
 ## 🧠 Detay
+
+### Konsept Akışı
+```mermaid
+graph TD
+    A["Yerel Kod"] -- "Dockerfile" --> B["Docker Build"]
+    B -- "Docker Image" --> C["Docker Registry"]
+    C -- "Pull Image" --> D["Production Sunucusu"]
+    D -- "Konteyner" --> E["FastAPI Uygulaması"]
+    E -- "Bağlantı" --> F["Redis / DB"]
+    G["İnternet"] -- "Trafik" --> H["Nginx (Reverse Proxy)"]
+    H -- "Proxy Pass" --> E
+```
 
 ### Proje Yapısı
 ```

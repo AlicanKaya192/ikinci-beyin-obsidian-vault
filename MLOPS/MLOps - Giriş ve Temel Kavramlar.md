@@ -11,6 +11,23 @@ MLOps, ML sistemlerini production'da güvenilir ve verimli şekilde çalıştır
 
 ## 🧠 Detay
 
+### 🗺️ MLOps Yaşam Döngüsü (Lifecycle)
+
+```mermaid
+graph TD
+    A["Veri Toplama & Hazırlama"] --> B["Deney Takibi (MLflow / W&B)"]
+    B --> C["Model Eğitimi & Tuning"]
+    C --> D["Model Kayıt Defteri (Registry)"]
+    D --> E["CI/CD Pipeline (GitHub Actions)"]
+    E --> F["Dağıtım (Serving / Kubernetes)"]
+    F --> G["İzleme (Monitoring) & Drift Tespiti"]
+    G --> H{Yeniden Eğitim Gerekli mi?}
+    H -- Evet --> A
+    H -- Hayır --> F
+```
+
+---
+
 ### MLOps Nedir?
 ```
 DevOps + DataOps + ModelOps = MLOps

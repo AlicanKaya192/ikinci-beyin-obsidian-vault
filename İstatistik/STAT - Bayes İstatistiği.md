@@ -8,11 +8,21 @@ zorluk: ⭐⭐⭐⭐
 
 ## 📌 Özet
 
-Bayes istatistiği, parametreleri sabit değil, olasılık dağılımına sahip rastlantı değişkeni olarak ele alır. Önsel bilgi ile veriden elde edilen kanıtı birleştirerek sonsal dağılım oluşturur.
+Bayes istatistiği, parametreleri sabit birer değer yerine, olasılık dağılımına sahip rastlantı değişkenleri olarak kabul eden modern bir istatistiksel yaklaşımıdır. Bu yöntem, analiz sürecine "önsel bilgi" (prior) katarak, mevcut veriden elde edilen kanıtlarla (likelihood) bu bilgiyi birleştirir ve "sonsal dağılımı" (posterior) oluşturur. Frekansçı yaklaşımın aksine, veriyi sabit, parametreyi ise belirsiz kabul ederek doğrudan olasılık çıkarımları yapmaya olanak tanır. Özellikle karmaşık veri yapılarında ve küçük örneklemlerde, uzman görüşünü veya geçmiş çalışmaları analize dahil edebilme özelliği sayesinde oldukça esnek ve güçlüdür.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph LR
+    A["Önsel Bilgi (Prior)"] --> C["Bayes Teoremi"]
+    B["Veri/Kanıt (Likelihood)"] --> C
+    C --> D["Sonsal Dağılım (Posterior)"]
+    D --> E["Karar Verme ve Tahmin"]
+    E --> F["Yeni Veri Geldiğinde Süreç Tekrarlanır"]
+    F -.-> A
+```
 
 ### Frekansçı vs Bayes Felsefesi
 

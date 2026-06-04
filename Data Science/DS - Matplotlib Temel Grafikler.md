@@ -7,9 +7,24 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-Matplotlib, Python'un temel veri görselleştirme kütüphanesidir. Çizgi grafik, bar grafik, histogram, scatter plot gibi temel grafikleri oluşturur.
+Matplotlib, Python ekosistemindeki veri görselleştirme araçlarının atası ve en güçlü temel taşıdır. Düşük seviyeli (low-level) bir kütüphane olması sayesinde, bir grafiğin her bir bileşeni üzerinde tam kontrol imkanı sunar ve Seaborn gibi daha yüksek seviyeli kütüphanelerin üzerine inşa edildiği çekirdek yapıyı oluşturur. Veri biliminde; zaman serisi trendlerini gözlemlemek için çizgi grafikler, kategorik karşılaştırmalar için bar grafikler, veri dağılımını analiz etmek için histogramlar ve değişkenler arası korelasyonu keşfetmek için scatter plot'lar en temel analiz araçlarıdır. Etkili bir görselleştirme süreci, eldeki veri setinin doğasına ve yanıt aranan soruya en uygun grafik türünü seçmekle başlar; Matplotlib bu seçimi gerçeğe dönüştürmek için sınırsız esneklik sağlar.
 
 ## 🧠 Detay
+
+### Grafik Türü Seçim Rehberi
+```mermaid
+graph TD
+    A["Hangi Grafiği Seçmeliyim?"] --> B{"Veri Tipi & Amaç Nedir?"}
+    B -- "Zaman Serisi / Sürekli" --> C["Çizgi Grafik (Line Plot)"]
+    B -- "Kategorik Karşılaştırma" --> D["Bar Grafik (Bar Chart)"]
+    B -- "Veri Dağılımı (Frekans)" --> E["Histogram"]
+    B -- "İki Değişkenli İlişki" --> F["Scatter Plot"]
+    
+    C --> C1["Trendleri ve Değişimi Gözlemle"]
+    D --> D1["Gruplar Arası Farkları Gör"]
+    E --> E1["Yoğunluk ve Yayılımı Anla"]
+    F --> F1["Korelasyon ve Kümelenmeyi Keşfet"]
+```
 
 ### Kurulum ve Import
 ```python

@@ -8,11 +8,33 @@ zorluk: ⭐⭐⭐⭐
 
 ## 📌 Özet
 
-Docker ile CI/CD pipeline: kod değişikliği → otomatik build → test → push → deploy. GitHub Actions ve GitLab CI ile tam otomasyon.
+Docker, modern yazılım geliştirme süreçlerinin ayrılmaz bir parçası olan CI/CD (Sürekli Entegrasyon ve Sürekli Dağıtım) boru hatlarının temel taşıdır. Konteyner yapısı sayesinde, bir uygulamanın build, test ve deployment aşamaları tamamen izole ve tekrarlanabilir bir ortamda gerçekleştirilebilir. GitHub Actions veya GitLab CI gibi araçlarla entegre edilen Docker, kod değişikliğinden itibaren otomatik imaj oluşturma, güvenlik taraması ve sıfır kesinti (zero-downtime) ile yayına alma süreçlerini mümkün kılar. Bu otomasyon, geliştirme ekiplerinin hataları erkenden tespit etmesini sağlar ve yazılımın üretim ortamına güvenle, hızla ve standart bir şekilde taşınmasını garanti eder.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph LR
+    A["Kod Değişikliği (Push)"] --> B["CI Sunucusu (GitHub/GitLab)"]
+    B --> C["Otomatik Testler"]
+    C -->|"Başarılı"| D["Docker Build & Tag"]
+    D --> E["İmaj Güvenlik Taraması"]
+    E -->|"Güvenli"| F["Docker Registry'ye Push"]
+    F --> G["Deployment (CD)"]
+    G --> H["Rolling Update / Blue-Green"]
+    subgraph "Sürekli Entegrasyon (CI)"
+    B
+    C
+    D
+    E
+    end
+    subgraph "Sürekli Dağıtım (CD)"
+    F
+    G
+    H
+    end
+```
 
 ### GitHub Actions ile Docker CI/CD
 

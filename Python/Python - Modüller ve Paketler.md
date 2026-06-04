@@ -7,9 +7,19 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Modüller, Python kodunu organize etmek için kullanılan `.py` dosyalarıdır. Paketler ise modüllerin bir araya getirildiği klasörlerdir. `import` ile kullanılırlar.
+Python'da modüller ve paketler, kodun modülerliğini artırmak ve büyük projeleri daha yönetilebilir parçalara bölmek için kullanılan hiyerarşik yapılardır. Bir modül, içinde fonksiyonlar, sınıflar ve değişkenler barındıran basit bir `.py` dosyasıyken; paketler, içinde birden fazla modül ve genellikle bir `__init__.py` dosyası bulunduran klasör dizinleridir. Bu yapılar sayesinde kodun tekrar kullanımı (reusability) sağlanır, isim çakışmaları (namespace pollution) önlenir ve standart kütüphanedeki zengin araç seti ile dış kaynaklı kütüphaneler projeye kolayca dahil edilebilir. `import` mekanizması, Python'ın esnekliğini sağlayan en temel özelliklerden biridir ve hem yerel dosyaları hem de yüklü kütüphaneleri aynı tutarlılıkla yönetmemize imkan tanır.
 
 ## 🧠 Detay
+
+```mermaid
+graph TD
+    A["Proje Dizini"] --> B["Paket (Klasör)"]
+    B --> B1["__init__.py"]
+    B --> B2["Modül A (.py)"]
+    B --> B3["Modül B (.py)"]
+    A --> C["Modül C (.py)"]
+    B2 --> D["Fonksiyonlar & Sınıflar"]
+```
 
 ### Modül İçe Aktarma
 ```python

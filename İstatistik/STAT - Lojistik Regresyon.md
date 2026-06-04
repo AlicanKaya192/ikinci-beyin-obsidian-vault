@@ -8,11 +8,22 @@ zorluk: ⭐⭐⭐
 
 ## 📌 Özet
 
-Lojistik regresyon, ikili (0/1) bağımlı değişkenin olasılığını modelleyen yöntemdir. Çıktı olasılık olduğundan sigmoid fonksiyon kullanılır, doğrusal regresyon uygulanamaz.
+Lojistik regresyon, bağımlı değişkenin ikili (0/1, Evet/Hayır gibi) veya kategorik olduğu durumlarda, belirli bir olayın gerçekleşme olasılığını modellemek için kullanılan güçlü bir sınıflandırma algoritmasıdır. Doğrusal regresyonun aksine, çıktı değerlerini 0 ile 1 arasına sıkıştıran "sigmoid" (lojistik) fonksiyonunu kullanarak olasılık tahmini yapar. Model, logit dönüşümü aracılığıyla bağımsız değişkenler ile hedef olayın "odds" (gerçekleşme oranı) arasındaki ilişkiyi doğrusal bir düzleme taşır. Özellikle tıp, finans ve pazarlama gibi alanlarda bir riskin veya sonucun olasılığını belirlemek ve katsayılar üzerinden değişkenlerin etkisini yorumlamak (odds ratio) amacıyla yaygın olarak tercih edilir.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph LR
+    A["Giriş Verisi (X)"] --> B["Doğrusal Kombinasyon (z = B0 + B1X)"]
+    B --> C["Logit Dönüşümü"]
+    C --> D["Sigmoid Fonksiyonu"]
+    D --> E["Olasılık Çıktısı (0 ile 1 arası)"]
+    E --> F{"Eşik Değer (0.5)?"}
+    F -- "> 0.5" --> G["Sınıf 1"]
+    F -- "< 0.5" --> H["Sınıf 0"]
+```
 
 ### Neden Doğrusal Regresyon Çalışmaz?
 

@@ -7,9 +7,24 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-Terraform, bulut altyapısını kod olarak (IaC) tanımlamayı sağlar. AWS ve Azure kaynakları tekrarlanabilir, versiyonlanabilir şekilde yönetilir. "Click-ops" yerine güvenilir altyapı.
+Altyapı olarak Kod (Infrastructure as Code - IaC) yaklaşımının en güçlü araçlarından biri olan Terraform, bulut kaynaklarının bildirimsel (declarative) bir dille tanımlanmasını ve yönetilmesini sağlar. Bu yöntem, manuel yapılandırma süreçlerinde (click-ops) oluşabilecek insan hatalarını minimize ederek AWS, Azure ve GCP gibi farklı sağlayıcılarda tutarlı, tekrarlanabilir ve versiyonlanabilir bir mimari sunar. Veri bilimi projelerinde karmaşık veri işleme kümelerini, depolama alanlarını ve model sunucu uç noktalarını saniyeler içinde standartize bir şekilde ayağa kaldırmayı mümkün kılar. Terraform'un sunduğu durum yönetimi (state management) sayesinde, altyapı üzerindeki her değişiklik titizlikle izlenebilir ve ekipler arası işbirliği güvenli bir şekilde yürütülebilir.
 
 ## 🧠 Detay
+
+### 🔄 Terraform İş Akışı
+
+```mermaid
+graph LR
+    A["Kodlama (HCL)"] --> B["terraform init"]
+    B --> C["terraform plan"]
+    C --> D["terraform apply"]
+    D --> E["terraform destroy"]
+    
+    B -- "Provider İndir" --> B1["Eklentiler"]
+    C -- "Değişiklikleri Önizle" --> C1["Plan Çıktısı"]
+    D -- "Kaynakları Oluştur" --> D1["Gerçek Bulut Kaynakları"]
+    D1 -- "Durumu Sakla" --> F["terraform.tfstate"]
+```
 
 ### Temel Kavramlar
 ```

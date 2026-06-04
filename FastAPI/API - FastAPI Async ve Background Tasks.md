@@ -7,9 +7,24 @@ zorluk: orta
 ---
 
 ## 📌 Özet
-FastAPI async/await ile yüksek eşzamanlılık sağlar. Arka plan görevleri ise uzun işlemleri (model eğitimi, e-posta gönderimi) istek döngüsü dışına taşır.
+FastAPI, Python'un `asyncio` kütüphanesini kullanarak yüksek performanslı ve eşzamanlı veri işleme yeteneği sunar. `async def` ile tanımlanan uç noktalar, veritabanı sorguları veya harici API istekleri gibi I/O işlemlerini beklerken sunucu kaynaklarını serbest bırakarak verimliliği artırır. `BackgroundTasks` ise, istemciye hızlıca yanıt döndükten sonra e-posta gönderimi veya loglama gibi uzun sürebilecek yan işlemleri arka planda yürütmek için kullanılır. Daha karmaşık ve kaynak tüketen görevler (örneğin model eğitimi veya büyük veri işleme) için Celery gibi dağıtık görev kuyrukları tercih edilmelidir.
 
 ## 🧠 Detay
+
+### Async ve Background İş Akışı
+```mermaid
+sequenceDiagram
+    participant C as "İstemci"
+    participant F as "FastAPI"
+    participant B as "Background Task"
+
+    C->>F: POST /tahmin (Veri)
+    F->>F: Model Tahmini Yap
+    F->>B: add_task(log_kaydet)
+    F-->>C: 200 OK (Tahmin Sonucu)
+    Note over B: Yanıt döndükten sonra çalışır
+    B->>B: DB Log Yazımı / Email
+```
 
 ### Async Endpoint
 ```python

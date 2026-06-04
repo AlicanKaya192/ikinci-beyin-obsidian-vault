@@ -8,11 +8,26 @@ zorluk: ⭐⭐
 
 ## 📌 Özet
 
-Registry, Docker image'larının depolandığı ve dağıtıldığı yerdir. Docker Hub herkese açık registry'dir. Özel registry'ler (ECR, GCR, Harbor) kurumsal kullanım için tercih edilir.
+Docker Registry, oluşturulan imajların güvenli bir şekilde saklandığı, sürümlendiği ve dağıtıldığı merkezi bir depo sistemidir. En yaygın kullanılan genel registry Docker Hub olsa da, kurumsal ihtiyaçlar için AWS ECR, Google Artifact Registry veya öz-barındırılan (self-hosted) Harbor gibi özel çözümler tercih edilir. İmaj etiketleme (tagging) stratejileri, sürümlerin takibini kolaylaştırırken; imaj tarama araçları, depolanan yazılımlardaki güvenlik açıklarını tespit etmek için kritik bir rol oynar. Etkili bir registry yönetimi, CI/CD süreçlerinin sorunsuz işlemesini ve konteynerize edilmiş uygulamaların hızlı bir şekilde farklı ortamlara yayılmasını sağlar.
 
 ---
 
 ## 🧠 Detay
+
+```mermaid
+graph LR
+    A["Geliştirici Makinesi"] -->|"docker build"| B["Yerel İmaj (Local Image)"]
+    B -->|"docker tag"| C["Etiketli İmaj (Tagged Image)"]
+    C -->|"docker push"| D["Docker Registry (Hub/ECR/GHCR)"]
+    D -->|"docker pull"| E["Test/Prod Ortamı"]
+    E -->|"docker run"| F["Çalışan Konteyner"]
+    subgraph "İmaj Yaşam Döngüsü"
+    B
+    C
+    D
+    E
+    end
+```
 
 ### Docker Hub
 

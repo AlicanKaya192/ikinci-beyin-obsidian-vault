@@ -8,11 +8,29 @@ zorluk: ⭐⭐⭐⭐
 
 ## 📌 Özet
 
-Git'in ileri düzey araçları: Interactive rebase ile geçmiş temizleme, reflog ile "silinen" commitleri kurtarma, bisect ile hata bulma ve worktree ile çoklu dal aynı anda.
+Git'in ileri düzey özellikleri, geliştiricilere proje geçmişi üzerinde tam kontrol ve hata ayıklama süreçlerinde büyük kolaylıklar sağlar. İnteraktif rebase (`rebase -i`) ile karmaşık commit geçmişini temizleyebilir, `reflog` sayesinde "silindiği" sanılan verileri zaman makinesi gibi geri getirebilirsiniz. `bisect` aracı, hataların kaynağını ikili arama algoritmasıyla saniyeler içinde tespit etmenize olanak tanırken, `worktree` özelliği aynı anda birden fazla dal üzerinde farklı dizinlerde çalışmanıza imkan tanır. Bu profesyonel araçlar, karmaşık projelerde kod kalitesini ve sürdürülebilirliğini korumak için elzemdir.
 
 ---
 
 ## 🧠 Detay
+
+### İnteraktif Rebase Süreci
+
+```mermaid
+graph LR
+    A["Mevcut Geçmiş"] --> B["git rebase -i HEAD~n"]
+    B --> C{"İşlem Seç"}
+    C -- "pick" --> D["Commit'i Koru"]
+    C -- "reword" --> E["Mesajı Değiştir"]
+    C -- "edit" --> F["İçeriği Güncelle"]
+    C -- "squash/fixup" --> G["Commitleri Birleştir"]
+    C -- "drop" --> H["Commit'i Sil"]
+    D --> I["Yeni ve Temiz Geçmiş"]
+    E --> I
+    F --> I
+    G --> I
+    H --> I
+```
 
 ### Interactive Rebase — Geçmişi Temizle
 

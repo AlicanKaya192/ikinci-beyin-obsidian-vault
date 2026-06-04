@@ -7,19 +7,30 @@ zorluk: başlangıç
 ---
 
 ## 📌 Özet
-Lineer regresyon, bağımlı değişkeni bağımsız değişkenlerle doğrusal bir ilişki üzerinden tahmin eder. En basit ve en açıklanabilir ML modelidir.
+Lineer Regresyon, bir hedef değişken (bağımlı değişken) ile bir veya daha fazla tahmin edici değişken (bağımsız değişken) arasındaki doğrusal ilişkiyi modelleyen, hem istatistikte hem de makine öğrenmesinde temel taş kabul edilen bir algoritmadır. Temel amacı, gözlemlenen veri noktaları ile modelin tahmin ettiği doğru arasındaki hata kareler toplamını (Residual Sum of Squares) minimize eden en uygun doğruyu (veya hiper-düzlemi) bulmaktır. Katsayıların doğrudan yorumlanabilir olması (örneğin; X'teki 1 birimlik artışın Y'de ne kadar değişikliğe yol açtığı), bu modeli finans, sağlık ve ekonomi gibi alanlarda vazgeçilmez kılar. Ancak başarısı; doğrusallık, eş varyanslılık ve normal dağılım gibi varsayımların karşılanmasına bağlıdır.
 
 ## 🧠 Detay
 
+### Lineer Regresyon Mekanizması
+```mermaid
+graph LR
+    X["Girdiler (X1, X2, ... Xn)"] --> W["Ağırlıklar (β1, β2, ... βn)"]
+    W --> S["Toplam (Σ W*X + β0)"]
+    S --> Y["Tahmin Edilen Değer (ŷ)"]
+    Y --> E["Hata Hesaplama (y - ŷ)"]
+    E --> O["Katsayı Güncelleme (OLS)"]
+```
+
 ### Matematiksel Temel
+Lineer regresyonun arkasındaki temel denklem şudur:
 ```
 y = β₀ + β₁x₁ + β₂x₂ + ... + βₙxₙ + ε
 
-β₀ → sabit (intercept)
-β₁...βₙ → katsayılar (coefficients)
-ε → hata terimi
+β₀ → Sabit terim (intercept), tüm X'ler sıfırken Y'nin değeri
+β₁...βₙ → Katsayılar (coefficients), bağımsız değişkenlerin etkisi
+ε → Hata terimi (residual), modelin açıklayamadığı kısım
 ```
-
+...
 ### Scikit-learn ile Lineer Regresyon
 ```python
 from sklearn.linear_model import LinearRegression
