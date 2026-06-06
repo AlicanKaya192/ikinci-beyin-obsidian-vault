@@ -17,12 +17,9 @@
 
 **The Tech Cortex**, modern bir yazılım geliştirici, veri bilimci, veri mühendisi ve DevOps uzmanının ihtiyaç duyabileceği tüm teknik konuları tek bir çatı altında toplayan kapsamlı bir **İkinci Beyin (Second Brain)** kütüphanesidir.
 
-Bu depo; Veri Bilimi (Data Science), Yapay Zeka / Makine Öğrenmesi (Machine Learning), Derin Öğrenme (Deep Learning), MLOps, Veri Mühendisliği (Data Engineering), Generative AI & LLM, Sistem Tasarımı (System Design), Veritabanları (SQL & NoSQL), API Geliştirme, Konteynerizasyon (Docker & Kubernetes), Bulut Sistemleri, İstatistik, Linux ve Siber Güvenlik konularını kapsayan, **386 kapsamlı not içeren bir Obsidian bilgi bankasıdır (vault)**.
+Bu depo; Veri Bilimi (Data Science), Yapay Zeka / Makine Öğrenmesi (Machine Learning), Derin Öğrenme (Deep Learning), MLOps, Veri Mühendisliği (Data Engineering), Generative AI & LLM, Sistem Tasarımı (System Design), Veritabanları (SQL & NoSQL), API Geliştirme, Konteynerizasyon (Docker & Kubernetes), Bulut Sistemleri, İstatistik, Linux ve Siber Güvenlik konularını kapsayan, **411 kapsamlı not içeren bir Obsidian bilgi bankasıdır (vault)**.
 
 Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari şemaları ve gerçek dünya senaryolarını içerecek şekilde detaylı olarak Türkçe hazırlanmıştır.
-
-> [!NOTE]
-> Proje adı **The Tech Cortex** olarak güncellenmiştir. GitHub üzerindeki depo ismi ise `ikinci-beyin-obsidian-vault` olarak güncellenmiştir.
 
 ---
 
@@ -77,17 +74,21 @@ Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari ş
 
 </details>
 
-### 🐍 Python Programlama (26 Not)
+### 🐍 Python Programlama (32 Not)
 <details>
   <summary><b>Dosya Listesini Göster/Gizle</b></summary>
 
 | Not Başlığı | Dosya Yolu |
 | :--- | :--- |
+| Python - Asyncio ve Asenkron Programlama | [`Python - Asyncio ve Asenkron Programlama.md`](Python/Python%20-%20Asyncio%20ve%20Asenkron%20Programlama.md) |
+| Python - Concurrency (Threading vs Multiprocessing) | [`Python - Concurrency (Threading vs Multiprocessing).md`](Python/Python%20-%20Concurrency%20%28Threading%20vs%20Multiprocessing%29.md) |
+| Python - Context Managers ve with Blokları | [`Python - Context Managers ve with Blokları.md`](Python/Python%20-%20Context%20Managers%20ve%20with%20Bloklar%C4%B1.md) |
 | Python - Datetime İşlemleri | [`Python - Datetime İşlemleri.md`](Python/Python%20-%20Datetime%20%C4%B0%C5%9Flemleri.md) |
 | Python - Decorators | [`Python - Decorators.md`](Python/Python%20-%20Decorators.md) |
 | Python - Demetler (Tuple) | [`Python - Demetler (Tuple).md`](Python/Python%20-%20Demetler%20%28Tuple%29.md) |
 | Python - Değişkenler ve Veri Tipleri | [`Python - Değişkenler ve Veri Tipleri.md`](Python/Python%20-%20De%C4%9Fi%C5%9Fkenler%20ve%20Veri%20Tipleri.md) |
 | Python - Dosya İşlemleri | [`Python - Dosya İşlemleri.md`](Python/Python%20-%20Dosya%20%C4%B0%C5%9Flemleri.md) |
+| Python - Dunder (Magic) Metotlar | [`Python - Dunder (Magic) Metotlar.md`](Python/Python%20-%20Dunder%20%28Magic%29%20Metotlar.md) |
 | Python - Döngüler (for-while) | [`Python - Döngüler (for-while).md`](Python/Python%20-%20D%C3%B6ng%C3%BCler%20%28for-while%29.md) |
 | Python - Fonksiyonlar | [`Python - Fonksiyonlar.md`](Python/Python%20-%20Fonksiyonlar.md) |
 | Python - Generators | [`Python - Generators.md`](Python/Python%20-%20Generators.md) |
@@ -99,11 +100,13 @@ Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari ş
 | Python - Lambda ve Fonksiyonel Programlama | [`Python - Lambda ve Fonksiyonel Programlama.md`](Python/Python%20-%20Lambda%20ve%20Fonksiyonel%20Programlama.md) |
 | Python - List & Dict Comprehension | [`Python - List & Dict Comprehension.md`](Python/Python%20-%20List%20%26%20Dict%20Comprehension.md) |
 | Python - Listeler | [`Python - Listeler.md`](Python/Python%20-%20Listeler.md) |
+| Python - Metaprogramming (Metaclasses) | [`Python - Metaprogramming (Metaclasses).md`](Python/Python%20-%20Metaprogramming%20%28Metaclasses%29.md) |
 | Python - Modüller ve Paketler | [`Python - Modüller ve Paketler.md`](Python/Python%20-%20Mod%C3%BCller%20ve%20Paketler.md) |
 | Python - OOP - Kalıtım | [`Python - OOP - Kalıtım.md`](Python/Python%20-%20OOP%20-%20Kal%C4%B1t%C4%B1m.md) |
 | Python - OOP - Kapsülleme | [`Python - OOP - Kapsülleme.md`](Python/Python%20-%20OOP%20-%20Kaps%C3%BClleme.md) |
 | Python - OOP - Sınıflar ve Nesneler | [`Python - OOP - Sınıflar ve Nesneler.md`](Python/Python%20-%20OOP%20-%20S%C4%B1n%C4%B1flar%20ve%20Nesneler.md) |
 | Python - Operatörler | [`Python - Operatörler.md`](Python/Python%20-%20Operat%C3%B6rler.md) |
+| Python - Profiling ve Performans Optimizasyonu | [`Python - Profiling ve Performans Optimizasyonu.md`](Python/Python%20-%20Profiling%20ve%20Performans%20Optimizasyonu.md) |
 | Python - Regular Expressions | [`Python - Regular Expressions.md`](Python/Python%20-%20Regular%20Expressions.md) |
 | Python - String İşlemleri | [`Python - String İşlemleri.md`](Python/Python%20-%20String%20%C4%B0%C5%9Flemleri.md) |
 | Python - Sözlükler (Dictionary) | [`Python - Sözlükler (Dictionary).md`](Python/Python%20-%20S%C3%B6zl%C3%BCkler%20%28Dictionary%29.md) |
@@ -146,7 +149,7 @@ Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari ş
 
 </details>
 
-### 🤖 Makine Öğrenmesi (ML) (24 Not)
+### 🤖 Makine Öğrenmesi (ML) (25 Not)
 <details>
   <summary><b>Dosya Listesini Göster/Gizle</b></summary>
 
@@ -157,6 +160,7 @@ Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari ş
 | ML - Dengesiz Veri Seti Yönetimi | [`ML - Dengesiz Veri Seti Yönetimi.md`](Machine%20Learning/ML%20-%20Dengesiz%20Veri%20Seti%20Y%C3%B6netimi.md) |
 | ML - Ensemble Öğrenme (LightGBM ve CatBoost) | [`ML - Ensemble Öğrenme (LightGBM ve CatBoost).md`](Machine%20Learning/ML%20-%20Ensemble%20%C3%96%C4%9Frenme%20%28LightGBM%20ve%20CatBoost%29.md) |
 | ML - Eğitim Test Ayrımı ve Cross Validation | [`ML - Eğitim Test Ayrımı ve Cross Validation.md`](Machine%20Learning/ML%20-%20E%C4%9Fitim%20Test%20Ayr%C4%B1m%C4%B1%20ve%20Cross%20Validation.md) |
+| ML - Feature Store Kavramı | [`ML - Feature Store Kavramı.md`](Machine%20Learning/ML%20-%20Feature%20Store%20Kavram%C4%B1.md) |
 | ML - Gradient Boosting ve XGBoost | [`ML - Gradient Boosting ve XGBoost.md`](Machine%20Learning/ML%20-%20Gradient%20Boosting%20ve%20XGBoost.md) |
 | ML - Hiperparametre Optimizasyonu | [`ML - Hiperparametre Optimizasyonu.md`](Machine%20Learning/ML%20-%20Hiperparametre%20Optimizasyonu.md) |
 | ML - K-Means Kümeleme | [`ML - K-Means Kümeleme.md`](Machine%20Learning/ML%20-%20K-Means%20K%C3%BCmeleme.md) |
@@ -380,29 +384,31 @@ Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari ş
 
 </details>
 
-### ☁️ Bulut Bilişim (AWS & Azure & Terraform) (17 Not)
+### ☁️ Bulut Bilişim (AWS & Azure & Terraform) (19 Not)
 <details>
   <summary><b>Dosya Listesini Göster/Gizle</b></summary>
 
 | Not Başlığı | Dosya Yolu |
 | :--- | :--- |
-| AWS - EC2 ve RDS | [`AWS - EC2 ve RDS.md`](Cloud/AWS%20-%20EC2%20ve%20RDS.md) |
-| AWS - Lambda ile Serverless | [`AWS - Lambda ile Serverless.md`](Cloud/AWS%20-%20Lambda%20ile%20Serverless.md) |
-| AWS - S3 ile Veri Depolama | [`AWS - S3 ile Veri Depolama.md`](Cloud/AWS%20-%20S3%20ile%20Veri%20Depolama.md) |
-| AWS - SageMaker Pipelines (MLOps) | [`AWS - SageMaker Pipelines (MLOps).md`](Cloud/AWS%20-%20SageMaker%20Pipelines%20%28MLOps%29.md) |
-| AWS - SageMaker ile ML | [`AWS - SageMaker ile ML.md`](Cloud/AWS%20-%20SageMaker%20ile%20ML.md) |
-| Azure - Azure Databricks | [`Azure - Azure Databricks.md`](Cloud/Azure%20-%20Azure%20Databricks.md) |
-| Azure - Azure Functions ve Event Grid | [`Azure - Azure Functions ve Event Grid.md`](Cloud/Azure%20-%20Azure%20Functions%20ve%20Event%20Grid.md) |
-| Azure - Azure Machine Learning Pipelines | [`Azure - Azure Machine Learning Pipelines.md`](Cloud/Azure%20-%20Azure%20Machine%20Learning%20Pipelines.md) |
-| Azure - Azure Machine Learning | [`Azure - Azure Machine Learning.md`](Cloud/Azure%20-%20Azure%20Machine%20Learning.md) |
-| Azure - Azure SQL ve Cosmos DB | [`Azure - Azure SQL ve Cosmos DB.md`](Cloud/Azure%20-%20Azure%20SQL%20ve%20Cosmos%20DB.md) |
-| Azure - Blob Storage ve Veri Gölü | [`Azure - Blob Storage ve Veri Gölü.md`](Cloud/Azure%20-%20Blob%20Storage%20ve%20Veri%20G%C3%B6l%C3%BC.md) |
-| Cloud - Bulut Bilişime Giriş | [`Cloud - Bulut Bilişime Giriş.md`](Cloud/Cloud%20-%20Bulut%20Bili%C5%9Fime%20Giri%C5%9F.md) |
-| Cloud - Bulut Güvenliği ve IAM | [`Cloud - Bulut Güvenliği ve IAM.md`](Cloud/Cloud%20-%20Bulut%20G%C3%BCvenli%C4%9Fi%20ve%20IAM.md) |
-| Cloud - Bulut Üzerinde Model İzleme ve Drift Tespiti | [`Cloud - Bulut Üzerinde Model İzleme ve Drift Tespiti.md`](Cloud/Cloud%20-%20Bulut%20%C3%9Czerinde%20Model%20%C4%B0zleme%20ve%20Drift%20Tespiti.md) |
-| Cloud - Python ile Bulut SDK Karşılaştırması | [`Cloud - Python ile Bulut SDK Karşılaştırması.md`](Cloud/Cloud%20-%20Python%20ile%20Bulut%20SDK%20Kar%C5%9F%C4%B1la%C5%9Ft%C4%B1rmas%C4%B1.md) |
-| Cloud - Serverless ML ve Event-Driven Çözümler | [`Cloud - Serverless ML ve Event-Driven Çözümler.md`](Cloud/Cloud%20-%20Serverless%20ML%20ve%20Event-Driven%20%C3%87%C3%B6z%C3%BCmler.md) |
-| Cloud - Terraform ile Altyapı Yönetimi | [`Cloud - Terraform ile Altyapı Yönetimi.md`](Cloud/Cloud%20-%20Terraform%20ile%20Altyap%C4%B1%20Y%C3%B6netimi.md) |
+| AWS - EC2 ve RDS | [`AWS - EC2 ve RDS.md`](Cloud%20-%20AWS%20-%20Azure/AWS%20-%20EC2%20ve%20RDS.md) |
+| AWS - Lambda ile Serverless | [`AWS - Lambda ile Serverless.md`](Cloud%20-%20AWS%20-%20Azure/AWS%20-%20Lambda%20ile%20Serverless.md) |
+| AWS - S3 ile Veri Depolama | [`AWS - S3 ile Veri Depolama.md`](Cloud%20-%20AWS%20-%20Azure/AWS%20-%20S3%20ile%20Veri%20Depolama.md) |
+| AWS - SageMaker Pipelines (MLOps) | [`AWS - SageMaker Pipelines (MLOps).md`](Cloud%20-%20AWS%20-%20Azure/AWS%20-%20SageMaker%20Pipelines%20%28MLOps%29.md) |
+| AWS - SageMaker ile ML | [`AWS - SageMaker ile ML.md`](Cloud%20-%20AWS%20-%20Azure/AWS%20-%20SageMaker%20ile%20ML.md) |
+| Azure - Azure Databricks | [`Azure - Azure Databricks.md`](Cloud%20-%20AWS%20-%20Azure/Azure%20-%20Azure%20Databricks.md) |
+| Azure - Azure Functions ve Event Grid | [`Azure - Azure Functions ve Event Grid.md`](Cloud%20-%20AWS%20-%20Azure/Azure%20-%20Azure%20Functions%20ve%20Event%20Grid.md) |
+| Azure - Azure Machine Learning Pipelines | [`Azure - Azure Machine Learning Pipelines.md`](Cloud%20-%20AWS%20-%20Azure/Azure%20-%20Azure%20Machine%20Learning%20Pipelines.md) |
+| Azure - Azure Machine Learning | [`Azure - Azure Machine Learning.md`](Cloud%20-%20AWS%20-%20Azure/Azure%20-%20Azure%20Machine%20Learning.md) |
+| Azure - Azure SQL ve Cosmos DB | [`Azure - Azure SQL ve Cosmos DB.md`](Cloud%20-%20AWS%20-%20Azure/Azure%20-%20Azure%20SQL%20ve%20Cosmos%20DB.md) |
+| Azure - Blob Storage ve Veri Gölü | [`Azure - Blob Storage ve Veri Gölü.md`](Cloud%20-%20AWS%20-%20Azure/Azure%20-%20Blob%20Storage%20ve%20Veri%20G%C3%B6l%C3%BC.md) |
+| Cloud - Bulut Bilişime Giriş | [`Cloud - Bulut Bilişime Giriş.md`](Cloud%20-%20AWS%20-%20Azure/Cloud%20-%20Bulut%20Bili%C5%9Fime%20Giri%C5%9F.md) |
+| Cloud - Bulut Güvenliği ve IAM | [`Cloud - Bulut Güvenliği ve IAM.md`](Cloud%20-%20AWS%20-%20Azure/Cloud%20-%20Bulut%20G%C3%BCvenli%C4%9Fi%20ve%20IAM.md) |
+| Cloud - Bulut Üzerinde Model İzleme ve Drift Tespiti | [`Cloud - Bulut Üzerinde Model İzleme ve Drift Tespiti.md`](Cloud%20-%20AWS%20-%20Azure/Cloud%20-%20Bulut%20%C3%9Czerinde%20Model%20%C4%B0zleme%20ve%20Drift%20Tespiti.md) |
+| Cloud - FinOps (Bulut Maliyet Yönetimi) | [`Cloud - FinOps (Bulut Maliyet Yönetimi).md`](Cloud%20-%20AWS%20-%20Azure/Cloud%20-%20FinOps%20%28Bulut%20Maliyet%20Y%C3%B6netimi%29.md) |
+| Cloud - Multi-Cloud ve Hybrid-Cloud Stratejileri | [`Cloud - Multi-Cloud ve Hybrid-Cloud Stratejileri.md`](Cloud%20-%20AWS%20-%20Azure/Cloud%20-%20Multi-Cloud%20ve%20Hybrid-Cloud%20Stratejileri.md) |
+| Cloud - Python ile Bulut SDK Karşılaştırması | [`Cloud - Python ile Bulut SDK Karşılaştırması.md`](Cloud%20-%20AWS%20-%20Azure/Cloud%20-%20Python%20ile%20Bulut%20SDK%20Kar%C5%9F%C4%B1la%C5%9Ft%C4%B1rmas%C4%B1.md) |
+| Cloud - Serverless ML ve Event-Driven Çözümler | [`Cloud - Serverless ML ve Event-Driven Çözümler.md`](Cloud%20-%20AWS%20-%20Azure/Cloud%20-%20Serverless%20ML%20ve%20Event-Driven%20%C3%87%C3%B6z%C3%BCmler.md) |
+| Cloud - Terraform ile Altyapı Yönetimi | [`Cloud - Terraform ile Altyapı Yönetimi.md`](Cloud%20-%20AWS%20-%20Azure/Cloud%20-%20Terraform%20ile%20Altyap%C4%B1%20Y%C3%B6netimi.md) |
 
 </details>
 
@@ -467,7 +473,7 @@ Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari ş
 
 </details>
 
-### 🛡️ Siber Güvenlik (20 Not)
+### 🛡️ Siber Güvenlik (21 Not)
 <details>
   <summary><b>Dosya Listesini Göster/Gizle</b></summary>
 
@@ -486,6 +492,7 @@ Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari ş
 | Siber Güvenlik - Kriptografi Temelleri (Simetrik, Asimetrik, Hash) | [`Siber Güvenlik - Kriptografi Temelleri (Simetrik, Asimetrik, Hash).md`](Siber%20G%C3%BCvenlik/Siber%20G%C3%BCvenlik%20-%20Kriptografi%20Temelleri%20%28Simetrik%2C%20Asimetrik%2C%20Hash%29.md) |
 | Siber Güvenlik - Man-in-the-Middle (MITM) Saldırıları | [`Siber Güvenlik - Man-in-the-Middle (MITM) Saldırıları.md`](Siber%20G%C3%BCvenlik/Siber%20G%C3%BCvenlik%20-%20Man-in-the-Middle%20%28MITM%29%20Sald%C4%B1r%C4%B1lar%C4%B1.md) |
 | Siber Güvenlik - OWASP Top 10 (SQLi, XSS, CSRF) | [`Siber Güvenlik - OWASP Top 10 (SQLi, XSS, CSRF).md`](Siber%20G%C3%BCvenlik/Siber%20G%C3%BCvenlik%20-%20OWASP%20Top%2010%20%28SQLi%2C%20XSS%2C%20CSRF%29.md) |
+| Siber Güvenlik - OAuth2 ve OIDC Protokolleri | [`Siber Güvenlik - OAuth2 ve OIDC Protokolleri.md`](Siber%20G%C3%BCvenlik/Siber%20G%C3%BCvenlik%20-%20OAuth2%20ve%20OIDC%20Protokolleri.md) |
 | Siber Güvenlik - Olay Müdahalesi (Incident Response) | [`Siber Güvenlik - Olay Müdahalesi (Incident Response).md`](Siber%20G%C3%BCvenlik/Siber%20G%C3%BCvenlik%20-%20Olay%20M%C3%BCdahalesi%20%28Incident%20Response%29.md) |
 | Siber Güvenlik - Ransomware ve Malware | [`Siber Güvenlik - Ransomware ve Malware.md`](Siber%20G%C3%BCvenlik/Siber%20G%C3%BCvenlik%20-%20Ransomware%20ve%20Malware.md) |
 | Siber Güvenlik - SIEM ve Log Analizi | [`Siber Güvenlik - SIEM ve Log Analizi.md`](Siber%20G%C3%BCvenlik/Siber%20G%C3%BCvenlik%20-%20SIEM%20ve%20Log%20Analizi.md) |
@@ -496,7 +503,7 @@ Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari ş
 
 </details>
 
-### 🧠 Derin Öğrenme (Deep Learning) (8 Not)
+### 🧠 Derin Öğrenme (Deep Learning) (9 Not)
 <details>
   <summary><b>Dosya Listesini Göster/Gizle</b></summary>
 
@@ -509,16 +516,18 @@ Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari ş
 | DL - PyTorch ile Model Geliştirme | [`DL - PyTorch ile Model Geliştirme.md`](Derin%20%C3%96%C4%9Frenme%20%28Deep%20Learning%29/DL%20-%20PyTorch%20ile%20Model%20Geli%C5%9Ftirme.md) |
 | DL - TensorFlow ve Keras Ekosistemi | [`DL - TensorFlow ve Keras Ekosistemi.md`](Derin%20%C3%96%C4%9Frenme%20%28Deep%20Learning%29/DL%20-%20TensorFlow%20ve%20Keras%20Ekosistemi.md) |
 | DL - Transfer Learning ve Fine-tuning Teknikleri | [`DL - Transfer Learning ve Fine-tuning Teknikleri.md`](Derin%20%C3%96%C4%9Frenme%20%28Deep%20Learning%29/DL%20-%20Transfer%20Learning%20ve%20Fine-tuning%20Teknikleri.md) |
+| DL - Transformer Mimarisi ve Attention Mekanizması | [`DL - Transformer Mimarisi ve Attention Mekanizması.md`](Derin%20%C3%96%C4%9Frenme%20%28Deep%20Learning%29/DL%20-%20Transformer%20Mimarisi%20ve%20Attention%20Mekanizmas%C4%B1.md) |
 | DL - Yinelemeli Sinir Ağları (RNN) ve LSTM | [`DL - Yinelemeli Sinir Ağları (RNN) ve LSTM.md`](Derin%20%C3%96%C4%9Frenme%20%28Deep%20Learning%29/DL%20-%20Yinelemeli%20Sinir%20A%C4%9Flar%C4%B1%20%28RNN%29%20ve%20LSTM.md) |
 
 </details>
 
-### 💻 Yazılım Mühendisliği & Metodolojiler (8 Not)
+### 💻 Yazılım Mühendisliği & Metodolojiler (9 Not)
 <details>
   <summary><b>Dosya Listesini Göster/Gizle</b></summary>
 
 | Not Başlığı | Dosya Yolu |
 | :--- | :--- |
+| SE - 12-Factor App Metodolojisi | [`SE - 12-Factor App Metodolojisi.md`](Yaz%C4%B1l%C4%B1m%20M%C3%BChendisli%C4%9Fi%20%26%20Metodolojiler/SE%20-%2012-Factor%20App%20Metodolojisi.md) |
 | SE - Agile Metodolojileri (Scrum, Kanban) | [`SE - Agile Metodolojileri (Scrum, Kanban).md`](Yaz%C4%B1l%C4%B1m%20M%C3%BChendisli%C4%9Fi%20%26%20Metodolojiler/SE%20-%20Agile%20Metodolojileri%20%28Scrum%2C%20Kanban%29.md) |
 | SE - CI-CD Süreçleri ve Otomasyon Stratejileri | [`SE - CI-CD Süreçleri ve Otomasyon Stratejileri.md`](Yaz%C4%B1l%C4%B1m%20M%C3%BChendisli%C4%9Fi%20%26%20Metodolojiler/SE%20-%20CI-CD%20S%C3%BCre%C3%A7leri%20ve%20Otomasyon%20Stratejileri.md) |
 | SE - Clean Code Prensipleri ve Best Practices | [`SE - Clean Code Prensipleri ve Best Practices.md`](Yaz%C4%B1l%C4%B1m%20M%C3%BChendisli%C4%9Fi%20%26%20Metodolojiler/SE%20-%20Clean%20Code%20Prensipleri%20ve%20Best%20Practices.md) |
@@ -530,18 +539,20 @@ Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari ş
 
 </details>
 
-### 🌐 İleri Dağıtık Sistemler & Veritabanları (8 Not)
+### 🌐 İleri Dağıtık Sistemler & Veritabanları (10 Not)
 <details>
   <summary><b>Dosya Listesini Göster/Gizle</b></summary>
 
 | Not Başlığı | Dosya Yolu |
 | :--- | :--- |
 | DB - Apache Cassandra ve Dağıtık Columnar Sistemler | [`DB - Apache Cassandra ve Dağıtık Columnar Sistemler.md`](%C4%B0leri%20Da%C4%9F%C4%B1t%C4%B1k%20Sistemler%20%26%20Veritabanlar%C4%B1/DB%20-%20Apache%20Cassandra%20ve%20Da%C4%9F%C4%B1t%C4%B1k%20Columnar%20Sistemler.md) |
+| DB - CAP Teoremi ve PACELC | [`DB - CAP Teoremi ve PACELC.md`](%C4%B0leri%20Da%C4%9F%C4%B1t%C4%B1k%20Sistemler%20%26%20Veritabanlar%C4%B1/DB%20-%20CAP%20Teoremi%20ve%20PACELC.md) |
 | DB - ClickHouse ile Gerçek Zamanlı Analitik (OLAP) | [`DB - ClickHouse ile Gerçek Zamanlı Analitik (OLAP).md`](%C4%B0leri%20Da%C4%9F%C4%B1t%C4%B1k%20Sistemler%20%26%20Veritabanlar%C4%B1/DB%20-%20ClickHouse%20ile%20Ger%C3%A7ek%20Zamanl%C4%B1%20Analitik%20%28OLAP%29.md) |
 | DB - Dağıtık Kilit (Distributed Lock) Mekanizmaları | [`DB - Dağıtık Kilit (Distributed Lock) Mekanizmaları.md`](%C4%B0leri%20Da%C4%9F%C4%B1t%C4%B1k%20Sistemler%20%26%20Veritabanlar%C4%B1/DB%20-%20Da%C4%9F%C4%B1t%C4%B1k%20Kilit%20%28Distributed%20Lock%29%20Mekanizmalar%C4%B1.md) |
 | DB - Graph Veritabanları (Neo4j, Memgraph) | [`DB - Graph Veritabanları (Neo4j, Memgraph).md`](%C4%B0leri%20Da%C4%9F%C4%B1t%C4%B1k%20Sistemler%20%26%20Veritabanlar%C4%B1/DB%20-%20Graph%20Veritabanlar%C4%B1%20%28Neo4j%2C%20Memgraph%29.md) |
 | DB - RabbitMQ vs Apache Kafka (Mimari Karşılaştırma) | [`DB - RabbitMQ vs Apache Kafka (Mimari Karşılaştırma).md`](%C4%B0leri%20Da%C4%9F%C4%B1t%C4%B1k%20Sistemler%20%26%20Veritabanlar%C4%B1/DB%20-%20RabbitMQ%20vs%20Apache%20Kafka%20%28Mimari%20Kar%C5%9F%C4%B1la%C5%9Ft%C4%B1rma%29.md) |
 | DB - Redis İleri Seviye (Clustering, Sentinel, Lua) | [`DB - Redis İleri Seviye (Clustering, Sentinel, Lua).md`](%C4%B0leri%20Da%C4%9F%C4%B1t%C4%B1k%20Sistemler%20%26%20Veritabanlar%C4%B1/DB%20-%20Redis%20%C4%B0leri%20Seviye%20%28Clustering%2C%20Sentinel%2C%20Lua%29.md) |
+| DB - Vektör Veritabanları Derin Dalış | [`DB - Vektör Veritabanları Derin Dalış.md`](%C4%B0leri%20Da%C4%9F%C4%B1t%C4%B1k%20Sistemler%20%26%20Veritabanlar%C4%B1/DB%20-%20Vekt%C3%B6r%20Veritabanlar%C4%B1%20Derin%20Dal%C4%B1%C5%9F.md) |
 | DB - Veri Çoğaltma (Replication) ve Consensus Algoritmaları (Raft, Paxos) | [`DB - Veri Çoğaltma (Replication) ve Consensus Algoritmaları (Raft, Paxos).md`](%C4%B0leri%20Da%C4%9F%C4%B1t%C4%B1k%20Sistemler%20%26%20Veritabanlar%C4%B1/DB%20-%20Veri%20%C3%87o%C4%9Faltma%20%28Replication%29%20ve%20Consensus%20Algoritmalar%C4%B1%20%28Raft%2C%20Paxos%29.md) |
 | DB - Veritabanı Parçalama (Sharding) ve Veri Göçü Stratejileri | [`DB - Veritabanı Parçalama (Sharding) ve Veri Göçü Stratejileri.md`](%C4%B0leri%20Da%C4%9F%C4%B1t%C4%B1k%20Sistemler%20%26%20Veritabanlar%C4%B1/DB%20-%20Veritaban%C4%B1%20Par%C3%A7alama%20%28Sharding%29%20ve%20Veri%20G%C3%B6%C3%A7%C3%BC%20Stratejileri.md) |
 
@@ -564,7 +575,7 @@ Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari ş
 
 </details>
 
-### ☸️ Kubernetes & Orchestration (8 Not)
+### ☸️ Kubernetes & Orchestration (12 Not)
 <details>
   <summary><b>Dosya Listesini Göster/Gizle</b></summary>
 
@@ -573,15 +584,19 @@ Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari ş
 | K8s - ConfigMaps ve Secrets | [`K8s - ConfigMaps ve Secrets.md`](Kubernetes%20%26%20Orchestration/K8s%20-%20ConfigMaps%20ve%20Secrets.md) |
 | K8s - Deployments ve Scaling | [`K8s - Deployments ve Scaling.md`](Kubernetes%20%26%20Orchestration/K8s%20-%20Deployments%20ve%20Scaling.md) |
 | K8s - Giriş ve Mimari (Control Plane, Worker Nodes) | [`K8s - Giriş ve Mimari (Control Plane, Worker Nodes).md`](Kubernetes%20%26%20Orchestration/K8s%20-%20Giri%C5%9F%20ve%20Mimari%20%28Control%20Plane%2C%20Worker%20Nodes%29.md) |
+| K8s - HPA ve VPA (Autoscaling) | [`K8s - HPA ve VPA (Autoscaling).md`](Kubernetes%20%26%20Orchestration/K8s%20-%20HPA%20ve%20VPA%20%28Autoscaling%29.md) |
 | K8s - Helm ile Paket Yönetimi | [`K8s - Helm ile Paket Yönetimi.md`](Kubernetes%20%26%20Orchestration/K8s%20-%20Helm%20ile%20Paket%20Y%C3%B6netimi.md) |
 | K8s - Ingress ve Trafik Yönetimi | [`K8s - Ingress ve Trafik Yönetimi.md`](Kubernetes%20%26%20Orchestration/K8s%20-%20Ingress%20ve%20Trafik%20Y%C3%B6netimi.md) |
+| K8s - Operatör Deseni (Operator Pattern) | [`K8s - Operatör Deseni (Operator Pattern).md`](Kubernetes%20%26%20Orchestration/K8s%20-%20Operat%C3%B6r%20Deseni%20%28Operator%20Pattern%29.md) |
 | K8s - Pods ve Konteyner Yönetimi | [`K8s - Pods ve Konteyner Yönetimi.md`](Kubernetes%20%26%20Orchestration/K8s%20-%20Pods%20ve%20Konteyner%20Y%C3%B6netimi.md) |
 | K8s - Services ve Networking | [`K8s - Services ve Networking.md`](Kubernetes%20%26%20Orchestration/K8s%20-%20Services%20ve%20Networking.md) |
 | K8s - Volumes ve Veri Kalıcılığı (PV, PVC) | [`K8s - Volumes ve Veri Kalıcılığı (PV, PVC).md`](Kubernetes%20%26%20Orchestration/K8s%20-%20Volumes%20ve%20Veri%20Kal%C4%B1c%C4%B1l%C4%B1%C4%9F%C4%B1%20%28PV%2C%20PVC%29.md) |
+| MO - OpenTelemetry (OTel) | [`MO - OpenTelemetry (OTel).md`](Kubernetes%20%26%20Orchestration/MO%20-%20OpenTelemetry%20%28OTel%29.md) |
+| MO - eBPF ile Sistem İzleme | [`MO - eBPF ile Sistem İzleme.md`](Kubernetes%20%26%20Orchestration/MO%20-%20eBPF%20ile%20Sistem%20%C4%B0zleme.md) |
 
 </details>
 
-### 🧱 Data Engineering (8 Not)
+### 🧱 Data Engineering (10 Not)
 <details>
   <summary><b>Dosya Listesini Göster/Gizle</b></summary>
 
@@ -589,16 +604,18 @@ Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari ş
 | :--- | :--- |
 | DE - Airflow ile Boru Hattı Orkestrasyonu | [`DE - Airflow ile Boru Hattı Orkestrasyonu.md`](Data%20Engineering/DE%20-%20Airflow%20ile%20Boru%20Hatt%C4%B1%20Orkestrasyonu.md) |
 | DE - Apache Kafka ile Streaming Veri | [`DE - Apache Kafka ile Streaming Veri.md`](Data%20Engineering/DE%20-%20Apache%20Kafka%20ile%20Streaming%20Veri.md) |
+| DE - Apache Spark Performans Optimizasyonu | [`DE - Apache Spark Performans Optimizasyonu.md`](Data%20Engineering/DE%20-%20Apache%20Spark%20Performans%20Optimizasyonu.md) |
 | DE - Apache Spark ile Büyük Veri İşleme | [`DE - Apache Spark ile Büyük Veri İşleme.md`](Data%20Engineering/DE%20-%20Apache%20Spark%20ile%20B%C3%BCy%C3%BCk%20Veri%20%C4%B0%C5%9Fleme.md) |
 | DE - Delta Lake ve Lakehouse Mimarisi | [`DE - Delta Lake ve Lakehouse Mimarisi.md`](Data%20Engineering/DE%20-%20Delta%20Lake%20ve%20Lakehouse%20Mimarisi.md) |
 | DE - ETL vs ELT Stratejileri | [`DE - ETL vs ELT Stratejileri.md`](Data%20Engineering/DE%20-%20ETL%20vs%20ELT%20Stratejileri.md) |
 | DE - Giriş ve Veri Yaşam Döngüsü | [`DE - Giriş ve Veri Yaşam Döngüsü.md`](Data%20Engineering/DE%20-%20Giri%C5%9F%20ve%20Veri%20Ya%C5%9Fam%20D%C3%B6ng%C3%BCs%C3%BC.md) |
 | DE - Veri Ambarı ve Modern Veri Yığını (BigQuery, Snowflake) | [`DE - Veri Ambarı ve Modern Veri Yığını (BigQuery, Snowflake).md`](Data%20Engineering/DE%20-%20Veri%20Ambar%C4%B1%20ve%20Modern%20Veri%20Y%C4%B1%C4%9F%C4%B1n%C4%B1%20%28BigQuery%2C%20Snowflake%29.md) |
 | DE - Veri Kalitesi ve Gözlemlenebilirlik | [`DE - Veri Kalitesi ve Gözlemlenebilirlik.md`](Data%20Engineering/DE%20-%20Veri%20Kalitesi%20ve%20G%C3%B6zlemlenebilirlik.md) |
+| DE - dbt (data build tool) ile Veri Modelleme | [`DE - dbt (data build tool) ile Veri Modelleme.md`](Data%20Engineering/DE%20-%20dbt%20%28data%20build%20tool%29%20ile%20Veri%20Modelleme.md) |
 
 </details>
 
-### ✨ Generative AI & LLM Engineering (8 Not)
+### ✨ Generative AI & LLM Engineering (9 Not)
 <details>
   <summary><b>Dosya Listesini Göster/Gizle</b></summary>
 
@@ -608,6 +625,7 @@ Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari ş
 | LLM - Değerlendirme (Evaluation) ve İzleme | [`LLM - Değerlendirme (Evaluation) ve İzleme.md`](Generative%20AI%20%26%20LLM%20Engineering/LLM%20-%20De%C4%9Ferlendirme%20%28Evaluation%29%20ve%20%C4%B0zleme.md) |
 | LLM - Fine-tuning Stratejileri | [`LLM - Fine-tuning Stratejileri.md`](Generative%20AI%20%26%20LLM%20Engineering/LLM%20-%20Fine-tuning%20Stratejileri.md) |
 | LLM - Giriş ve Temel Kavramlar (Transformer, Tokens) | [`LLM - Giriş ve Temel Kavramlar (Transformer, Tokens).md`](Generative%20AI%20%26%20LLM%20Engineering/LLM%20-%20Giri%C5%9F%20ve%20Temel%20Kavramlar%20%28Transformer%2C%20Tokens%29.md) |
+| LLM - GraphRAG | [`LLM - GraphRAG.md`](Generative%20AI%20%26%20LLM%20Engineering/LLM%20-%20GraphRAG.md) |
 | LLM - LangChain ve LlamaIndex ile Uygulama Geliştirme | [`LLM - LangChain ve LlamaIndex ile Uygulama Geliştirme.md`](Generative%20AI%20%26%20LLM%20Engineering/LLM%20-%20LangChain%20ve%20LlamaIndex%20ile%20Uygulama%20Geli%C5%9Ftirme.md) |
 | LLM - Prompt Engineering Teknikleri | [`LLM - Prompt Engineering Teknikleri.md`](Generative%20AI%20%26%20LLM%20Engineering/LLM%20-%20Prompt%20Engineering%20Teknikleri.md) |
 | LLM - RAG (Retrieval Augmented Generation) Mimarisi | [`LLM - RAG (Retrieval Augmented Generation) Mimarisi.md`](Generative%20AI%20%26%20LLM%20Engineering/LLM%20-%20RAG%20%28Retrieval%20Augmented%20Generation%29%20Mimarisi.md) |
@@ -615,7 +633,7 @@ Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari ş
 
 </details>
 
-### 🏛️ System Design & Mimari (8 Not)
+### 🏛️ System Design & Mimari (10 Not)
 <details>
   <summary><b>Dosya Listesini Göster/Gizle</b></summary>
 
@@ -625,14 +643,16 @@ Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari ş
 | SD - Caching Stratejileri (Redis, Memcached) | [`SD - Caching Stratejileri (Redis, Memcached).md`](System%20Design%20%26%20Mimari/SD%20-%20Caching%20Stratejileri%20%28Redis%2C%20Memcached%29.md) |
 | SD - Dağıtık Sistemler ve CAP Teoremi | [`SD - Dağıtık Sistemler ve CAP Teoremi.md`](System%20Design%20%26%20Mimari/SD%20-%20Da%C4%9F%C4%B1t%C4%B1k%20Sistemler%20ve%20CAP%20Teoremi.md) |
 | SD - Event-Driven Mimari ve Mesaj Kuyrukları | [`SD - Event-Driven Mimari ve Mesaj Kuyrukları.md`](System%20Design%20%26%20Mimari/SD%20-%20Event-Driven%20Mimari%20ve%20Mesaj%20Kuyruklar%C4%B1.md) |
+| SD - Idempotency ve Retry Stratejileri | [`SD - Idempotency ve Retry Stratejileri.md`](System%20Design%20%26%20Mimari/SD%20-%20Idempotency%20ve%20Retry%20Stratejileri.md) |
 | SD - Mimari Giriş ve Monolith vs Microservices | [`SD - Mimari Giriş ve Monolith vs Microservices.md`](System%20Design%20%26%20Mimari/SD%20-%20Mimari%20Giri%C5%9F%20ve%20Monolith%20vs%20Microservices.md) |
+| SD - Saga Pattern ve Dağıtık Transactionlar | [`SD - Saga Pattern ve Dağıtık Transactionlar.md`](System%20Design%20%26%20Mimari/SD%20-%20Saga%20Pattern%20ve%20Da%C4%9F%C4%B1t%C4%B1k%20Transactionlar.md) |
 | SD - Tasarım Desenleri (Gang of Four) | [`SD - Tasarım Desenleri (Gang of Four).md`](System%20Design%20%26%20Mimari/SD%20-%20Tasar%C4%B1m%20Desenleri%20%28Gang%20of%20Four%29.md) |
 | SD - Veritabanı Seçim Stratejileri (SQL vs NoSQL) | [`SD - Veritabanı Seçim Stratejileri (SQL vs NoSQL).md`](System%20Design%20%26%20Mimari/SD%20-%20Veritaban%C4%B1%20Se%C3%A7im%20Stratejileri%20%28SQL%20vs%20NoSQL%29.md) |
 | SD - Ölçeklenebilirlik (Horizontal vs Vertical Scaling) | [`SD - Ölçeklenebilirlik (Horizontal vs Vertical Scaling).md`](System%20Design%20%26%20Mimari/SD%20-%20%C3%96l%C3%A7eklenebilirlik%20%28Horizontal%20vs%20Vertical%20Scaling%29.md) |
 
 </details>
 
-### 🔍 Monitoring & Observability (7 Not)
+### 🔍 Monitoring & Observability (9 Not)
 <details>
   <summary><b>Dosya Listesini Göster/Gizle</b></summary>
 
@@ -643,8 +663,10 @@ Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari ş
 | MO - Distributed Tracing ve Jaeger | [`MO - Distributed Tracing ve Jaeger.md`](Monitoring%20%26%20Observability/MO%20-%20Distributed%20Tracing%20ve%20Jaeger.md) |
 | MO - ELK Stack ile Merkezi Log Yönetimi | [`MO - ELK Stack ile Merkezi Log Yönetimi.md`](Monitoring%20%26%20Observability/MO%20-%20ELK%20Stack%20ile%20Merkezi%20Log%20Y%C3%B6netimi.md) |
 | MO - Grafana ile Görselleştirme ve Dashboard | [`MO - Grafana ile Görselleştirme ve Dashboard.md`](Monitoring%20%26%20Observability/MO%20-%20Grafana%20ile%20G%C3%B6rselle%C5%9Ftirme%20ve%20Dashboard.md) |
+| MO - OpenTelemetry (OTel) | [`MO - OpenTelemetry (OTel).md`](Monitoring%20%26%20Observability/MO%20-%20OpenTelemetry%20%28OTel%29.md) |
 | MO - Prometheus ile Metrik Toplama | [`MO - Prometheus ile Metrik Toplama.md`](Monitoring%20%26%20Observability/MO%20-%20Prometheus%20ile%20Metrik%20Toplama.md) |
 | MO - SRE Prensipleri ve Hata Bütçesi (SLI, SLO) | [`MO - SRE Prensipleri ve Hata Bütçesi (SLI, SLO).md`](Monitoring%20%26%20Observability/MO%20-%20SRE%20Prensipleri%20ve%20Hata%20B%C3%BCt%C3%A7esi%20%28SLI%2C%20SLO%29.md) |
+| MO - eBPF ile Sistem İzleme | [`MO - eBPF ile Sistem İzleme.md`](Monitoring%20%26%20Observability/MO%20-%20eBPF%20ile%20Sistem%20%C4%B0zleme.md) |
 
 </details>
 
