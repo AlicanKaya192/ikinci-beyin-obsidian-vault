@@ -17,7 +17,7 @@
 
 **The Tech Cortex**, modern bir yazılım geliştirici, veri bilimci, veri mühendisi ve DevOps uzmanının ihtiyaç duyabileceği tüm teknik konuları tek bir çatı altında toplayan kapsamlı bir **İkinci Beyin (Second Brain)** kütüphanesidir.
 
-Bu depo; Veri Bilimi (Data Science), Yapay Zeka / Makine Öğrenmesi (Machine Learning), Derin Öğrenme (Deep Learning), MLOps, Veri Mühendisliği (Data Engineering), Generative AI & LLM, Sistem Tasarımı (System Design), Veritabanları (SQL & NoSQL), API Geliştirme, Konteynerizasyon (Docker & Kubernetes), Bulut Sistemleri, İstatistik, Linux ve Siber Güvenlik konularını kapsayan, **411 kapsamlı not içeren bir Obsidian bilgi bankasıdır (vault)**.
+Bu depo; Veri Bilimi (Data Science), Yapay Zeka / Makine Öğrenmesi (Machine Learning), Derin Öğrenme (Deep Learning), MLOps, Veri Mühendisliği (Data Engineering), Generative AI & LLM, Sistem Tasarımı (System Design), Veritabanları (SQL & NoSQL), API Geliştirme, Konteynerizasyon (Docker & Kubernetes), Bulut Sistemleri, İstatistik, Linux, Siber Güvenlik, AI-Augmented Engineering, Advanced LLM Operations ve AI Future konularını kapsayan, **427 kapsamlı not içeren bir Obsidian bilgi bankasıdır (vault)**.
 
 Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari şemaları ve gerçek dünya senaryolarını içerecek şekilde detaylı olarak Türkçe hazırlanmıştır.
 
@@ -667,6 +667,49 @@ Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari ş
 | MO - Prometheus ile Metrik Toplama | [`MO - Prometheus ile Metrik Toplama.md`](Monitoring%20%26%20Observability/MO%20-%20Prometheus%20ile%20Metrik%20Toplama.md) |
 | MO - SRE Prensipleri ve Hata Bütçesi (SLI, SLO) | [`MO - SRE Prensipleri ve Hata Bütçesi (SLI, SLO).md`](Monitoring%20%26%20Observability/MO%20-%20SRE%20Prensipleri%20ve%20Hata%20B%C3%BCt%C3%A7esi%20%28SLI%2C%20SLO%29.md) |
 | MO - eBPF ile Sistem İzleme | [`MO - eBPF ile Sistem İzleme.md`](Monitoring%20%26%20Observability/MO%20-%20eBPF%20ile%20Sistem%20%C4%B0zleme.md) |
+
+</details>
+
+### 🧑‍💻 AI-Augmented Engineering & Advanced Prompting (8 Not)
+<details>
+  <summary><b>Dosya Listesini Göster/Gizle</b></summary>
+
+| Not Başlığı | Dosya Yolu |
+| :--- | :--- |
+| 00 - AI-Augmented Engineering (Ana Rehber) | [`00 - AI-Augmented Engineering (Ana Rehber).md`](AI-Augmented%20Engineering%20%26%20Advanced%20Prompting/00%20-%20AI-Augmented%20Engineering%20%28Ana%20Rehber%29.md) |
+| AI Skills - Genişletilmiş Yetenek Yönetimi | [`AI Skills - Genişletilmiş Yetenek Yönetimi.md`](AI-Augmented%20Engineering%20%26%20Advanced%20Prompting/AI%20Skills%20-%20Geni%C5%9Fletilmi%C5%9F%20Yetenek%20Y%C3%B6netimi.md) |
+| AI-Driven Coding - IDE ve Terminal Entegrasyonları | [`AI-Driven Coding - IDE ve Terminal Entegrasyonları.md`](AI-Augmented%20Engineering%20%26%20Advanced%20Prompting/AI-Driven%20Coding%20-%20IDE%20ve%20Terminal%20Entegrasyonlar%C4%B1.md) |
+| Advanced Prompting - CoT, ToT ve Medprompt | [`Advanced Prompting - CoT, ToT ve Medprompt.md`](AI-Augmented%20Engineering%20%26%20Advanced%20Prompting/Advanced%20Prompting%20-%20CoT%2C%20ToT%20ve%20Medprompt.md) |
+| Autonomous Agents - Hermes, AutoGen ve Özel Agent Yapımı | [`Autonomous Agents - Hermes, AutoGen ve Özel Agent Yapımı.md`](AI-Augmented%20Engineering%20%26%20Advanced%20Prompting/Autonomous%20Agents%20-%20Hermes%2C%20AutoGen%20ve%20%C3%96zel%20Agent%20Yap%C4%B1m%C4%B1.md) |
+| Claude - Artifacts ve Profesyonel İş Akışları | [`Claude - Artifacts ve Profesyonel İş Akışları.md`](AI-Augmented%20Engineering%20%26%20Advanced%20Prompting/Claude%20-%20Artifacts%20ve%20Profesyonel%20%C4%B0%C5%9F%20Ak%C4%B1%C5%9Flar%C4%B1.md) |
+| Gemini - Long Context ve Repo Management | [`Gemini - Long Context ve Repo Management.md`](AI-Augmented%20Engineering%20%26%20Advanced%20Prompting/Gemini%20-%20Long%20Context%20ve%20Repo%20Management.md) |
+| Multi-AI Terminal Management - CLI Orchestration | [`Multi-AI Terminal Management - CLI Orchestration.md`](AI-Augmented%20Engineering%20%26%20Advanced%20Prompting/Multi-AI%20Terminal%20Management%20-%20CLI%20Orchestration.md) |
+
+</details>
+
+### 🛡️ Advanced LLM Operations & Security (4 Not)
+<details>
+  <summary><b>Dosya Listesini Göster/Gizle</b></summary>
+
+| Not Başlığı | Dosya Yolu |
+| :--- | :--- |
+| AI Safety ve Guardrails - Güvenlik ve Defans Stratejileri | [`AI Safety ve Guardrails - Güvenlik ve Defans Stratejileri.md`](Advanced%20LLM%20Operations%20%26%20Security/AI%20Safety%20ve%20Guardrails%20-%20G%C3%BCvenlik%20ve%20Defans%20Stratejileri.md) |
+| AI-Driven Cyber Security - Otonom Tehdit Avcılığı ve Pentesting | [`AI-Driven Cyber Security - Otonom Tehdit Avcılığı ve Pentesting.md`](Advanced%20LLM%20Operations%20%26%20Security/AI-Driven%20Cyber%20Security%20-%20Otonom%20Tehdit%20Avc%C4%B1l%C4%B1%C4%9F%C4%B1%20ve%20Pentesting.md) |
+| Advanced RAG - GraphRAG ve Knowledge Graphs | [`Advanced RAG - GraphRAG ve Knowledge Graphs.md`](Advanced%20LLM%20Operations%20%26%20Security/Advanced%20RAG%20-%20GraphRAG%20ve%20Knowledge%20Graphs.md) |
+| Context Caching ve AI Economics - Maliyet Optimizasyonu | [`Context Caching ve AI Economics - Maliyet Optimizasyonu.md`](Advanced%20LLM%20Operations%20%26%20Security/Context%20Caching%20ve%20AI%20Economics%20-%20Maliyet%20Optimizasyonu.md) |
+
+</details>
+
+### 🔮 AI Future & Emerging Trends (4 Not)
+<details>
+  <summary><b>Dosya Listesini Göster/Gizle</b></summary>
+
+| Not Başlığı | Dosya Yolu |
+| :--- | :--- |
+| AI-Generated Software - AppGen ve AI-Native SaaS | [`AI-Generated Software - AppGen ve AI-Native SaaS.md`](AI%20Future%20%26%20Emerging%20Trends/AI-Generated%20Software%20-%20AppGen%20ve%20AI-Native%20SaaS.md) |
+| Real-time Multimodal Agents - Voice, Vision ve Action | [`Real-time Multimodal Agents - Voice, Vision ve Action.md`](AI%20Future%20%26%20Emerging%20Trends/Real-time%20Multimodal%20Agents%20-%20Voice%2C%20Vision%20ve%20Action.md) |
+| Reasoning Models - o1, o3 ve DeepSeek-R1 Mimarisi | [`Reasoning Models - o1, o3 ve DeepSeek-R1 Mimarisi.md`](AI%20Future%20%26%20Emerging%20Trends/Reasoning%20Models%20-%20o1%2C%20o3%20ve%20DeepSeek-R1%20Mimarisi.md) |
+| SLM ve Local AI - Edge Intelligence ve Ollama | [`SLM ve Local AI - Edge Intelligence ve Ollama.md`](AI%20Future%20%26%20Emerging%20Trends/SLM%20ve%20Local%20AI%20-%20Edge%20Intelligence%20ve%20Ollama.md) |
 
 </details>
 

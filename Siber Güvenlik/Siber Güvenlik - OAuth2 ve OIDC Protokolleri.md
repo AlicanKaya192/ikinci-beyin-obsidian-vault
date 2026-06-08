@@ -1,4 +1,4 @@
-﻿---
+---
 tarih: 2026-06-06
 konu: OAuth2 & OIDC
 etiket: [security, authentication, authorization, oauth2, oidc]
