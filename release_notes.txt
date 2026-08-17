@@ -1,0 +1,83 @@
+TAG: v0.6.0
+TITLE: v0.6.0 - PostgreSQL, Kariyer & Portfolio ve DS Roadmap Güncellemesi
+
+Bu sürümde iki yeni klasör eklendi (PostgreSQL ve Kariyer & Portfolio), vault genelinde kök dizine bir DS öğrenme yol haritası ve CONTRIBUTING.md eklendi.
+
+### 🛠️ 1. Yapısal İyileştirmeler:
+- **CONTRIBUTING.md eklendi:** Not formatı, naming convention ve tag sistemi belgelendi
+- **DATA SCIENCE & ML ÖĞRENME YOL HARİTASI.md:** Kök dizinde ASCII roadmap + bölüm başına not referansları
+- **README güncellendi:** PostgreSQL ve Kariyer bölümleri eklendi, not sayısı 494'e çıktı
+
+### 📚 2. Yeni Klasörler ve Notlar (40 not):
+
+**PostgreSQL (+15 not → ilk defa):**
+- 00 - Giriş ve Yol Haritası, Kurulum, SQL Temelleri
+- İleri SQL (Window Functions, CTE), JSONB/Array/UUID veri tipleri
+- İndeksleme (B-tree, GIN, GiST, BRIN), EXPLAIN ANALYZE, Partitioning
+- Python entegrasyonu (psycopg2, SQLAlchemy, asyncpg)
+- pgvector ile AI/RAG entegrasyonu, Full-Text Search
+- Stored Procedures & Triggers, Replikasyon & HA, Güvenlik & RLS
+- PostgreSQL vs MSSQL karşılaştırması
+
+**Kariyer & Portfolio (+8 not → ilk defa):**
+- 00 - Kariyer Yol Haritası, Portfolio Proje Fikirleri
+- GitHub Profil Optimizasyonu, CV & LinkedIn Hazırlama
+- Mülakat Süreci Stratejisi, Kaggle Rehberi
+- Freelance vs Tam Zamanlı, Networking & Topluluk
+
+---
+
+TAG: v0.5.0
+TITLE: v0.5.0 - MCP, LangGraph, Red Teaming ve LLM Observability Güncellemesi
+
+Bu sürümde kütüphaneye en güncel AI/LLM konuları eklendi ve toplam not sayısı 433'e ulaştı.
+
+### 🛠️ 1. Yapısal İyileştirmeler:
+- **.gitignore eklendi:** .obsidian/workspace, .smart-env/ ve kişisel ayar dosyaları artık git'e dahil edilmiyor
+- **README clone URL düzeltildi:** Eski repo adı `ikinci-beyin-obsidian-vault` → gerçek repo adına güncellendi
+- **Not sayısı güncellendi:** 427 → 433
+
+### 📚 2. Yeni Notlar (6 not):
+
+**AI Future & Emerging Trends (+3 not → toplam 7):**
+- MCP - Model Context Protocol ve Tool Use (Anthropic'in açık protokolü)
+- LangGraph - Stateful Agent ve Graph Tabanlı Orkestrasyon
+- Vibe Coding ve AI-Native Yazılım Geliştirme
+
+**Advanced LLM Operations & Security (+3 not → toplam 7):**
+- LLM Observability - LangSmith ve LangFuse ile İzleme
+- AI Red Teaming ve Adversarial Prompting (OWASP LLM Top 10)
+- DuckDB - In-Process Analitik ve LLM Data Pipelines
+
+---
+TAG: v0.4.0
+TITLE: v0.4.0 - Yapay Zeka Destekli Mühendislik ve İleri LLM Operasyonları Güncellemesi
+
+Bu sürüm, kütüphaneye AI-Augmented Engineering, Advanced LLM Operations & Security ve AI Future & Emerging Trends adlarında 3 yeni ana modülün eklendiği ve kütüphanenin toplam not sayısının 427'ye ulaştığı kapsamlı bir güncellemedir.
+
+### 🛠️ 1. Yapısal Yenilikler ve Kategorizasyon Güncellemeleri:
+- **3 Yeni Ana Kategori Eklendi:** Kütüphane genelinde otonom yazılım geliştirme araçları, LLM güvenlik önlemleri ve geleceğin yapay zeka trendleri için 3 yeni klasör oluşturuldu.
+- **Toplam Not Sayısı Artışı:** Kütüphanedeki toplam not sayısı 411'den 427'ye yükseltildi (16 yeni not eklendi).
+
+### 📚 2. Eklenen Yeni Notlar ve Konular:
+Kütüphaneye eklenen 16 yeni not aşağıdaki kategorilerde yer almaktadır:
+
+- **AI-Augmented Engineering & Advanced Prompting (8 Yeni Not):**
+  - 00 - AI-Augmented Engineering (Ana Rehber)
+  - AI Skills - Genişletilmiş Yetenek Yönetimi
+  - AI-Driven Coding - IDE ve Terminal Entegrasyonları
+  - Advanced Prompting - CoT, ToT ve Medprompt
+  - Autonomous Agents - Hermes, AutoGen ve Özel Agent Yapımı
+  - Claude - Artifacts ve Profesyonel İş Akışları
+  - Gemini - Long Context ve Repo Management
+  - Multi-AI Terminal Management - CLI Orchestration
+- **Advanced LLM Operations & Security (4 Yeni Not):**
+  - AI Safety ve Guardrails - Güvenlik ve Defans Stratejileri
+  - AI-Driven Cyber Security - Otonom Tehdit Avcılığı ve Pentesting
+  - Advanced RAG - GraphRAG ve Knowledge Graphs
+  - Context Caching ve AI Economics - Maliyet Optimizasyonu
+- **AI Future & Emerging Trends (4 Yeni Not):**
+  - AI-Generated Software - AppGen ve AI-Native SaaS
+  - Real-time Multimodal Agents - Voice, Vision ve Action
+  - Reasoning Models - o1, o3 ve DeepSeek-R1 Mimarisi
+  - SLM ve Local AI - Edge Intelligence ve Ollama

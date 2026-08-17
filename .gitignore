@@ -1,0 +1,25 @@
+# Obsidian — kişisel ayarlar ve önbellek
+.obsidian/workspace
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/plugins/
+.obsidian/graph.json
+.obsidian/starred.json
+.obsidian/cache
+.trash/
+
+# Smart Connections & Embedding modelleri — büyük ikili dosyalar
+.smart-env/
+
+# OS & editör artıkları
+.DS_Store
+Thumbs.db
+desktop.ini
+*.bak
+
+# Copilot ve Gemini Scribe geçici dosyalar
+copilot/
+gemini-scribe/
+
+# Excalidraw geçici dosyalar (büyükse)
+# Excalidraw/

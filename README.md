@@ -17,7 +17,7 @@
 
 **The Tech Cortex**, modern bir yazılım geliştirici, veri bilimci, veri mühendisi ve DevOps uzmanının ihtiyaç duyabileceği tüm teknik konuları tek bir çatı altında toplayan kapsamlı bir **İkinci Beyin (Second Brain)** kütüphanesidir.
 
-Bu depo; Veri Bilimi (Data Science), Yapay Zeka / Makine Öğrenmesi (Machine Learning), Derin Öğrenme (Deep Learning), MLOps, Veri Mühendisliği (Data Engineering), Generative AI & LLM, Sistem Tasarımı (System Design), Veritabanları (SQL & NoSQL), API Geliştirme, Konteynerizasyon (Docker & Kubernetes), Bulut Sistemleri, İstatistik, Linux, Siber Güvenlik, AI-Augmented Engineering, Advanced LLM Operations ve AI Future konularını kapsayan, **427 kapsamlı not içeren bir Obsidian bilgi bankasıdır (vault)**.
+Bu depo; Veri Bilimi (Data Science), Yapay Zeka / Makine Öğrenmesi (Machine Learning), Derin Öğrenme (Deep Learning), MLOps, Veri Mühendisliği (Data Engineering), Generative AI & LLM, Sistem Tasarımı (System Design), Veritabanları (SQL, NoSQL & **PostgreSQL**), API Geliştirme, Konteynerizasyon (Docker & Kubernetes), Bulut Sistemleri, İstatistik, Linux, Siber Güvenlik, AI-Augmented Engineering, Advanced LLM Operations, AI Future, ML Interview Prep ve **Kariyer & Portfolio** konularını kapsayan, **494 kapsamlı not içeren bir Obsidian bilgi bankasıdır (vault)**.
 
 Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari şemaları ve gerçek dünya senaryolarını içerecek şekilde detaylı olarak Türkçe hazırlanmıştır.
 
@@ -427,13 +427,15 @@ Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari ş
 
 </details>
 
-### 📊 BI — İş Zekası (Power BI & Tableau) (6 Not)
+### 📊 BI — İş Zekası (Power BI & Tableau) (8 Not)
 <details>
   <summary><b>Dosya Listesini Göster/Gizle</b></summary>
 
 | Not Başlığı | Dosya Yolu |
 | :--- | :--- |
 | BI - Giriş ve Temel Kavramlar | [`BI - Giriş ve Temel Kavramlar.md`](BI%20%E2%80%94%20%C4%B0%C5%9F%20Zekas%C4%B1%20%28Power%20BI%20%26%20Tableau%29/BI%20-%20Giri%C5%9F%20ve%20Temel%20Kavramlar.md) |
+| BI - KPI Dashboard Tasarım Prensipleri | [`BI - KPI Dashboard Tasarım Prensipleri.md`](BI%20%E2%80%94%20%C4%B0%C5%9F%20Zekas%C4%B1%20%28Power%20BI%20%26%20Tableau%29/BI%20-%20KPI%20Dashboard%20Tasar%C4%B1m%20Prensipleri.md) |
+| BI - Looker ve Modern BI Araçları (Metabase, Superset) | [`BI - Looker ve Modern BI Araçları (Metabase, Superset).md`](BI%20%E2%80%94%20%C4%B0%C5%9F%20Zekas%C4%B1%20%28Power%20BI%20%26%20Tableau%29/BI%20-%20Looker%20ve%20Modern%20BI%20Ara%C3%A7lar%C4%B1%20%28Metabase%2C%20Superset%29.md) |
 | BI - Power BI vs Tableau Karşılaştırması | [`BI - Power BI vs Tableau Karşılaştırması.md`](BI%20%E2%80%94%20%C4%B0%C5%9F%20Zekas%C4%B1%20%28Power%20BI%20%26%20Tableau%29/BI%20-%20Power%20BI%20vs%20Tableau%20Kar%C5%9F%C4%B1la%C5%9Ft%C4%B1rmas%C4%B1.md) |
 | BI - Veri Ambarı ve ETL Stratejileri | [`BI - Veri Ambarı ve ETL Stratejileri.md`](BI%20%E2%80%94%20%C4%B0%C5%9F%20Zekas%C4%B1%20%28Power%20BI%20%26%20Tableau%29/BI%20-%20Veri%20Ambar%C4%B1%20ve%20ETL%20Stratejileri.md) |
 | BI - İleri DAX ve Performans Optimizasyonu | [`BI - İleri DAX ve Performans Optimizasyonu.md`](BI%20%E2%80%94%20%C4%B0%C5%9F%20Zekas%C4%B1%20%28Power%20BI%20%26%20Tableau%29/BI%20-%20%C4%B0leri%20DAX%20ve%20Performans%20Optimizasyonu.md) |
@@ -503,20 +505,25 @@ Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari ş
 
 </details>
 
-### 🧠 Derin Öğrenme (Deep Learning) (9 Not)
+### 🧠 Derin Öğrenme (Deep Learning) (13 Not)
 <details>
   <summary><b>Dosya Listesini Göster/Gizle</b></summary>
 
 | Not Başlığı | Dosya Yolu |
 | :--- | :--- |
+| DL - Diffusion Modelleri ve Stable Diffusion Mimarisi | [`DL - Diffusion Modelleri ve Stable Diffusion Mimarisi.md`](Derin%20%C3%96%C4%9Frenme%20%28Deep%20Learning%29/DL%20-%20Diffusion%20Modelleri%20ve%20Stable%20Diffusion%20Mimarisi.md) |
 | DL - Generative Adversarial Networks (GAN) | [`DL - Generative Adversarial Networks (GAN).md`](Derin%20%C3%96%C4%9Frenme%20%28Deep%20Learning%29/DL%20-%20Generative%20Adversarial%20Networks%20%28GAN%29.md) |
 | DL - Giriş ve YSA Temelleri (Perceptron, Activation Functions) | [`DL - Giriş ve YSA Temelleri (Perceptron, Activation Functions).md`](Derin%20%C3%96%C4%9Frenme%20%28Deep%20Learning%29/DL%20-%20Giri%C5%9F%20ve%20YSA%20Temelleri%20%28Perceptron%2C%20Activation%20Functions%29.md) |
 | DL - Konvolsiyonel Sinir Ağları (CNN) ve Görüntü İşleme | [`DL - Konvolsiyonel Sinir Ağları (CNN) ve Görüntü İşleme.md`](Derin%20%C3%96%C4%9Frenme%20%28Deep%20Learning%29/DL%20-%20Konvolsiyonel%20Sinir%20A%C4%9Flar%C4%B1%20%28CNN%29%20ve%20G%C3%B6r%C3%BCnt%C3%BC%20%C4%B0%C5%9Fleme.md) |
+| DL - LoRA ve Parameter-Efficient Fine-Tuning (PEFT) | [`DL - LoRA ve Parameter-Efficient Fine-Tuning (PEFT).md`](Derin%20%C3%96%C4%9Frenme%20%28Deep%20Learning%29/DL%20-%20LoRA%20ve%20Parameter-Efficient%20Fine-Tuning%20%28PEFT%29.md) |
 | DL - Model Optimizasyonu (Pruning, Quantization) | [`DL - Model Optimizasyonu (Pruning, Quantization).md`](Derin%20%C3%96%C4%9Frenme%20%28Deep%20Learning%29/DL%20-%20Model%20Optimizasyonu%20%28Pruning%2C%20Quantization%29.md) |
+| DL - Production'da Model Optimizasyonu (Quantization, ONNX, TensorRT) | [`DL - Production'da Model Optimizasyonu (Quantization, ONNX, TensorRT).md`](Derin%20%C3%96%C4%9Frenme%20%28Deep%20Learning%29/DL%20-%20Production%27da%20Model%20Optimizasyonu%20%28Quantization%2C%20ONNX%2C%20TensorRT%29.md) |
 | DL - PyTorch ile Model Geliştirme | [`DL - PyTorch ile Model Geliştirme.md`](Derin%20%C3%96%C4%9Frenme%20%28Deep%20Learning%29/DL%20-%20PyTorch%20ile%20Model%20Geli%C5%9Ftirme.md) |
+| DL - RLHF ve İnsan Geri Bildirimiyle Öğrenme | [`DL - RLHF ve İnsan Geri Bildirimiyle Öğrenme.md`](Derin%20%C3%96%C4%9Frenme%20%28Deep%20Learning%29/DL%20-%20RLHF%20ve%20%C4%B0nsan%20Geri%20Bildirimiyle%20%C3%96%C4%9Frenme.md) |
 | DL - TensorFlow ve Keras Ekosistemi | [`DL - TensorFlow ve Keras Ekosistemi.md`](Derin%20%C3%96%C4%9Frenme%20%28Deep%20Learning%29/DL%20-%20TensorFlow%20ve%20Keras%20Ekosistemi.md) |
 | DL - Transfer Learning ve Fine-tuning Teknikleri | [`DL - Transfer Learning ve Fine-tuning Teknikleri.md`](Derin%20%C3%96%C4%9Frenme%20%28Deep%20Learning%29/DL%20-%20Transfer%20Learning%20ve%20Fine-tuning%20Teknikleri.md) |
 | DL - Transformer Mimarisi ve Attention Mekanizması | [`DL - Transformer Mimarisi ve Attention Mekanizması.md`](Derin%20%C3%96%C4%9Frenme%20%28Deep%20Learning%29/DL%20-%20Transformer%20Mimarisi%20ve%20Attention%20Mekanizmas%C4%B1.md) |
+| DL - Vision Transformer (ViT) ve Multimodal Modeller | [`DL - Vision Transformer (ViT) ve Multimodal Modeller.md`](Derin%20%C3%96%C4%9Frenme%20%28Deep%20Learning%29/DL%20-%20Vision%20Transformer%20%28ViT%29%20ve%20Multimodal%20Modeller.md) |
 | DL - Yinelemeli Sinir Ağları (RNN) ve LSTM | [`DL - Yinelemeli Sinir Ağları (RNN) ve LSTM.md`](Derin%20%C3%96%C4%9Frenme%20%28Deep%20Learning%29/DL%20-%20Yinelemeli%20Sinir%20A%C4%9Flar%C4%B1%20%28RNN%29%20ve%20LSTM.md) |
 
 </details>
@@ -687,31 +694,95 @@ Her bir not, konseptlerin teorik temellerini, pratik kod bloklarını, mimari ş
 
 </details>
 
-### 🛡️ Advanced LLM Operations & Security (4 Not)
+### 🛡️ Advanced LLM Operations & Security (7 Not)
 <details>
   <summary><b>Dosya Listesini Göster/Gizle</b></summary>
 
 | Not Başlığı | Dosya Yolu |
 | :--- | :--- |
+| AI Red Teaming ve Adversarial Prompting | [`AI Red Teaming ve Adversarial Prompting.md`](Advanced%20LLM%20Operations%20%26%20Security/AI%20Red%20Teaming%20ve%20Adversarial%20Prompting.md) |
 | AI Safety ve Guardrails - Güvenlik ve Defans Stratejileri | [`AI Safety ve Guardrails - Güvenlik ve Defans Stratejileri.md`](Advanced%20LLM%20Operations%20%26%20Security/AI%20Safety%20ve%20Guardrails%20-%20G%C3%BCvenlik%20ve%20Defans%20Stratejileri.md) |
 | AI-Driven Cyber Security - Otonom Tehdit Avcılığı ve Pentesting | [`AI-Driven Cyber Security - Otonom Tehdit Avcılığı ve Pentesting.md`](Advanced%20LLM%20Operations%20%26%20Security/AI-Driven%20Cyber%20Security%20-%20Otonom%20Tehdit%20Avc%C4%B1l%C4%B1%C4%9F%C4%B1%20ve%20Pentesting.md) |
 | Advanced RAG - GraphRAG ve Knowledge Graphs | [`Advanced RAG - GraphRAG ve Knowledge Graphs.md`](Advanced%20LLM%20Operations%20%26%20Security/Advanced%20RAG%20-%20GraphRAG%20ve%20Knowledge%20Graphs.md) |
 | Context Caching ve AI Economics - Maliyet Optimizasyonu | [`Context Caching ve AI Economics - Maliyet Optimizasyonu.md`](Advanced%20LLM%20Operations%20%26%20Security/Context%20Caching%20ve%20AI%20Economics%20-%20Maliyet%20Optimizasyonu.md) |
+| DuckDB - In-Process Analitik ve LLM Data Pipelines | [`DuckDB - In-Process Analitik ve LLM Data Pipelines.md`](Advanced%20LLM%20Operations%20%26%20Security/DuckDB%20-%20In-Process%20Analitik%20ve%20LLM%20Data%20Pipelines.md) |
+| LLM Observability - LangSmith ve LangFuse ile İzleme | [`LLM Observability - LangSmith ve LangFuse ile İzleme.md`](Advanced%20LLM%20Operations%20%26%20Security/LLM%20Observability%20-%20LangSmith%20ve%20LangFuse%20ile%20%C4%B0zleme.md) |
 
 </details>
 
-### 🔮 AI Future & Emerging Trends (4 Not)
+### 🎯 ML Interview Prep (5 Not)
+<details>
+  <summary><b>Dosya Listesini Göster/Gizle</b></summary>
+
+| Not Başlığı | Dosya Yolu |
+| :--- | :--- |
+| 00 - ML Mülakat Hazırlık Rehberi | [`00 - ML Mülakat Hazırlık Rehberi.md`](ML%20Interview%20Prep/00%20-%20ML%20M%C3%BClakat%20Haz%C4%B1rl%C4%B1k%20Rehberi.md) |
+| Interview - Data Science Vaka Çalışmaları | [`Interview - Data Science Vaka Çalışmaları.md`](ML%20Interview%20Prep/Interview%20-%20Data%20Science%20Vaka%20%C3%87al%C4%B1%C5%9Fmalar%C4%B1.md) |
+| Interview - İstatistik ve Olasılık Soruları | [`Interview - İstatistik ve Olasılık Soruları.md`](ML%20Interview%20Prep/Interview%20-%20%C4%B0statistik%20ve%20Olas%C4%B1l%C4%B1k%20Sorular%C4%B1.md) |
+| Interview - Makine Öğrenmesi Temel Sorular | [`Interview - Makine Öğrenmesi Temel Sorular.md`](ML%20Interview%20Prep/Interview%20-%20Makine%20%C3%96%C4%9Frenmesi%20Temel%20Sorular.md) |
+| Interview - MLOps ve Sistem Tasarımı Soruları | [`Interview - MLOps ve Sistem Tasarımı Soruları.md`](ML%20Interview%20Prep/Interview%20-%20MLOps%20ve%20Sistem%20Tasar%C4%B1m%C4%B1%20Sorular%C4%B1.md) |
+| Interview - Python ve SQL Kodlama Soruları | [`Interview - Python ve SQL Kodlama Soruları.md`](ML%20Interview%20Prep/Interview%20-%20Python%20ve%20SQL%20Kodlama%20Sorular%C4%B1.md) |
+
+</details>
+
+### 🔮 AI Future & Emerging Trends (7 Not)
 <details>
   <summary><b>Dosya Listesini Göster/Gizle</b></summary>
 
 | Not Başlığı | Dosya Yolu |
 | :--- | :--- |
 | AI-Generated Software - AppGen ve AI-Native SaaS | [`AI-Generated Software - AppGen ve AI-Native SaaS.md`](AI%20Future%20%26%20Emerging%20Trends/AI-Generated%20Software%20-%20AppGen%20ve%20AI-Native%20SaaS.md) |
+| LangGraph - Stateful Agent ve Graph Tabanlı Orkestrasyon | [`LangGraph - Stateful Agent ve Graph Tabanlı Orkestrasyon.md`](AI%20Future%20%26%20Emerging%20Trends/LangGraph%20-%20Stateful%20Agent%20ve%20Graph%20Tabanl%C4%B1%20Orkestrasyon.md) |
+| MCP - Model Context Protocol ve Tool Use | [`MCP - Model Context Protocol ve Tool Use.md`](AI%20Future%20%26%20Emerging%20Trends/MCP%20-%20Model%20Context%20Protocol%20ve%20Tool%20Use.md) |
 | Real-time Multimodal Agents - Voice, Vision ve Action | [`Real-time Multimodal Agents - Voice, Vision ve Action.md`](AI%20Future%20%26%20Emerging%20Trends/Real-time%20Multimodal%20Agents%20-%20Voice%2C%20Vision%20ve%20Action.md) |
 | Reasoning Models - o1, o3 ve DeepSeek-R1 Mimarisi | [`Reasoning Models - o1, o3 ve DeepSeek-R1 Mimarisi.md`](AI%20Future%20%26%20Emerging%20Trends/Reasoning%20Models%20-%20o1%2C%20o3%20ve%20DeepSeek-R1%20Mimarisi.md) |
 | SLM ve Local AI - Edge Intelligence ve Ollama | [`SLM ve Local AI - Edge Intelligence ve Ollama.md`](AI%20Future%20%26%20Emerging%20Trends/SLM%20ve%20Local%20AI%20-%20Edge%20Intelligence%20ve%20Ollama.md) |
+| Vibe Coding ve AI-Native Yazılım Geliştirme | [`Vibe Coding ve AI-Native Yazılım Geliştirme.md`](AI%20Future%20%26%20Emerging%20Trends/Vibe%20Coding%20ve%20AI-Native%20Yaz%C4%B1l%C4%B1m%20Geli%C5%9Ftirme.md) |
 
 </details>
+
+### 🐘 PostgreSQL (13 Not)
+<details>
+  <summary><b>Dosya Listesini Göster/Gizle</b></summary>
+
+| Not Başlığı | Dosya Yolu |
+| :--- | :--- |
+| 00 - PostgreSQL Giriş ve Yol Haritası | [`00 - PostgreSQL Giriş ve Yol Haritası.md`](PostgreSQL/00%20-%20PostgreSQL%20Giri%C5%9F%20ve%20Yol%20Haritas%C4%B1.md) |
+| PG - PostgreSQL Kurulum ve Temel Yapılandırma | [`PG - PostgreSQL Kurulum ve Temel Yapılandırma.md`](PostgreSQL/PG%20-%20PostgreSQL%20Kurulum%20ve%20Temel%20Yap%C4%B1land%C4%B1rma.md) |
+| PG - SQL Temelleri ve PostgreSQL Sözdizimi | [`PG - SQL Temelleri ve PostgreSQL Sözdizimi.md`](PostgreSQL/PG%20-%20SQL%20Temelleri%20ve%20PostgreSQL%20S%C3%B6zdizimi.md) |
+| PG - İleri SQL — Window Functions ve CTE | [`PG - İleri SQL — Window Functions ve CTE.md`](PostgreSQL/PG%20-%20%C4%B0leri%20SQL%20%E2%80%94%20Window%20Functions%20ve%20CTE.md) |
+| PG - PostgreSQL Veri Tipleri (JSONB, Arrays, UUID) | [`PG - PostgreSQL Veri Tipleri (JSONB, Arrays, UUID).md`](PostgreSQL/PG%20-%20PostgreSQL%20Veri%20Tipleri%20%28JSONB%2C%20Arrays%2C%20UUID%29.md) |
+| PG - İndeksleme Stratejileri (B-tree, GIN, GiST, BRIN) | [`PG - İndeksleme Stratejileri (B-tree, GIN, GiST, BRIN).md`](PostgreSQL/PG%20-%20%C4%B0ndeksleme%20Stratejileri%20%28B-tree%2C%20GIN%2C%20GiST%2C%20BRIN%29.md) |
+| PG - Performans Optimizasyonu ve EXPLAIN ANALYZE | [`PG - Performans Optimizasyonu ve EXPLAIN ANALYZE.md`](PostgreSQL/PG%20-%20Performans%20Optimizasyonu%20ve%20EXPLAIN%20ANALYZE.md) |
+| PG - Partitioning ve Tablo Bölümleme | [`PG - Partitioning ve Tablo Bölümleme.md`](PostgreSQL/PG%20-%20Partitioning%20ve%20Tablo%20B%C3%B6l%C3%BCmleme.md) |
+| PG - PostgreSQL ile Python (psycopg2, SQLAlchemy, asyncpg) | [`PG - PostgreSQL ile Python (psycopg2, SQLAlchemy, asyncpg).md`](PostgreSQL/PG%20-%20PostgreSQL%20ile%20Python%20%28psycopg2%2C%20SQLAlchemy%2C%20asyncpg%29.md) |
+| PG - Replikasyon ve Yüksek Erişilebilirlik | [`PG - Replikasyon ve Yüksek Erişilebilirlik.md`](PostgreSQL/PG%20-%20Replikasyon%20ve%20Y%C3%BCksek%20Eri%C5%9Filebilirlik.md) |
+| PG - PostgreSQL Güvenliği ve Row-Level Security | [`PG - PostgreSQL Güvenliği ve Row-Level Security.md`](PostgreSQL/PG%20-%20PostgreSQL%20G%C3%BCvenli%C4%9Fi%20ve%20Row-Level%20Security.md) |
+| PG - pgvector ile Vektör Arama ve AI Entegrasyonu | [`PG - pgvector ile Vektör Arama ve AI Entegrasyonu.md`](PostgreSQL/PG%20-%20pgvector%20ile%20Vekt%C3%B6r%20Arama%20ve%20AI%20Entegrasyonu.md) |
+| PG - Full-Text Search ve Tsvector | [`PG - Full-Text Search ve Tsvector.md`](PostgreSQL/PG%20-%20Full-Text%20Search%20ve%20Tsvector.md) |
+| PG - Stored Procedures ve Triggers | [`PG - Stored Procedures ve Triggers.md`](PostgreSQL/PG%20-%20Stored%20Procedures%20ve%20Triggers.md) |
+| PG - PostgreSQL vs MSSQL Karşılaştırması | [`PG - PostgreSQL vs MSSQL Karşılaştırması.md`](PostgreSQL/PG%20-%20PostgreSQL%20vs%20MSSQL%20Kar%C5%9F%C4%B1la%C5%9Ft%C4%B1rmas%C4%B1.md) |
+
+</details>
+
+### 💼 Kariyer & Portfolio (8 Not)
+<details>
+  <summary><b>Dosya Listesini Göster/Gizle</b></summary>
+
+| Not Başlığı | Dosya Yolu |
+| :--- | :--- |
+| 00 - Kariyer Yol Haritası ve Rehber | [`00 - Kariyer Yol Haritası ve Rehber.md`](Kariyer%20%26%20Portfolio/00%20-%20Kariyer%20Yol%20Haritas%C4%B1%20ve%20Rehber.md) |
+| Kariyer - Data Science Portfolio Proje Fikirleri | [`Kariyer - Data Science Portfolio Proje Fikirleri.md`](Kariyer%20%26%20Portfolio/Kariyer%20-%20Data%20Science%20Portfolio%20Proje%20Fikirleri.md) |
+| Kariyer - GitHub Profil Optimizasyonu | [`Kariyer - GitHub Profil Optimizasyonu.md`](Kariyer%20%26%20Portfolio/Kariyer%20-%20GitHub%20Profil%20Optimizasyonu.md) |
+| Kariyer - CV ve LinkedIn Hazırlama | [`Kariyer - CV ve LinkedIn Hazırlama.md`](Kariyer%20%26%20Portfolio/Kariyer%20-%20CV%20ve%20LinkedIn%20Haz%C4%B1rlama.md) |
+| Kariyer - Mülakat Süreci ve Hazırlık Stratejisi | [`Kariyer - Mülakat Süreci ve Hazırlık Stratejisi.md`](Kariyer%20%26%20Portfolio/Kariyer%20-%20M%C3%BClakat%20S%C3%BCreci%20ve%20Haz%C4%B1rl%C4%B1k%20Stratejisi.md) |
+| Kariyer - Kaggle Strateji Rehberi | [`Kariyer - Kaggle Strateji Rehberi.md`](Kariyer%20%26%20Portfolio/Kariyer%20-%20Kaggle%20Strateji%20Rehberi.md) |
+| Kariyer - Freelance vs Tam Zamanlı Karar Rehberi | [`Kariyer - Freelance vs Tam Zamanlı Karar Rehberi.md`](Kariyer%20%26%20Portfolio/Kariyer%20-%20Freelance%20vs%20Tam%20Zamanl%C4%B1%20Karar%20Rehberi.md) |
+| Kariyer - Networking ve Topluluk Katılımı | [`Kariyer - Networking ve Topluluk Katılımı.md`](Kariyer%20%26%20Portfolio/Kariyer%20-%20Networking%20ve%20Topluluk%20Kat%C4%B1l%C4%B1m%C4%B1.md) |
+
+</details>
+
+---
 
 ## 🚀 Obsidian ile Nasıl Kullanılır?
 
@@ -720,19 +791,19 @@ Bu not defteri Obsidian uygulaması ile tamamen entegre çalışacak şekilde ta
 1. **Obsidian'ı İndirin:** Henüz kurmadıysanız [Obsidian Web Sitesi](https://obsidian.md/)'nden uygulamayı indirin.
 2. **Depoyu Klonlayın:**
    ```bash
-   git clone https://github.com/AlicanKaya192/ikinci-beyin-obsidian-vault.git
+   git clone https://github.com/AlicanKaya192/data-science-ml-obsidian-vault.git
    ```
 3. **Vault Olarak Açın:**
    - Obsidian uygulamasını açın.
    - **"Open folder as vault"** (Klasörü vault olarak aç) seçeneğine tıklayın.
-   - Klonladığınız `ikinci-beyin-obsidian-vault` klasörünü seçin.
+   - Klonladığınız `data-science-ml-obsidian-vault` klasörünü seçin.
 4. **Grafik Görünümünü Keşfedin:** `Ctrl + G` (veya Mac'te `Cmd + G`) tuşlarına basarak notların birbiriyle olan ilişkilerini görselleştiren **Graph View** modunu açın.
 
 ---
 
 ## 🛠️ Katkıda Bulunma
 
-Notlardaki hataları düzeltmek veya yeni konular eklemek isterseniz katkılarınızı memnuniyetle kabul ediyorum!
+Notlardaki hataları düzeltmek veya yeni konular eklemek isterseniz katkılarınızı memnuniyetle kabul ediyorum! Katkı formatı ve not şablonu için **[CONTRIBUTING.md](CONTRIBUTING.md)** dosyasına bakın.
 
 1. Bu depoyu **fork** edin.
 2. Yeni bir branch oluşturun (`git checkout -b feature/yeni-not`).
